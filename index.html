@@ -129,6 +129,68 @@ html{overflow-x:hidden}body{overflow-x:hidden}.app-shell,.work-area,.content,.pa
 @media(max-width:760px){.discovery-overlay.void-cinema .discovery-content{padding:16px}.discovery-overlay.void-cinema .discovery-icon{margin:35px 0}.discovery-overlay.void-cinema .discovery-name{max-width:100%}}
 @media(prefers-reduced-motion:reduce){.discovery-overlay.void-cinema *,.aura-card.void-rare::before{animation:none!important}}
 
+
+/* VOID RNG 4.0 - mobile-safe unknown sigils, admin elixir and craft-ready UI */
+:root{--void-accent:#b4a0ff}
+.admin-code-panel{margin:22px 0;padding:18px;border:1px solid #564980;border-radius:15px;background:radial-gradient(ellipse at 10% 5%,#8e64e224,transparent 65%),linear-gradient(135deg,#17172b,#101523)}
+.admin-code-header{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+.admin-code-header>span{width:39px;height:39px;display:grid;place-items:center;border-radius:12px;background:#aa8bff24;border:1px solid #ab8ff36b;color:#e3d9ff;font-size:24px}
+.admin-code-header b{display:block;letter-spacing:2px;font-size:12px;color:#e9e1ff}
+.admin-code-header small{display:block;margin-top:4px;font-size:10px;line-height:1.6;color:#a4a0ba}
+.admin-code-form{display:flex;gap:9px;align-items:stretch}
+.admin-code-form input{flex:1;min-width:0;min-height:43px;border-radius:10px;background:#090f1d;border:1px solid #5b4d82;color:#f6f1ff;padding:11px 13px;font-size:13px}
+.admin-code-form button{border:1px solid #c6b3ff;color:#151028;background:linear-gradient(110deg,#e6c6ff,#a997ff);padding:10px 13px;font-weight:900;border-radius:10px;white-space:nowrap}
+.admin-code-message{font-size:10px;color:#a4a4c2;margin-top:10px;line-height:1.6}
+.admin-code-message.success{color:#9df5d9}.admin-code-message.error{color:#ff9fab}
+.forge-ready-banner{display:flex;align-items:center;gap:13px;padding:15px 18px;border:1px solid #79f1ce74;border-radius:13px;background:linear-gradient(105deg,#183c3a,#17263b);color:#cffff3;box-shadow:0 0 26px #6af7c21c;margin-bottom:17px}
+.forge-ready-banner[hidden]{display:none}
+.forge-ready-icon{font-size:29px;color:#8fffdf;filter:drop-shadow(0 0 10px #7bead5)}
+.forge-ready-banner strong{display:block;font-size:11px;letter-spacing:2px}
+.forge-ready-banner span:not(.forge-ready-icon){display:block;font-size:11px;margin-top:5px;line-height:1.5}
+.craft-recipe-ready{border-color:#6df7c4!important;box-shadow:0 0 16px #7dfac02c!important}
+.craft-ready-label{display:inline-flex;align-items:center;padding:5px 8px;border-radius:6px;color:#083a35;font-weight:900;font-size:9px;letter-spacing:.5px;background:#8affd9;border:1px solid #ccffed}
+/* Real SVG unknown sigils prevent mobile OS emoji 'boxed question mark' fallback */
+.aura-card.locked .aura-art .void-unknown-mark,
+.aura-card.locked.void-rare .aura-art .void-unknown-mark{
+  width:61px;height:61px;display:grid;place-items:center;position:relative;z-index:2;
+  border-radius:50%;border:1px solid #47516a;background:radial-gradient(circle at 37% 25%,#48556d,#1b2335 68%,#0c111f);
+  box-shadow:inset 0 0 20px #050917b3,0 0 20px #090c17!important;
+  filter:none!important;text-shadow:none!important;color:#a3abc4!important;
+}
+.aura-card.locked .void-unknown-mark svg{width:36px;height:36px;stroke:#c3cbe1;stroke-width:3.1;stroke-linecap:round;stroke-linejoin:round;fill:none;filter:drop-shadow(0 0 5px #a6b2d058)}
+.aura-card.locked.void-rare .aura-art{filter:none!important}
+.aura-card.locked.void-rare .aura-art .void-unknown-mark{color:#a3abc4!important}
+.aura-card.locked .aura-art::before{box-shadow:none}
+/* Cinematic motifs: each aura has a stable, identity-specific look */
+.discovery-overlay.void-cinema .discovery-content{transform-style:preserve-3d}
+.discovery-overlay.void-cinema .void-motif{position:absolute;width:min(75vw,520px);aspect-ratio:1;border-radius:50%;pointer-events:none;z-index:-1;border:2px solid color-mix(in srgb,var(--void-alt),transparent 52%);box-shadow:inset 0 0 35px color-mix(in srgb,var(--void-alt),transparent 83%),0 0 60px color-mix(in srgb,var(--discovery-color),transparent 70%);animation:void-motif-rotate var(--motif-speed,5.5s) linear infinite}
+.discovery-overlay.void-cinema .void-motif::before{content:"";position:absolute;inset:22px;border-radius:50%;border:1px dashed color-mix(in srgb,var(--void-alt),transparent 30%);animation:void-motif-rotate 7s linear infinite reverse}
+.discovery-overlay.void-cinema .void-motif::after{content:"";position:absolute;inset:-13px;border-radius:50%;border:1px solid transparent;border-top:3px solid var(--void-alt);border-bottom:3px solid var(--discovery-color);filter:drop-shadow(0 0 15px var(--void-alt))}
+.discovery-overlay.void-cinema .void-particle{position:absolute;top:50%;left:50%;width:var(--ps);height:var(--ps);border-radius:50%;background:var(--void-alt);box-shadow:0 0 12px var(--void-alt),0 0 28px var(--discovery-color);pointer-events:none;animation:void-particle-explode var(--pd) cubic-bezier(.12,.38,.1,1) both}
+.discovery-overlay.void-cinema.motif-void .void-motif{border-style:dashed;animation-direction:reverse;clip-path:polygon(50% 0%,100% 30%,100% 80%,55% 100%,0 77%,0 20%)}
+.discovery-overlay.void-cinema.motif-solar .void-motif{box-shadow:inset 0 0 80px #ffd78342,0 0 70px var(--discovery-color);border-width:4px}
+.discovery-overlay.void-cinema.motif-prism .void-motif{border-radius:26%;transform:rotate(45deg);animation:void-prism-orbit 6s linear infinite}
+.discovery-overlay.void-cinema.motif-storm .void-motif{border-style:dotted;border-width:5px;animation-duration:1.9s}
+.discovery-overlay.void-cinema.motif-rift .void-motif{border-radius:42% 58% 35% 65%;animation-duration:3.1s}
+.discovery-overlay.void-cinema.motif-celestial .void-motif{border-width:4px;border-style:double;animation-duration:10s}
+.discovery-overlay.void-cinema.power-6 .void-motif{box-shadow:0 0 85px var(--discovery-color),inset 0 0 70px var(--void-alt)}
+.discovery-overlay.void-cinema .void-reveal-note{font-size:11px;letter-spacing:2px;font-weight:900;margin:2px auto 9px;color:#f7f1ff;text-shadow:0 0 15px var(--void-alt)}
+@keyframes void-motif-rotate{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes void-prism-orbit{from{transform:rotate(45deg)}to{transform:rotate(405deg)}}
+@keyframes void-particle-explode{0%{opacity:0;transform:translate(-50%,-50%) scale(.25)}20%{opacity:1}100%{opacity:0;transform:translate(calc(-50% + var(--px)),calc(-50% + var(--py))) scale(.05)}}
+@media(max-width:760px){.discovery-overlay.void-cinema .void-motif{width:min(86vw,390px)}.admin-code-panel{padding:14px}.admin-code-form{flex-wrap:wrap}.admin-code-form button{min-width:115px}.aura-card.locked .aura-art .void-unknown-mark{width:53px;height:53px}.aura-card.locked .void-unknown-mark svg{width:31px;height:31px}}
+@media(prefers-reduced-motion:reduce){.discovery-overlay.void-cinema .void-motif,.discovery-overlay.void-cinema .void-motif::before,.discovery-overlay.void-cinema .void-particle{animation:none!important}}
+
+
+/* Final mobile cinematic contrast and visibility hardening. */
+.craft-alert-button[hidden]{display:none!important}
+.discovery-overlay.void-cinema{background:rgba(2,4,13,.8)}
+.discovery-overlay.void-cinema .discovery-wash{background:radial-gradient(ellipse at 50% 42%,color-mix(in srgb,var(--discovery-color),#050717 72%),#02040df5 67%),linear-gradient(180deg,#030613fa,#02030afa);backdrop-filter:blur(22px) brightness(.28)}
+.discovery-overlay.void-cinema .void-motif{opacity:.57}
+.discovery-overlay.void-cinema .discovery-content::before{opacity:.65}
+.discovery-overlay.void-cinema .discovery-name,.discovery-overlay.void-cinema .discovery-eyebrow{position:relative;z-index:2}
+@media(max-width:760px){.discovery-overlay.void-cinema .void-motif{width:min(74vw,315px)}.discovery-overlay.void-cinema .discovery-icon{margin:24px 0}.discovery-overlay.void-cinema .discovery-content{padding:12px;max-height:90dvh}.discovery-overlay.void-cinema .discovery-odds{margin:10px 0 16px}.discovery-overlay.void-cinema .discovery-content::before{width:min(70vw,var(--void-size))}}
+
 </style>
 </head>
 <body>
@@ -184,7 +246,7 @@ html{overflow-x:hidden}body{overflow-x:hidden}.app-shell,.work-area,.content,.pa
           <div class="status-pill"><i></i> SYSTEM ONLINE</div>
           <div class="top-asset"><span class="mini-gem">✧</span><div><small>STARDUST</small><strong id="top-shards">0</strong></div></div>
           <button class="icon-btn sound-btn" id="sound-btn" aria-label="サウンドを切り替える" title="サウンド切替"><svg><use href="#i-volume"/></svg></button>
-          <button class="icon-btn" id="help-btn" aria-label="遊び方" title="遊び方"><svg><use href="#i-info"/></svg></button>
+          <button class="icon-btn craft-alert-button" id="craft-alert-btn" aria-label="クラフト可能な装備を見る" title="クラフト可能な装備" hidden style="position:relative;color:#9df5d8;border-color:#5b9d8b">✦<span id="craft-alert-count" style="position:absolute;top:-5px;right:-5px;font-size:9px;font-weight:900;background:#8dffde;color:#052b29;border-radius:20px;min-width:15px;padding:1px 3px">0</span></button><button class="icon-btn" id="help-btn" aria-label="遊び方" title="遊び方"><svg><use href="#i-info"/></svg></button>
         </div>
       </header>
 
@@ -235,24 +297,24 @@ html{overflow-x:hidden}body{overflow-x:hidden}.app-shell,.work-area,.content,.pa
               <div class="tip-banner"><span class="tip-star">✧</span><div><b>CRAFT YOUR FUTURE</b><p>重複したオーラから装備やポーションを作って、さらに強い運を手に入れよう。</p></div><button data-goto="forge" aria-label="クラフトへ"><svg><use href="#i-chevron"/></svg></button></div>
             </div>
           </div>
-          <div class="page-endline">AETHER NETWORK <span>—</span> THE IMPOSSIBLE IS ONLY A NUMBER.</div>
+          <div class="page-endline">VOID NETWORK <span>—</span> THE IMPOSSIBLE IS ONLY A NUMBER.</div>
         </section>
 
         <section class="page" id="page-collection" aria-labelledby="collection-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> AURA DATABASE <span class="eyebrow-dot">◆</span> 80 SIGNATURES</div><h1 id="collection-title">未知の光を、<em>収集せよ。</em></h1><p>すべてのオーラには、それぞれ固有の奇跡がある。</p></div></div><div class="collection-summary panel"><div><span>ARCHIVE PROGRESS</span><strong id="collection-count">0 <small>/ 80</small></strong></div><div class="large-progress"><div id="collection-progress"></div></div><div class="collection-percent" id="collection-percent">0%</div></div><div class="toolbar"><div class="tab-group" id="collection-tabs"><button data-filter="all" class="active">すべて <span>80</span></button><button data-filter="owned">発見済み</button><button data-filter="missing">未発見</button></div><div class="toolbar-right"><label class="search-box"><svg><use href="#i-search"/></svg><input id="collection-search" placeholder="オーラ名で検索" autocomplete="off"></label><select id="tier-filter" aria-label="レアリティで絞り込む"><option value="all">すべてのレアリティ</option></select></div></div><div class="aura-grid" id="aura-grid"></div><div class="grid-empty" id="grid-empty" hidden>条件に合うオーラがありません。</div></section>
 
-        <section class="page" id="page-forge" aria-labelledby="forge-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE FORGE <span class="eyebrow-dot">◆</span> ASCEND BEYOND</div><h1 id="forge-title">運を、<em>鍛え上げろ。</em></h1><p>入手したオーラを素材に、強力なラック装備をクラフト。</p></div></div><div class="forge-overview panel"><div class="forge-glyph">✣</div><div class="forge-overview-text"><span>YOUR EQUIPPED POWER</span><strong id="forge-bonus">+0.00× <small>GEAR LUCK</small></strong><p>3スロットに装備可能。各スロットには1つだけ装備できる。</p></div><button class="outline-btn" data-goto="collection">素材を見る <svg><use href="#i-chevron"/></svg></button></div><div class="subhead"><h2>装備スロット <span>／ EQUIPPED</span></h2></div><div class="equip-slots" id="equip-slots"></div><div class="subhead with-gap"><h2>クラフト設計図 <span>／ BLUEPRINTS</span></h2><div class="small-note">素材はクラフト時に消費されます</div></div><div class="recipe-grid" id="gear-grid"></div></section>
+        <section class="page" id="page-forge" aria-labelledby="forge-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE FORGE <span class="eyebrow-dot">◆</span> ASCEND BEYOND</div><h1 id="forge-title">運を、<em>鍛え上げろ。</em></h1><p>入手したオーラを素材に、強力なラック装備をクラフト。</p></div></div><div id="forge-ready-banner" class="forge-ready-banner" hidden><span class="forge-ready-icon">✦</span><div><strong>CRAFT AVAILABLE</strong><span id="forge-ready-text">新しくクラフトできる装備があります</span></div></div><div class="forge-overview panel"><div class="forge-glyph">✣</div><div class="forge-overview-text"><span>YOUR EQUIPPED POWER</span><strong id="forge-bonus">+0.00× <small>GEAR LUCK</small></strong><p>3スロットに装備可能。各スロットには1つだけ装備できる。</p></div><button class="outline-btn" data-goto="collection">素材を見る <svg><use href="#i-chevron"/></svg></button></div><div class="subhead"><h2>装備スロット <span>／ EQUIPPED</span></h2></div><div class="equip-slots" id="equip-slots"></div><div class="subhead with-gap"><h2>クラフト設計図 <span>／ BLUEPRINTS</span></h2><div class="small-note">素材はクラフト時に消費されます</div></div><div class="recipe-grid" id="gear-grid"></div></section>
 
         <section class="page" id="page-potions" aria-labelledby="potions-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> ALCHEMY LAB <span class="eyebrow-dot">◆</span> TEMPORARY POWER</div><h1 id="potions-title">一瞬に、<em>奇跡を宿せ。</em></h1><p>オーラとスターダストを調合。ここぞという時に運命を加速させよう。</p></div></div><div class="potion-active panel"><div class="potion-illustration">◈</div><div><span>ACTIVE ELIXIR</span><strong id="active-potion-name">ポーション効果なし</strong><p id="active-potion-text">ポーションを作成して使用すると、期間中ラックが上がります。</p></div><div class="potion-clock" id="active-potion-timer">0 / 6</div></div><div class="active-potion-stack" id="active-potion-stack" aria-label="重ねがけ中のポーション"></div><div class="subhead"><h2>所持しているポーション <span>／ INVENTORY</span></h2></div><div class="potion-inventory" id="potion-inventory"></div><div class="subhead with-gap"><h2>調合レシピ <span>／ LABORATORY</span></h2><span class="small-note">同種も重ねがけOK · 最大6本 · 倍率は掛け算 · 時間は個別</span></div><div class="recipe-grid" id="potion-grid"></div></section>
 
-        <section class="page" id="page-records" aria-labelledby="records-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR LEGACY <span class="eyebrow-dot">◆</span> ARCHIVE STATUS</div><h1 id="records-title">すべての軌跡を、<em>刻め。</em></h1><p>歩んだ記録を確認し、セーブデータを管理しよう。</p></div></div><div class="records-grid" id="records-grid"></div><div class="records-bottom"><div class="panel data-panel"><div class="subhead"><h2>セーブデータ <span>／ DATA MANAGEMENT</span></h2></div><p>プレイ内容はこのブラウザに自動保存されます。ブラウザのデータ削除に備えて、バックアップファイルの保存をおすすめします。</p><div class="save-status"><span class="online-dot"></span><span id="save-status-text">自動セーブ有効</span></div><div class="data-actions"><button id="export-btn" class="solid-small"><svg><use href="#i-down"/></svg> セーブを書き出す</button><label class="outline-btn import-btn"><svg><use href="#i-up"/></svg> セーブを読み込む<input id="import-input" type="file" accept=".json,application/json" hidden></label></div><div class="data-warning"><span>注意</span> 別のブラウザ・端末には自動で同期されません。プライベートブラウズでは保存できない場合があります。</div><button class="danger-link" id="reset-btn">全データを初期化</button></div><div class="panel achievements-panel"><div class="subhead"><h2>進行状況 <span>／ MILESTONES</span></h2></div><div id="milestone-list"></div></div></div></section>
+        <section class="page" id="page-records" aria-labelledby="records-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR LEGACY <span class="eyebrow-dot">◆</span> ARCHIVE STATUS</div><h1 id="records-title">すべての軌跡を、<em>刻め。</em></h1><p>歩んだ記録を確認し、セーブデータを管理しよう。</p></div></div><div class="records-grid" id="records-grid"></div><div class="records-bottom"><div class="panel data-panel"><div class="subhead"><h2>セーブデータ <span>／ DATA MANAGEMENT</span></h2></div><p>プレイ内容はこのブラウザに自動保存されます。ブラウザのデータ削除に備えて、バックアップファイルの保存をおすすめします。</p><div class="save-status"><span class="online-dot"></span><span id="save-status-text">自動セーブ有効</span></div><div class="data-actions"><button id="export-btn" class="solid-small"><svg><use href="#i-down"/></svg> セーブを書き出す</button><label class="outline-btn import-btn"><svg><use href="#i-up"/></svg> セーブを読み込む<input id="import-input" type="file" accept=".json,application/json" hidden></label></div><div class="data-warning"><span>注意</span> 別のブラウザ・端末には自動で同期されません。プライベートブラウズでは保存できない場合があります。</div><div class="admin-code-panel"><div class="admin-code-header"><span>✦</span><div><b>ADMIN CODE</b><small>管理コードから特別なポーションを受け取る</small></div></div><form id="admin-code-form" class="admin-code-form"><input id="admin-code-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="12" placeholder="管理コードを入力" autocomplete="off" aria-label="管理コード"><button type="submit">コードを使用</button></form><div id="admin-code-message" class="admin-code-message" role="status">入力したコードの報酬は、ポーション画面から使えます。</div></div><button class="danger-link" id="reset-btn">全データを初期化</button></div><div class="panel achievements-panel"><div class="subhead"><h2>進行状況 <span>／ MILESTONES</span></h2></div><div id="milestone-list"></div></div></div></section>
       </main>
     </div>
   </div>
   <div id="toast-stack" class="toast-stack" role="status" aria-live="polite"></div>
   <div id="discovery-overlay" class="discovery-overlay" hidden><div class="discovery-wash"></div><div class="discovery-content"><div class="discovery-eyebrow">✦ &nbsp; NEW DISCOVERY &nbsp; ✦</div><div class="discovery-icon">✧</div><div class="discovery-name" id="discovery-name"></div><div class="discovery-odds" id="discovery-odds"></div><button id="discovery-dismiss">CONTINUE <svg><use href="#i-chevron"/></svg></button></div></div>
-  <dialog id="help-modal" class="help-modal"><div class="help-inner"><button class="help-close icon-btn" id="help-close" aria-label="閉じる"><svg><use href="#i-close"/></svg></button><div class="eyebrow"><span class="eyebrow-line"></span> WELCOME TO AETHER</div><h2>運命を書き換える、<em>準備はいい？</em></h2><div class="help-steps"><div><span>01</span><b>ROLL</b><p>中央のボタンでオーラを抽選。80種類の頂点は1兆分の1。スペースキーでも抽選できる。</p></div><div><span>02</span><b>COLLECT</b><p>図鑑に発見を記録。同じオーラを複数獲得するとクラフト素材にも使える。</p></div><div><span>03</span><b>ASCEND</b><p>装備とポーションでラックを強化。ポーションは最大6本まで重複できる。</p></div></div><div class="help-extra">※ 表示される「1/N」はラック1.00×時の基礎確率。ラックはレア度に応じて抽選確率を強化します。<br>※ セーブはこの端末のブラウザに保存。大切なデータは「記録・セーブ」で書き出せます。</div><button id="help-start" class="roll-button">LET'S BEGIN <svg><use href="#i-chevron"/></svg></button></div></dialog>
+  <dialog id="help-modal" class="help-modal"><div class="help-inner"><button class="help-close icon-btn" id="help-close" aria-label="閉じる"><svg><use href="#i-close"/></svg></button><div class="eyebrow"><span class="eyebrow-line"></span> WELCOME TO VOID</div><h2>運命を書き換える、<em>準備はいい？</em></h2><div class="help-steps"><div><span>01</span><b>ROLL</b><p>中央のボタンでオーラを抽選。80種類の頂点は1兆分の1。スペースキーでも抽選できる。</p></div><div><span>02</span><b>COLLECT</b><p>図鑑に発見を記録。同じオーラを複数獲得するとクラフト素材にも使える。</p></div><div><span>03</span><b>ASCEND</b><p>装備とポーションでラックを強化。ポーションは最大6本まで重複できる。</p></div></div><div class="help-extra">※ 表示される「1/N」はラック1.00×時の基礎確率。ラックはレア度に応じて抽選確率を強化します。<br>※ セーブはこの端末のブラウザに保存。大切なデータは「記録・セーブ」で書き出せます。</div><button id="help-start" class="roll-button">LET'S BEGIN <svg><use href="#i-chevron"/></svg></button></div></dialog>
   <script>
-/* AETHER // RNG — Standalone browser game (no frameworks required). */
+/* VOID RNG — Standalone browser game (no frameworks required). */
 (() => {
 'use strict';
 const $ = (id) => document.getElementById(id);
@@ -318,6 +380,8 @@ const POTIONS = [
   {id:'nebula-serum',name:'ネビュラ・セラム',mult:5,seconds:45,color:'#f49cde',glyph:'✶',desc:'星雲の残光から作られる短期決戦の薬。',cost:[['STARDUST',1],['NEBULA',1]],dust:700},
   {id:'omega-essence',name:'オメガ・エッセンス',mult:10,seconds:30,color:'#ffd59b',glyph:'✺',desc:'常識を越える究極の錬金術。',cost:[['ZENITH',1],['OMEGA',1]],dust:5000},
 ];
+// Developer-only elixir: awarded by entering an in-game code (client-side, not a secret).
+POTIONS.push({id:'void-admin-2020',name:'VOID Ω 管理者エリクサー',mult:5000000,seconds:600,color:'#d7a2ff',glyph:'✦',desc:'管理コードで獲得できる、10分間ラックを500万倍にする特別なポーション。',admin:true,cost:[],dust:0});
 const SLOT_LABELS = {ring:'RING / 指輪',core:'CORE / コア',charm:'CHARM / 護符'};
 const PAGE_NAMES = {roll:'SUMMON',collection:'COLLECTION',forge:'CRAFTING',potions:'ALCHEMY',records:'RECORDS'};
 const fmt = (v) => Math.floor(Number(v)||0).toLocaleString('ja-JP');
@@ -446,6 +510,30 @@ function presentAura(a,first=false){
   $('result-new').hidden=!first;
   resultAura=a;
 }
+let pendingCraftAnnouncement=null;
+function currentlyCraftable(){return GEAR.filter(g=>!state.gearOwned.includes(g.id)&&canCraft(g));}
+function updateCraftReadyUI(){
+  const ready=currentlyCraftable();
+  const badge=$('craft-alert-btn');
+  badge.hidden=ready.length===0;
+  $('craft-alert-count').textContent=String(ready.length);
+  $('forge-ready-banner').hidden=ready.length===0;
+  $('forge-ready-text').textContent=ready.length ? ready.map(g=>g.name).join('・')+' がクラフト可能！' : '';
+}
+function announceNewCraftReady(previousIds){
+  const newItems=currentlyCraftable().filter(g=>!previousIds.has(g.id));
+  updateCraftReadyUI();
+  if(!newItems.length)return;
+  pendingCraftAnnouncement=newItems;
+  if(!hasModal)flushCraftAnnouncement();
+}
+function flushCraftAnnouncement(){
+  if(!pendingCraftAnnouncement)return;
+  const list=pendingCraftAnnouncement;
+  pendingCraftAnnouncement=null;
+  toast('✦ 装備の素材がそろった！',list.map(g=>g.name).join(' / ')+' をクラフト可能','good');
+  tone(760,.2,'triangle',.025);tone(1100,.28,'sine',.025,.13);
+}
 function startRoll(){
   if(rolling || hasModal)return;
   rolling=true;$('roll-btn').disabled=true;$('summon-panel').classList.add('rolling');
@@ -453,6 +541,7 @@ function startRoll(){
   const delay=state.fast?105:720;
   if(!state.fast)tone(250,.10,'sine',.014);
   setTimeout(()=>{
+    const craftableBefore=new Set(currentlyCraftable().map(g=>g.id));
     const a=pickAura();const first=!state.discovered[a.id];
     state.rolls++;state.inventory[a.id]=(state.inventory[a.id]||0)+1;state.discovered[a.id]=true;
     state.shards+=1+Math.floor(rng()*3)+a.tier*2;
@@ -462,8 +551,12 @@ function startRoll(){
     if(a.tier>=4){const panel=$('summon-panel');panel.style.setProperty('--flash-color',a.color);panel.classList.remove('legend-flash');void panel.offsetWidth;panel.classList.add('legend-flash');}
     rolling=false;$('roll-btn').disabled=false;$('summon-panel').classList.remove('rolling');
     renderRollUI();save();
-    if(a.odds>=10000){showDiscovery(a);}
-    else if(first && a.tier>=2){toast('NEW DISCOVERY · '+a.name,TIERS[a.tier].jp+' / '+oddsText(a),'good');}
+    // Epic 1/10k+ on first discovery, Legendary+ on first discovery,
+    // Mythic+ every roll (including duplicates). Lower tiers do not interrupt auto-roll.
+    const cinematic=(a.tier>=5)||(first&&(a.tier>=4||a.odds>=10000));
+    if(cinematic)showDiscovery(a,first);
+    else if(first && a.tier>=2)toast('NEW DISCOVERY · '+a.name,TIERS[a.tier].jp+' / '+oddsText(a),'good');
+    announceNewCraftReady(craftableBefore);
     if(auto&&!hasModal)queueAuto();
   },delay);
 }
@@ -471,7 +564,7 @@ function setAuto(next){auto=!!next;if(autoTimer){clearTimeout(autoTimer);autoTim
 function queueAuto(){if(!auto||autoTimer||hasModal)return;autoTimer=setTimeout(()=>{autoTimer=null;startRoll();},state.fast?70:160);}
 function toggleFast(){state.fast=!state.fast;$('fast-btn').classList.toggle('is-on',state.fast);$('fast-btn').setAttribute('aria-pressed',String(state.fast));$('fast-state').textContent=state.fast?'ON':'OFF';save();}
 let voidRevealTimer=null;
-function showDiscovery(a){
+function showDiscovery(a,first=true){
   if(voidRevealTimer){clearTimeout(voidRevealTimer);voidRevealTimer=null;}
   hasModal=true;
   const el=$('discovery-overlay'),design=voidRareDesign(a);
@@ -482,12 +575,38 @@ function showDiscovery(a){
   $('discovery-name').textContent=a.name;
   $('discovery-odds').textContent=oddsText(a)+' · '+TIERS[a.tier].name;
   const title=el.querySelector('.discovery-eyebrow');
-  title.textContent=design?'✦ '+design.label+' ✦':'✦ NEW DISCOVERY ✦';
+  title.textContent=first?'✦ FIRST DISCOVERY ✦':'✦ MYTHIC REAWAKENING ✦';
   let tag=el.querySelector('.void-epithet'),bar=el.querySelector('.void-countdown');
   if(!tag){tag=document.createElement('div');tag.className='void-epithet';$('discovery-name').after(tag);}
   if(!bar){bar=document.createElement('div');bar.className='void-countdown';bar.innerHTML='<span></span>';$('discovery-odds').after(bar);}
+  const content=el.querySelector('.discovery-content');
+  content.querySelectorAll('.void-motif,.void-particle,.void-reveal-note').forEach(node=>node.remove());
   if(design){
-    el.classList.add('void-cinema','power-'+design.level);
+    const themes=['void','solar','prism','storm','rift','celestial'];
+    const motif=themes[a.id%themes.length];
+    el.classList.add('void-cinema','power-'+design.level,'motif-'+motif);
+    const motifRing=document.createElement('div');
+    motifRing.className='void-motif';
+    motifRing.style.setProperty('--motif-speed',(8-design.level*.6)+'s');
+    content.prepend(motifRing);
+    const note=document.createElement('div');
+    note.className='void-reveal-note';
+    note.textContent=first?'✦ NEW AURA ACQUIRED ✦':'✦ POWER REAWAKENED ✦';
+    $('discovery-name').before(note);
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      const count=Math.min(38,13+design.level*4);
+      for(let n=0;n<count;n++){
+        const particle=document.createElement('i');
+        particle.className='void-particle';
+        const angle=n*2*Math.PI/count+(a.id%7)*.2;
+        const radius=120+(n%6)*22+design.level*11;
+        particle.style.setProperty('--px',Math.cos(angle)*radius+'px');
+        particle.style.setProperty('--py',Math.sin(angle)*radius+'px');
+        particle.style.setProperty('--ps',(2+n%4)+'px');
+        particle.style.setProperty('--pd',(1.4+design.level*.2+(n%4)*.13)+'s');
+        content.append(particle);
+      }
+    }
     el.style.setProperty('--discovery-color',design.accent);
     el.style.setProperty('--void-alt',design.alt);
     el.style.setProperty('--void-duration',design.duration+'s');
@@ -505,6 +624,7 @@ function showDiscovery(a){
 function dismissDiscovery(){
   if(voidRevealTimer){clearTimeout(voidRevealTimer);voidRevealTimer=null;}
   hasModal=false;$('discovery-overlay').hidden=true;
+  flushCraftAnnouncement();
   if(auto&&!rolling)queueAuto();
 }
 function renderRollUI(){
@@ -530,7 +650,7 @@ function renderCollection(){
     const count=state.inventory[a.id]||0,owned=count>0,known=!!state.discovered[a.id],equipped=owned&&state.equippedAura===a.id;
     const design=voidRareDesign(a),rareClass=design?'void-rare power-'+design.level:'';
     const rarity=design?`<div class="aura-rarity-meta">${design.label} · ${design.theme}</div>`:'';
-    return `<article class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art"><span>${known?a.glyph+'\uFE0E':'?'}</span></div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'装備中':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
+    return `<article class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art">${known?`<span>${a.glyph+'\uFE0E'}</span>`:`<span class="void-unknown-mark" title="未発見" aria-label="未発見"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 23a12 12 0 0 1 24 0c0 9-12 9-12 19"/><path d="M32 51v1"/></svg></span>`}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'装備中':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
   }).join('');$('grid-empty').hidden=result.length!==0;
 }
 function equippedAura(id){const a=AURAS[Number(id)];if(!a||!isOwned(a)){toast('装備できません','このオーラを持っていません。','error');return;}state.equippedAura=a.id;presentAura(a,false);save();renderCollection();renderEquippedAura();toast('オーラ装備完了',a.name+'をセットしました。','good');}
@@ -540,9 +660,9 @@ function consume(rec){for(const [name,num] of rec.cost){const id=BY_NAME.get(nam
 function renderForge(){
   $('forge-bonus').innerHTML='+'+gearBonus().toFixed(2)+'× <small>GEAR LUCK</small>';
   $('equip-slots').innerHTML=Object.entries(SLOT_LABELS).map(([slot,label])=>{const gear=GEAR.find(g=>g.id===state.equipped[slot]);return `<div class="equip-slot"><div class="slot-tag">${label}</div>${gear?`<div class="slot-name" style="color:${gear.color}">${gear.glyph} ${gear.name}</div><div class="slot-bonus">+${gear.bonus.toFixed(2)}× LUCK</div>`:'<div class="slot-empty">スロットが空いています</div>'}</div>`;}).join('');
-  $('gear-grid').innerHTML=GEAR.map(g=>{const owned=state.gearOwned.includes(g.id),eq=state.equipped[g.slot]===g.id,can=canCraft(g);return `<article class="recipe-card" style="--recipe-color:${g.color}"><div class="recipe-top"><div class="recipe-icon">${g.glyph}</div><span class="recipe-category">${g.slotName} · EQUIPMENT</span></div><h3>${g.name}</h3><p class="recipe-desc">${g.desc}</p><div class="recipe-bonus">+${g.bonus.toFixed(2)}× <small>LUCK BONUS</small></div><div class="recipe-ingredients">${ingredients(g.cost,g.dust)}</div><button class="craft-btn" data-craft-gear="${g.id}" ${(!owned&&!can)?'disabled':''}>${owned?(eq?icon('check')+' 装備中':'装備する'):can?'✦ クラフトする':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
+  $('gear-grid').innerHTML=GEAR.map(g=>{const owned=state.gearOwned.includes(g.id),eq=state.equipped[g.slot]===g.id,can=canCraft(g);return `<article class="recipe-card ${can&&!owned?'craft-recipe-ready':''}" style="--recipe-color:${g.color}"><div class="recipe-top"><div class="recipe-icon">${g.glyph}</div>${can&&!owned?'<span class="craft-ready-label">✦ CRAFT READY</span>':`<span class="recipe-category">${g.slotName} · EQUIPMENT</span>`}</div><h3>${g.name}</h3><p class="recipe-desc">${g.desc}</p><div class="recipe-bonus">+${g.bonus.toFixed(2)}× <small>LUCK BONUS</small></div><div class="recipe-ingredients">${ingredients(g.cost,g.dust)}</div><button class="craft-btn" data-craft-gear="${g.id}" ${(!owned&&!can)?'disabled':''}>${owned?(eq?icon('check')+' 装備中':'装備する'):can?'✦ クラフトする':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
 }
-function craftGear(id){const g=GEAR.find(g=>g.id===id);if(!g)return;if(state.gearOwned.includes(id)){state.equipped[g.slot]=g.id;save();renderForge();renderRollUI();toast('装備を変更しました',g.name+'を装備した。','good');return;}if(!canCraft(g)){toast('素材が足りません','必要なオーラとスターダストを集めよう。','error');return;}consume(g);state.gearOwned.push(g.id);state.equipped[g.slot]=g.id;save();renderForge();renderRollUI();toast('CRAFT SUCCESS',g.name+'が完成。自動で装備しました！','good');tone(600,.2,'triangle',.035);tone(850,.2,'sine',.03,.12);}
+function craftGear(id){const g=GEAR.find(g=>g.id===id);if(!g)return;if(state.gearOwned.includes(id)){state.equipped[g.slot]=g.id;save();renderForge();renderRollUI();updateCraftReadyUI();toast('装備を変更しました',g.name+'を装備した。','good');return;}if(!canCraft(g)){toast('素材が足りません','必要なオーラとスターダストを集めよう。','error');return;}consume(g);state.gearOwned.push(g.id);state.equipped[g.slot]=g.id;save();renderForge();renderRollUI();updateCraftReadyUI();toast('CRAFT SUCCESS',g.name+'が完成。自動で装備しました！','good');tone(600,.2,'triangle',.035);tone(850,.2,'sine',.03,.12);}
 function renderPotions(){
   const active=activePotions(),mult=potionMultiplier(),full=active.length>=MAX_POTION_STACKS;
   $('active-potion-name').textContent=active.length?`${active.length}本のポーション発動中`:'ポーション効果なし';
@@ -552,10 +672,10 @@ function renderPotions(){
     const p=POTIONS.find(x=>x.id===e.id);
     return `<div class="stacked-elixir" style="--elixir-color:${p.color}"><span class="elixir-glyph">${p.glyph}</span><div class="elixir-details"><strong>${p.name}</strong><small>LUCK ×${p.mult} · STACK ${index+1}</small></div><span class="elixir-time" data-potion-expiry="${e.expires}">${clockText(e.expires-Date.now())}</span></div>`;
   }).join(''):'<div class="empty-stack"><span>✧</span> ポーションを使うとここに重ねがけの履歴と残り時間が並びます。</div>';
-  $('potion-inventory').innerHTML=POTIONS.map(p=>{const count=state.potions[p.id]||0;
-    return `<div class="inventory-potion" style="--potion-color:${p.color}"><div class="potion-emblem">${p.glyph}</div><b>${p.name}</b><span>×${fmt(count)} · ${p.mult}×</span><button data-use-potion="${p.id}" ${count&&!full?'':'disabled'}>${full?'6本発動中':count?'使用する':'所持数 0'}</button></div>`;
+  $('potion-inventory').innerHTML=POTIONS.filter(p=>!p.admin||(state.potions[p.id]||0)>0||state.activePotions.some(e=>e.id===p.id)).map(p=>{const count=state.potions[p.id]||0;
+    return `<div class="inventory-potion" style="--potion-color:${p.color}"><div class="potion-emblem">${p.glyph}</div><b>${p.name}</b><span>×${fmt(count)} · ×${fmt(p.mult)}</span><button data-use-potion="${p.id}" ${count&&!full?'':'disabled'}>${full?'6本発動中':count?'使用する':'所持数 0'}</button></div>`;
   }).join('');
-  $('potion-grid').innerHTML=POTIONS.map(p=>{const can=canCraft(p);return `<article class="recipe-card" style="--recipe-color:${p.color}"><div class="recipe-top"><div class="recipe-icon">${p.glyph}</div><span class="recipe-category">ELIXIR · ALCHEMY</span></div><h3>${p.name}</h3><p class="recipe-desc">${p.desc}</p><div class="recipe-bonus">×${p.mult.toFixed(1)} <small>LUCK / ${p.seconds} SEC</small></div><div class="recipe-ingredients">${ingredients(p.cost,p.dust)}</div><button class="craft-btn" data-craft-potion="${p.id}" ${can?'':'disabled'}>${can?'✦ 調合する':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
+  $('potion-grid').innerHTML=POTIONS.filter(p=>!p.admin).map(p=>{const can=canCraft(p);return `<article class="recipe-card" style="--recipe-color:${p.color}"><div class="recipe-top"><div class="recipe-icon">${p.glyph}</div><span class="recipe-category">ELIXIR · ALCHEMY</span></div><h3>${p.name}</h3><p class="recipe-desc">${p.desc}</p><div class="recipe-bonus">×${p.mult.toFixed(1)} <small>LUCK / ${p.seconds} SEC</small></div><div class="recipe-ingredients">${ingredients(p.cost,p.dust)}</div><button class="craft-btn" data-craft-potion="${p.id}" ${can?'':'disabled'}>${can?'✦ 調合する':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
   updatePotionTimer();
 }
 function craftPotion(id){const p=POTIONS.find(p=>p.id===id);if(!p)return;if(!canCraft(p)){toast('素材が足りません','図鑑から素材を探してみよう。','error');return;}consume(p);state.potions[id]=(state.potions[id]||0)+1;save();renderPotions();renderRollUI();toast('ALCHEMY SUCCESS',p.name+'を調合しました。','good');tone(700,.25,'sine',.03);}
@@ -575,6 +695,26 @@ function updatePotionTimer(){
   $('rail-stack').textContent=active.length+' / '+MAX_POTION_STACKS;
   $('active-potion-stack').querySelectorAll('[data-potion-expiry]').forEach(el=>{el.textContent=clockText(Number(el.dataset.potionExpiry)-Date.now());});
 }
+function redeemAdminCode(event){
+  event.preventDefault();
+  const input=$('admin-code-input');
+  const code=input.value.trim();
+  const message=$('admin-code-message');
+  input.value='';
+  if(code!=='2020'){
+    message.textContent='コードが違います。もう一度確認してください。';
+    message.className='admin-code-message error';
+    toast('INVALID CODE','その管理コードは使えません。','error');
+    return;
+  }
+  const admin=POTIONS.find(p=>p.admin);
+  state.potions[admin.id]=(state.potions[admin.id]||0)+1;
+  save();renderPotions();renderRollUI();
+  message.textContent='特別ポーションを1本受け取りました！ ポーション画面で使用できます。';
+  message.className='admin-code-message success';
+  toast('ADMIN ACCESS GRANTED','ラック ×5,000,000・10分間のポーションを1本獲得！','good');
+  tone(880,.26,'sine',.04);tone(1320,.35,'triangle',.04,.12);
+}
 function renderRecords(){
   const best=state.rolls?AURAS[state.bestId]:null;
   const cards=[['◈','TOTAL ROLLS',fmt(state.rolls),'累計抽選回数'],['✦','AURAS DISCOVERED',fmt(discoveredCount())+' / 80','発見したオーラの種類'],['✧','BEST PULL',best?.name||'—',best?oddsText(best):'まだ記録なし'],['✣','GEAR CRAFTED',fmt(state.gearOwned.length)+' / '+GEAR.length,'クラフト済み装備']];
@@ -590,7 +730,7 @@ function renderEntireGame(){
   $('fast-btn').classList.toggle('is-on',state.fast);$('fast-state').textContent=state.fast?'ON':'OFF';$('fast-btn').setAttribute('aria-pressed',String(state.fast));
   $('sound-btn').innerHTML=icon(state.sound?'volume':'mute');
   if(resultAura)presentAura(resultAura,false);else if(state.equippedAura!==null&&isOwned(AURAS[state.equippedAura]))presentAura(AURAS[state.equippedAura],false);else if(state.recent.length)presentAura(AURAS[state.recent[0].id],false);else{$('altar').style.setProperty('--aura-color','#9c90ff');$('aura-center').querySelector('.core-icon').textContent='✦';$('result-rank').textContent='YOUR DESTINY AWAITS';$('result-rank').style.color='#b2a5ff';$('result-name').textContent='AWAKEN';$('result-name').style.textShadow='0 0 20px #9991f377';$('result-odds').textContent='宇宙のどこかに、まだ見ぬ光がある。';$('result-new').hidden=true;}
-  renderRollUI();renderEquippedAura();renderCollection();renderForge();renderPotions();renderRecords();
+  renderRollUI();renderEquippedAura();renderCollection();renderForge();renderPotions();renderRecords();updateCraftReadyUI();
 }
 function showHelp(){setAuto(false);hasModal=true;const d=$('help-modal');if(typeof d.showModal==='function')d.showModal();else d.setAttribute('open','');}
 function hideHelp(){const d=$('help-modal');if(typeof d.close==='function')d.close();else d.removeAttribute('open');hasModal=false;}
@@ -611,6 +751,8 @@ function bind(){
   $('gear-grid').addEventListener('click',e=>{const b=e.target.closest('[data-craft-gear]');if(b)craftGear(b.dataset.craftGear);});
   $('potion-grid').addEventListener('click',e=>{const b=e.target.closest('[data-craft-potion]');if(b)craftPotion(b.dataset.craftPotion);});
   $('potion-inventory').addEventListener('click',e=>{const b=e.target.closest('[data-use-potion]');if(b)usePotion(b.dataset.usePotion);});
+  $('admin-code-form').addEventListener('submit',redeemAdminCode);
+  $('craft-alert-btn').addEventListener('click',()=>showPage('forge'));
   $('export-btn').addEventListener('click',exportSave);$('import-input').addEventListener('change',async e=>{await importSave(e.target.files?.[0]);e.target.value='';});$('reset-btn').addEventListener('click',resetAll);
   document.addEventListener('keydown',e=>{if(e.key==='Escape' && !$('discovery-overlay').hidden){dismissDiscovery();return;}if(e.repeat||e.altKey||e.ctrlKey||e.metaKey||hasModal)return;if(['INPUT','SELECT','TEXTAREA','BUTTON'].includes(document.activeElement.tagName))return;if(e.code==='Space'&&page==='roll'){e.preventDefault();startRoll();}});
   window.addEventListener('beforeunload',save);
