@@ -10,7 +10,7 @@
 :root{color-scheme:dark;--bg:#070a12;--surface:#0e1220;--panel:#101522;--line:#242b40;--text:#f3f4ff;--muted:#818ba2;--faint:#505b71;--purple:#a498ff;--cyan:#65f1e5;--gold:#f3c789;--r:18px;--glow:rgba(126,111,255,.2);font-family:'Manrope','Noto Sans JP',sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;color:var(--text);background:var(--bg);font-size:14px;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer;color:inherit}button:disabled{cursor:not-allowed;opacity:.43}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #b4aaff;outline-offset:3px}::selection{background:rgba(156,137,255,.5)}.svg-defs{display:none}svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.7;flex-shrink:0}#starfield{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.6}.ambient-glow{position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse at 50% -10%,rgba(71,67,121,.15),transparent 46%),radial-gradient(ellipse at 80% 65%,rgba(28,45,78,.1),transparent 40%)}.app-shell{position:relative;z-index:1;display:flex;min-height:100vh;max-width:2200px;margin:auto}
 .sidebar{width:252px;flex:none;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;border-right:1px solid #22283a;background:linear-gradient(165deg,rgba(13,17,30,.98),rgba(10,14,25,.96));padding:32px 16px 22px;z-index:10}.brand{display:flex;align-items:center;gap:13px;padding:0 12px 49px}.brand-symbol{width:43px;height:43px;display:grid;place-items:center;border:1px solid #aaa2ff70;background:radial-gradient(circle at 50% 38%,#a89aff32,#41315a17);border-radius:13px;box-shadow:0 0 30px #a89aff12}.brand-symbol svg{width:29px;height:29px;color:#c1b8ff;filter:drop-shadow(0 0 7px #978aff88)}.brand-name{font-size:19px;font-weight:800;letter-spacing:2px}.brand-slash{color:#9e93e7}.brand-caption{font-size:8px;font-weight:800;letter-spacing:1.8px;color:#6f7792;margin-top:2px;white-space:nowrap}.sidebar-section-label{display:flex;justify-content:space-between;margin:0 14px 14px;font-size:9px;letter-spacing:1.8px;font-weight:800;color:#525b74}.sidebar-section-label span{color:#737a91}.nav{display:grid;gap:8px}.nav-btn{width:100%;border:1px solid transparent;background:transparent;padding:14px 13px;border-radius:11px;display:flex;align-items:center;gap:13px;text-align:left;color:#8891a8;transition:.2s}.nav-btn svg{width:19px;height:19px}.nav-btn>span:nth-of-type(1){font-size:12px;font-weight:800;letter-spacing:.2px}.nav-btn:hover{color:#dddafa;background:#ffffff08}.nav-btn.active{color:#dfdcff;background:linear-gradient(95deg,#a496ff25,#8b7ee712);border-color:#9786ff28;box-shadow:inset 3px 0 #a79aff}.nav-btn.active svg{color:#b8afff}.nav-index,.nav-count{font-size:10px!important;font-weight:700!important;margin-left:auto;opacity:.6}.sidebar-footer{margin-top:auto}.sidebar-player-card{display:flex;align-items:center;gap:10px;padding:14px 10px;border:1px solid #262d40;background:#121625;border-radius:13px}.player-orbit{width:36px;height:36px;display:grid;place-items:center;background:radial-gradient(circle,#9085fc36,#40346b29);border:1px solid #746ad34d;color:#c2b9ff;font-size:20px;border-radius:11px}.muted-xs{font-size:8px;color:#758097;letter-spacing:1px;font-weight:800}.player-title{font-size:11px;font-weight:800;margin-top:4px}.online-dot{width:7px;height:7px;display:inline-block;background:#64e0bb;border-radius:50%;box-shadow:0 0 10px #64e0bb88;flex:none;margin-left:auto}.sidebar-hint{display:flex;justify-content:space-between;color:#485169;font-size:9px;letter-spacing:.6px;padding:20px 6px 0}.work-area{min-width:0;flex:1}.topbar{height:83px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #22283a;padding:0 clamp(22px,3.2vw,58px);background:#0a0e1aa8;backdrop-filter:blur(14px);position:relative;z-index:4}.breadcrumb{display:flex;align-items:center;gap:11px;font-size:9px;color:#adb5c9;font-weight:800;letter-spacing:1.8px}.breadcrumb-root{color:#69758e}.breadcrumb svg{width:12px;height:12px;color:#54617d}.top-actions{display:flex;align-items:center;gap:17px}.status-pill{display:flex;align-items:center;gap:8px;color:#8bbbac;font-size:9px;font-weight:800;letter-spacing:1.3px}.status-pill i{width:6px;height:6px;background:#52ddb3;border-radius:100%;box-shadow:0 0 9px #44ffb7}.top-asset{display:flex;align-items:center;gap:10px;border-left:1px solid #2c354e;padding-left:20px}.mini-gem{color:#a8cfff;font-size:25px}.top-asset small{display:block;font-size:8px;letter-spacing:1px;color:#8590a8;font-weight:800}.top-asset strong{display:block;font-size:15px;font-weight:800;line-height:1.2}.icon-btn{width:36px;height:36px;display:grid;place-items:center;border:1px solid #283045;background:#131827;border-radius:10px;color:#9da8bf;transition:.2s}.icon-btn:hover{color:white;border-color:#857ae0}.icon-btn svg{width:17px;height:17px}
-.content{padding:42px clamp(22px,3.2vw,58px) 56px;max-width:1800px;margin:auto}.page{display:none;animation:page-in .35s ease both}.page.active{display:block}@keyframes page-in{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:30px}.eyebrow{font-size:10px;letter-spacing:3.3px;font-weight:800;color:#a29ad3;display:flex;align-items:center;gap:10px}.eyebrow-line{height:1px;width:26px;background:#a49aff}.eyebrow-dot{font-size:8px;color:#77708d}.section-heading h1{font-family:'Noto Sans JP','Manrope',sans-serif;font-size:clamp(26px,3vw,38px);line-height:1.4;font-weight:900;letter-spacing:-1.5px;margin:13px 0 8px}.section-heading h1 em,.help-inner h2 em{font-style:normal;background:linear-gradient(120deg,#c7c4ff,#8e83ff 42%,#a1e5ff);color:transparent;background-clip:text;-webkit-background-clip:text}.section-heading p{margin:0;color:#8993ab;font-size:12px;line-height:1.9}.intro-counter{text-align:right;min-width:140px}.intro-counter>span{color:#778098;letter-spacing:1.8px;font-size:9px;font-weight:800}.intro-counter strong{display:block;font-size:29px;line-height:1.6;letter-spacing:1px}.intro-counter strong b{font-size:33px;color:#c7c1ff}.intro-counter small{font-size:14px;color:#737c94}.discover-bar{height:3px;border-radius:8px;background:#262d42;overflow:hidden}.discover-bar>div,.large-progress>div{height:100%;width:0;background:linear-gradient(90deg,#8f85ff,#7cf3e8);transition:width .4s}.summon-layout{display:grid;grid-template-columns:minmax(0,1fr) 294px;gap:19px;align-items:start}.primary-column{min-width:0}.panel{border:1px solid #293047;background:linear-gradient(148deg,rgba(18,23,38,.92),rgba(13,18,30,.93));border-radius:var(--r);box-shadow:0 12px 45px #00000024}.summon-panel{position:relative;overflow:hidden;min-height:610px;padding:22px 25px 0;background:radial-gradient(ellipse at 50% 40%,#28204063,transparent 54%),radial-gradient(ellipse at 55% 6%,#20213d36,transparent 55%),linear-gradient(#111523,#101523)}.summon-panel:before{position:absolute;inset:0;content:"";pointer-events:none;opacity:.16;background-image:linear-gradient(#6a749610 1px,transparent 1px),linear-gradient(90deg,#6a749610 1px,transparent 1px);background-size:37px 37px;mask-image:linear-gradient(#000,transparent 75%)}.summon-panel:after{position:absolute;top:-30%;left:15%;width:70%;height:70%;content:"";background:radial-gradient(circle,#6459b526,transparent 70%);pointer-events:none}.stage-head{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2;color:#9298b0;font-size:9px;letter-spacing:1.6px;font-weight:800}.diamond-dot{display:inline-block;width:5px;height:5px;background:#aea3ff;transform:rotate(45deg);margin-right:8px;box-shadow:0 0 8px #a89eff}.stage-coordinate{color:#67728d}.altar{--aura-color:#9c90ff;width:min(100%,375px);height:300px;position:relative;margin:14px auto 0;display:grid;place-items:center;isolation:isolate}.altar-glow{position:absolute;width:73%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--aura-color) 0,transparent 66%);opacity:.19;filter:blur(34px);transition:background .5s;z-index:-1}.ring-outer,.ring-mid,.ring-inner{position:absolute;aspect-ratio:1;border-radius:50%;pointer-events:none}.ring-outer{width:267px;border:1px solid #aaaaee26;box-shadow:0 0 0 8px #ffffff03,0 0 0 33px #aabbff03;background:repeating-conic-gradient(from 7deg,transparent 0 13deg,#d9daff23 13.5deg 14deg,transparent 14.2deg 30deg) border-box;animation:spin 45s linear infinite}.ring-outer:before,.ring-outer:after{position:absolute;content:"";inset:-14px;border:1px solid transparent;border-top:1px solid #9c94fba8;border-bottom:1px solid #8d82fb45;border-radius:50%}.ring-outer:after{inset:-32px;border-top-color:#504a8a9e;border-bottom-color:transparent;transform:rotate(30deg)}.ring-mid{width:214px;border:1px dashed #aaa6ea4f;box-shadow:0 0 45px #9682ff13;animation:spin-reverse 24s linear infinite}.ring-mid:before,.ring-mid:after{content:"";position:absolute;inset:-5px;border:2px solid transparent;border-left-color:#bcb3ff;border-radius:50%;transform:rotate(-25deg);filter:drop-shadow(0 0 9px #a89bff)}.ring-mid:after{border-left-color:transparent;border-right-color:#7770b9;transform:rotate(140deg)}.ring-inner{width:154px;border:1px solid #9e9af62e;box-shadow:inset 0 0 35px #8477e514,0 0 18px #7a6cc015}.altar-ray{position:absolute;width:1px;height:260px;background:linear-gradient(transparent,#a99aff26,transparent);transform-origin:50% 50%}.ray-1{transform:rotate(0)}.ray-2{transform:rotate(60deg)}.ray-3{transform:rotate(120deg)}.orbit-tick{position:absolute;width:7px;height:7px;transform:rotate(45deg);background:#bdacff;box-shadow:0 0 15px #a49aff}.orbit-tick-a{top:24px;left:120px}.orbit-tick-b{right:39px;bottom:74px;width:4px;height:4px;background:#a1ffee}.orbit-float{position:absolute;color:#b4a7ffb0;font-size:14px;animation:float 4s ease-in-out infinite}.float-a{top:48px;right:82px}.float-b{bottom:40px;left:48px;font-size:10px;animation-delay:1.4s}.float-c{right:36px;top:135px;font-size:8px;animation-delay:2s}.aura-center{width:126px;height:126px;border-radius:50%;display:grid;place-items:center;position:relative;z-index:2;background:radial-gradient(circle at 30% 28%,#f5f4ffcc 0,#b5abff8a 5%,var(--aura-color) 20%,#27264d 49%,#0c1020 69%);box-shadow:inset 0 0 14px #ffffffa8,0 0 22px var(--aura-color),0 0 66px #9789ff55,0 0 100px #816cff24;transition:background .4s,box-shadow .4s}.aura-center:before{position:absolute;inset:-12px;border:1px solid #ffffff33;content:"";border-radius:50%;box-shadow:0 0 17px var(--aura-color)}.aura-center:after{position:absolute;inset:13px;border:1px solid #ffffff3d;content:"";border-radius:50%;transform:rotate(20deg)}.core-flare{position:absolute;inset:12px;background:conic-gradient(from 42deg,transparent,rgba(255,255,255,.27),transparent,rgba(255,255,255,.13),transparent);border-radius:50%;animation:spin 10s linear infinite}.core-icon{font-size:65px;line-height:1;text-shadow:0 0 15px #ffffff9e,0 0 32px var(--aura-color);color:#fff;transform:rotate(-13deg);z-index:3;animation:breathe 3s ease-in-out infinite}.result-block{text-align:center;height:128px;position:relative;z-index:2}.result-rank{font-size:10px;color:#b2a5ff;font-weight:900;letter-spacing:3px;transition:color .3s}.result-name{font-weight:900;letter-spacing:2.5px;font-size:clamp(24px,3vw,39px);line-height:1.5;color:#f8f7ff;text-shadow:0 0 20px #9991f377;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.result-odds{font-size:11px;color:#8892a9;letter-spacing:1px;margin-top:2px}.result-new{display:inline-block;margin-top:9px;font-size:9px;font-weight:900;color:#fcdca4;letter-spacing:2px;background:#b58d4e1c;border:1px solid #f0bd775a;padding:5px 13px;border-radius:20px}.result-new[hidden]{display:none}.roll-controls{width:min(100%,420px);margin:0 auto;z-index:2;position:relative}.roll-button{width:100%;height:62px;border:1px solid #d1caff9c;display:flex;align-items:center;justify-content:center;gap:12px;border-radius:12px;background:linear-gradient(110deg,#8c7ce3,#b0a1ff 51%,#776ae2);box-shadow:0 9px 32px #8b78ff46,inset 0 1px 0 #ffffffa3;color:#fff;font-size:14px;letter-spacing:2.5px;font-weight:900;transition:transform .18s,box-shadow .18s,filter .18s;position:relative;overflow:hidden}.roll-button:before{content:"";position:absolute;inset:-2px;background:linear-gradient(105deg,transparent 15%,#ffffff44 50%,transparent 85%);transform:translateX(-120%);transition:transform .6s}.roll-button:hover:not(:disabled):before{transform:translateX(120%)}.roll-button:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 13px 40px #9987ff79}.roll-button svg{height:21px;width:21px}.roll-button small{position:absolute;right:16px;border:1px solid #ffffff5b;padding:4px 6px;border-radius:4px;font-size:8px;letter-spacing:1px;color:#e9e4ff}.secondary-controls{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:12px 0 21px}.secondary-button{height:42px;border:1px solid #313650;background:#151b2d;border-radius:9px;display:flex;align-items:center;justify-content:center;gap:8px;color:#9ba4bb;font-size:11px;font-weight:800;transition:.2s}.secondary-button:hover{border-color:#7d78bb;color:#fff}.secondary-button.is-on{border-color:#8f83ec;background:#7164a62c;color:#d9d3ff}.secondary-button svg{height:16px;width:16px}.control-state{font-size:9px;letter-spacing:.6px;opacity:.7}.panel-bottom{height:43px;border-top:1px solid #30334a91;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2;color:#646e89;font-size:9px;font-weight:800;letter-spacing:.6px}.summon-panel.rolling .ring-mid{animation-duration:1.2s}.summon-panel.rolling .ring-outer{animation-duration:4s}.summon-panel.rolling .core-icon{animation:breathe .3s linear infinite}.summon-panel.legend-flash{animation:flash .7s ease-out}@keyframes flash{0%,100%{box-shadow:0 12px 45px #00000024}35%{box-shadow:0 0 65px var(--flash-color,#ffc46a) inset,0 0 80px var(--flash-color,#ffc46a)}}.quick-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:15px}.stat-tile{display:flex;align-items:center;gap:11px;padding:18px 14px;border:1px solid #283047;border-radius:12px;background:linear-gradient(130deg,#131929,#0d121f);min-width:0}.stat-symbol{font-size:25px;font-weight:800}.stat-symbol.teal{color:#68efe1}.stat-symbol.purple{color:#baadff}.stat-symbol.amber{color:#f1bf83}.stat-tile small{color:#8b93ad;font-size:8px;letter-spacing:1.5px;font-weight:900;white-space:nowrap}.stat-tile strong{font-size:20px;font-weight:900;display:block;line-height:1.5;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.stat-tile p{margin:0;color:#626e87;font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.right-rail{display:grid;gap:15px}.rail-card{padding:22px 20px}.rail-title{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:900;letter-spacing:1.3px}.title-spark{font-size:17px;color:#ae9fff;margin-right:5px}.title-spark.mint{color:#66e1c8}.micro-label{font-size:9px;letter-spacing:1px;color:#777f96}.boost-big{margin-top:29px;font-size:53px;font-weight:800;letter-spacing:-2.5px;color:#c6bfff;line-height:1}.boost-big b{font-size:27px;margin-left:5px;font-weight:600}.boost-caption{font-size:9px;color:#7d879f;letter-spacing:1.4px;font-weight:800;margin-top:10px}.boost-divider{height:1px;background:#2b3247;margin:25px 0 20px}.boost-rows{display:grid;gap:17px}.boost-rows div{display:flex;align-items:center;justify-content:space-between;font-size:11px}.boost-rows span{color:#818ba0}.boost-rows strong{font-size:12px;color:#d5d9ea}.rail-action{width:100%;margin-top:21px;border:1px solid #36354f;border-radius:9px;background:#26233f62;height:38px;display:flex;align-items:center;justify-content:center;gap:10px;font-weight:800;color:#c5bdff;font-size:10px}.rail-action:hover{background:#40376b}.rail-action svg{width:13px;height:13px}.activity-panel{min-height:282px}.recent-list{display:grid;margin-top:17px;gap:0}.recent-entry{display:flex;align-items:center;gap:9px;padding:9px 0;border-bottom:1px solid #252b3a}.recent-entry:last-child{border-bottom:0}.recent-icon{width:31px;height:31px;display:grid;place-items:center;border:1px solid color-mix(in srgb,var(--rc),transparent 55%);border-radius:9px;background:color-mix(in srgb,var(--rc),transparent 90%);color:var(--rc);font-size:17px;flex:none}.recent-body{min-width:0;flex:1}.recent-name{font-size:11px;font-weight:900;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.recent-odds{color:#6e7a93;font-size:9px;margin-top:2px}.recent-time{font-size:9px;color:#5c6881}.empty-recent{font-size:11px;line-height:2;color:#788198;margin-top:40px;text-align:center}.tip-banner{background:linear-gradient(110deg,#302a51,#1b2240 65%,#1a263b);border:1px solid #554b83a3;border-radius:14px;min-height:116px;padding:16px 13px;display:flex;align-items:flex-start;gap:10px}.tip-star{font-size:24px;color:#b0a3ff}.tip-banner div{flex:1;min-width:0}.tip-banner b{font-size:9px;color:#d4cbff;letter-spacing:1.2px}.tip-banner p{font-size:10px;line-height:1.7;color:#a8acc8;margin:7px 0 0}.tip-banner button{align-self:center;display:grid;place-items:center;border:0;border-radius:8px;width:27px;height:27px;background:#a89bf329;color:#cfc4ff}.tip-banner button svg{width:14px}.page-endline{display:flex;gap:14px;justify-content:center;margin:36px auto 0;color:#464f66;font-size:9px;letter-spacing:2px;font-weight:800}.page-endline span{color:#777098}
+.content{padding:42px clamp(22px,3.2vw,58px) 56px;max-width:1800px;margin:auto}.page{display:none;animation:page-in .35s ease both}.page.active{display:block}@keyframes page-in{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:30px}.eyebrow{font-size:10px;letter-spacing:3.3px;font-weight:800;color:#a29ad3;display:flex;align-items:center;gap:10px}.eyebrow-line{height:1px;width:26px;background:#a49aff}.eyebrow-dot{font-size:8px;color:#77708d}.section-heading h1{font-family:'Noto Sans JP','Manrope',sans-serif;font-size:clamp(26px,3vw,38px);line-height:1.4;font-weight:900;letter-spacing:-1.5px;margin:13px 0 8px}.section-heading h1 em,.help-inner h2 em{font-style:normal;background:linear-gradient(120deg,#c7c4ff,#8e83ff 42%,#a1e5ff);color:transparent;background-clip:text;-webkit-background-clip:text}.section-heading p{margin:0;color:#8993ab;font-size:12px;line-height:1.9}.intro-counter{text-align:right;min-width:140px}.intro-counter>span{color:#778098;letter-spacing:1.8px;font-size:9px;font-weight:800}.intro-counter strong{display:block;font-size:29px;line-height:1.6;letter-spacing:1px}.intro-counter strong b{font-size:33px;color:#c7c1ff}.intro-counter small{font-size:14px;color:#737c94}.discover-bar{height:3px;border-radius:8px;background:#262d42;overflow:hidden}.discover-bar>div,.large-progress>div{height:100%;width:0;background:linear-gradient(90deg,#8f85ff,#7cf3e8);transition:width .4s}.summon-layout{display:grid;grid-template-columns:minmax(0,1fr) 294px;gap:19px;align-items:start}.primary-column{min-width:0}.panel{border:1px solid #293047;background:linear-gradient(148deg,rgba(18,23,38,.92),rgba(13,18,30,.93));border-radius:var(--r);box-shadow:0 12px 45px #00000024}.summon-panel{position:relative;overflow:hidden;min-height:610px;padding:22px 25px 0;background:radial-gradient(ellipse at 50% 40%,#28204063,transparent 54%),radial-gradient(ellipse at 55% 6%,#20213d36,transparent 55%),linear-gradient(#111523,#101523)}.summon-panel:before{position:absolute;inset:0;content:"";pointer-events:none;opacity:.16;background-image:linear-gradient(#6a749610 1px,transparent 1px),linear-gradient(90deg,#6a749610 1px,transparent 1px);background-size:37px 37px;mask-image:linear-gradient(#000,transparent 75%)}.summon-panel:after{position:absolute;top:-30%;left:15%;width:70%;height:70%;content:"";background:radial-gradient(circle,#6459b526,transparent 70%);pointer-events:none}.stage-head{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2;color:#9298b0;font-size:9px;letter-spacing:1.6px;font-weight:800}.diamond-dot{display:inline-block;width:5px;height:5px;background:#aea3ff;transform:rotate(45deg);margin-right:8px;box-shadow:0 0 8px #a89eff}.stage-coordinate{color:#67728d}.altar{--aura-color:#9c90ff;width:min(100%,375px);height:300px;position:relative;margin:14px auto 0;display:grid;place-items:center;isolation:isolate}.altar-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:73%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--aura-color) 0,transparent 66%);opacity:.19;filter:blur(34px);transition:background .5s;z-index:-1}.ring-outer,.ring-mid,.ring-inner{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);aspect-ratio:1;border-radius:50%;pointer-events:none}.ring-outer{width:267px;border:1px solid #aaaaee26;box-shadow:0 0 0 8px #ffffff03,0 0 0 33px #aabbff03;background:repeating-conic-gradient(from 7deg,transparent 0 13deg,#d9daff23 13.5deg 14deg,transparent 14.2deg 30deg) border-box;animation:spin-center 45s linear infinite}.ring-outer:before,.ring-outer:after{position:absolute;content:"";inset:-14px;border:1px solid transparent;border-top:1px solid #9c94fba8;border-bottom:1px solid #8d82fb45;border-radius:50%}.ring-outer:after{inset:-32px;border-top-color:#504a8a9e;border-bottom-color:transparent;transform:rotate(30deg)}.ring-mid{width:214px;border:1px dashed #aaa6ea4f;box-shadow:0 0 45px #9682ff13;animation:spin-reverse-center 24s linear infinite}.ring-mid:before,.ring-mid:after{content:"";position:absolute;inset:-5px;border:2px solid transparent;border-left-color:#bcb3ff;border-radius:50%;transform:rotate(-25deg);filter:drop-shadow(0 0 9px #a89bff)}.ring-mid:after{border-left-color:transparent;border-right-color:#7770b9;transform:rotate(140deg)}.ring-inner{width:154px;border:1px solid #9e9af62e;box-shadow:inset 0 0 35px #8477e514,0 0 18px #7a6cc015}.altar-ray{position:absolute;top:50%;left:50%;width:1px;height:260px;background:linear-gradient(transparent,#a99aff26,transparent);transform-origin:50% 50%}.ray-1{transform:translate(-50%,-50%) rotate(0)}.ray-2{transform:translate(-50%,-50%) rotate(60deg)}.ray-3{transform:translate(-50%,-50%) rotate(120deg)}.orbit-tick{position:absolute;width:7px;height:7px;transform:rotate(45deg);background:#bdacff;box-shadow:0 0 15px #a49aff}.orbit-tick-a{top:24px;left:120px}.orbit-tick-b{right:39px;bottom:74px;width:4px;height:4px;background:#a1ffee}.orbit-float{position:absolute;color:#b4a7ffb0;font-size:14px;animation:float 4s ease-in-out infinite}.float-a{top:48px;right:82px}.float-b{bottom:40px;left:48px;font-size:10px;animation-delay:1.4s}.float-c{right:36px;top:135px;font-size:8px;animation-delay:2s}.aura-center{width:126px;height:126px;border-radius:50%;display:grid;place-items:center;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;background:radial-gradient(circle at 30% 28%,#f5f4ffcc 0,#b5abff8a 5%,var(--aura-color) 20%,#27264d 49%,#0c1020 69%);box-shadow:inset 0 0 14px #ffffffa8,0 0 22px var(--aura-color),0 0 66px #9789ff55,0 0 100px #816cff24;transition:background .4s,box-shadow .4s}.aura-center:before{position:absolute;inset:-12px;border:1px solid #ffffff33;content:"";border-radius:50%;box-shadow:0 0 17px var(--aura-color)}.aura-center:after{position:absolute;inset:13px;border:1px solid #ffffff3d;content:"";border-radius:50%;transform:rotate(20deg)}.core-flare{position:absolute;inset:12px;background:conic-gradient(from 42deg,transparent,rgba(255,255,255,.27),transparent,rgba(255,255,255,.13),transparent);border-radius:50%;animation:spin 10s linear infinite}.core-icon{font-size:65px;line-height:1;text-shadow:0 0 15px #ffffff9e,0 0 32px var(--aura-color);color:#fff;transform:rotate(-13deg);z-index:3;animation:breathe 3s ease-in-out infinite}.result-block{text-align:center;height:128px;position:relative;z-index:2}.result-rank{font-size:10px;color:#b2a5ff;font-weight:900;letter-spacing:3px;transition:color .3s}.result-name{font-weight:900;letter-spacing:2.5px;font-size:clamp(24px,3vw,39px);line-height:1.5;color:#f8f7ff;text-shadow:0 0 20px #9991f377;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.result-odds{font-size:11px;color:#8892a9;letter-spacing:1px;margin-top:2px}.result-new{display:inline-block;margin-top:9px;font-size:9px;font-weight:900;color:#fcdca4;letter-spacing:2px;background:#b58d4e1c;border:1px solid #f0bd775a;padding:5px 13px;border-radius:20px}.result-new[hidden]{display:none}.roll-controls{width:min(100%,420px);margin:0 auto;z-index:2;position:relative}.roll-button{width:100%;height:62px;border:1px solid #d1caff9c;display:flex;align-items:center;justify-content:center;gap:12px;border-radius:12px;background:linear-gradient(110deg,#8c7ce3,#b0a1ff 51%,#776ae2);box-shadow:0 9px 32px #8b78ff46,inset 0 1px 0 #ffffffa3;color:#fff;font-size:14px;letter-spacing:2.5px;font-weight:900;transition:transform .18s,box-shadow .18s,filter .18s;position:relative;overflow:hidden}.roll-button:before{content:"";position:absolute;inset:-2px;background:linear-gradient(105deg,transparent 15%,#ffffff44 50%,transparent 85%);transform:translateX(-120%);transition:transform .6s}.roll-button:hover:not(:disabled):before{transform:translateX(120%)}.roll-button:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 13px 40px #9987ff79}.roll-button svg{height:21px;width:21px}.roll-button small{position:absolute;right:16px;border:1px solid #ffffff5b;padding:4px 6px;border-radius:4px;font-size:8px;letter-spacing:1px;color:#e9e4ff}.secondary-controls{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:12px 0 21px}.secondary-button{height:42px;border:1px solid #313650;background:#151b2d;border-radius:9px;display:flex;align-items:center;justify-content:center;gap:8px;color:#9ba4bb;font-size:11px;font-weight:800;transition:.2s}.secondary-button:hover{border-color:#7d78bb;color:#fff}.secondary-button.is-on{border-color:#8f83ec;background:#7164a62c;color:#d9d3ff}.secondary-button svg{height:16px;width:16px}.control-state{font-size:9px;letter-spacing:.6px;opacity:.7}.panel-bottom{height:43px;border-top:1px solid #30334a91;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2;color:#646e89;font-size:9px;font-weight:800;letter-spacing:.6px}.summon-panel.rolling .ring-mid{animation-duration:1.2s}.summon-panel.rolling .ring-outer{animation-duration:4s}.summon-panel.rolling .core-icon{animation:breathe .3s linear infinite}.summon-panel.legend-flash{animation:flash .7s ease-out}@keyframes flash{0%,100%{box-shadow:0 12px 45px #00000024}35%{box-shadow:0 0 65px var(--flash-color,#ffc46a) inset,0 0 80px var(--flash-color,#ffc46a)}}.quick-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:15px}.stat-tile{display:flex;align-items:center;gap:11px;padding:18px 14px;border:1px solid #283047;border-radius:12px;background:linear-gradient(130deg,#131929,#0d121f);min-width:0}.stat-symbol{font-size:25px;font-weight:800}.stat-symbol.teal{color:#68efe1}.stat-symbol.purple{color:#baadff}.stat-symbol.amber{color:#f1bf83}.stat-tile small{color:#8b93ad;font-size:8px;letter-spacing:1.5px;font-weight:900;white-space:nowrap}.stat-tile strong{font-size:20px;font-weight:900;display:block;line-height:1.5;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.stat-tile p{margin:0;color:#626e87;font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.right-rail{display:grid;gap:15px}.rail-card{padding:22px 20px}.rail-title{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:900;letter-spacing:1.3px}.title-spark{font-size:17px;color:#ae9fff;margin-right:5px}.title-spark.mint{color:#66e1c8}.micro-label{font-size:9px;letter-spacing:1px;color:#777f96}.boost-big{margin-top:29px;font-size:53px;font-weight:800;letter-spacing:-2.5px;color:#c6bfff;line-height:1}.boost-big b{font-size:27px;margin-left:5px;font-weight:600}.boost-caption{font-size:9px;color:#7d879f;letter-spacing:1.4px;font-weight:800;margin-top:10px}.boost-divider{height:1px;background:#2b3247;margin:25px 0 20px}.boost-rows{display:grid;gap:17px}.boost-rows div{display:flex;align-items:center;justify-content:space-between;font-size:11px}.boost-rows span{color:#818ba0}.boost-rows strong{font-size:12px;color:#d5d9ea}.rail-action{width:100%;margin-top:21px;border:1px solid #36354f;border-radius:9px;background:#26233f62;height:38px;display:flex;align-items:center;justify-content:center;gap:10px;font-weight:800;color:#c5bdff;font-size:10px}.rail-action:hover{background:#40376b}.rail-action svg{width:13px;height:13px}.activity-panel{min-height:282px}.recent-list{display:grid;margin-top:17px;gap:0}.recent-entry{display:flex;align-items:center;gap:9px;padding:9px 0;border-bottom:1px solid #252b3a}.recent-entry:last-child{border-bottom:0}.recent-icon{width:31px;height:31px;display:grid;place-items:center;border:1px solid color-mix(in srgb,var(--rc),transparent 55%);border-radius:9px;background:color-mix(in srgb,var(--rc),transparent 90%);color:var(--rc);font-size:17px;flex:none}.recent-body{min-width:0;flex:1}.recent-name{font-size:11px;font-weight:900;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.recent-odds{color:#6e7a93;font-size:9px;margin-top:2px}.recent-time{font-size:9px;color:#5c6881}.empty-recent{font-size:11px;line-height:2;color:#788198;margin-top:40px;text-align:center}.tip-banner{background:linear-gradient(110deg,#302a51,#1b2240 65%,#1a263b);border:1px solid #554b83a3;border-radius:14px;min-height:116px;padding:16px 13px;display:flex;align-items:flex-start;gap:10px}.tip-star{font-size:24px;color:#b0a3ff}.tip-banner div{flex:1;min-width:0}.tip-banner b{font-size:9px;color:#d4cbff;letter-spacing:1.2px}.tip-banner p{font-size:10px;line-height:1.7;color:#a8acc8;margin:7px 0 0}.tip-banner button{align-self:center;display:grid;place-items:center;border:0;border-radius:8px;width:27px;height:27px;background:#a89bf329;color:#cfc4ff}.tip-banner button svg{width:14px}.page-endline{display:flex;gap:14px;justify-content:center;margin:36px auto 0;color:#464f66;font-size:9px;letter-spacing:2px;font-weight:800}.page-endline span{color:#777098}
 /* ARCHIVE */
 .collection-summary{display:flex;align-items:center;gap:22px;padding:19px 24px;margin-bottom:24px}.collection-summary>div:first-child{flex:none}.collection-summary span,.forge-overview-text>span,.potion-active>div:nth-child(2)>span{display:block;font-size:9px;letter-spacing:1.8px;font-weight:800;color:#838da5}.collection-summary strong{display:block;font-size:25px;letter-spacing:1px}.collection-summary strong small{color:#6a738a;font-size:12px}.large-progress{background:#232d41;height:7px;border-radius:10px;flex:1;overflow:hidden}.collection-percent{font-size:15px;font-weight:900;color:#beb6ff;min-width:60px;text-align:right}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap}.tab-group{display:flex;gap:3px;border:1px solid #2a3044;border-radius:10px;background:#101522;padding:4px}.tab-group button{border:0;background:transparent;border-radius:7px;color:#838da6;padding:11px 15px;font-weight:800;font-size:11px}.tab-group button.active{background:#8779e62c;color:#cfc8ff;box-shadow:inset 0 0 0 1px #a79dff34}.tab-group button span{font-size:9px;margin-left:5px;opacity:.7}.toolbar-right{display:flex;gap:10px;flex-wrap:wrap}.search-box{height:41px;display:flex;align-items:center;gap:9px;padding:0 12px;border:1px solid #2c344b;border-radius:9px;background:#111827;color:#69758e}.search-box svg{width:16px}.search-box input{width:160px;border:0;outline:0;background:transparent;color:#f4f1ff;font-size:11px}.search-box input::placeholder{color:#6b7690}#tier-filter{height:41px;background:#111827;border:1px solid #2c344b;color:#b5bbcc;border-radius:9px;padding:0 12px;font-size:11px;max-width:220px}.aura-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.aura-card{--c:#a99bff;min-width:0;position:relative;background:radial-gradient(ellipse at 50% 1%,color-mix(in srgb,var(--c),transparent 88%),transparent 74%),linear-gradient(#171c2b,#101522);border:1px solid color-mix(in srgb,var(--c),#293047 70%);padding:18px 15px 15px;min-height:205px;border-radius:13px;overflow:hidden;transition:transform .2s,border-color .2s}.aura-card:hover{transform:translateY(-3px);border-color:var(--c)}.aura-card.locked{background:linear-gradient(#151a28,#111622);border-color:#273044;opacity:.62}.aura-card.locked:hover{opacity:.95}.aura-card-top{display:flex;justify-content:space-between;align-items:center;color:var(--c);font-size:8px;letter-spacing:1.25px;font-weight:900}.aura-count{color:#b8c3d9;background:#ffffff10;border-radius:20px;padding:3px 7px;font-size:9px}.aura-art{height:94px;display:grid;place-items:center;position:relative}.aura-art:before{content:"";position:absolute;width:78px;height:78px;border:1px solid color-mix(in srgb,var(--c),transparent 60%);border-radius:50%;box-shadow:0 0 20px color-mix(in srgb,var(--c),transparent 85%),inset 0 0 20px color-mix(in srgb,var(--c),transparent 90%)}.aura-art:after{content:"";position:absolute;width:64px;height:64px;border:1px dashed color-mix(in srgb,var(--c),transparent 78%);border-radius:50%;animation:spin 25s linear infinite}.aura-art span{font-size:38px;color:var(--c);filter:drop-shadow(0 0 12px var(--c));position:relative;z-index:1}.locked .aura-art span{filter:none;color:#536077}.locked .aura-art:before{border-color:#435069;box-shadow:none}.locked .aura-art:after{border-color:#37435b}.aura-card h3{font-family:'Manrope',sans-serif;font-size:14px;letter-spacing:.5px;margin:5px 0;color:#f2f3ff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.aura-card.locked h3{color:#68738b}.aura-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:6px}.aura-card-bottom small{font-size:9px;color:#8792a9}.aura-card-bottom button{font-size:9px;border:1px solid #555073;color:#c5bdff;background:#3b345a6e;border-radius:7px;padding:6px 9px;font-weight:800}.aura-card-bottom button:hover{background:#685a9c}.aura-card-bottom button.is-equipped{background:#33585488;border-color:#447e74;color:#a9ffdb}.grid-empty{text-align:center;color:#75809a;padding:80px 0}
 /* FORGE AND LAB */
@@ -18,7 +18,7 @@
 /* RECORDS */
 .records-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:24px}.record-card{padding:24px;border:1px solid #2d354c;border-radius:14px;background:linear-gradient(155deg,#171d2e,#101522)}.record-card .record-icon{font-size:25px;color:#b7aeff;margin-bottom:14px}.record-card small{display:block;font-size:9px;color:#8791aa;letter-spacing:1.4px;font-weight:800}.record-card strong{display:block;font-size:clamp(20px,2.4vw,30px);margin-top:7px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.record-card p{margin:7px 0 0;color:#65728e;font-size:10px}.records-bottom{display:grid;grid-template-columns:1.1fr .9fr;gap:17px}.data-panel,.achievements-panel{padding:24px}.data-panel p{line-height:1.9;font-size:11px;color:#8690a8}.save-status{display:flex;align-items:center;justify-content:flex-start;gap:9px;color:#90ccb9;font-size:11px;margin:18px 0}.save-status .online-dot{margin:0}.data-actions{display:flex;gap:10px;flex-wrap:wrap}.solid-small{background:#8d7ce4;color:#fff;border:1px solid #a59aff;border-radius:9px;padding:11px 14px;display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:900}.solid-small svg{width:16px;height:16px}.data-warning{border:1px solid #6d593d86;background:#65471b24;border-radius:9px;padding:12px;margin:20px 0;color:#b7a48f;font-size:10px;line-height:1.8}.data-warning span{font-weight:900;color:#f2c589;margin-right:10px}.danger-link{border:0;background:transparent;color:#db8496;padding:0;text-decoration:underline;text-underline-offset:3px;font-size:10px;font-weight:800}.milestone{display:flex;align-items:center;gap:13px;padding:15px 0;border-bottom:1px solid #2b3345}.milestone:last-child{border:0}.milestone-symbol{height:37px;width:37px;flex:none;border-radius:10px;display:grid;place-items:center;border:1px solid #4c445f;background:#36304a70;color:#ab9df1}.milestone.completed .milestone-symbol{color:#90f5ce;border-color:#427b70;background:#315e554e}.milestone-text{flex:1}.milestone-text b{display:block;font-size:12px}.milestone-text small{font-size:10px;color:#7d879e;line-height:1.7}.milestone-state{font-size:9px;color:#738098;font-weight:900}.milestone.completed .milestone-state{color:#83e4c4}
 /* FEEDBACK */
-.toast-stack{position:fixed;right:22px;bottom:20px;z-index:80;display:grid;gap:8px;max-width:min(380px,calc(100vw - 40px));pointer-events:none}.toast{display:flex;align-items:center;gap:12px;border:1px solid #55497e;background:#17172bef;backdrop-filter:blur(15px);border-radius:12px;padding:14px 17px;box-shadow:0 10px 35px #0009;animation:toast-in .25s ease both;color:#ddd8ff;pointer-events:auto;font-size:12px}.toast.good{border-color:#46756b}.toast.error{border-color:#995769}.toast-symbol{font-size:22px}.toast b{display:block;font-size:12px}.toast small{display:block;font-size:10px;color:#97a1b5;line-height:1.6;margin-top:3px}@keyframes toast-in{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:translateX(0)}}.discovery-overlay{position:fixed;inset:0;z-index:60;display:grid;place-items:center;isolation:isolate}.discovery-overlay[hidden]{display:none}.discovery-wash{position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,color-mix(in srgb,var(--discovery-color),transparent 65%),#050610ee 65%);backdrop-filter:blur(16px)}.discovery-content{text-align:center;position:relative;padding:35px;animation:discover-in .65s cubic-bezier(.17,.84,.44,1) both}.discovery-eyebrow{font-size:13px;color:#fff;font-weight:900;letter-spacing:5px}.discovery-icon{font-size:clamp(90px,15vw,160px);color:var(--discovery-color);text-shadow:0 0 35px var(--discovery-color),0 0 95px var(--discovery-color);margin:30px 0;animation:breathe 2.4s ease-in-out infinite}.discovery-name{font-size:clamp(30px,6vw,66px);font-weight:900;letter-spacing:3px;color:#fff;text-shadow:0 0 45px var(--discovery-color)}.discovery-odds{font-size:15px;letter-spacing:3px;color:#d5cfff;margin:14px 0 35px}.discovery-content button{background:#ffffff13;color:white;border:1px solid #ffffff8d;display:inline-flex;align-items:center;gap:12px;padding:13px 24px;border-radius:10px;font-size:12px;font-weight:900;letter-spacing:2px}.discovery-content button:hover{background:#ffffff2a}.discovery-content button svg{width:15px}@keyframes discover-in{from{opacity:0;transform:scale(.6) translateY(50px)}to{opacity:1;transform:scale(1) translateY(0)}}.help-modal{width:min(600px,calc(100vw - 24px));background:radial-gradient(ellipse at 50% -5%,#50446e48,transparent 60%),#141928;border:1px solid #70639c;border-radius:19px;color:var(--text);padding:0;box-shadow:0 35px 100px #000d}.help-modal::backdrop{background:#02040cdb;backdrop-filter:blur(7px)}.help-inner{padding:35px;position:relative}.help-close{position:absolute;right:18px;top:18px}.help-inner h2{font-size:26px;margin:17px 0 22px;font-weight:900}.help-steps{display:grid;gap:13px}.help-steps>div{border:1px solid #323951;background:#171d2d;padding:15px;border-radius:11px}.help-steps span{font-weight:900;color:#9889f2;margin-right:11px}.help-steps b{letter-spacing:2px;font-size:11px}.help-steps p{margin:8px 0 0;color:#9aa4bb;font-size:11px;line-height:1.8}.help-extra{color:#7e89a1;line-height:1.8;font-size:10px;margin:20px 0}.help-inner .roll-button{height:51px;font-size:12px}.help-inner .roll-button svg{width:16px}.burst-particle{position:absolute;top:50%;left:50%;width:var(--sz);height:var(--sz);border-radius:50%;background:var(--aura-color);box-shadow:0 0 12px var(--aura-color);z-index:5;pointer-events:none;animation:burst-out var(--dur) ease-out forwards}@keyframes burst-out{0%{opacity:1;transform:translate(-50%,-50%) scale(.4)}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(.1)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes spin-reverse{to{transform:rotate(-360deg)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}@keyframes breathe{0%,100%{transform:scale(.95)}50%{transform:scale(1.06)}}
+.toast-stack{position:fixed;right:22px;bottom:20px;z-index:80;display:grid;gap:8px;max-width:min(380px,calc(100vw - 40px));pointer-events:none}.toast{display:flex;align-items:center;gap:12px;border:1px solid #55497e;background:#17172bef;backdrop-filter:blur(15px);border-radius:12px;padding:14px 17px;box-shadow:0 10px 35px #0009;animation:toast-in .25s ease both;color:#ddd8ff;pointer-events:auto;font-size:12px}.toast.good{border-color:#46756b}.toast.error{border-color:#995769}.toast-symbol{font-size:22px}.toast b{display:block;font-size:12px}.toast small{display:block;font-size:10px;color:#97a1b5;line-height:1.6;margin-top:3px}@keyframes toast-in{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:translateX(0)}}.discovery-overlay{position:fixed;inset:0;z-index:60;display:grid;place-items:center;isolation:isolate}.discovery-overlay[hidden]{display:none}.discovery-wash{position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,color-mix(in srgb,var(--discovery-color),transparent 65%),#050610ee 65%);backdrop-filter:blur(16px)}.discovery-content{text-align:center;position:relative;padding:35px;animation:discover-in .65s cubic-bezier(.17,.84,.44,1) both}.discovery-eyebrow{font-size:13px;color:#fff;font-weight:900;letter-spacing:5px}.discovery-icon{font-size:clamp(90px,15vw,160px);color:var(--discovery-color);text-shadow:0 0 35px var(--discovery-color),0 0 95px var(--discovery-color);margin:30px 0;animation:breathe 2.4s ease-in-out infinite}.discovery-name{font-size:clamp(30px,6vw,66px);font-weight:900;letter-spacing:3px;color:#fff;text-shadow:0 0 45px var(--discovery-color)}.discovery-odds{font-size:15px;letter-spacing:3px;color:#d5cfff;margin:14px 0 35px}.discovery-content button{background:#ffffff13;color:white;border:1px solid #ffffff8d;display:inline-flex;align-items:center;gap:12px;padding:13px 24px;border-radius:10px;font-size:12px;font-weight:900;letter-spacing:2px}.discovery-content button:hover{background:#ffffff2a}.discovery-content button svg{width:15px}@keyframes discover-in{from{opacity:0;transform:scale(.6) translateY(50px)}to{opacity:1;transform:scale(1) translateY(0)}}.help-modal{width:min(600px,calc(100vw - 24px));background:radial-gradient(ellipse at 50% -5%,#50446e48,transparent 60%),#141928;border:1px solid #70639c;border-radius:19px;color:var(--text);padding:0;box-shadow:0 35px 100px #000d}.help-modal::backdrop{background:#02040cdb;backdrop-filter:blur(7px)}.help-inner{padding:35px;position:relative}.help-close{position:absolute;right:18px;top:18px}.help-inner h2{font-size:26px;margin:17px 0 22px;font-weight:900}.help-steps{display:grid;gap:13px}.help-steps>div{border:1px solid #323951;background:#171d2d;padding:15px;border-radius:11px}.help-steps span{font-weight:900;color:#9889f2;margin-right:11px}.help-steps b{letter-spacing:2px;font-size:11px}.help-steps p{margin:8px 0 0;color:#9aa4bb;font-size:11px;line-height:1.8}.help-extra{color:#7e89a1;line-height:1.8;font-size:10px;margin:20px 0}.help-inner .roll-button{height:51px;font-size:12px}.help-inner .roll-button svg{width:16px}.burst-particle{position:absolute;top:50%;left:50%;width:var(--sz);height:var(--sz);border-radius:50%;background:var(--aura-color);box-shadow:0 0 12px var(--aura-color);z-index:5;pointer-events:none;animation:burst-out var(--dur) ease-out forwards}@keyframes burst-out{0%{opacity:1;transform:translate(-50%,-50%) scale(.4)}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(.1)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes spin-reverse{to{transform:rotate(-360deg)}}@keyframes spin-center{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}@keyframes spin-reverse-center{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(-360deg)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}@keyframes breathe{0%,100%{transform:scale(.95)}50%{transform:scale(1.06)}}
 @media(max-width:1450px){.sidebar{width:220px}.summon-layout{grid-template-columns:minmax(0,1fr) 250px}.rail-card{padding:18px 15px}.tip-banner{padding:13px 10px}.aura-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.stat-tile{gap:6px;padding:13px 9px}.stat-symbol{font-size:20px}.stat-tile strong{font-size:17px}.stat-tile small{font-size:7px}.recipe-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:1130px){.summon-layout{grid-template-columns:1fr}.right-rail{grid-template-columns:1fr 1fr}.tip-banner{grid-column:1/-1}.activity-panel{min-height:0}.records-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.potion-inventory{grid-template-columns:repeat(3,minmax(0,1fr))}.summon-panel{min-height:610px}}
 @media(max-width:760px){.app-shell{display:block}.sidebar{width:100%;height:auto;position:relative;padding:14px 14px 12px;border-right:0;border-bottom:1px solid #273044;gap:9px}.brand{padding:0 3px 9px}.brand-symbol{width:36px;height:36px}.brand-symbol svg{width:22px;height:22px}.brand-name{font-size:17px}.sidebar-section-label,.sidebar-footer{display:none}.nav{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}.nav-btn{padding:10px 2px;display:flex;flex-direction:column;gap:5px;border-radius:9px;min-height:60px;justify-content:center}.nav-btn svg{width:17px;height:17px}.nav-btn>span:nth-of-type(1){font-size:9px;white-space:nowrap}.nav-index,.nav-count{display:none}.nav-btn.active{box-shadow:inset 0 -2px #a79aff}.topbar{height:58px;padding:0 15px}.top-actions{gap:7px}.status-pill,.breadcrumb-root{display:none}.top-asset{border-left:0;padding-left:0;margin-right:5px}.top-asset strong{font-size:13px}.top-asset small{font-size:7px}.mini-gem{font-size:17px}.icon-btn{width:31px;height:31px}.content{padding:27px 15px 45px}.section-heading{align-items:flex-start;margin-bottom:20px}.eyebrow{font-size:8px;letter-spacing:1.7px}.section-heading h1{font-size:26px;letter-spacing:-1px;margin-top:12px}.section-heading p{font-size:10px}.intro-counter{min-width:70px}.intro-counter>span{font-size:7px}.intro-counter strong{font-size:15px}.intro-counter strong b{font-size:20px}.intro-counter small{font-size:11px}.summon-panel{min-height:590px;padding:19px 14px 0}.stage-head{font-size:8px}.stage-coordinate{display:none}.altar{margin-top:8px;height:290px}.result-block{height:126px}.result-name{font-size:26px}.panel-bottom{font-size:8px}.panel-bottom span:last-child{display:none}.right-rail{grid-template-columns:1fr 1fr;gap:10px}.rail-card{padding:14px}.rail-title{font-size:9px;letter-spacing:.4px}.boost-big{font-size:36px;margin-top:15px}.boost-caption{font-size:7px}.boost-divider{margin:18px 0}.boost-rows{gap:10px}.boost-rows div{font-size:9px}.boost-rows strong{font-size:9px}.rail-action{font-size:9px}.recent-name{font-size:9px}.recent-odds{font-size:8px}.recent-icon{height:24px;width:24px}.recent-time{display:none}.tip-banner{grid-column:1/-1}.quick-stats{gap:7px}.stat-tile{padding:11px 7px}.stat-symbol{display:none}.stat-tile small{font-size:7px}.stat-tile strong{font-size:15px}.stat-tile p{font-size:7px}.aura-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.aura-card{min-height:186px;padding:13px}.aura-art{height:81px}.aura-art:before{width:66px;height:66px}.aura-art:after{width:52px;height:52px}.aura-art span{font-size:34px}.aura-card h3{font-size:12px}.toolbar-right{width:100%}.search-box{flex:1;min-width:100px}.search-box input{width:100%}#tier-filter{flex:1;min-width:110px}.collection-summary{padding:12px;gap:12px}.collection-summary span{font-size:7px}.collection-summary strong{font-size:20px}.collection-percent{font-size:12px;min-width:35px}.tab-group{width:100%;justify-content:space-around}.tab-group button{flex:1;padding:9px 6px}.recipe-grid{grid-template-columns:1fr}.equip-slots{grid-template-columns:1fr;gap:7px}.equip-slot{min-height:0}.forge-overview{padding:16px;gap:10px;flex-wrap:wrap}.forge-glyph{font-size:33px}.forge-overview-text strong{font-size:23px}.forge-overview>.outline-btn{margin-left:auto}.potion-inventory{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.potion-active{gap:13px;padding:13px}.potion-illustration{width:52px;height:52px;font-size:28px;border-radius:12px}.potion-active strong{font-size:14px}.potion-active p{font-size:9px}.potion-clock{font-size:15px}.records-bottom{grid-template-columns:1fr}.record-card{padding:14px}.record-card strong{font-size:22px}.help-inner{padding:25px 18px}.help-inner h2{font-size:21px}.small-note{font-size:8px}.page-endline{font-size:7px;letter-spacing:1px}}
@@ -266,6 +266,174 @@ html{overflow-x:hidden}body{overflow-x:hidden}.app-shell,.work-area,.content,.pa
   .aura-center .core-icon{font-size:65px!important;line-height:1!important;display:block!important;}
   .discovery-overlay .discovery-icon{font-size:clamp(90px,15vw,160px)!important;display:block!important;line-height:1!important;}
 }
+/* VOID RNG — SPECTACLE GRAPHICS v9 */
+.spectacle-orb{overflow:visible!important;contain:layout style;filter:drop-shadow(0 0 7px color-mix(in srgb,var(--sp-accent),transparent 34%)) drop-shadow(0 0 15px color-mix(in srgb,var(--sp-accent2),transparent 56%));transition:filter .3s;}
+.spectacle-orb .aura-orb-svg{overflow:visible;display:block}
+.spectacle-orb svg .sp-reverse,.spectacle-orb svg .sp-forward,.spectacle-orb svg .sp-slow,.spectacle-orb svg .sp-outerpulse,.spectacle-orb svg .sp-twist,.spectacle-orb svg .sp-breathe,.spectacle-orb svg .sp-heave,.spectacle-orb svg .sp-aurora{transform-box:view-box;transform-origin:60px 60px;}
+.spectacle-orb .sp-reverse{animation:spectacle-reverse calc(var(--sp-speed) * .74) linear infinite;}
+.spectacle-orb .sp-forward{animation:spectacle-forward var(--sp-speed) linear infinite;}
+.spectacle-orb .sp-slow{animation:spectacle-forward calc(var(--sp-speed) * 1.9) linear infinite;}
+.spectacle-orb .sp-twist{animation:spectacle-twist 6.2s ease-in-out infinite;}
+.spectacle-orb .sp-breathe{animation:spectacle-breathe 3.4s ease-in-out infinite;}
+.spectacle-orb .sp-heave{animation:spectacle-heave 3.2s ease-in-out infinite;}
+.spectacle-orb .sp-outerpulse{animation:spectacle-twist 8s ease-in-out infinite;}
+.spectacle-orb .sp-aurora{animation:spectacle-aurora 3.2s ease-in-out infinite;}
+.spectacle-orb .sp-blink{animation:spectacle-blink 2.9s ease-in-out infinite;}
+.spectacle-orb.sp-tier-0,.spectacle-orb.sp-tier-1,.spectacle-orb.sp-tier-2{filter:drop-shadow(0 0 3px color-mix(in srgb,var(--sp-accent),transparent 70%));}
+.spectacle-orb.sp-tier-8,.spectacle-orb.sp-tier-9{filter:drop-shadow(0 0 8px color-mix(in srgb,var(--sp-accent),transparent 8%)) drop-shadow(0 0 18px color-mix(in srgb,var(--sp-accent2),transparent 43%)) drop-shadow(0 0 27px color-mix(in srgb,var(--sp-accent),transparent 63%));}
+.spectacle-orb.sp-theme-inferno .sp-core{filter:drop-shadow(0 0 8px #ff6c45a3)}
+.spectacle-orb.sp-theme-glacial .sp-core{filter:drop-shadow(0 0 5px #9eefffd6)}
+.spectacle-orb.sp-theme-void .sp-core{filter:drop-shadow(0 0 11px var(--sp-accent))}
+.spectacle-orb.sp-theme-seraph .sp-core{filter:drop-shadow(0 0 8px #fff3d78c)}
+.spectacle-orb.sp-theme-mechanical .sp-core{filter:drop-shadow(0 0 5px var(--sp-accent))}
+@keyframes spectacle-forward{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes spectacle-reverse{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
+@keyframes spectacle-twist{0%,100%{transform:rotate(-8deg) scale(.98)}50%{transform:rotate(14deg) scale(1.03)}}
+@keyframes spectacle-breathe{0%,100%{transform:scale(.97);opacity:.92}50%{transform:scale(1.035);opacity:1}}
+@keyframes spectacle-heave{0%,100%{transform:scale(.96)}50%{transform:scale(1.06)}}
+@keyframes spectacle-aurora{0%,100%{opacity:.5;transform:scale(.95)}50%{opacity:.88;transform:scale(1.07)}}
+@keyframes spectacle-blink{0%,100%{opacity:.26}48%{opacity:1}70%{opacity:.3}}
+#page-collection .aura-card{border-color:color-mix(in srgb,var(--c),#34344a 60%);transition:border-color .3s,transform .3s,box-shadow .3s;}
+#page-collection .aura-card:not(.locked){background:radial-gradient(circle at 50% 28%,color-mix(in srgb,var(--c),transparent 80%) 0%,transparent 61%),linear-gradient(148deg,#1b1d30 0%,#0d101b 96%);}
+#page-collection .aura-card.void-rare:not(.locked){background:radial-gradient(circle at 52% 31%,color-mix(in srgb,var(--special),transparent 73%),transparent 65%),linear-gradient(145deg,#1b1930,#090d18);border-color:color-mix(in srgb,var(--special),transparent 30%);box-shadow:inset 0 0 32px color-mix(in srgb,var(--special),transparent 95%),0 0 17px color-mix(in srgb,var(--special),transparent 82%);}
+#page-collection .aura-card.void-rare:not(.locked):hover{transform:translateY(-3px);box-shadow:0 0 29px color-mix(in srgb,var(--special),transparent 68%);}
+#page-collection .aura-card .aura-art{height:130px;display:grid;place-items:center;overflow:visible;z-index:2;cursor:zoom-in;border-radius:10px;}
+#page-collection .aura-card .aura-art:not(:has(.void-unknown-mark)):focus-visible{outline:2px solid var(--c);outline-offset:2px}
+#page-collection .aura-card .aura-art .spectacle-orb{width:112px!important;height:112px!important;}
+#page-collection .aura-card.void-rare .aura-art .spectacle-orb{width:123px!important;height:123px!important;transform:scale(1.03)}
+#page-collection .aura-card .aura-art .void-unknown-mark{cursor:default}
+#page-collection .aura-card .aura-art .spectacle-orb{pointer-events:none}
+#page-collection .aura-card h3{position:relative;z-index:2;font-size:14px;white-space:normal;overflow:visible;text-overflow:unset;line-height:1.2;}
+#page-collection .aura-card .aura-card-bottom,#page-collection .aura-card .aura-rarity-meta,#page-collection .aura-card .aura-signature-meta{position:relative;z-index:2}
+#page-collection .aura-card.void-rare h3{color:#fff;letter-spacing:.6px;text-shadow:0 0 12px color-mix(in srgb,var(--special),transparent 65%);}
+#page-collection .aura-card.locked .aura-art{cursor:default}
+#page-collection .aura-card.void-rare::before{opacity:.33}
+#page-collection .aura-card.void-rare::after{opacity:.5}
+.equipped-orb-host .spectacle-orb{width:174px!important;height:174px!important;}
+.aura-center:has(.spectacle-orb){background:transparent;border:none;box-shadow:none;overflow:visible;}
+.aura-center:has(.spectacle-orb)::before,.aura-center:has(.spectacle-orb)::after{display:none}
+.aura-center .core-icon:has(.spectacle-orb){font-size:0!important;line-height:0!important;display:grid!important;place-items:center!important;transform:none!important;animation:none!important;width:155px!important;height:155px!important;overflow:visible;}
+.aura-center .core-icon .spectacle-orb{width:155px!important;height:155px!important;}
+@media(max-width:760px){
+ #page-collection .aura-card .aura-art{height:84px;}
+ #page-collection .aura-card .aura-art .spectacle-orb{width:81px!important;height:81px!important;}
+ #page-collection .aura-card.void-rare .aura-art .spectacle-orb{width:91px!important;height:91px!important;}
+ #page-collection .aura-card h3{font-size:12px!important;}
+ #page-collection .aura-card .aura-rarity-meta{font-size:7px;}
+ .equipped-orb-host .spectacle-orb{width:154px!important;height:154px!important;}
+ .aura-center .core-icon .spectacle-orb{width:132px!important;height:132px!important;}
+}
+/* Enlarged gallery: no screenshots or external images needed */
+#spectacle-inspector[hidden]{display:none!important;}
+#spectacle-inspector{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;}
+.sp-inspect-backdrop{position:absolute;inset:0;background:#030510ed;backdrop-filter:blur(19px);}
+.sp-inspect-panel{--sp-view-color:#be98ff;position:relative;width:min(94vw,510px);max-height:min(96dvh,850px);overflow:auto;padding:28px 22px 30px;text-align:center;border:1px solid color-mix(in srgb,var(--sp-view-color),transparent 35%);border-radius:22px;background:radial-gradient(ellipse at 50% 32%,color-mix(in srgb,var(--sp-view-color),transparent 85%),transparent 68%),linear-gradient(155deg,#1a172c,#080b16 80%);box-shadow:0 0 85px color-mix(in srgb,var(--sp-view-color),transparent 85%),0 35px 100px #000a;isolation:isolate;}
+.sp-inspect-panel::before{position:absolute;inset:0;content:"";pointer-events:none;background-image:linear-gradient(#b2acd70a 1px,transparent 1px),linear-gradient(90deg,#b2acd70a 1px,transparent 1px);background-size:28px 28px;mask-image:linear-gradient(#000,transparent 75%);}
+.sp-inspect-close{position:absolute;right:16px;top:16px;width:38px;height:38px;border:1px solid #76728b81;border-radius:50%;background:#171a2d;color:white;font-size:16px;z-index:5;}
+.sp-inspect-eyebrow{font-size:10px;letter-spacing:3px;color:#b4a9e8;font-weight:900;}
+.sp-inspect-stage{width:min(77vw,340px);height:min(77vw,340px);margin:8px auto 4px;display:grid;place-items:center;}
+.sp-inspect-stage .spectacle-orb{width:100%!important;height:100%!important;}
+.sp-inspect-tier{font-size:10px;font-weight:900;letter-spacing:3px;margin-top:3px;}
+.sp-inspect-panel h2{font-size:clamp(24px,5vw,36px);font-weight:900;margin:10px 0;word-break:break-word;color:#fff;text-shadow:0 0 22px var(--sp-view-color);}
+.sp-inspect-odds{font-size:14px;letter-spacing:1px;color:#eee9ff;font-weight:800;}
+.sp-inspect-lore{line-height:1.85;font-size:12px;color:#aeb5d0;max-width:370px;margin:16px auto;}
+.sp-inspect-tip{font-size:9px;letter-spacing:1px;color:#8c90a9;}
+body.sp-inspect-open{overflow:hidden;}
+@media(max-width:380px){.sp-inspect-panel{padding:21px 14px 25px}.sp-inspect-stage{width:78vw;height:78vw}}
+@media(prefers-reduced-motion:reduce){.spectacle-orb svg *,#spectacle-inspector .spectacle-orb svg *{animation:none!important}}
+
+
+/* Mobile collection layout: retain 2-column paging but keep details below the artwork */
+@media(max-width:760px){
+ #page-collection .aura-card{display:flex!important;flex-direction:column!important;min-height:248px!important;padding:12px 10px 11px!important;}
+ #page-collection .aura-card .aura-card-top{flex:none;min-height:16px;}
+ #page-collection .aura-card .aura-art{height:113px!important;flex:none;display:grid!important;place-items:center;}
+ #page-collection .aura-card .aura-art .spectacle-orb{width:104px!important;height:104px!important;}
+ #page-collection .aura-card.void-rare .aura-art .spectacle-orb{width:112px!important;height:112px!important;transform:none!important;}
+ #page-collection .aura-card h3{font-size:12px!important;line-height:1.25!important;margin:4px 0 3px!important;min-height:16px;white-space:normal!important;text-align:center;overflow-wrap:anywhere;}
+ #page-collection .aura-card .aura-signature-meta{display:none!important;}
+ #page-collection .aura-card .aura-rarity-meta{font-size:7px!important;line-height:1.3;margin:2px 0 4px!important;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+ #page-collection .aura-card .aura-card-bottom{display:grid!important;grid-template-columns:1fr;gap:4px;margin-top:auto;text-align:center;}
+ #page-collection .aura-card .aura-card-bottom small{margin:0!important;font-size:8px!important;}
+ #page-collection .aura-card .aura-card-bottom button{margin:0!important;min-height:31px!important;font-size:10px!important;}
+}
+@media(max-width:410px){#page-collection .aura-card{display:flex!important;grid-template-columns:unset!important;grid-template-rows:unset!important;min-height:248px!important;}#page-collection .aura-card .aura-art,#page-collection .aura-card h3,#page-collection .aura-card .aura-rarity-meta,#page-collection .aura-card .aura-card-bottom{grid-column:auto!important;grid-row:auto!important;}}
+
+/* VOID RNG v10 — smartphone-only collection compact layout; desktop untouched. */
+@media(max-width:760px){
+  #aura-pager{display:none!important}
+  #page-collection .aura-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important;align-items:stretch}
+  #page-collection .aura-card{box-sizing:border-box;min-height:192px!important;height:192px!important;padding:9px 8px!important;display:flex!important;flex-direction:column!important;gap:0!important;border-radius:12px!important;content-visibility:auto;contain-intrinsic-size:auto 192px}
+  #page-collection .aura-card-top{min-height:17px!important;flex:none;font-size:8px!important}
+  #page-collection .aura-art{height:86px!important;min-height:86px!important;flex:0 0 86px!important;display:grid!important;place-items:center!important;margin:0!important;overflow:visible}
+  #page-collection .aura-card .aura-art .spectacle-orb{width:85px!important;height:85px!important;transform:none!important}
+  #page-collection .aura-card.void-rare .aura-art .spectacle-orb{width:92px!important;height:92px!important;transform:none!important}
+  #page-collection .aura-card h3{font-size:11px!important;line-height:1.14!important;margin:2px 0!important;min-height:13px!important;max-height:26px!important;display:-webkit-box!important;-webkit-line-clamp:2!important;-webkit-box-orient:vertical!important;white-space:normal!important;overflow:hidden!important;overflow-wrap:anywhere;text-align:center}
+  #page-collection .aura-signature-meta,#page-collection .aura-rarity-meta{display:none!important}
+  #page-collection .aura-card-bottom{display:grid!important;grid-template-columns:1fr!important;align-items:stretch!important;gap:3px!important;margin-top:auto!important;min-height:0!important;text-align:center!important}
+  #page-collection .aura-card-bottom small{margin:0!important;white-space:nowrap;line-height:1.3;font-size:8px!important}
+  #page-collection .aura-card-bottom button{width:100%!important;max-width:100%!important;min-height:27px!important;padding:4px 6px!important;font-size:10px!important;line-height:1.1!important}
+  #page-collection .aura-card.locked .aura-art .void-unknown-mark{width:58px!important;height:58px!important}
+  #page-collection .aura-card.locked .void-unknown-mark svg{width:30px!important;height:30px!important}
+  /* Summoning orb and all rings now share the exact center of the altar. */
+  #altar .aura-center{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;margin:0!important;z-index:4}
+  #altar .aura-center .core-icon:has(.spectacle-orb){position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;margin:0!important;animation:none!important;display:grid!important;place-items:center!important;width:150px!important;height:150px!important}
+  #altar .aura-center .core-icon .spectacle-orb{width:142px!important;height:142px!important;transform:none!important;margin:0!important}
+  #altar .aura-center .core-flare{pointer-events:none}
+}
+@media(max-width:380px){
+  #page-collection .aura-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:6px!important}
+  #page-collection .aura-card{padding:8px 6px!important;height:187px!important;min-height:187px!important}
+  #page-collection .aura-card .aura-art .spectacle-orb{width:80px!important;height:80px!important}
+  #page-collection .aura-card.void-rare .aura-art .spectacle-orb{width:86px!important;height:86px!important}
+  #altar .aura-center .core-icon .spectacle-orb{width:136px!important;height:136px!important}
+}
+.orb-lazy-placeholder{width:100%;height:100%;max-height:88px;aspect-ratio:1;margin:auto;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 22px color-mix(in srgb,var(--orb-accent),transparent 65%);border:1px solid color-mix(in srgb,var(--orb-accent),transparent 40%);background:radial-gradient(circle at 37% 28%,#e9f8ff96,transparent 38%),radial-gradient(circle at center,color-mix(in srgb,var(--orb-accent),transparent 56%),#0a1022 81%)}
+.orb-lazy-placeholder span{font-size:25px!important;color:#e8ebff;filter:none!important;background:none!important;box-shadow:none!important;text-shadow:0 0 18px #fff;animation:lazyOrbPulse 1.8s ease-in-out infinite}
+@keyframes lazyOrbPulse{0%,100%{opacity:.5;transform:scale(.91)}50%{opacity:1;transform:scale(1.05)}}
+.tier-ingredient{border-left:3px solid var(--tier-color);padding-left:7px;background:color-mix(in srgb,var(--tier-color),transparent 94%);border-radius:4px}
+.tier-ingredient span{color:var(--tier-color)!important;font-weight:800}
+.tier-ingredient span small{font-size:8px!important;color:#99a3ba;font-weight:600;margin-left:2px}
+
+
+/* v10.2: summon centerpiece shares the SAME true center as all altar rings.
+   Earlier desktop CSS gave the inner orb a 155px box inside a 126px grid
+   without absolute centering, which made the orb visibly shift right/down. */
+#altar .aura-center{
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  transform:translate(-50%,-50%)!important;
+  margin:0!important;
+  display:grid!important;
+  place-items:center!important;
+}
+#altar .aura-center .core-icon:has(.spectacle-orb){
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  transform:translate(-50%,-50%)!important;
+  width:155px!important;
+  height:155px!important;
+  display:grid!important;
+  place-items:center!important;
+  margin:0!important;
+  animation:none!important;
+  line-height:0!important;
+}
+#altar .aura-center .core-icon .spectacle-orb{
+  display:grid!important;
+  place-items:center!important;
+  margin:0 auto!important;
+  transform:none!important;
+}
+@media(max-width:760px){
+  #altar .aura-center .core-icon:has(.spectacle-orb){
+    width:150px!important;
+    height:150px!important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -381,7 +549,7 @@ html{overflow-x:hidden}body{overflow-x:hidden}.app-shell,.work-area,.content,.pa
 
         <section class="page" id="page-potions" aria-labelledby="potions-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> ALCHEMY LAB <span class="eyebrow-dot">◆</span> TEMPORARY POWER</div><h1 id="potions-title">一瞬に、<em>奇跡を宿せ。</em></h1><p>オーラとスターダストを調合。ここぞという時に運命を加速させよう。</p></div></div><div class="potion-active panel"><div class="potion-illustration">◈</div><div><span>ACTIVE ELIXIR</span><strong id="active-potion-name">ポーション効果なし</strong><p id="active-potion-text">ポーションを作成して使用すると、期間中ラックが上がります。</p></div><div class="potion-clock" id="active-potion-timer">0 / 6</div></div><div class="active-potion-stack" id="active-potion-stack" aria-label="重ねがけ中のポーション"></div><div class="subhead"><h2>所持しているポーション <span>／ INVENTORY</span></h2></div><div class="potion-inventory" id="potion-inventory"></div><div class="subhead with-gap"><h2>調合レシピ <span>／ LABORATORY</span></h2><span class="small-note">同種も重ねがけOK · 最大6本 · 倍率は掛け算 · 時間は個別</span></div><div class="recipe-grid" id="potion-grid"></div></section>
 
-        <section class="page" id="page-records" aria-labelledby="records-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR LEGACY <span class="eyebrow-dot">◆</span> ARCHIVE STATUS</div><h1 id="records-title">すべての軌跡を、<em>刻め。</em></h1><p>歩んだ記録を確認し、セーブデータを管理しよう。</p></div></div><div class="records-grid" id="records-grid"></div><div class="records-bottom"><div class="panel data-panel"><div class="subhead"><h2>セーブデータ <span>／ DATA MANAGEMENT</span></h2></div><p>プレイ内容はこのブラウザに自動保存されます。ブラウザのデータ削除に備えて、バックアップファイルの保存をおすすめします。</p><div class="save-status"><span class="online-dot"></span><span id="save-status-text">自動セーブ有効</span></div><div class="data-actions"><button id="export-btn" class="solid-small"><svg><use href="#i-down"/></svg> セーブを書き出す</button><label class="outline-btn import-btn"><svg><use href="#i-up"/></svg> セーブを読み込む<input id="import-input" type="file" accept=".json,application/json" hidden></label></div><div class="data-warning"><span>注意</span> 別のブラウザ・端末には自動で同期されません。プライベートブラウズでは保存できない場合があります。</div><div class="admin-code-panel"><div class="admin-code-header"><span>✦</span><div><b>ADMIN CODE</b><small>管理コードから特別なポーションを受け取る</small></div></div><form id="admin-code-form" class="admin-code-form"><input id="admin-code-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="12" placeholder="管理コードを入力" autocomplete="off" aria-label="管理コード"><button type="submit">コードを使用</button></form><div id="admin-code-message" class="admin-code-message" role="status">2020：管理者ポーション / 2021：図鑑コンプリート。</div></div><button class="danger-link" id="reset-btn">全データを初期化</button></div><div class="panel achievements-panel"><div class="subhead"><h2>進行状況 <span>／ MILESTONES</span></h2></div><div id="milestone-list"></div></div></div></section>
+        <section class="page" id="page-records" aria-labelledby="records-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR LEGACY <span class="eyebrow-dot">◆</span> ARCHIVE STATUS</div><h1 id="records-title">すべての軌跡を、<em>刻め。</em></h1><p>歩んだ記録を確認し、セーブデータを管理しよう。</p></div></div><div class="records-grid" id="records-grid"></div><div class="records-bottom"><div class="panel data-panel"><div class="subhead"><h2>セーブデータ <span>／ DATA MANAGEMENT</span></h2></div><p>プレイ内容はこのブラウザに自動保存されます。ブラウザのデータ削除に備えて、バックアップファイルの保存をおすすめします。</p><div class="save-status"><span class="online-dot"></span><span id="save-status-text">自動セーブ有効</span></div><div class="data-actions"><button id="export-btn" class="solid-small"><svg><use href="#i-down"/></svg> セーブを書き出す</button><label class="outline-btn import-btn"><svg><use href="#i-up"/></svg> セーブを読み込む<input id="import-input" type="file" accept=".json,application/json" hidden></label></div><div class="data-warning"><span>注意</span> 別のブラウザ・端末には自動で同期されません。プライベートブラウズでは保存できない場合があります。</div><div class="admin-code-panel"><div class="admin-code-header"><span>✦</span><div><b>ADMIN CODE</b><small>このコードは管理者だけが知っています</small></div></div><form id="admin-code-form" class="admin-code-form"><input id="admin-code-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="12" placeholder="管理コードを入力" autocomplete="off" aria-label="管理コード"><button type="submit">コードを使用</button></form><div id="admin-code-message" class="admin-code-message" role="status">コードを入力して認証してください。</div></div><button class="danger-link" id="reset-btn">全データを初期化</button></div><div class="panel achievements-panel"><div class="subhead"><h2>進行状況 <span>／ MILESTONES</span></h2></div><div id="milestone-list"></div></div></div></section>
       </main>
     </div>
   </div>
@@ -457,6 +625,34 @@ const POTIONS = [
 ];
 // Developer-only elixir: awarded by entering an in-game code (client-side, not a secret).
 POTIONS.push({id:'void-admin-2020',name:'VOID Ω 管理者エリクサー',mult:5000000,seconds:600,color:'#d7a2ff',glyph:'✦',desc:'管理コードで獲得できる、10分間ラックを500万倍にする特別なポーション。',admin:true,cost:[],dust:0});
+
+/* v10: new advanced equipment and alchemy recipes.
+   tierCost consumes ANY owned aura in that EXACT rarity, AFTER named ingredients.
+   The consumption planner deliberately avoids double-spending one aura. */
+GEAR.push(
+  {id:'stormbreaker-ring',name:'ストームブレイカーリング',slot:'ring',slotName:'RING',bonus:9,glyph:'⚡',color:'#84cfff',desc:'雷鳴を指輪へ刻んだ武装。RAREオーラから電荷を抽出。',cost:[['THUNDER',1]],tierCost:[{tier:2,count:3}],dust:800},
+  {id:'astral-gearbox',name:'アストラル・ギアボックス',slot:'core',slotName:'CORE',bonus:18,glyph:'⚙',color:'#90afff',desc:'精密に回る星界機構。EPICの波形で運命を圧縮する。',cost:[['VORTEX',1]],tierCost:[{tier:3,count:3}],dust:2000},
+  {id:'aurora-ward',name:'オーロラ・ウォード',slot:'charm',slotName:'CHARM',bonus:26,glyph:'✧',color:'#99ffef',desc:'極光を織りこんだ魔導護符。神秘的なEPICを糸にする。',cost:[['NIGHTFALL',1]],tierCost:[{tier:3,count:5}],dust:3200},
+  {id:'infernal-crown',name:'インフェルナルクラウン',slot:'ring',slotName:'RING',bonus:48,glyph:'♛',color:'#ff9366',desc:'地獄の業火と伝説の魂を束ねた王冠。',cost:[['INFERNO',1]],tierCost:[{tier:4,count:2}],dust:8500},
+  {id:'seraphim-engine',name:'セラフィムエンジン',slot:'core',slotName:'CORE',bonus:75,glyph:'✥',color:'#ffe5b9',desc:'天使の六翼とMYTHICの核を組み合わせた神聖機関。',cost:[['SERAPH',1]],tierCost:[{tier:5,count:2}],dust:16000},
+  {id:'eclipse-requiem',name:'エクリプス・レクイエム',slot:'charm',slotName:'CHARM',bonus:120,glyph:'☾',color:'#da91ff',desc:'日蝕の封印を三重に重ねた禁断の護符。',cost:[['ECLIPSE',1],['OBLIVION',1]],tierCost:[{tier:5,count:3}],dust:30000},
+  {id:'quasar-sovereign',name:'クエーサー・ソヴリン',slot:'ring',slotName:'RING',bonus:210,glyph:'✴',color:'#9bf5ff',desc:'宇宙の王のための指輪。COSMIC級の残光を食らう。',cost:[['QUASAR',1]],tierCost:[{tier:6,count:2}],dust:55000},
+  {id:'genesis-reactor',name:'ジェネシス・リアクター',slot:'core',slotName:'CORE',bonus:360,glyph:'⬡',color:'#dcc2ff',desc:'時空誕生のエネルギーを再構築する超越炉。',cost:[['GENESIS',1]],tierCost:[{tier:7,count:2}],dust:90000},
+  {id:'abyssal-throne',name:'アビサル・スローン',slot:'charm',slotName:'CHARM',bonus:600,glyph:'◈',color:'#ff709a',desc:'虚無の王座から削り出す漆黒の護符。',cost:[['ABYSS WALKER',1]],tierCost:[{tier:8,count:2}],dust:180000},
+  {id:'singularity-emperor',name:'シンギュラリティ・エンペラー',slot:'ring',slotName:'RING',bonus:1100,glyph:'◎',color:'#f5dcff',desc:'すべての可能性を一点に折りたたむ絶対級の指輪。',cost:[['SINGULARITY',1]],tierCost:[{tier:9,count:2}],dust:350000},
+  {id:'last-light-sanctum',name:'ラストライト・サンクタム',slot:'core',slotName:'CORE',bonus:2000,glyph:'✦',color:'#fff2cc',desc:'宇宙最後の光を保持し続ける伝説の保管炉。',cost:[['LAST LIGHT',1]],tierCost:[{tier:9,count:3}],dust:650000},
+  {id:'void-apotheosis',name:'ヴォイド・アポセオシス',slot:'charm',slotName:'CHARM',bonus:3500,glyph:'✵',color:'#efbaff',desc:'禁忌と絶対を融合させた究極の守護紋。',cost:[['NULL GOD',1],['APOTHEOSIS',1]],tierCost:[{tier:8,count:2},{tier:9,count:2}],dust:950000}
+);
+POTIONS.push(
+  {id:'thunder-tonic',name:'サンダー・トニック',mult:6,seconds:150,color:'#78c9ff',glyph:'ϟ',desc:'RAREの電荷を調合した、持続型のラック薬。',cost:[['THUNDER',1]],tierCost:[{tier:2,count:2}],dust:320},
+  {id:'epic-storm',name:'エピック・ストーム',mult:18,seconds:90,color:'#c799ff',glyph:'✳',desc:'EPICの力を束ねて一時的に運命を暴走させる。',cost:[['SYMPHONY',1]],tierCost:[{tier:3,count:3}],dust:1100},
+  {id:'solstice-brew',name:'ソルスティス・ブリュー',mult:60,seconds:65,color:'#ffd27c',glyph:'☼',desc:'レジェンダリーの残光を凝縮した黄金の秘薬。',cost:[['SOLSTICE',1]],tierCost:[{tier:4,count:2}],dust:4000},
+  {id:'seraph-nectar',name:'セラフ・ネクター',mult:180,seconds:60,color:'#ffeabf',glyph:'✥',desc:'MYTHICの神秘を授かる祝福の霊薬。',cost:[['SERAPH',1]],tierCost:[{tier:5,count:2}],dust:12000},
+  {id:'quasar-catalyst',name:'クエーサー・カタリスト',mult:550,seconds:50,color:'#8cecff',glyph:'✺',desc:'COSMICの光を放出する超高密度触媒。',cost:[['QUASAR',1]],tierCost:[{tier:6,count:2}],dust:25000},
+  {id:'aeon-ampoule',name:'イーオン・アンプル',mult:1800,seconds:45,color:'#cbb7ff',glyph:'⧖',desc:'TRANSCENDENTの時空を薬に封じた増幅液。',cost:[['AEON',1]],tierCost:[{tier:7,count:2}],dust:55000},
+  {id:'abyss-surge',name:'アビス・サージ',mult:6000,seconds:35,color:'#ff829e',glyph:'✴',desc:'FORBIDDENの深淵を一瞬だけ解放する。',cost:[['BLACK SUN',1]],tierCost:[{tier:8,count:2}],dust:105000},
+  {id:'absolute-serum',name:'アブソリュート・セラム',mult:20000,seconds:28,color:'#fce8c0',glyph:'◇',desc:'ABSOLUTEの光を瞬間圧縮。最上位のラック強化液。',cost:[['THE FIRST STAR',1]],tierCost:[{tier:9,count:2}],dust:260000}
+);
 const SLOT_LABELS = {ring:'RING / 指輪',core:'CORE / コア',charm:'CHARM / 護符'};
 const PAGE_NAMES = {roll:'SUMMON',collection:'COLLECTION',forge:'CRAFTING',potions:'ALCHEMY',records:'RECORDS'};
 const fmt = (v) => Math.floor(Number(v)||0).toLocaleString('ja-JP');
@@ -587,7 +783,7 @@ function tone(freq=660,duration=.09,kind='sine',volume=.026,offset=0){if(!state.
 function playRollSound(a){tone(260+a.tier*46,.11,'sine',.022);if(a.tier>=3)tone(540+a.tier*55,.26,'triangle',.023,.07);if(a.tier>=5)tone(840,.3,'sine',.025,.2);}
 function burst(a){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const layer=$('burst-layer');layer.replaceChildren();const n=Math.min(48,12+a.tier*4);for(let i=0;i<n;i++){const p=document.createElement('span');p.className='burst-particle';const angle=(Math.PI*2*i/n)+Math.random()*.2,dist=68+Math.random()*145;p.style.setProperty('--dx',Math.cos(angle)*dist+'px');p.style.setProperty('--dy',Math.sin(angle)*dist+'px');p.style.setProperty('--sz',(2+Math.random()*4)+'px');p.style.setProperty('--dur',(0.7+Math.random()*.8)+'s');layer.append(p);}setTimeout(()=>layer.replaceChildren(),1700);}
 function presentAura(a,first=false){
-  const stage=$('altar');stage.style.setProperty('--aura-color',a.color);if(__mobileCollection())$('aura-center').querySelector('.core-icon').innerHTML=renderAuraOrb(a,{size:102,className:'roll-center-orb'});else $('aura-center').querySelector('.core-icon').textContent=a.glyph;
+  const stage=$('altar');stage.style.setProperty('--aura-color',a.color);$('aura-center').querySelector('.core-icon').innerHTML=renderAuraOrb(a,{size:150,className:'roll-center-orb'});
   $('result-rank').textContent=TIERS[a.tier].name;$('result-rank').style.color=a.color;
   $('result-name').textContent=a.name;$('result-name').style.textShadow=`0 0 22px ${a.color}77`;
   $('result-odds').textContent=oddsText(a)+'  ·  '+TIERS[a.tier].jp;
@@ -734,19 +930,74 @@ function renderCollection(){
     const count=state.inventory[a.id]||0,owned=count>0,known=!!state.discovered[a.id],equipped=owned&&state.equippedAura===a.id;
     const design=voidRareDesign(a),rareClass=design?'void-rare power-'+design.level:'';
     const rarity=design?`<div class="aura-rarity-meta">${design.label} · ${design.theme}</div>`:'';
-    return `<article class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art">${known?`<span>${a.glyph+'\uFE0E'}</span>`:`<span class="void-unknown-mark" title="未発見" aria-label="未発見"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 23a12 12 0 0 1 24 0c0 9-12 9-12 19"/><path d="M32 51v1"/></svg></span>`}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'装備中':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
+    return `<article data-aura-id="${a.id}" class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art">${known?`<span>${a.glyph+'\uFE0E'}</span>`:`<span class="void-unknown-mark" title="未発見" aria-label="未発見"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 23a12 12 0 0 1 24 0c0 9-12 9-12 19"/><path d="M32 51v1"/></svg></span>`}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'装備中':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
   }).join('');$('grid-empty').hidden=result.length!==0;
 }
 function equippedAura(id){const a=AURAS[Number(id)];if(!a||!isOwned(a)){toast('装備できません','このオーラを持っていません。','error');return;}state.equippedAura=a.id;presentAura(a,false);save();renderCollection();renderEquippedAura();toast('オーラ装備完了',a.name+'をセットしました。','good');}
-function ingredients(cost,dust){const blocks=cost.map(([name,need])=>{const owned=state.inventory[BY_NAME.get(name).id]||0;return `<div class="ingredient"><span>✦ ${name}</span><strong class="${owned<need?'lacking':''}">${fmt(owned)} / ${need}</strong></div>`;});if(dust){blocks.push(`<div class="ingredient"><span>✧ スターダスト</span><strong class="${state.shards<dust?'lacking':''}">${fmt(state.shards)} / ${fmt(dust)}</strong></div>`);}return blocks.join('');}
-function canCraft(rec){return state.shards>=rec.dust && rec.cost.every(([name,num])=>(state.inventory[BY_NAME.get(name).id]||0)>=num);}
-function consume(rec){for(const [name,num] of rec.cost){const id=BY_NAME.get(name).id;state.inventory[id]-=num;if(state.inventory[id]===0)delete state.inventory[id];if(state.equippedAura===id && !state.inventory[id])state.equippedAura=null;}state.shards-=rec.dust;renderEquippedAura();}
+function __craftAllocation(rec){
+  if(!rec||state.shards < (rec.dust||0))return null;
+  const reservation=new Map();
+  for(const [name,rawNeed] of (rec.cost||[])){
+    const a=BY_NAME.get(name),need=Math.floor(rawNeed);
+    if(!a||need<0)return null;
+    reservation.set(a.id,(reservation.get(a.id)||0)+need);
+    if((state.inventory[a.id]||0)<reservation.get(a.id))return null;
+  }
+  for(const req of (rec.tierCost||[])){
+    let left=Math.floor(req.count);
+    if(!Number.isInteger(req.tier)||req.tier<0||req.tier>=TIERS.length||left<0)return null;
+    // Consume duplicate and low-odds auras first; keep equipped / ultra rare ones last.
+    const pool=AURAS.filter(a=>a.tier===req.tier).sort((a,b)=>{
+      const ae=a.id===state.equippedAura?1:0,be=b.id===state.equippedAura?1:0;
+      if(ae!==be)return ae-be;
+      return a.odds-b.odds;
+    });
+    for(const aura of pool){
+      if(left<=0)break;
+      const spare=Math.max(0,(state.inventory[aura.id]||0)-(reservation.get(aura.id)||0));
+      const take=Math.min(spare,left);
+      if(take){reservation.set(aura.id,(reservation.get(aura.id)||0)+take);left-=take;}
+    }
+    if(left>0)return null;
+  }
+  return reservation;
+}
+function __tierCountAvailable(rec,tier){
+  const reserved=new Map();
+  for(const [name,count] of (rec.cost||[])){
+    const aura=BY_NAME.get(name);if(aura)reserved.set(aura.id,(reserved.get(aura.id)||0)+count);
+  }
+  return AURAS.filter(a=>a.tier===tier).reduce((sum,a)=>sum+Math.max(0,(state.inventory[a.id]||0)-(reserved.get(a.id)||0)),0);
+}
+function ingredients(rec){
+  const blocks=(rec.cost||[]).map(([name,need])=>{
+    const a=BY_NAME.get(name),owned=a?(state.inventory[a.id]||0):0;
+    return `<div class="ingredient"><span>✦ ${name}</span><strong class="${owned<need?'lacking':''}">${fmt(owned)} / ${need}</strong></div>`;
+  });
+  for(const req of (rec.tierCost||[])){
+    const owned=__tierCountAvailable(rec,req.tier),tier=TIERS[req.tier];
+    blocks.push(`<div class="ingredient tier-ingredient" style="--tier-color:${tier.color}"><span>◆ ${tier.name} <small>どれでもOK</small></span><strong class="${owned<req.count?'lacking':''}">${fmt(owned)} / ${req.count}</strong></div>`);
+  }
+  if(rec.dust){blocks.push(`<div class="ingredient"><span>✧ スターダスト</span><strong class="${state.shards<rec.dust?'lacking':''}">${fmt(state.shards)} / ${fmt(rec.dust)}</strong></div>`);}
+  return blocks.join('');
+}
+function canCraft(rec){return __craftAllocation(rec)!==null;}
+function consume(rec){
+  const plan=__craftAllocation(rec); if(!plan)return false;
+  for(const [id,count] of plan){
+    const remaining=(state.inventory[id]||0)-count;
+    if(remaining>0)state.inventory[id]=remaining;else delete state.inventory[id];
+    if(state.equippedAura===id && remaining<=0)state.equippedAura=null;
+  }
+  state.shards-=rec.dust||0;
+  renderEquippedAura();return true;
+}
 function renderForge(){
   $('forge-bonus').innerHTML='+'+gearBonus().toFixed(2)+'× <small>GEAR LUCK</small>';
   $('equip-slots').innerHTML=Object.entries(SLOT_LABELS).map(([slot,label])=>{const gear=GEAR.find(g=>g.id===state.equipped[slot]);return `<div class="equip-slot"><div class="slot-tag">${label}</div>${gear?`<div class="slot-name" style="color:${gear.color}">${gear.glyph} ${gear.name}</div><div class="slot-bonus">+${gear.bonus.toFixed(2)}× LUCK</div>`:'<div class="slot-empty">スロットが空いています</div>'}</div>`;}).join('');
-  $('gear-grid').innerHTML=GEAR.map(g=>{const owned=state.gearOwned.includes(g.id),eq=state.equipped[g.slot]===g.id,can=canCraft(g);return `<article class="recipe-card ${can&&!owned?'craft-recipe-ready':''}" style="--recipe-color:${g.color}"><div class="recipe-top"><div class="recipe-icon">${g.glyph}</div>${can&&!owned?'<span class="craft-ready-label">✦ CRAFT READY</span>':`<span class="recipe-category">${g.slotName} · EQUIPMENT</span>`}</div><h3>${g.name}</h3><p class="recipe-desc">${g.desc}</p><div class="recipe-bonus">+${g.bonus.toFixed(2)}× <small>LUCK BONUS</small></div><div class="recipe-ingredients">${ingredients(g.cost,g.dust)}</div><button class="craft-btn" data-craft-gear="${g.id}" ${(!owned&&!can)?'disabled':''}>${owned?(eq?icon('check')+' 装備中':'装備する'):can?'✦ クラフトする':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
+  $('gear-grid').innerHTML=GEAR.map(g=>{const owned=state.gearOwned.includes(g.id),eq=state.equipped[g.slot]===g.id,can=canCraft(g);return `<article class="recipe-card ${can&&!owned?'craft-recipe-ready':''}" style="--recipe-color:${g.color}"><div class="recipe-top"><div class="recipe-icon">${g.glyph}</div>${can&&!owned?'<span class="craft-ready-label">✦ CRAFT READY</span>':`<span class="recipe-category">${g.slotName} · EQUIPMENT</span>`}</div><h3>${g.name}</h3><p class="recipe-desc">${g.desc}</p><div class="recipe-bonus">+${g.bonus.toFixed(2)}× <small>LUCK BONUS</small></div><div class="recipe-ingredients">${ingredients(g)}</div><button class="craft-btn" data-craft-gear="${g.id}" ${(!owned&&!can)?'disabled':''}>${owned?(eq?icon('check')+' 装備中':'装備する'):can?'✦ クラフトする':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
 }
-function craftGear(id){const g=GEAR.find(g=>g.id===id);if(!g)return;if(state.gearOwned.includes(id)){state.equipped[g.slot]=g.id;save();renderForge();renderRollUI();updateCraftReadyUI();toast('装備を変更しました',g.name+'を装備した。','good');return;}if(!canCraft(g)){toast('素材が足りません','必要なオーラとスターダストを集めよう。','error');return;}consume(g);state.gearOwned.push(g.id);state.equipped[g.slot]=g.id;save();renderForge();renderRollUI();updateCraftReadyUI();toast('CRAFT SUCCESS',g.name+'が完成。自動で装備しました！','good');tone(600,.2,'triangle',.035);tone(850,.2,'sine',.03,.12);}
+function craftGear(id){const g=GEAR.find(g=>g.id===id);if(!g)return;if(state.gearOwned.includes(id)){state.equipped[g.slot]=g.id;save();renderForge();renderRollUI();updateCraftReadyUI();toast('装備を変更しました',g.name+'を装備した。','good');return;}if(!canCraft(g)){toast('素材が足りません','必要なオーラとスターダストを集めよう。','error');return;}if(!consume(g))return;state.gearOwned.push(g.id);state.equipped[g.slot]=g.id;save();renderForge();renderRollUI();updateCraftReadyUI();toast('CRAFT SUCCESS',g.name+'が完成。自動で装備しました！','good');tone(600,.2,'triangle',.035);tone(850,.2,'sine',.03,.12);}
 function renderPotions(){
   const active=activePotions(),mult=potionMultiplier(),full=active.length>=MAX_POTION_STACKS;
   $('active-potion-name').textContent=active.length?`${active.length}本のポーション発動中`:'ポーション効果なし';
@@ -759,10 +1010,10 @@ function renderPotions(){
   $('potion-inventory').innerHTML=POTIONS.filter(p=>!p.admin||(state.potions[p.id]||0)>0||state.activePotions.some(e=>e.id===p.id)).map(p=>{const count=state.potions[p.id]||0;
     return `<div class="inventory-potion" style="--potion-color:${p.color}"><div class="potion-emblem">${p.glyph}</div><b>${p.name}</b><span>×${fmt(count)} · ×${fmt(p.mult)}</span><button data-use-potion="${p.id}" ${count&&!full?'':'disabled'}>${full?'6本発動中':count?'使用する':'所持数 0'}</button></div>`;
   }).join('');
-  $('potion-grid').innerHTML=POTIONS.filter(p=>!p.admin).map(p=>{const can=canCraft(p);return `<article class="recipe-card" style="--recipe-color:${p.color}"><div class="recipe-top"><div class="recipe-icon">${p.glyph}</div><span class="recipe-category">ELIXIR · ALCHEMY</span></div><h3>${p.name}</h3><p class="recipe-desc">${p.desc}</p><div class="recipe-bonus">×${p.mult.toFixed(1)} <small>LUCK / ${p.seconds} SEC</small></div><div class="recipe-ingredients">${ingredients(p.cost,p.dust)}</div><button class="craft-btn" data-craft-potion="${p.id}" ${can?'':'disabled'}>${can?'✦ 調合する':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
+  $('potion-grid').innerHTML=POTIONS.filter(p=>!p.admin).map(p=>{const can=canCraft(p);return `<article class="recipe-card" style="--recipe-color:${p.color}"><div class="recipe-top"><div class="recipe-icon">${p.glyph}</div><span class="recipe-category">ELIXIR · ALCHEMY</span></div><h3>${p.name}</h3><p class="recipe-desc">${p.desc}</p><div class="recipe-bonus">×${p.mult.toFixed(1)} <small>LUCK / ${p.seconds} SEC</small></div><div class="recipe-ingredients">${ingredients(p)}</div><button class="craft-btn" data-craft-potion="${p.id}" ${can?'':'disabled'}>${can?'✦ 調合する':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
   updatePotionTimer();
 }
-function craftPotion(id){const p=POTIONS.find(p=>p.id===id);if(!p)return;if(!canCraft(p)){toast('素材が足りません','図鑑から素材を探してみよう。','error');return;}consume(p);state.potions[id]=(state.potions[id]||0)+1;save();renderPotions();renderRollUI();toast('ALCHEMY SUCCESS',p.name+'を調合しました。','good');tone(700,.25,'sine',.03);}
+function craftPotion(id){const p=POTIONS.find(p=>p.id===id);if(!p)return;if(!canCraft(p)){toast('素材が足りません','図鑑から素材を探してみよう。','error');return;}if(!consume(p))return;state.potions[id]=(state.potions[id]||0)+1;save();renderPotions();renderRollUI();toast('ALCHEMY SUCCESS',p.name+'を調合しました。','good');tone(700,.25,'sine',.03);}
 function usePotion(id){
   const p=POTIONS.find(p=>p.id===id);if(!p||(state.potions[id]||0)<1)return;
   const active=activePotions();
@@ -813,7 +1064,7 @@ function resetAll(){if(!window.confirm('すべてのオーラ・装備・記録�
 function renderEntireGame(){
   $('fast-btn').classList.toggle('is-on',state.fast);$('fast-state').textContent=state.fast?'ON':'OFF';$('fast-btn').setAttribute('aria-pressed',String(state.fast));
   $('sound-btn').innerHTML=icon(state.sound?'volume':'mute');
-  if(resultAura)presentAura(resultAura,false);else if(state.equippedAura!==null&&isOwned(AURAS[state.equippedAura]))presentAura(AURAS[state.equippedAura],false);else if(state.recent.length)presentAura(AURAS[state.recent[0].id],false);else{$('altar').style.setProperty('--aura-color','#9c90ff');if(__mobileCollection())$('aura-center').querySelector('.core-icon').innerHTML=renderAuraOrb(AURAS[0],{size:102,className:'roll-center-orb'});else $('aura-center').querySelector('.core-icon').textContent='✦';$('result-rank').textContent='YOUR DESTINY AWAITS';$('result-rank').style.color='#b2a5ff';$('result-name').textContent='AWAKEN';$('result-name').style.textShadow='0 0 20px #9991f377';$('result-odds').textContent='宇宙のどこかに、まだ見ぬ光がある。';$('result-new').hidden=true;}
+  if(resultAura)presentAura(resultAura,false);else if(state.equippedAura!==null&&isOwned(AURAS[state.equippedAura]))presentAura(AURAS[state.equippedAura],false);else if(state.recent.length)presentAura(AURAS[state.recent[0].id],false);else{$('altar').style.setProperty('--aura-color','#9c90ff');$('aura-center').querySelector('.core-icon').innerHTML=renderAuraOrb(AURAS[0],{size:150,className:'roll-center-orb'});$('result-rank').textContent='YOUR DESTINY AWAITS';$('result-rank').style.color='#b2a5ff';$('result-name').textContent='AWAKEN';$('result-name').style.textShadow='0 0 20px #9991f377';$('result-odds').textContent='宇宙のどこかに、まだ見ぬ光がある。';$('result-new').hidden=true;}
   renderRollUI();renderEquippedAura();renderCollection();renderForge();renderPotions();renderRecords();updateCraftReadyUI();
 }
 function showHelp(){setAuto(false);hasModal=true;const d=$('help-modal');if(typeof d.showModal==='function')d.showModal();else d.setAttribute('open','');}
@@ -862,9 +1113,17 @@ const ORB_STYLE = `
 .aura-orb-svg .float-a{animation:orbFloat 3.2s ease-in-out infinite;transform-origin:60px 60px}
 .aura-orb-svg .float-b{animation:orbFloat 4.4s ease-in-out infinite reverse;transform-origin:60px 60px}
 .aura-orb-svg .twinkle{animation:orbTwinkle 1.7s ease-in-out infinite}
+.aura-orb-svg .shield-spin-a{animation:orbShieldSpinA calc(var(--orb-spin,11s) * 1.42) linear infinite;transform-origin:60px 60px}
+.aura-orb-svg .shield-spin-b{animation:orbShieldSpinB calc(var(--orb-spin,11s) * 1.15) linear infinite;transform-origin:60px 60px}
+.aura-orb-svg .shield-spin-c{animation:orbShieldSpinC calc(var(--orb-spin,11s) * 1.85) linear infinite;transform-origin:60px 60px}
+.aura-orb-svg .shield-pulse{animation:orbShieldPulse 2.8s ease-in-out infinite;transform-origin:60px 60px}
+.aura-orb-svg .shield-node{filter:drop-shadow(0 0 7px currentColor)}
+.aura-orb-svg .shield-plate{filter:drop-shadow(0 0 7px color-mix(in srgb,var(--orb-glow,#c7b8ff),transparent 50%))}
+.aura-orb-svg .shield-outline{filter:drop-shadow(0 0 9px color-mix(in srgb,var(--orb-glow,#c7b8ff),transparent 40%))}
 .aura-orb-wrap.is-muted{opacity:.78;filter:saturate(.72) brightness(.92)}
 .aura-card .aura-art .aura-orb-wrap{width:92px;height:92px}
 .aura-card.void-rare .aura-orb-wrap{transform:scale(1.05);filter:drop-shadow(0 0 18px var(--special)) drop-shadow(0 0 28px color-mix(in srgb,var(--special),transparent 60%))}
+.aura-card.void-rare .aura-orb-wrap .shield-outline,.aura-card.void-rare .aura-orb-wrap .shield-plate{opacity:1}
 .equipped-orb-host{position:relative;width:178px;height:178px;display:grid;place-items:center;z-index:2}
 .equipped-orb-host .aura-orb-wrap{width:100%;height:100%}
 .orb-showcase{overflow:visible}
@@ -878,6 +1137,10 @@ const ORB_STYLE = `
 @keyframes orbPulse{0%,100%{transform:scale(1);opacity:.92}50%{transform:scale(1.055);opacity:1}}
 @keyframes orbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
 @keyframes orbTwinkle{0%,100%{opacity:.3}45%{opacity:1}70%{opacity:.55}}
+@keyframes orbShieldSpinA{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes orbShieldSpinB{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
+@keyframes orbShieldSpinC{0%{transform:rotate(0deg) scale(1)}50%{transform:rotate(180deg) scale(1.015)}100%{transform:rotate(360deg) scale(1)}}
+@keyframes orbShieldPulse{0%,100%{transform:scale(1);opacity:.94}50%{transform:scale(1.03);opacity:1}}
 @keyframes orbDriftA{0%,100%{transform:translate(0,0) scale(.9);opacity:.35}50%{transform:translate(10px,-10px) scale(1.35);opacity:.9}}
 @keyframes orbDriftB{0%,100%{transform:translate(0,0) scale(.8);opacity:.4}50%{transform:translate(-9px,8px) scale(1.2);opacity:.95}}
 @keyframes orbDriftC{0%,100%{transform:translate(-6px,0) scale(.7);opacity:.3}50%{transform:translate(8px,-12px) scale(1.25);opacity:.85}}
@@ -1025,9 +1288,143 @@ function __vectorSigil(a,p){
 }
 function __smallVectorMark(a){const p=__orbProfile(a);return `<svg viewBox="0 0 120 120" aria-hidden="true"><g transform="translate(0 0)">${__vectorSigil(a,p)}</g></svg>`;}
 
+function __orbPoint(r,ang){return `${(60+Math.cos(ang)*r).toFixed(2)} ${(60+Math.sin(ang)*r).toFixed(2)}`;}
+function __shieldFacet(ang,r1,r2,spread,fill,stroke,tip=4,opacity=.9){
+  const p1=__orbPoint(r1,ang-spread),p2=__orbPoint(r2,ang-spread*.62),p3=__orbPoint(r2+tip,ang),p4=__orbPoint(r2,ang+spread*.62),p5=__orbPoint(r1,ang+spread),p6=__orbPoint(Math.max(12,r1-tip*.42),ang);
+  return `<path class="shield-plate" d="M${p1} L${p2} L${p3} L${p4} L${p5} L${p6} Z" fill="${fill}" stroke="${stroke}" stroke-width="1.2" opacity="${opacity}"/>`;
+}
+function __shieldPolygon(points,outer,inner,rotation=0,stroke='#fff',width=1.6,opacity=.95){
+  const list=[];for(let i=0;i<points*2;i++){const r=i%2===0?outer:inner;const ang=rotation+(Math.PI*i/points);list.push(__orbPoint(r,ang));}
+  return `<polygon class="shield-outline" points="${list.join(' ')}" fill="none" stroke="${stroke}" stroke-width="${width}" opacity="${opacity}"/>`;
+}
+function __shieldLevel(a,p){
+  if((a.odds||0)>=1e15||a.tier>=9)return 6;
+  if((a.odds||0)>=1e12||a.tier>=8)return 5;
+  if((a.odds||0)>=1e9||a.tier>=7)return 4;
+  if((a.odds||0)>=1e7||a.tier>=6)return 3;
+  if((a.odds||0)>=1e5||a.tier>=4)return 2;
+  if((a.odds||0)>=1e4||a.tier>=3)return 1;
+  return 0;
+}
+function __shieldThemeFor(motif='star'){
+  if(['crown','seraph','wing','ascend'].includes(motif))return 'royal';
+  if(['solar','flame','phoenix','nova','meteor'].includes(motif))return 'solar';
+  if(['ice','glacial'].includes(motif))return 'ice';
+  if(['vortex','quasar','cosmos','singularity','stardust','star','nebula','eclipse'].includes(motif))return 'cosmic';
+  if(['architect','rune','genesis','omega','zero','clock'].includes(motif))return 'tech';
+  if(['void','abyss','heartvoid','ghost'].includes(motif))return 'void';
+  if(['fracture','entropy','thread'].includes(motif))return 'fracture';
+  if(['lotus','eye','infinity'].includes(motif))return 'mystic';
+  return 'cosmic';
+}
+function __shieldMarkup(a,p,uid){
+  const level=__shieldLevel(a,p); if(level<=0)return '';
+  const accent=`url(#${uid}-accent)`,accent2=`url(#${uid}-accent2)`;
+  const strokeA=__rgba(p.accent,.92),strokeB=__rgba(p.accent2,.96),strokeC=__rgba('#ffffff',.78),fillSoft=__rgba(p.accent,.14),theme=__shieldThemeFor(p.motif);
+  const baseR=46+Math.min(10,level*2+p.power*.35),shellR=baseR+6+level*1.25;
+  const tw=(i)=>` style="animation-delay:${(i*.12).toFixed(2)}s"`;
+
+  if(theme==='cosmic'){
+    const nodes=[];
+    for(let i=0;i<8+level;i++){
+      const ang=(Math.PI*2*i/(8+level))+.14;
+      const x=(60+Math.cos(ang)*(shellR+10+(i%2?3:0))).toFixed(2), y=(60+Math.sin(ang)*(shellR+10+(i%2?3:0))).toFixed(2);
+      nodes.push(`<circle class="shield-node twinkle" cx="${x}" cy="${y}" r="${i%3===0?2.2:1.6}" fill="${i%2?strokeB:strokeC}"${tw(i)}/>`);
+    }
+    const shards=[];
+    for(let i=0;i<6+Math.min(4,level);i++){
+      const ang=(Math.PI*2*i/(6+Math.min(4,level)))+.22;
+      shards.push(__shieldFacet(ang,baseR+5,shellR+8,.12+(i%2)*.02, i%2?accent:accent2, i%2?strokeA:strokeB, 7+level*.8,.78));
+    }
+    return `<g class="shield-pulse"><g class="shield-spin-a"><ellipse class="shield-outline" cx="60" cy="60" rx="${shellR+10}" ry="${baseR-10}" fill="none" stroke="${__rgba(p.accent2,.55)}" stroke-width="2.1"/><ellipse class="shield-outline" cx="60" cy="60" rx="${shellR+4}" ry="${baseR-3}" fill="none" stroke="${__rgba(p.accent,.42)}" stroke-width="1.4" transform="rotate(58 60 60)"/></g><g class="shield-spin-b">${shards.join('')}</g><g class="shield-spin-c">${__shieldPolygon(8,shellR+6,baseR+10,Math.PI/8,strokeB,1.25,.72)}<circle class="shield-outline" cx="60" cy="60" r="${shellR+13}" fill="none" stroke="${__rgba('#ffffff',.22)}" stroke-width="1.05" stroke-dasharray="1.5 7"/></g><g>${nodes.join('')}</g><circle cx="60" cy="60" r="${baseR+2}" fill="none" stroke="${fillSoft}" stroke-width="1.1" opacity=".85"/></g>`;
+  }
+  if(theme==='royal'){
+    const crowns=[];
+    for(let i=0;i<6;i++){
+      const ang=-Math.PI/2 + (i-2.5)*.42;
+      crowns.push(__shieldFacet(ang,baseR+3,shellR+12,.09, i%2?accent2:accent, i%2?strokeB:strokeA, 12+level,.88));
+    }
+    const sideBraces=[];
+    [-1,1].forEach((dir,idx)=>{
+      sideBraces.push(`<path class="shield-plate" d="M ${60+dir*(baseR+2)} ${60-(baseR-10)} Q ${60+dir*(shellR+12)} 60 ${60+dir*(baseR+2)} ${60+(baseR-10)}" fill="none" stroke="${idx?strokeB:strokeA}" stroke-width="2.4" opacity=".9"/>`);
+    });
+    return `<g class="shield-pulse"><g class="shield-spin-a">${__shieldPolygon(6,shellR+2,baseR+9,Math.PI/6,strokeA,1.5,.82)}</g><g class="shield-spin-b">${crowns.join('')}</g><g>${sideBraces.join('')}<path class="shield-outline" d="M60 ${baseR-3} L66 ${baseR+9} L60 ${baseR+20} L54 ${baseR+9} Z" fill="${accent2}" opacity=".92"/><path class="shield-outline" d="M60 ${120-(baseR-3)} L66 ${120-(baseR+9)} L60 ${120-(baseR+20)} L54 ${120-(baseR+9)} Z" fill="${accent}" opacity=".82"/></g><g class="shield-spin-c"><circle class="shield-outline" cx="60" cy="60" r="${shellR+10}" fill="none" stroke="${__rgba('#ffffff',.18)}" stroke-width="1" stroke-dasharray="2 8"/></g></g>`;
+  }
+  if(theme==='solar'){
+    const flames=[]; const count=10+Math.min(4,level);
+    for(let i=0;i<count;i++){
+      const ang=(Math.PI*2*i/count)+.12;
+      flames.push(__shieldFacet(ang,baseR-2,shellR+10+(i%2?5:0),.08, i%2?accent2:accent, i%2?strokeB:strokeA, 14+level*1.1,.86));
+    }
+    const orbit=`<path class="shield-outline" d="M ${60-(shellR+6)} 60 C ${60-(shellR+1)} ${60-(baseR-7)}, ${60+(shellR+1)} ${60+(baseR-7)}, ${60+(shellR+6)} 60 C ${60+(shellR+1)} ${60-(baseR-7)}, ${60-(shellR+1)} ${60+(baseR-7)}, ${60-(shellR+6)} 60 Z" fill="none" stroke="${__rgba(p.accent2,.52)}" stroke-width="2"/>`;
+    const spokes=Array.from({length:6}).map((_,i)=>{const ang=i*Math.PI/3; const a=__orbPoint(baseR+4,ang).split(' '); const b=__orbPoint(shellR+13,ang).split(' '); return `<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="${__rgba('#fff',.28)}" stroke-width="1.2" stroke-linecap="round"/>`;}).join('');
+    return `<g class="shield-pulse"><g class="shield-spin-b">${flames.join('')}</g><g class="shield-spin-a">${orbit}<circle class="shield-outline" cx="60" cy="60" r="${shellR+3}" fill="none" stroke="${__rgba(p.accent,.32)}" stroke-width="1.5"/></g><g class="shield-spin-c">${spokes}</g></g>`;
+  }
+  if(theme==='ice'){
+    const crystals=[];
+    for(let i=0;i<6;i++){
+      const ang=(Math.PI*2*i/6)+Math.PI/6;
+      const outer=__orbPoint(shellR+12+(i%2?2:0),ang), l=__orbPoint(baseR+8,ang-.12), r=__orbPoint(baseR+8,ang+.12), back=__orbPoint(shellR+3,ang+Math.PI);
+      crystals.push(`<polygon class="shield-plate" points="${outer} ${l} ${back} ${r}" fill="${i%2?accent2:accent}" stroke="${i%2?strokeB:strokeA}" stroke-width="1.2" opacity=".84"/>`);
+    }
+    const nodes=[];
+    for(let i=0;i<12;i++){
+      const ang=(Math.PI*2*i/12)+.1, r=shellR+10;
+      const pt=__orbPoint(r,ang).split(' ');
+      nodes.push(`<rect class="shield-node twinkle" x="${(parseFloat(pt[0])-1.7).toFixed(2)}" y="${(parseFloat(pt[1])-1.7).toFixed(2)}" width="3.4" height="3.4" rx=".7" transform="rotate(45 ${pt[0]} ${pt[1]})" fill="${i%2?strokeB:strokeC}"${tw(i)}/>`);
+    }
+    return `<g class="shield-pulse"><g class="shield-spin-a">${__shieldPolygon(6,shellR+7,baseR+10,Math.PI/6,strokeB,1.35,.84)}${__shieldPolygon(6,shellR+12,shellR+2,0,strokeA,1,.55)}</g><g class="shield-spin-b">${crystals.join('')}</g><g>${nodes.join('')}</g></g>`;
+  }
+  if(theme==='tech'){
+    const segments=[];
+    for(let i=0;i<8;i++){
+      const ang=(Math.PI*2*i/8)+Math.PI/8;
+      const p1=__orbPoint(baseR+6,ang-.16), p2=__orbPoint(shellR+8,ang-.16), p3=__orbPoint(shellR+8,ang+.16), p4=__orbPoint(baseR+6,ang+.16);
+      segments.push(`<path class="shield-plate" d="M${p1} L${p2} L${p3} L${p4} Z" fill="${i%2?accent:accent2}" stroke="${i%2?strokeA:strokeB}" stroke-width="1.1" opacity=".76"/>`);
+    }
+    const brackets=[0,Math.PI/2,Math.PI,Math.PI*1.5].map((ang,i)=>`<path class="shield-outline" d="M ${__orbPoint(shellR+11,ang-.23)} A ${shellR+11} ${shellR+11} 0 0 1 ${__orbPoint(shellR+11,ang+.23)}" fill="none" stroke="${i%2?strokeB:strokeA}" stroke-width="2.4" stroke-linecap="round"/>`).join('');
+    const ticks=Array.from({length:12}).map((_,i)=>{const ang=(Math.PI*2*i/12); const a=__orbPoint(shellR+2,ang).split(' '); const b=__orbPoint(shellR+9+(i%3===0?3:0),ang).split(' '); return `<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="${__rgba('#fff',.38)}" stroke-width="1.1" stroke-linecap="round"/>`;}).join('');
+    return `<g class="shield-pulse"><g class="shield-spin-a">${__shieldPolygon(8,shellR+7,baseR+12,Math.PI/8,strokeA,1.2,.78)}${ticks}</g><g class="shield-spin-b">${segments.join('')}</g><g>${brackets}</g></g>`;
+  }
+  if(theme==='void'){
+    const spines=[]; const count=7+Math.min(3,level);
+    for(let i=0;i<count;i++){
+      const ang=(Math.PI*2*i/count)-Math.PI/2;
+      spines.push(__shieldFacet(ang,baseR+2,shellR+14+(i%2?5:0),.07+(i%2)*.02, i%2?accent2:accent, i%2?strokeB:strokeA, 16+level*1.4,.9));
+    }
+    const halo1=`<ellipse class="shield-outline" cx="60" cy="60" rx="${shellR+14}" ry="${baseR-6}" fill="none" stroke="${__rgba(p.accent2,.62)}" stroke-width="2.3"/>`;
+    const halo2=`<ellipse class="shield-outline" cx="60" cy="60" rx="${shellR+9}" ry="${baseR-1}" fill="none" stroke="${__rgba('#ffffff',.22)}" stroke-width="1.15" transform="rotate(90 60 60)"/>`;
+    const drips=[-14,-7,0,7,14].map((dx,i)=>`<path class="shield-plate" d="M ${60+dx} ${60+shellR+4} L ${60+dx+2} ${60+shellR+16+(i%2?8:0)} L ${60+dx+6} ${60+shellR+4} Z" fill="${i%2?accent:accent2}" opacity=".74"/>`).join('');
+    return `<g class="shield-pulse"><g class="shield-spin-b">${spines.join('')}</g><g class="shield-spin-a">${halo1}${halo2}</g><g>${drips}<circle class="shield-outline" cx="60" cy="60" r="${shellR+5}" fill="none" stroke="${__rgba(p.accent,.24)}" stroke-width="1.2"/></g></g>`;
+  }
+  if(theme==='fracture'){
+    const shards=[]; const count=9+Math.min(3,level);
+    for(let i=0;i<count;i++){
+      const ang=(Math.PI*2*i/count)+((i%2)*.12); const r1=baseR+3+(i%3), r2=shellR+8+(i%2?7:1), spread=.05+(i%3)*.02;
+      shards.push(__shieldFacet(ang,r1,r2,spread, i%2?accent:accent2, i%2?strokeA:strokeB, 12+((i%3)*3),.84));
+    }
+    const breaks=[];
+    for(let i=0;i<5;i++){
+      const ang=(Math.PI*2*i/5)+.5;
+      breaks.push(`<path class="shield-outline" d="M ${__orbPoint(baseR+6,ang)} L ${__orbPoint(shellR+14,ang+.05)} L ${__orbPoint(shellR+8,ang-.08)}" fill="none" stroke="${__rgba('#fff',.25)}" stroke-width="1.2"/>`);
+    }
+    return `<g class="shield-pulse"><g class="shield-spin-b">${shards.join('')}</g><g class="shield-spin-c">${__shieldPolygon(7,shellR+6,baseR+9,.2,strokeA,1.1,.45)}${breaks.join('')}</g></g>`;
+  }
+  if(theme==='mystic'){
+    const petals=[]; const count=8;
+    for(let i=0;i<count;i++){
+      const ang=(Math.PI*2*i/count);
+      petals.push(`<path class="shield-plate" d="M ${__orbPoint(baseR+4,ang)} Q ${__orbPoint(shellR+10,ang-.12)} ${__orbPoint(shellR+13,ang)} Q ${__orbPoint(shellR+10,ang+.12)} ${__orbPoint(baseR+4,ang)}" fill="${i%2?accent:accent2}" stroke="${i%2?strokeA:strokeB}" stroke-width="1" opacity=".62"/>`);
+    }
+    const runeRing=`<circle class="shield-outline" cx="60" cy="60" r="${shellR+7}" fill="none" stroke="${__rgba(p.accent2,.34)}" stroke-width="1.2" stroke-dasharray="0.8 5.2"/>`;
+    return `<g class="shield-pulse"><g class="shield-spin-a">${petals.join('')}</g><g class="shield-spin-c">${__shieldPolygon(8,shellR+3,baseR+11,Math.PI/8,strokeB,1.1,.66)}${runeRing}</g></g>`;
+  }
+  return '';
+}
+
 function renderAuraOrb(a,{size=96,className='',muted=false}={}){
   const p=__orbProfile(a);const uid=`orb${String(a.id).replace(/[^\w-]/g,'_')}_${size}_${p.motif}`;const shell=33+Math.min(14,p.power*1.5);const rim=40+Math.min(14,p.power*1.5);const spin=Math.max(3.2,13.4-p.power*.88);const glow=muted?'#99a3ba':p.accent;const sparkCount=Math.min(12,4+Math.floor(p.power/1.5));
-  return `<div class="aura-orb-wrap ${className}${muted?' is-muted':''}" style="width:${size}px;height:${size}px;--orb-glow:${glow};--orb-accent2:${p.accent2};--orb-spin:${spin}s;--orb-main:${a.color}"><svg class="aura-orb-svg" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><radialGradient id="${uid}-core" cx="34%" cy="26%" r="78%"><stop offset="0%" stop-color="#ffffff" stop-opacity=".98"/><stop offset="26%" stop-color="${p.accent2}" stop-opacity=".92"/><stop offset="56%" stop-color="${p.shell}" stop-opacity=".96"/><stop offset="84%" stop-color="${p.deep}" stop-opacity="1"/></radialGradient><radialGradient id="${uid}-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="${__rgba(p.accent,.42)}"/><stop offset="100%" stop-color="${__rgba(p.accent,.02)}"/></radialGradient><linearGradient id="${uid}-accent" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="${p.accent}"/><stop offset="100%" stop-color="${p.accent2}"/></linearGradient><linearGradient id="${uid}-accent2" x1="20%" y1="15%" x2="80%" y2="95%"><stop offset="0%" stop-color="#ffffff" stop-opacity=".95"/><stop offset="100%" stop-color="${p.accent2}" stop-opacity=".92"/></linearGradient></defs><g class="pulse-b"><circle cx="60" cy="60" r="52" fill="url(#${uid}-glow)" opacity="${(0.34+Math.min(.38,p.power*.04)).toFixed(2)}"/></g><g class="rot-a"><circle cx="60" cy="60" r="${rim}" fill="none" stroke="${__rgba(p.accent,.42)}" stroke-width="2.2" stroke-dasharray="${(p.power>6?6:4)} ${(p.power>6?5:6)}" opacity=".9"/></g><g class="rot-b"><ellipse cx="60" cy="60" rx="${rim+5}" ry="${shell-11}" fill="none" stroke="${__rgba(p.accent2,.25)}" stroke-width="1.7"/></g><g class="pulse-a"><circle cx="60" cy="60" r="${shell}" fill="url(#${uid}-core)"/><circle cx="49" cy="45" r="${Math.max(8,14-p.power*.35)}" fill="${__rgba('#ffffff',.32)}"/></g>${__motifMarkup(p,uid)}<g class="float-b orb-sigil-original"><text x="60" y="68" text-anchor="middle" font-size="${18+Math.min(10,p.power)}" font-weight="900" fill="${__rgba('#ffffff',.96)}" style="paint-order:stroke;stroke:${__rgba(p.deep,.85)};stroke-width:2.8px;font-family:Manrope,system-ui,sans-serif">${p.sigil}</text></g><g class="float-b orb-sigil-vector">${__vectorSigil(a,p)}</g><g>${Array.from({length:sparkCount}).map((_,i)=>{const ang=(Math.PI*2*i/sparkCount)+(p.power*.11),rad=44+(i%3)*5+(p.power>7?3:0),x=(60+Math.cos(ang)*rad).toFixed(2),y=(60+Math.sin(ang)*rad).toFixed(2),r=(i%4===0?2.4:1.6);return `<circle class="twinkle" cx="${x}" cy="${y}" r="${r}" fill="${i%2?__rgba(p.accent2,.92):__rgba('#ffffff',.96)}" style="animation-delay:${(i*.13).toFixed(2)}s"/>`;}).join('')}</g></svg></div>`;
+  return `<div class="aura-orb-wrap ${className}${muted?' is-muted':''}" style="width:${size}px;height:${size}px;--orb-glow:${glow};--orb-accent2:${p.accent2};--orb-spin:${spin}s;--orb-main:${a.color}"><svg class="aura-orb-svg" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><radialGradient id="${uid}-core" cx="34%" cy="26%" r="78%"><stop offset="0%" stop-color="#ffffff" stop-opacity=".98"/><stop offset="26%" stop-color="${p.accent2}" stop-opacity=".92"/><stop offset="56%" stop-color="${p.shell}" stop-opacity=".96"/><stop offset="84%" stop-color="${p.deep}" stop-opacity="1"/></radialGradient><radialGradient id="${uid}-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="${__rgba(p.accent,.42)}"/><stop offset="100%" stop-color="${__rgba(p.accent,.02)}"/></radialGradient><linearGradient id="${uid}-accent" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="${p.accent}"/><stop offset="100%" stop-color="${p.accent2}"/></linearGradient><linearGradient id="${uid}-accent2" x1="20%" y1="15%" x2="80%" y2="95%"><stop offset="0%" stop-color="#ffffff" stop-opacity=".95"/><stop offset="100%" stop-color="${p.accent2}" stop-opacity=".92"/></linearGradient></defs><g class="pulse-b"><circle cx="60" cy="60" r="52" fill="url(#${uid}-glow)" opacity="${(0.34+Math.min(.38,p.power*.04)).toFixed(2)}"/></g>${__shieldMarkup(a,p,uid)}<g class="rot-a"><circle cx="60" cy="60" r="${rim}" fill="none" stroke="${__rgba(p.accent,.42)}" stroke-width="2.2" stroke-dasharray="${(p.power>6?6:4)} ${(p.power>6?5:6)}" opacity=".9"/></g><g class="rot-b"><ellipse cx="60" cy="60" rx="${rim+5}" ry="${shell-11}" fill="none" stroke="${__rgba(p.accent2,.25)}" stroke-width="1.7"/></g><g class="pulse-a"><circle cx="60" cy="60" r="${shell}" fill="url(#${uid}-core)"/><circle cx="49" cy="45" r="${Math.max(8,14-p.power*.35)}" fill="${__rgba('#ffffff',.32)}"/></g>${__motifMarkup(p,uid)}<g class="float-b orb-sigil-original"><text x="60" y="68" text-anchor="middle" font-size="${18+Math.min(10,p.power)}" font-weight="900" fill="${__rgba('#ffffff',.96)}" style="paint-order:stroke;stroke:${__rgba(p.deep,.85)};stroke-width:2.8px;font-family:Manrope,system-ui,sans-serif">${p.sigil}</text></g><g class="float-b orb-sigil-vector">${__vectorSigil(a,p)}</g><g>${Array.from({length:sparkCount}).map((_,i)=>{const ang=(Math.PI*2*i/sparkCount)+(p.power*.11),rad=44+(i%3)*5+(p.power>7?3:0),x=(60+Math.cos(ang)*rad).toFixed(2),y=(60+Math.sin(ang)*rad).toFixed(2),r=(i%4===0?2.4:1.6);return `<circle class="twinkle" cx="${x}" cy="${y}" r="${r}" fill="${i%2?__rgba(p.accent2,.92):__rgba('#ffffff',.96)}" style="animation-delay:${(i*.13).toFixed(2)}s"/>`;}).join('')}</g></svg></div>`;
 }
 function __unknownOrbMarkup(){return `<span class="void-unknown-mark" title="未発見" aria-label="未発見"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 23a12 12 0 0 1 24 0c0 9-12 9-12 19"/><path d="M32 51v1"/></svg></span>`;}
 
@@ -1057,7 +1454,7 @@ function renderCollection(){
     const rarity=design?`<div class="aura-rarity-meta">${design.label} · ${design.theme}</div>`:'';
     const signature=known&&a.tier>=3?`<div class="aura-signature-meta">${profile.title}</div>`:'';
     const orb=known?renderAuraOrb(a,{size:96,className:'collection-orb'}):__unknownOrbMarkup();
-    return `<article class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art">${orb}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${signature}${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'装備中':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
+    return `<article data-aura-id="${a.id}" class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art" role="button" tabindex="${known?0:-1}" aria-label="${known?a.name+'を拡大表示':'未発見'}">${orb}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${signature}${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'装備中':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
   }).join('');$('grid-empty').hidden=result.length!==0;
 }
 
@@ -1071,7 +1468,7 @@ function redeemAdminCode(event){
     const admin=POTIONS.find(p=>p.id==='void-admin-2020');
     state.potions[admin.id]=(state.potions[admin.id]||0)+1;
     save();renderPotions();renderRollUI();
-    message.textContent='2020認証完了：ラック×5,000,000の管理者ポーションを1本受け取りました。';
+    message.textContent='認証成功：特別なポーションを1本受け取りました。';
     message.className='admin-code-message success';
     toast('ADMIN ACCESS GRANTED','2020: ラック ×5,000,000・10分間のポーションを獲得！','good');
     tone(880,.26,'sine',.04);tone(1320,.35,'triangle',.04,.12);return;
@@ -1080,21 +1477,45 @@ function redeemAdminCode(event){
     for(const aura of AURAS){state.discovered[aura.id]=true;state.inventory[aura.id]=Math.max(1,state.inventory[aura.id]||0);} 
     state.bestId=AURAS[AURAS.length-1].id;
     save();renderEntireGame();showPage('collection');
-    message.textContent='2021認証完了：図鑑コンプリート。全80種のオーラを1個ずつ付与しました。';
+    message.textContent='認証成功：図鑑がコンプリートしました。';
     message.className='admin-code-message success';
     toast('COMPENDIUM OVERRIDE','2021: 図鑑80/80解放 + 全オーラ付与。','good');
     tone(740,.18,'triangle',.03);tone(960,.24,'sine',.03,.08);tone(1280,.3,'triangle',.035,.18);return;
   }
-  message.textContent='コードが違います。2020 または 2021 を確認してください。';
+  message.textContent='コードが違います。管理者に確認してください。';
   message.className='admin-code-message error';
   toast('INVALID CODE','その管理コードは使えません。','error');
 }
 /* ===== end of v5 override block ===== */
 
 
-// v6: Render only eight cards at a time on phones; desktops remain exactly as before.
+// v10: continuous collection on phones. Use IntersectionObserver to animate only
+// the cards near the viewport instead of rendering 80 heavy SVGs simultaneously.
 let collectionMobilePage=0;
+let __collectionOrbObserver=null;
 function __mobileCollection(){return window.matchMedia('(max-width:760px)').matches;}
+function __resetCollectionPage(){collectionMobilePage=0;}
+function __moveCollection(){/* Deprecated: continuous-scroll collection, no pagination. */}
+function __lazyOrbPlaceholder(a){
+  return `<div class="orb-lazy-placeholder" data-lazy-orb="${a.id}" style="--orb-accent:${a.color}" aria-hidden="true"><span>✦</span></div>`;
+}
+function __hydrateCollectionOrbs(){
+  if(__collectionOrbObserver){__collectionOrbObserver.disconnect();__collectionOrbObserver=null;}
+  const pending=Array.from($('aura-grid').querySelectorAll('[data-lazy-orb]'));
+  if(!pending.length)return;
+  function hydrate(el){
+    if(!el.isConnected)return;
+    const aura=AURAS[Number(el.dataset.lazyOrb)];
+    if(aura)el.outerHTML=renderAuraOrb(aura,{size:96,className:'collection-orb'});
+  }
+  if(!('IntersectionObserver' in window)){pending.forEach(hydrate);return;}
+  __collectionOrbObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){__collectionOrbObserver?.unobserve(entry.target);hydrate(entry.target);}
+    });
+  },{root:null,rootMargin:'470px 0px 470px 0px',threshold:0});
+  pending.forEach(el=>__collectionOrbObserver.observe(el));
+}
 function renderCollection(){
   try{
     const total=discoveredCount();
@@ -1102,39 +1523,243 @@ function renderCollection(){
     $('collection-progress').style.width=Math.min(100,total/80*100)+'%';
     $('collection-percent').textContent=Math.min(100,total/80*100).toFixed(1)+'%';
     const filtered=AURAS.filter(a=>(collectionMode==='all'||(collectionMode==='owned'?!!state.discovered[a.id]:!state.discovered[a.id]))&&(collectionTier==='all'||a.tier===Number(collectionTier))&&(!collectionSearch||a.name.toLowerCase().includes(collectionSearch.toLowerCase())));
-    const mobile=__mobileCollection(),perPage=8,pages=Math.max(1,Math.ceil(filtered.length/perPage));
-    collectionMobilePage=Math.max(0,Math.min(collectionMobilePage,pages-1));
-    const display=mobile?filtered.slice(collectionMobilePage*perPage,(collectionMobilePage+1)*perPage):filtered;
-    const cards=display.map(a=>{
+    const mobile=__mobileCollection();
+    const cards=filtered.map(a=>{
       const count=state.inventory[a.id]||0,owned=count>0,known=!!state.discovered[a.id],equipped=owned&&state.equippedAura===a.id;
       const design=voidRareDesign(a),rareClass=design?'void-rare power-'+design.level:'';
       const profile=__orbProfile(a);
       const rarity=design?`<div class="aura-rarity-meta">${design.label} · ${design.theme}</div>`:'';
       const signature=known&&a.tier>=3?`<div class="aura-signature-meta">${profile.title}</div>`:'';
-      const orb=known?renderAuraOrb(a,{size:96,className:'collection-orb'}):__unknownOrbMarkup();
-      return `<article class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art">${orb}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${signature}${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'装備中':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
+      const orb=known?(mobile?__lazyOrbPlaceholder(a):renderAuraOrb(a,{size:96,className:'collection-orb'})):__unknownOrbMarkup();
+      return `<article data-aura-id="${a.id}" class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art" role="button" tabindex="${known?0:-1}" aria-label="${known?a.name+'を拡大表示':'未発見'}">${orb}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${signature}${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'装備中':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
     });
     $('aura-grid').innerHTML=cards.join('');
     $('grid-empty').hidden=filtered.length!==0;
-    const pager=$('aura-pager');
-    pager.hidden=!mobile||filtered.length===0;
-    $('aura-page-counter').textContent=`${collectionMobilePage+1} / ${pages} ページ`;
-    $('aura-prev').disabled=collectionMobilePage===0;
-    $('aura-next').disabled=collectionMobilePage>=pages-1;
+    $('aura-pager').hidden=true;
+    __hydrateCollectionOrbs();
   }catch(e){
     console.error('Collection error',e);
     $('grid-empty').hidden=false;
     $('grid-empty').textContent='図鑑の読み込みで問題が発生しました。画面を更新してください。';
   }
 }
-function __moveCollection(delta){collectionMobilePage+=delta;renderCollection();
- const grid=$('aura-grid');
- if(grid)grid.scrollIntoView({block:'start',behavior:'instant'});
+/* ===== VOID RNG: SPECTACLE ENGINE v9 ===== */
+let _spectacleSerial=0;
+const SP_DESC={
+'INFERNO':'黒鉄の鎧に封じられた獄炎。燃える刃が周囲を巡る。',
+'PHOENIX':'不死の炎から蘇る火の鳥。双翼が核を包み込む。',
+'GLACIAL':'極地の結晶装甲。六枚の氷槍が逆回転する。',
+'ABSOLUTE ZERO':'宇宙の熱を奪う絶対零度の結晶。',
+'CHRONOS':'終わらない秒針と巨大な時空歯車。',
+'HEAVENFALL':'天界から落ちた神聖な隕石の心臓。',
+'SERAPH':'黄金の光輪と六翼の守護者。',
+'OBLIVION':'光も音も吸い込む虚無の中心核。',
+'SINGULARITY':'時空が崩壊する特異点。多重の重力輪が歪む。',
+'PARADOX':'相反する世界が交わる、破れた真理の核。',
+'ECLIPSE: Ω':'終末の日蝕。Ωの封印が歪んだ宇宙を支配する。',
+'THE FIRST STAR':'宇宙で最初に灯った光。神々しい光芒が広がる。',
+'BLACK SUN':'黒い太陽と暴走する紅蓮のコロナ。',
+'OMEGA':'終端にして頂点。巨大な封印輪と終焉の紋章。',
+'COSMOS':'あらゆる銀河が凝縮された宇宙の心臓。',
+'THE ARCHITECT':'世界を組み立てる古代の設計装置。',
+'ASTRAL KING':'天空の王冠と幾重もの王家の装甲。',
+'ETERNITY':'永遠の輪が何度も交差する、時を超えた光。',
+'WRAITH':'実体を持たない怨霊。崩れた霊的装甲が漂う。',
+'ZENITH':'星の頂点で輝く究極の冠。'
+};
+function spN(x){return Number(x).toFixed(2)}
+function spPt(r,ang){return [spN(60+Math.cos(ang)*r),spN(60+Math.sin(ang)*r)];}
+function spPath(pts){return pts.map((p,i)=>`${i?'L':'M'}${spN(p[0])} ${spN(p[1])}`).join(' ')+'Z';}
+function spShard(r0,r1,angle,width,tip=0){const pts=[spPt(r0,angle-width),spPt(r1-2,angle-width*.54),spPt(r1+tip,angle),spPt(r1-2,angle+width*.54),spPt(r0,angle+width),spPt(r0-2,angle)];return spPath(pts);}
+function spTheme(a,p){
+ const n=a.name;
+ if(['PHOENIX','VALKYRIE','SERAPH','HEAVENFALL','IMMORTAL','ASTRAL KING','DIVINITY','APOTHEOSIS','ZENITH','NIRVANA'].includes(n))return n==='PHOENIX'?'phoenix':n==='NIRVANA'?'lotus':'seraph';
+ if(['INFERNO','SOLARIS','SOLSTICE','SUPERNOVA','HYPERNOVA','BLACK SUN','LAST LIGHT','THE FIRST STAR'].includes(n))return 'inferno';
+ if(['GLACIAL','ABSOLUTE ZERO','FROSTBITE'].includes(n))return 'glacial';
+ if(['OBLIVION','ABYSS WALKER','NULL GOD','HEART OF VOID','DARK MATTER','EVENT HORIZON','THE END','SINGULARITY'].includes(n))return 'void';
+ if(['THE ARCHITECT','CREATION','GENESIS','ORIGIN','ARCANUM','OMEGA','AEON','CHRONOS','ZERO POINT'].includes(n))return 'mechanical';
+ if(['REALITY BREAKER','PARADOX','ENTROPY','FATELESS','ECLIPSE: Ω','WRAITH'].includes(n))return 'fracture';
+ if(['COSMOS','QUASAR','INFINITY','ETERNITY','CELESTIAL','ASTRAL KING','NEBULA','STARDUST','VORTEX','ASTRAL KING'].includes(n))return 'astral';
+ if(['SYMPHONY','NIGHTFALL','ECLIPSE','NIRVANA','OMNISCIENT'].includes(n))return 'arcane';
+ return {solar:'inferno',ice:'glacial',royal:'seraph',void:'void',fracture:'fracture',tech:'mechanical',mystic:'arcane',cosmic:'astral'}[__shieldThemeFor(p.motif)]||'astral';
 }
-function __resetCollectionPage(){collectionMobilePage=0;}
+function spEmblems(a,p,u){
+ const t=spTheme(a,p),c=`url(#${u}-bright)`,d=`url(#${u}-metal)`,edge=__rgba(p.accent2,.87),P=a.tier;
+ // These named relics have their own sculpted centerpieces, not recolored symbols.
+ if(a.name==='OMNISCIENT'){
+  return `<g class="sp-breathe"><path d="M22 60 Q60 19 98 60 Q60 101 22 60Z" fill="${d}" stroke="${edge}" stroke-width="2.8"/><path d="M29 60 Q60 31 91 60 Q60 89 29 60Z" fill="${c}" stroke="white" stroke-width="1.6"/><circle cx="60" cy="60" r="15" fill="${p.deep}" stroke="${edge}" stroke-width="2.5"/><circle cx="60" cy="60" r="8" fill="${p.accent}"/><circle cx="62" cy="57" r="3.5" fill="white"/></g>`;
+ }
+ if(a.name==='HEART OF VOID'){
+  return `<g class="sp-breathe"><path d="M60 85L39 67Q22 50 38 39Q49 33 60 46Q71 33 82 39Q98 50 81 67Z" fill="${d}" stroke="${edge}" stroke-width="2.7"/><path d="M60 75L48 61Q41 52 49 48Q56 45 60 53Q64 45 71 48Q79 52 72 61Z" fill="#06050c" stroke="${edge}" stroke-width="1.8"/><path d="M60 34L62 54L71 68L60 83L51 68L58 54Z" fill="none" stroke="white" stroke-width="1.1" opacity=".65"/></g>`;
+ }
+ if(a.name==='SINGULARITY'){
+  return `<g class="sp-twist"><ellipse cx="60" cy="60" rx="37" ry="15" fill="none" stroke="${p.accent2}" stroke-width="4.3" transform="rotate(-26 60 60)"/><ellipse cx="60" cy="60" rx="34" ry="15" fill="none" stroke="${p.accent}" stroke-width="2.1" transform="rotate(41 60 60)"/><circle cx="60" cy="60" r="22" fill="url(#${u}-abyss)" stroke="${edge}" stroke-width="1.8"/><circle cx="60" cy="60" r="10" fill="#000"/><circle cx="60" cy="60" r="5" fill="#fff9d8"/><circle cx="60" cy="60" r="3" fill="#000"/></g>`;
+ }
+ if(a.name==='LAST LIGHT'){
+  return `<g class="sp-breathe"><path d="M60 23 L67 52 L94 60 L67 68 L60 97 L53 68 L26 60 L53 52Z" fill="${c}" stroke="#fffef2" stroke-width="2.3"/><circle cx="60" cy="60" r="16" fill="${p.accent}"/><circle cx="60" cy="60" r="8" fill="#fff"/><path d="M23 60H97M60 23V97" stroke="#ffffff" stroke-width="1.4" opacity=".84"/></g>`;
+ }
+ if(a.name==='THE FIRST STAR'){
+  const spike=Array.from({length:12},(_,i)=>{const ang=i*Math.PI/6;return `<path d="${spShard(8,31+(i%2?7:0),ang,.13,7)}" fill="${i%2?c:d}" stroke="${edge}" stroke-width="1.1"/>`}).join('');
+  return `<g class="sp-breathe">${spike}<circle cx="60" cy="60" r="14" fill="${c}" stroke="#ffffff" stroke-width="2"/><circle cx="60" cy="60" r="5" fill="#ffffff"/></g>`;
+ }
+ if(a.name==='ENDLESS'||a.name==='INFINITY'||a.name==='ETERNITY'){
+  return `<g class="sp-breathe"><path d="M24 61 C37 27 53 50 60 60 C73 86 90 72 95 60 C101 40 82 33 69 50 C53 74 43 83 30 74 C18 65 25 48 37 47" stroke="${edge}" fill="none" stroke-width="5.8" stroke-linecap="round"/><path d="M24 61 C37 27 53 50 60 60 C73 86 90 72 95 60 C101 40 82 33 69 50 C53 74 43 83 30 74 C18 65 25 48 37 47" stroke="#fff" fill="none" stroke-width="1.4" opacity=".85"/></g>`;
+ }
+ if(a.name==='BLACK SUN'||a.name==='ECLIPSE: Ω'||a.name==='ECLIPSE'){
+  return `<g class="sp-twist"><circle cx="60" cy="60" r="27" fill="${p.accent}" opacity=".48"/><circle cx="56" cy="59" r="24" fill="#050411" stroke="${edge}" stroke-width="3"/><path d="M36 76 A29 29 0 1 1 85 43" fill="none" stroke="${p.accent2}" stroke-width="4.4" stroke-linecap="round"/><circle cx="84" cy="45" r="5.2" fill="#fff"/></g>`;
+ }
+ if(a.name==='THE END'){
+  return `<g class="sp-breathe"><path d="M34 30L54 55L43 78L59 72L69 88L79 55L92 38L70 48L60 26L53 46Z" fill="${d}" stroke="${edge}" stroke-width="2.6"/><path d="M38 82L80 32 M35 38L85 83" stroke="#fff" stroke-width="3.6" opacity=".81"/></g>`;
+ }
+ if(a.name==='OMEGA'){
+  return `<g class="sp-breathe"><path d="M37 75H47Q31 61 36 45Q40 28 60 27Q80 28 84 45Q89 61 73 75H83V86H65V77Q81 62 78 47Q74 35 60 35Q46 35 42 47Q39 62 55 77V86H37Z" fill="${d}" stroke="${edge}" stroke-width="2.1"/><path d="M50 44Q60 35 70 44" fill="none" stroke="#fff" stroke-width="2"/></g>`;
+ }
+ if(a.name==='THE ARCHITECT'||a.name==='CREATION'){
+  return `<g class="sp-twist"><path d="M60 23L86 38V82L60 97L34 82V38Z" fill="${d}" stroke="${edge}" stroke-width="2.3"/><path d="M60 31L77 42V78L60 89L43 78V42Z" fill="${c}" stroke="#fff" stroke-width="1.1" opacity=".83"/><path d="M60 31V89M43 42L77 78M77 42L43 78" stroke="${edge}" stroke-width="1.8"/><circle cx="60" cy="60" r="8" fill="#fff"/></g>`;
+ }
+ if(a.name==='FATELESS'){
+  return `<g class="sp-twist"><path d="M30 72Q44 28 60 49Q76 30 89 52Q76 77 51 90" fill="none" stroke="${edge}" stroke-width="4"/><path d="M28 27L72 90" stroke="white" stroke-width="2.5"/><path d="M67 29L34 80" stroke="${p.accent}" stroke-width="3.4"/></g>`;
+ }
+ if(a.name==='NIRVANA'){
+  return `<g class="sp-breathe">${Array.from({length:9},(_,i)=>`<ellipse cx="60" cy="39" rx="7.5" ry="21" transform="rotate(${i*40} 60 60)" fill="${i%2?d:c}" opacity=".77" stroke="${edge}" stroke-width="1.5"/>`).join('')}<circle cx="60" cy="60" r="10" fill="#fff" opacity=".88"/></g>`;
+ }
+
+ if(t==='inferno'||t==='phoenix'){
+  const flame=Array.from({length:5+(a.id%4)},(_,i)=>{const ang=Math.PI*(.5+i/(4+a.id%4));const R=17+(i%3)*2;return `<path d="${spShard(16,29+R/5,ang,.12,7+i%2*3)}" fill="${i%2?c:d}" stroke="${edge}" stroke-width=".8" opacity=".94"/>`}).join('');
+  return `<g class="sp-breathe">${flame}<path d="M60 31 C76 43 77 58 65 70 C59 75 48 69 49 60 C49 54 58 49 60 31Z" fill="${c}" stroke="${edge}" stroke-width="1.7"/><path d="M61 45 C70 54 68 65 60 68 C53 64 54 56 61 45Z" fill="#fff0c3" opacity=".82"/>${t==='phoenix'?`<path d="M60 59 Q39 18 20 31 Q37 32 44 55 Q27 56 21 74 Q45 70 60 59Z" fill="${d}" stroke="${edge}" stroke-width="2.4"/><path d="M60 59 Q81 18 100 31 Q83 32 76 55 Q93 56 99 74 Q75 70 60 59Z" fill="${d}" stroke="${edge}" stroke-width="2.4"/>`:''}</g>`;
+ }
+ if(t==='glacial'){
+  let crystals='';for(let i=0;i<6;i++){const a=i*Math.PI/3;crystals+=`<path d="${spShard(12,32+(i%2)*5,a,.18,5)}" fill="${i%2?c:d}" stroke="#e3faff" stroke-width="1.8"/>`;}
+  return `<g class="sp-twist">${crystals}<path d="M60 39L77 60L60 81L43 60Z" fill="${c}" opacity=".91" stroke="#ffffff" stroke-width="1.3"/><path d="M60 39V81M43 60H77" stroke="#faffff" stroke-width="1.15" opacity=".8"/></g>`;
+ }
+ if(t==='void'){
+  return `<g class="sp-breathe"><circle cx="60" cy="60" r="24" fill="url(#${u}-abyss)" stroke="${edge}" stroke-width="2.5"/><ellipse cx="60" cy="60" rx="31" ry="11" fill="none" stroke="${__rgba(p.accent,.8)}" stroke-width="3" transform="rotate(-28 60 60)"/><circle cx="60" cy="60" r="9" fill="#01020a" stroke="${__rgba(p.accent2,.75)}" stroke-width="1.8"/><circle cx="60" cy="60" r="3" fill="#fff" opacity=".9"/></g>`;
+ }
+ if(t==='mechanical'){
+  const layer=Array.from({length:8},(_,i)=>`<path d="${spShard(21,30,i*Math.PI/4,.16,2)}" fill="${i%2?d:c}" stroke="${edge}" stroke-width="1"/>`).join('');
+  return `<g class="sp-twist">${layer}<path d="M60 36L80 48V72L60 84L40 72V48Z" fill="url(#${u}-metal)" stroke="${edge}" stroke-width="2"/><path d="M60 44L73 52V68L60 76L47 68V52Z" fill="${c}" opacity=".73"/><path d="M60 47V73M48 53L72 67M72 53L48 67" stroke="#fff" stroke-width="1.3" opacity=".8"/></g>`;
+ }
+ if(t==='seraph'){
+  return `<g class="sp-breathe"><path d="M60 61 Q38 36 17 34 Q28 51 39 61 Q28 58 24 76 Q45 75 60 61Z" fill="${d}" stroke="${edge}" stroke-width="1.8"/><path d="M60 61 Q82 36 103 34 Q92 51 81 61 Q92 58 96 76 Q75 75 60 61Z" fill="${d}" stroke="${edge}" stroke-width="1.8"/><ellipse cx="60" cy="42" rx="16" ry="5" fill="none" stroke="#fff7d5" stroke-width="2.7"/><path d="M60 44L67 58L60 79L53 58Z" fill="${c}" stroke="#ffffff" stroke-width="1.7"/></g>`;
+ }
+ if(t==='lotus'){
+  return `<g class="sp-breathe">${Array.from({length:7},(_,i)=>`<ellipse cx="60" cy="47" rx="7.5" ry="15.5" fill="${i%2?d:c}" opacity=".8" stroke="${edge}" stroke-width="1.3" transform="rotate(${i*360/7} 60 60)"/>`).join('')}<circle cx="60" cy="60" r="8.2" fill="${c}" stroke="#fff" stroke-width="1.6"/></g>`;
+ }
+ if(t==='fracture'){
+  const frags=[[31,50,46,38,55,58],[61,34,75,42,66,58],[45,76,55,60,63,81],[71,60,83,73,65,81]];
+  return `<g class="sp-twist">${frags.map((v,i)=>`<polygon points="${v.join(' ')}" fill="${i%2?c:d}" stroke="${edge}" stroke-width="1.5" opacity=".9"/>`).join('')}<path d="M58 34L48 55L67 56L55 81" fill="none" stroke="#fff" stroke-width="2.8"/></g>`;
+ }
+ if(t==='arcane'){
+  const R=23;
+  return `<g class="sp-slow"><circle cx="60" cy="60" r="${R}" fill="none" stroke="${edge}" stroke-width="1.8"/><path d="M60 35 L74 69 L40 53 L80 53 L46 69 Z" fill="${__rgba(p.accent,.2)}" stroke="${__rgba('#fff',.93)}" stroke-width="1.4"/><circle cx="60" cy="60" r="8" fill="${c}" opacity=".87"/><circle cx="60" cy="60" r="2.5" fill="#fff"/></g>`;
+ }
+ return `<g class="sp-twist"><ellipse cx="60" cy="60" rx="30" ry="13" fill="none" stroke="${edge}" stroke-width="2.6" transform="rotate(40 60 60)"/><ellipse cx="60" cy="60" rx="27" ry="12" fill="none" stroke="${__rgba(p.accent,.78)}" stroke-width="2.5" transform="rotate(-40 60 60)"/><path d="M60 35 L67 53 L83 60 L67 67 L60 85 L53 67 L37 60 L53 53Z" fill="${c}" stroke="${edge}" stroke-width="1.8"/></g>`;
+}
+function spArmor(a,p,u){
+ const t=spTheme(a,p),level=Math.max(0,a.tier-2),complex=a.tier>=4,ultra=a.tier>=7,top=a.tier>=9;
+ if(a.tier<3)return '';
+ const metal=`url(#${u}-metal)`,bright=`url(#${u}-bright)`,edge=__rgba(p.accent2,.92),rim=__rgba(p.accent,.68),shadow=__rgba('#080b1c',.88);
+ let inner='',outer='',staticPart='';
+ const N=(t==='inferno'?9:t==='glacial'?6:t==='seraph'?6:t==='void'?8:t==='mechanical'?8:t==='fracture'?10:t==='lotus'?8:t==='arcane'?10:9)+(ultra?2:0);
+ for(let i=0;i<N;i++){
+   const ang=(i/N*2*Math.PI)+(a.id*.039);
+   const short=(i%4===0?2.5:0),offset=(i%2?1:0),gap=t==='fracture'?(i%2?4:-1):0;
+   const r0=27+offset, r1=42+short+gap+(t==='inferno'?3:0)+(top?3:0);
+   const width=t==='mechanical'?.14:t==='fracture'?.10:t==='seraph'?.19:t==='glacial'?.13:.15;
+   outer+=`<path d="${spShard(r0,r1,ang,width,complex?(t==='inferno'?10:t==='glacial'?7:7):3)}" fill="${i%3===0?bright:metal}" stroke="${i%2?rim:edge}" stroke-width="${complex?1.2:.95}" opacity="${(0.77+(i%3)*.07).toFixed(2)}"/>`;
+   if(complex){const [x,y]=spPt(40+(ultra?3:0),ang);outer+=`<circle cx="${x}" cy="${y}" r="${i%3===0?2.2:1.2}" fill="${i%2?'#fff':p.accent2}"/>`;}
+ }
+ if(t==='inferno'){
+   const waves=Array.from({length:6},(_,i)=>{const angle=i*Math.PI/3;return `<path d="${spShard(36,52,angle,.08,8+level)}" fill="${i%2?metal:bright}" stroke="${edge}" stroke-width="1"/>`;}).join('');
+   staticPart+=`<g class="sp-heave">${waves}</g>`;
+ }else if(t==='glacial'){
+   staticPart+=Array.from({length:6},(_,i)=>{const angle=i*Math.PI/3;return `<path d="${spShard(32,49,angle,.11,6)}" fill="${i%2?bright:metal}" stroke="#e4ffff" stroke-width="1.3" opacity=".9"/>`;}).join('');
+ }else if(t==='seraph'){
+   staticPart+=`<path d="M58 5L67 23L60 42L53 23Z M58 115L67 97L60 78L53 97Z" fill="${metal}" stroke="${edge}" stroke-width="2.2"/><path d="M8 44Q19 16 40 25L32 40L40 44Q18 51 8 44Z M112 44Q101 16 80 25L88 40L80 44Q102 51 112 44Z" fill="${bright}" stroke="${edge}" stroke-width="1.7" opacity=".84"/>`;
+ }else if(t==='mechanical'){
+   staticPart+=`<path d="M43 18L60 10L77 18 M102 43L110 60L102 77 M77 102L60 110L43 102 M18 77L10 60L18 43" fill="none" stroke="${edge}" stroke-width="2.4" opacity=".88"/>`;
+ }else if(t==='void'){
+   staticPart+=`<ellipse cx="60" cy="60" rx="54" ry="20" transform="rotate(-22 60 60)" stroke="${__rgba(p.accent,.45)}" stroke-width="3.5" fill="none"/>`;
+ }else if(t==='fracture'){
+   staticPart+=`<path d="M17 40L25 24L39 28 M81 28L95 24L103 40 M103 80L95 96L81 92 M39 92L25 96L17 80" stroke="${edge}" stroke-width="3" fill="none"/>`;
+ }else if(t==='lotus'){
+   staticPart+=Array.from({length:8},(_,i)=>`<ellipse cx="60" cy="16" rx="5" ry="12" transform="rotate(${i*45} 60 60)" fill="${i%2?metal:bright}" stroke="${edge}" stroke-width=".8" opacity=".55"/>`).join('');
+ }else{
+   staticPart+=`<ellipse cx="60" cy="60" rx="51" ry="20" fill="none" stroke="${__rgba(p.accent2,.63)}" stroke-width="2.8" transform="rotate(${(a.id%5)*28-35} 60 60)"/>`;
+ }
+ if(complex){
+   inner+=`<circle cx="60" cy="60" r="36" fill="none" stroke="${edge}" stroke-dasharray="${t==='mechanical'?'6 2':t==='void'?'3 3':'1.7 3.6'}" stroke-width="2" opacity=".83"/>`;
+   if(ultra)inner+=`<circle cx="60" cy="60" r="42" fill="none" stroke="${rim}" stroke-width="1.1" stroke-dasharray="2 7" opacity=".9"/>`;
+ }
+ const runes=Array.from({length:4+(ultra?4:0)},(_,i)=>{const ang=i*Math.PI*2/(4+(ultra?4:0))+(a.id*.09),[x,y]=spPt(52,ang);return `<path d="M${spN(+x-2)} ${y}L${x} ${spN(+y-3)}L${spN(+x+2)} ${y}L${x} ${spN(+y+3)}Z" fill="${i%2?bright:metal}" opacity=".86"/>`;}).join('');
+ return `<g class="sp-backfield" opacity="${complex?1:.9}"><circle cx="60" cy="60" r="46" stroke="${rim}" stroke-width="1" stroke-dasharray="1 5" fill="none"/></g><g class="sp-reverse">${outer}</g><g class="sp-forward">${inner}</g><g>${staticPart}</g><g class="sp-slow">${runes}</g>`;
+}
+function spSuper(a,p,u){
+ if(a.tier<5)return '';
+ const edge=__rgba(p.accent2,.85),bright=`url(#${u}-bright)`;
+ const big=[];const n=a.tier>=9?9:a.tier>=7?7:5;
+ for(let i=0;i<n;i++){
+  const ang=(i*2*Math.PI/n+a.id*.15),r=(i%2===0?52:49);big.push(`<path d="${spShard(43,r,ang,.055,(a.tier>=9?8:3)+(i%3))}" fill="${i%2?bright:__rgba(p.accent,.36)}" stroke="${edge}" stroke-width="1.2" opacity=".92"/>`);
+ }
+ return `<g class="sp-outerpulse">${big.join('')}${a.tier>=7?`<circle cx="60" cy="60" r="54" fill="none" stroke="${__rgba(p.accent2,.4)}" stroke-width="1" stroke-dasharray="1 6"/>`:''}</g>`;
+}
+function renderAuraOrb(a,{size=96,className='',muted=false}={}){
+ const p=__orbProfile(a),u='spe'+(a.id+1)+'_'+(++_spectacleSerial),t=spTheme(a,p),level=a.tier,phase=(a.id*19)%360;
+ const base=t==='void'?'#02020e':t==='inferno'?'#21090e':t==='glacial'?'#0b2940':t==='mechanical'?'#0b112a':'#080a20';
+ const auraGlow=level>=7?0.92:level>=4?.75:.48;
+ const opacity=muted?.5:1;
+ const coreCircle=t==='glacial'?`<path d="M60 31L87 44L90 60L78 84L60 91L36 81L30 60L41 39Z" fill="url(#${u}-core)" stroke="${__rgba(p.accent2,.82)}" stroke-width="1.5"/>`:
+ t==='mechanical'?`<path d="M60 31L85 43L88 66L69 87L45 86L31 64L37 41Z" fill="url(#${u}-core)" stroke="${__rgba(p.accent2,.85)}" stroke-width="1.4"/>`:
+ t==='fracture'?`<path d="M42 33L72 28L89 48L84 76L62 91L36 77L30 51Z" fill="url(#${u}-core)" stroke="${__rgba(p.accent2,.88)}" stroke-width="1.5"/>`:
+ `<circle cx="60" cy="60" r="${level>=4?30:32}" fill="url(#${u}-core)" stroke="${__rgba(p.accent,.82)}" stroke-width="1.9"/>`;
+ const tiny=Array.from({length:Math.min(16,5+a.tier*2)},(_,i)=>{const ang=i*2*Math.PI/Math.min(16,5+a.tier*2)+phase/90,r=45+(i%4)*2;const [x,y]=spPt(r,ang);return `<circle class="sp-blink" cx="${x}" cy="${y}" r="${i%3===0?1.65:.8}" fill="${i%2?'white':p.accent2}" style="animation-delay:${(i*.13).toFixed(2)}s"/>`;}).join('');
+ return `<div class="aura-orb-wrap spectacle-orb sp-tier-${level} sp-theme-${t} ${className}${muted?' is-muted':''}" style="width:${size}px;height:${size}px;--orb-glow:${p.accent};--sp-speed:${Math.max(5,19-level*1.3)}s;--sp-accent:${p.accent};--sp-accent2:${p.accent2};--orb-main:${a.color};opacity:${opacity}"><svg class="aura-orb-svg" viewBox="0 0 120 120" focusable="false" aria-hidden="true"><defs>
+ <radialGradient id="${u}-core" cx="37%" cy="24%" r="82%"><stop offset="0" stop-color="${__mixHex(p.accent2,'#ffffff',.6)}" stop-opacity="${t==='void'?.38:.98}"/><stop offset=".24" stop-color="${p.accent2}" stop-opacity="${t==='void'?.18:.98}"/><stop offset=".48" stop-color="${p.shell}" stop-opacity=".99"/><stop offset=".82" stop-color="${p.deep}"/><stop offset="1" stop-color="${base}"/></radialGradient>
+ <radialGradient id="${u}-abyss"><stop offset="0" stop-color="#000000"/><stop offset=".68" stop-color="#020516"/><stop offset=".89" stop-color="${p.accent}" stop-opacity=".43"/><stop offset="1" stop-color="#050415"/></radialGradient>
+ <radialGradient id="${u}-glow"><stop offset="0" stop-color="${p.accent}" stop-opacity=".7"/><stop offset=".46" stop-color="${p.accent2}" stop-opacity=".24"/><stop offset="1" stop-color="${p.accent}" stop-opacity="0"/></radialGradient>
+ <linearGradient id="${u}-metal" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="${__mixHex(p.accent2,'#ffffff',.35)}"/><stop offset=".18" stop-color="${__mixHex(p.accent2,'#0b1021',.18)}"/><stop offset=".4" stop-color="${__mixHex(p.accent,'#030518',.46)}"/><stop offset=".68" stop-color="${p.accent}"/><stop offset="1" stop-color="${p.deep}"/></linearGradient>
+ <linearGradient id="${u}-bright" x1=".1" x2=".9" y1="0" y2="1"><stop offset="0" stop-color="white"/><stop offset=".25" stop-color="${p.accent2}"/><stop offset=".72" stop-color="${p.accent}"/><stop offset="1" stop-color="${__mixHex(p.accent,'#010107',.5)}"/></linearGradient>
+ </defs>
+ <circle class="sp-aurora" cx="60" cy="60" r="58" fill="url(#${u}-glow)" opacity="${auraGlow}"/>
+ ${spSuper(a,p,u)}
+ ${spArmor(a,p,u)}
+ <g class="sp-core"><circle cx="60" cy="60" r="35" fill="${base}" stroke="${__rgba(p.accent,.32)}" stroke-width="1.2"/>${coreCircle}<ellipse cx="50" cy="45" rx="13" ry="6" fill="#ffffff" opacity="${t==='void'?.03:.13}" transform="rotate(-25 50 45)"/>${spEmblems(a,p,u)}</g>
+ <g class="sp-slow">${tiny}</g>
+ <circle cx="60" cy="60" r="32.3" stroke="${__rgba(p.accent2,.3)}" stroke-width=".85" fill="none" opacity="${level>=4?.8:.38}"/>
+ </svg></div>`;
+}
+function initSpectacleViewer(){
+ if(document.getElementById('spectacle-inspector'))return;
+ const overlay=document.createElement('div'); overlay.id='spectacle-inspector';overlay.hidden=true;
+ overlay.innerHTML=`<div class="sp-inspect-backdrop"></div><section class="sp-inspect-panel" role="dialog" aria-modal="true" aria-labelledby="sp-inspect-name"><button class="sp-inspect-close" type="button" aria-label="閉じる">✕</button><div class="sp-inspect-eyebrow">VOID // AURA ARMORY</div><div class="sp-inspect-stage" id="sp-inspect-stage"></div><div class="sp-inspect-tier" id="sp-inspect-tier"></div><h2 id="sp-inspect-name"></h2><div class="sp-inspect-odds" id="sp-inspect-odds"></div><p class="sp-inspect-lore" id="sp-inspect-lore"></p><span class="sp-inspect-tip">個別造形を拡大表示 · 特殊装甲は自動回転</span></section>`;
+ document.body.appendChild(overlay);
+ const close=()=>{overlay.hidden=true; document.body.classList.remove('sp-inspect-open')};
+ overlay.querySelector('.sp-inspect-backdrop').addEventListener('click',close);
+ overlay.querySelector('.sp-inspect-close').addEventListener('click',close);
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!overlay.hidden){e.stopImmediatePropagation();close();}},true);
+ $('aura-grid').addEventListener('click',e=>{
+  const art=e.target.closest('.aura-art');if(!art)return;
+  const card=art.closest('.aura-card');if(!card||card.classList.contains('locked'))return;
+  const a=AURAS[Number(card.dataset.auraId)];if(!a)return;
+  overlay.querySelector('#sp-inspect-stage').innerHTML=renderAuraOrb(a,{size:330,className:'sp-inspect-orb'});
+  overlay.querySelector('#sp-inspect-name').textContent=a.name;
+  overlay.querySelector('#sp-inspect-tier').textContent=TIERS[a.tier].name;
+  overlay.querySelector('#sp-inspect-tier').style.color=a.color;
+  overlay.querySelector('#sp-inspect-odds').textContent=oddsText(a);
+  overlay.querySelector('#sp-inspect-lore').textContent=SP_DESC[a.name]||__orbProfile(a).title+' · '+(a.tier>=4?'このオーラだけの装甲が運命を包み込む。':'光の奥に隠された力を観測せよ。');
+  overlay.querySelector('.sp-inspect-panel').style.setProperty('--sp-view-color',__orbProfile(a).accent);
+  overlay.hidden=false;document.body.classList.add('sp-inspect-open');
+ });
+ $('aura-grid').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('aura-art')){e.preventDefault();e.target.click();}});
+}
 
 function init(){TIERS.forEach((t,i)=>{const opt=document.createElement('option');opt.value=i;opt.textContent=t.jp+' · '+t.name;$('tier-filter').append(opt);});bind();renderEntireGame();showPage('roll');starfield();setInterval(()=>{const before=state.activePotions.length;const active=activePotions();updatePotionTimer();if(before!==active.length){renderRollUI();if(page==='potions')renderPotions();toast('ポーション効果終了',`残り${active.length}本 · 合計ラック×${multiplierText(potionMultiplier())}`);}if(page==='roll'&&state.rolls)for(const el of document.querySelectorAll('.recent-time')){ /* relative times refresh on next roll */ }},500);}
-init();
+init();initSpectacleViewer();
+(function(){
+  const gearGrid=$('gear-grid'),potionGrid=$('potion-grid');
+  if(gearGrid){const n=document.createElement('p');n.className='craft-tier-help';n.style.cssText='font-size:11px;color:#a8b2cd;line-height:1.65;margin:3px 0 18px';n.textContent='◆ EPIC ×3 などの表記は、そのレア度のオーラなら種類を問わず必要数を消費します（指定名の素材とは別に必要）。';gearGrid.before(n);}
+  if(potionGrid){const n=document.createElement('p');n.className='craft-tier-help';n.style.cssText='font-size:11px;color:#a8b2cd;line-height:1.65;margin:3px 0 18px';n.textContent='同じレア度の素材はどれでも使用可能。消費は低確率の低いオーラから優先し、装備中は後回しにします。';potionGrid.before(n);}
+})();
 window.addEventListener('resize',()=>{if(page==='collection')renderCollection();},{passive:true});
 })();
 
