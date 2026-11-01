@@ -434,6 +434,22 @@ body.sp-inspect-open{overflow:hidden;}
   }
 }
 
+
+/* VOID RNG + MATH//RANK: standalone top-of-app study shortcut */
+.void-math-bar{position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:69px;padding:12px clamp(22px,3.2vw,58px);background:linear-gradient(104deg,#151829 0%,#15142b 52%,#111e2c 100%);border-bottom:1px solid #63589e55;isolation:isolate;overflow:hidden}
+.void-math-bar:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 77% 50%,#a99aff18,transparent 54%),linear-gradient(90deg,#bcb0ff22 0px,transparent 2px)}
+.void-math-bar-caption{display:flex;align-items:center;gap:12px;min-width:0}
+.void-math-bar-emblem{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;flex:none;background:linear-gradient(145deg,#a8a2ff28,#61daed16);border:1px solid #8e8ee977;color:#c6c5ff;font-size:18px;font-weight:900;box-shadow:0 0 22px #9e90ff16}
+.void-math-bar-copy{min-width:0;display:flex;flex-direction:column;gap:4px}
+.void-math-bar-copy strong{font-size:11px;color:#ece8ff;font-weight:900;letter-spacing:1.2px;white-space:nowrap}
+.void-math-bar-copy span{font-size:10px;color:#9bacc5;line-height:1.35}
+.void-math-bar-link{display:inline-flex;align-items:center;justify-content:center;gap:10px;flex:none;min-height:41px;padding:0 19px;border-radius:10px;border:1px solid #c0b5ff99;background:linear-gradient(110deg,#7768d9,#a292ee);color:#fff;text-decoration:none;font-size:12px;font-weight:900;letter-spacing:.5px;box-shadow:0 8px 24px #7e6de839,inset 0 1px 0 #ffffff6b;transition:filter .2s,transform .2s,box-shadow .2s}
+.void-math-bar-link:hover{filter:brightness(1.16);transform:translateY(-2px);box-shadow:0 11px 28px #9580ff68}
+.void-math-bar-link:focus-visible{outline:3px solid #92f7fa;outline-offset:3px}
+.void-math-bar-link svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:760px){.void-math-bar{min-height:59px;padding:9px 13px;gap:8px}.void-math-bar-emblem{width:29px;height:29px;font-size:16px}.void-math-bar-caption{gap:8px}.void-math-bar-copy strong{font-size:10px;letter-spacing:.4px}.void-math-bar-copy span{font-size:9px}.void-math-bar-link{min-height:38px;padding:0 12px;font-size:11px;gap:5px}.void-math-bar-link svg{width:13px;height:13px}}
+@media(max-width:345px){.void-math-bar-copy span{display:none}.void-math-bar-link{padding:0 9px}}
+@media(prefers-reduced-motion:reduce){.void-math-bar-link{transition:none}}
 </style>
 </head>
 <body>
@@ -483,6 +499,13 @@ body.sp-inspect-open{overflow:hidden;}
     </aside>
 
     <div class="work-area">
+      <div class="void-math-bar" role="navigation" aria-label="数学公式サイトへのリンク">
+        <div class="void-math-bar-caption">
+          <span class="void-math-bar-emblem" aria-hidden="true">∑</span>
+          <div class="void-math-bar-copy"><strong>MATH//RANK</strong><span>数学公式・図形・練習問題</span></div>
+        </div>
+        <a class="void-math-bar-link" href="./math.html" target="_blank" rel="noopener noreferrer" aria-label="公式を覚える（数学公式サイトを新しいタブで開く）">公式を覚える <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
       <header class="topbar">
         <div class="breadcrumb"><span class="breadcrumb-root">THE OBSERVATORY</span><svg><use href="#i-chevron"/></svg><span id="breadcrumb-current">SUMMON</span></div>
         <div class="top-actions">

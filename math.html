@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080c18" />
+  <meta name="description" content="高校入試で覚えておきたい数学公式を、基礎から難関校向けまで攻略。例題・解説・暗記記録付き。" />
+  <title>MATH//RANK — 数学公式を、武器に。</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root{--bg:#080c18;--surface:#101727;--surface2:#151e30;--stroke:#253044;--text:#f2f5fc;--muted:#8f9ab0;--cyan:#68e7f9;--blue:#628eff;--lime:#c9ff79;--orange:#ffc18a;--purple:#bda2ff}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans','Noto Sans JP',sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}::selection{background:var(--cyan);color:#08101a}[hidden]{display:none!important}.shell{width:min(1320px,calc(100% - 88px));margin:auto}.noise{pointer-events:none;position:fixed;inset:0;z-index:100;opacity:.1;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")}.progress-line{position:fixed;left:0;top:0;height:3px;width:0;background:var(--cyan);z-index:200;transition:width .1s}.site-header{height:80px;display:flex;align-items:center;justify-content:space-between;padding:0 max(44px,calc((100vw - 1320px)/2));border-bottom:1px solid #ffffff13;background:#080c18ed;backdrop-filter:blur(18px);position:sticky;top:0;z-index:50}.brand,.footer-brand{font-family:'Space Grotesk',sans-serif;letter-spacing:-1.2px;font-size:23px;font-weight:700;display:flex;align-items:center;gap:13px}.brand-icon{border:1px solid var(--cyan);color:var(--cyan);width:35px;height:35px;display:grid;place-items:center;font-size:23px}.brand-slash,.footer-brand span{color:var(--cyan)}.main-nav{display:flex;gap:38px}.main-nav a,.header-progress{font:700 11px 'Space Grotesk',sans-serif;letter-spacing:1.9px}.main-nav a{color:#abb7ca;transition:.2s}.main-nav a:hover{color:var(--cyan)}.header-progress{display:flex;align-items:center;gap:10px;background:#152138;border:1px solid #25364e;border-radius:4px;padding:13px 15px;color:#e4f4ff}.status-light{width:7px;height:7px;background:var(--lime);border-radius:100%;box-shadow:0 0 12px var(--lime)}.arrow{color:var(--cyan)}.hero{min-height:690px;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:30px;position:relative;padding-top:60px;padding-bottom:65px}.eyebrow,.section-index{font:700 11px 'Space Grotesk',sans-serif;color:var(--cyan);letter-spacing:2.4px}.eyebrow{display:flex;align-items:center;gap:12px;white-space:nowrap}.eyebrow-line{width:26px;height:1px;background:var(--cyan)}.version{margin-left:9px;background:#1a2b3c;padding:7px 9px;color:#d5ecf2;font-size:9px}.hero-kicker{margin-top:53px;color:#93a0b7;font:600 11px 'Space Grotesk';letter-spacing:2.4px}.hero h1{font-size:clamp(62px,6.3vw,105px);letter-spacing:-.085em;line-height:1.27;margin:18px 0 25px;font-weight:900}.hero h1 em{font-style:normal;color:var(--cyan);text-shadow:0 0 80px #68e7f944}.punct{color:var(--cyan)}.hero-description{font-size:15px;line-height:2.15;color:#acb6c9;letter-spacing:.03em}.hero-description strong{color:#edf6ff}.hero-actions{display:flex;align-items:center;gap:26px;margin-top:33px}.btn-primary{background:var(--cyan);color:#08111b;padding:18px 22px;display:inline-flex;gap:45px;align-items:center;font-size:12px;font-weight:900;transition:.2s}.btn-primary:hover{background:#bdffff;transform:translateY(-2px)}.btn-primary span{font-size:18px}.btn-ghost{font-size:12px;font-weight:800;color:#e0e9f6}.btn-ghost span{color:var(--cyan);margin-left:14px}.hero-meta{margin-top:72px;display:flex;gap:25px;font:600 10px 'Space Grotesk';letter-spacing:1.2px;color:#677791}.hero-art{height:520px;position:relative;display:grid;place-items:center;isolation:isolate;background:radial-gradient(circle at center,#18375b88 0%,#0c172a77 35%,transparent 66%);overflow:hidden}.hero-art:before,.hero-art:after{content:"";position:absolute;inset:25px;background-image:linear-gradient(#4b6c9d17 1px,transparent 1px),linear-gradient(90deg,#4b6c9d17 1px,transparent 1px);background-size:31px 31px;mask-image:radial-gradient(circle,#000,transparent 70%)}.orbit{position:absolute;border:1px solid #69d5fb40;border-radius:50%;transform:rotate(-25deg) scaleY(.65);box-shadow:0 0 40px #2a8bff12}.orbit-one{width:460px;height:460px}.orbit-two{width:360px;height:360px;transform:rotate(52deg) scaleY(.62);border-color:#93aaff44}.orbit-three{width:290px;height:290px;transform:rotate(-72deg) scaleY(.75);border-color:#b4f8ff55}.hero-symbol{font:400 250px Georgia,serif;color:var(--cyan);text-shadow:0 0 100px #68e7f977;transform:translateY(-20px);z-index:2}.hero-equation{position:absolute;z-index:3;font:600 13px 'Space Grotesk';color:#a5edff;background:#111d31dd;border:1px solid #39597a7a;padding:12px 15px;box-shadow:0 14px 50px #0006}.eq-a{top:84px;right:15px;transform:rotate(5deg)}.eq-b{bottom:115px;left:0;transform:rotate(-5deg)}.eq-c{bottom:158px;right:0;font-size:11px;transform:rotate(4deg)}.hero-art-bottom{position:absolute;bottom:12px;letter-spacing:2px;font-size:10px;color:#7187a5}.hero-art-bottom span{color:var(--cyan);margin:0 15px}.stats{border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);display:grid;grid-template-columns:repeat(4,1fr);padding:29px 0}.stat{padding:0 32px;border-right:1px solid var(--stroke);display:flex;flex-direction:column;gap:5px}.stat:first-child{padding-left:0}.stat:last-child{border:0}.stat-number{font:600 43px 'Space Grotesk';letter-spacing:-2px}.stat-label{font:700 10px 'Space Grotesk';letter-spacing:1.3px;color:#8594ac}.completion-line{display:flex;align-items:center;gap:15px}.meter{height:3px;background:#283449;margin-top:13px}.meter span{display:block;height:100%;width:0;background:var(--cyan);transition:width .3s}.ranking-section{padding-top:128px;padding-bottom:135px}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:45px}.section-heading h2,.challenge-copy h2{font-size:clamp(36px,4.2vw,62px);letter-spacing:-.075em;margin:13px 0 14px;font-weight:900}.accent{color:var(--cyan)}.title-period{color:var(--cyan)}.section-heading p{color:#8997ae;font-size:13px;line-height:1.9}.section-side{text-align:right;font:600 13px/1.8 'Space Grotesk';color:#536984;letter-spacing:2px}.toolbar{display:flex;gap:12px;align-items:stretch}.search{height:56px;background:#101827;border:1px solid var(--stroke);display:flex;align-items:center;gap:12px;padding:0 18px;flex:1;min-width:0}.search:focus-within{border-color:var(--cyan)}.search-icon{font-size:29px;color:var(--cyan);line-height:1}.search input{background:none;border:0;outline:0;color:white;font-size:13px;width:100%}.search input::placeholder{color:#73829b}.search kbd{border:1px solid #3d4c62;border-radius:3px;padding:2px 6px;color:#7a8ca6}.select-wrap{min-width:180px;display:flex;align-items:center;background:#101827;border:1px solid var(--stroke);padding:0 12px;gap:8px}.select-wrap label{color:#7889a1;font-size:11px;white-space:nowrap}.select-wrap select{background:#101827;color:white;border:0;outline:0;flex:1;min-width:0;font-size:12px;padding:13px 0}.category-list{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.cat-btn{border:1px solid #29364a;background:transparent;color:#9eabc0;padding:11px 16px;font-size:12px;font-weight:700;transition:.2s}.cat-btn:hover,.cat-btn.active{background:var(--cyan);border-color:var(--cyan);color:#08111b}.result-line{display:flex;justify-content:space-between;align-items:center;margin:29px 0 19px;font:700 11px 'Space Grotesk';letter-spacing:1.1px;color:#8190a7}.result-line button{background:transparent;border:0;color:var(--cyan);letter-spacing:1px;font-size:10px}.formula-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.formula-card{min-width:0;position:relative;background:linear-gradient(145deg,#141d30,#101725);border:1px solid #293447;min-height:301px;padding:24px 23px 20px;display:flex;flex-direction:column;transition:transform .25s,border-color .25s,box-shadow .25s;overflow:hidden}.formula-card:before{content:"";position:absolute;left:0;top:0;height:2px;width:75px;background:var(--level-color)}.formula-card:hover{transform:translateY(-5px);border-color:#5bb1ce88;box-shadow:0 20px 50px #0005}.card-top{display:flex;justify-content:space-between;align-items:start}.rank{font:700 33px 'Space Grotesk';letter-spacing:-2px;color:#3c536f}.rank.top-rank{color:var(--cyan)}.level-tag{font:700 10px 'Space Grotesk';letter-spacing:.7px;color:var(--level-color);border:1px solid color-mix(in srgb,var(--level-color),transparent 65%);padding:7px 9px}.card-category{font:700 10px 'Space Grotesk';color:#8197b6;letter-spacing:1.5px;margin-top:17px}.formula-card h3{font-size:20px;letter-spacing:-.03em;margin:9px 0 7px}.formula-display{min-height:78px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:20px;color:#e9f7ff;overflow-x:auto;overflow-y:hidden;max-width:100%;padding:9px 0}.formula-display mjx-container{max-width:100%}.card-foot{border-top:1px solid #2b394e;padding-top:17px;display:flex;align-items:center;justify-content:space-between;margin-top:auto}.card-subtitle{color:#8192aa;font-size:11px;max-width:78%;line-height:1.5}.card-controls{display:flex;gap:7px}.circle-btn{height:33px;width:33px;border:1px solid #3b4c62;background:transparent;color:#a6bed7;display:grid;place-items:center;font-size:18px;transition:.2s}.circle-btn:hover{background:#263d55;color:white}.circle-btn.saved{background:#1e443a;color:var(--lime);border-color:#5f9f7c}.details-btn{background:var(--cyan);color:#08111b;border-color:var(--cyan)}.empty-state{text-align:center;padding:80px 20px;border:1px solid var(--stroke)}.empty-state>span{font-size:60px;color:var(--cyan)}.empty-state p{color:var(--muted)}.empty-state button{border:1px solid var(--cyan);padding:12px;color:var(--cyan);background:none}.challenge-section{background:#101827;border-top:1px solid var(--stroke);border-bottom:1px solid var(--stroke);padding:110px 0;position:relative;overflow:hidden}.challenge-section:after{content:'?';font:800 520px 'Space Grotesk';position:absolute;right:-80px;top:-150px;color:#1c3045;pointer-events:none}.challenge-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}.challenge-copy h2{font-size:clamp(36px,4vw,59px);line-height:1.32}.challenge-copy p{color:#99a7bc;font-size:13px;line-height:2.2;margin-top:20px}.challenge-score{margin-top:60px;font:700 11px 'Space Grotesk';letter-spacing:1.3px;color:#93a0b6}.challenge-score strong{font-size:29px;letter-spacing:-1px;color:var(--cyan);margin-left:8px}.challenge-score span{margin:0 14px;color:#596e85}.quiz-card{background:#0b111e;border:1px solid #38516b;min-height:390px;padding:27px 30px;display:flex;flex-direction:column}.quiz-top,.quiz-bottom{display:flex;justify-content:space-between;gap:10px;align-items:center;font:700 10px 'Space Grotesk';letter-spacing:1.2px;color:#8ea2bb}.quiz-top span:last-child{color:var(--cyan)}#quizContent{flex:1}.quiz-card h3{font-size:21px;margin:29px 0 25px}.quiz-options{display:grid;gap:9px}.quiz-option{text-align:left;padding:14px 16px;background:#152236;border:1px solid #2c4058;color:#d9e4f2;font-size:13px;transition:.2s}.quiz-option:not(:disabled):hover{border-color:var(--cyan);background:#213247}.quiz-option.correct{background:#1a4234;border-color:#6bd8a3;color:#bdf6d8}.quiz-option.wrong{background:#4b242d;border-color:#e77a88;color:#ffd4d9}.quiz-option:disabled{cursor:default}.quiz-bottom{border-top:1px solid #2b3a50;padding-top:20px;margin-top:25px}.quiz-bottom button{border:0;background:none;color:var(--cyan);font:700 11px 'Space Grotesk';letter-spacing:1px}.strategy-section{padding:125px 0}.strategy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.strategy-grid article{border-top:1px solid #45556c;padding:31px 20px 15px 0}.strategy-grid article>span{font:700 11px 'Space Grotesk';letter-spacing:1.5px;color:var(--cyan)}.strategy-grid h3{font-size:21px;margin:25px 0 13px}.strategy-grid p{color:#8997ac;line-height:2;font-size:13px;max-width:330px}.caution{margin-top:50px;color:#7d8ca4;font-size:11px;line-height:1.9}.footer{border-top:1px solid var(--stroke);padding-top:35px;padding-bottom:40px;display:grid;grid-template-columns:1fr 1fr auto;align-items:center;gap:12px}.footer-brand{font-size:24px}.footer p,.footer a,.footer small{font:700 10px 'Space Grotesk';letter-spacing:1px;color:#8c9ab0}.footer a{color:var(--cyan)}.footer small{grid-column:1/-1;margin-top:35px}.formula-modal{width:min(770px,calc(100% - 30px));max-height:min(90vh,900px);border:1px solid #43627f;background:#0e1726;color:var(--text);padding:0;box-shadow:0 40px 120px #000c}.formula-modal::backdrop{background:#020710dd;backdrop-filter:blur(8px)}.modal-layout{padding:45px;position:relative}.modal-close{position:absolute;top:15px;right:18px;background:none;border:0;color:white;font-size:32px}.modal-eyebrow{color:var(--cyan);font:700 11px 'Space Grotesk';letter-spacing:2px}.modal-title{font-size:35px;margin:16px 0 20px;letter-spacing:-1px}.modal-equation{padding:32px 16px;background:#141f32;border:1px solid #2b4058;font-size:25px;text-align:center;overflow-x:auto}.modal-section{margin-top:26px}.modal-section h4{font-size:12px;letter-spacing:1px;color:var(--cyan);margin:0 0 12px}.modal-section p{font-size:14px;line-height:2;color:#c0cee0;white-space:pre-line}.modal-example{background:#141f31;padding:18px 22px;font-size:14px;line-height:2;color:#e2ecf9;white-space:pre-line}.reveal-answer{display:block;margin-top:12px;border:1px solid var(--cyan);background:none;color:var(--cyan);padding:12px 16px;font-weight:700;font-size:12px}.modal-answer{margin-top:12px;color:#d4fdd4;background:#1b3935;padding:15px;line-height:2;white-space:pre-line;font-size:14px}.modal-actions{display:flex;gap:12px;margin-top:28px}.modal-save{background:var(--cyan);color:#06101b;border:0;padding:15px 20px;font-weight:900}.modal-note{color:#879ab2;font-size:11px}.toast{position:fixed;bottom:25px;right:25px;background:#d1ffed;color:#091e19;padding:15px 20px;font-size:12px;font-weight:800;z-index:120;transform:translateY(150%);transition:transform .25s}.toast.visible{transform:translateY(0)}@media(max-width:1050px){.shell{width:calc(100% - 46px)}.site-header{padding:0 23px}.hero{grid-template-columns:1fr 0.8fr}.hero-art{height:390px}.hero-symbol{font-size:185px}.orbit-one{width:330px;height:330px}.orbit-two{width:250px;height:250px}.orbit-three{width:190px;height:190px}.eq-c{display:none}.formula-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.challenge-inner{gap:35px}.main-nav{gap:17px}}@media(max-width:700px){.shell{width:calc(100% - 34px)}.site-header{height:67px;padding:0 17px}.brand{font-size:18px;gap:8px}.brand-icon{width:29px;height:29px;font-size:19px}.main-nav{display:none}.header-progress{font-size:9px;padding:10px}.hero{display:flex;flex-direction:column;align-items:stretch;min-height:auto;padding-top:65px;padding-bottom:35px;gap:10px}.eyebrow{font-size:8px;gap:6px;letter-spacing:1px}.eyebrow-line{width:13px}.version{margin-left:3px;font-size:8px}.hero-kicker{margin-top:35px;font-size:9px}.hero h1{font-size:clamp(54px,13vw,84px);margin:16px 0}.hero-description{font-size:12px}.hero-actions{gap:18px;flex-wrap:wrap}.btn-primary{padding:16px;gap:18px}.btn-ghost{font-size:11px}.hero-meta{margin-top:32px;font-size:8px;gap:13px}.hero-art{height:280px}.hero-symbol{font-size:155px}.orbit-one{width:250px;height:250px}.orbit-two{width:210px;height:210px}.orbit-three{width:160px;height:160px}.eq-a{top:23px;right:6px}.eq-b{bottom:55px;left:0;font-size:10px}.hero-art-bottom{font-size:7px}.stats{grid-template-columns:repeat(2,1fr);row-gap:24px}.stat{padding:0 10px}.stat:first-child{padding-left:10px}.stat:nth-child(2){border:0}.stat-number{font-size:34px}.stat-label{font-size:9px}.ranking-section{padding-top:85px;padding-bottom:75px}.section-heading{margin-bottom:26px}.section-heading h2{font-size:35px}.section-heading p{font-size:11px}.section-side{display:none}.toolbar{flex-wrap:wrap}.search{flex-basis:100%}.select-wrap{min-width:0;flex:1;height:49px}.select-wrap select{font-size:11px}.cat-btn{font-size:10px;padding:10px 11px}.formula-grid{grid-template-columns:1fr;gap:11px}.formula-card{min-height:277px}.challenge-section{padding:70px 0}.challenge-inner{grid-template-columns:1fr}.challenge-copy h2{font-size:38px}.challenge-score{margin-top:25px}.quiz-card{min-height:360px;padding:20px}.strategy-section{padding:75px 0}.strategy-grid{grid-template-columns:1fr;gap:16px}.strategy-grid article{padding-top:20px}.strategy-grid h3{margin-top:15px}.footer{grid-template-columns:1fr auto}.footer p{grid-column:1/-1;grid-row:2}.footer small{margin-top:15px}.modal-layout{padding:38px 21px 25px}.modal-title{font-size:27px}.modal-equation{font-size:18px;padding:25px 8px}.modal-section p,.modal-example{font-size:12px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* V2 – illustrated explanations and practice lab */
+.main-nav{gap:clamp(10px,2vw,30px)}
+.diagram-panel{padding:16px;background:radial-gradient(circle at 52% 55%,#192a40,#0a1423);border:1px solid #2b4055;border-radius:16px;margin:18px 0}
+.diagram-panel svg{display:block;width:100%;max-width:540px;height:auto;margin:auto;overflow:visible}
+.diagram-caption{text-align:center;font-size:12px;line-height:1.75;color:#a9bbd3;margin:10px 0 0}
+.diagram-panel .edge{stroke:#8feafa;stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.diagram-panel .helper{stroke:#ffc18a;stroke-width:2.2;stroke-dasharray:7 5;fill:none}
+.diagram-panel .measure{stroke:#c8a9ff;stroke-width:2.2;fill:none}
+.diagram-panel .point{fill:#e8f7ff;font:600 16px 'DM Sans',sans-serif}
+.diagram-panel .point-dot{fill:#fff}
+.diagram-panel .measure-label{fill:#d6b7ff;font:600 15px 'DM Sans',sans-serif}
+.explain-step{padding:13px 16px;margin:10px 0;border-left:3px solid #68e7f9;background:#142236;border-radius:0 10px 10px 0;line-height:1.9;color:#e8f4ff}
+.explain-step strong{color:#76e9f9}
+.modal-section .concept-prose{line-height:2.05;color:#d8e4f3}
+.practice-section{padding-top:100px;padding-bottom:105px;scroll-margin-top:75px}
+.practice-bar{display:flex;flex-wrap:wrap;gap:14px;align-items:end;margin:28px 0 18px}
+.practice-bar label{display:grid;gap:7px;font-size:12px;color:#a3b6cc;letter-spacing:.04em}
+.practice-bar select{background:#141f31;border:1px solid #34506a;border-radius:10px;color:white;padding:12px 35px 12px 14px;min-width:155px}
+.practice-bar button,.practice-action{background:#1a3042;border:1px solid #45708a;border-radius:10px;padding:12px 15px;color:#91f4ff;cursor:pointer;font-weight:700}
+.practice-progress{display:flex;justify-content:space-between;color:#a3b4c7;border-bottom:1px solid #273c54;padding:12px 0;margin-bottom:20px}
+.practice-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.practice-card{background:#111c2e;border:1px solid #293c54;border-radius:19px;padding:25px;min-width:0}
+.practice-card-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px;font-size:11px;letter-spacing:.08em;color:#8eabc4}
+.practice-card .p-number{color:#68e7f9;font-weight:800;font-size:17px}
+.practice-card h3{font-size:clamp(17px,2vw,21px);line-height:1.5;margin:0 0 12px}
+.practice-card .p-question{color:#dce7f4;line-height:1.85;margin:0 0 12px}
+.practice-card .diagram-panel{margin:12px 0}
+.practice-card .p-answer{padding:16px;margin:14px 0;background:#0a1525;border:1px solid #355069;border-radius:12px;line-height:1.95;color:#e1edff}
+.practice-card .p-answer h4{color:#91f4ff;margin:0 0 8px}
+.practice-card .p-answer p{margin:6px 0}
+.practice-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.practice-action.is-solved{background:#1c3b32;border-color:#4a9277;color:#a6ffcf}
+.practice-empty{padding:40px;text-align:center;color:#b7c8dc}
+@media(max-width:790px){.practice-list{grid-template-columns:1fr}.practice-section{padding-top:65px}.practice-card{padding:19px}.main-nav{gap:10px}}
+
+
+/* MATH RANK / CAUTION OPENING — fullscreen cinematic alert */
+body.intro-locked{overflow:hidden}
+.entry-warning{position:fixed;inset:0;z-index:9999;background:#070910;color:#fff;isolation:isolate;display:grid;place-items:center;overflow:auto;overscroll-behavior:contain;padding:24px 18px;min-height:100dvh}
+.entry-warning::before{content:"";position:absolute;inset:-30%;pointer-events:none;background:radial-gradient(ellipse at 50% 48%,#ec4c5830 0%,#571e3c16 20%,transparent 50%),radial-gradient(ellipse at 10% 20%,#46e4fb12,transparent 42%);animation:entryBreathe 5.5s ease-in-out infinite alternate;z-index:-2}
+.entry-warning::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 3px,#fff2 4px,transparent 5px);background-size:100% 7px;opacity:.18;z-index:5;mix-blend-mode:screen}
+.entry-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(90deg,#4a667022 1px,transparent 1px),linear-gradient(#4a667022 1px,transparent 1px);background-size:58px 58px;mask-image:radial-gradient(ellipse at center,#0009,transparent 75%);transform:perspective(800px) rotateX(22deg) scale(1.4);z-index:-1}
+.entry-frame{position:absolute;inset:22px;border:1px solid #cd54602d;pointer-events:none}
+.entry-frame::before,.entry-frame::after{content:"";position:absolute;width:56px;height:56px;border:2px solid #ff667c;filter:drop-shadow(0 0 12px #f04a60a6)}
+.entry-frame::before{left:-1px;top:-1px;border-right:0;border-bottom:0}.entry-frame::after{right:-1px;bottom:-1px;border-left:0;border-top:0}
+.entry-topline{position:absolute;z-index:3;top:34px;left:max(38px,5vw);right:max(38px,5vw);display:flex;align-items:center;justify-content:space-between;gap:16px;font:700 10px 'Space Grotesk',sans-serif;letter-spacing:2.5px;color:#aaafc2}
+.entry-topline strong{color:#ff899a;font:inherit}
+.entry-inner{position:relative;width:min(970px,100%);margin:auto;text-align:center;padding:100px 6px 80px;z-index:2}
+.entry-symbol{position:relative;display:grid;place-items:center;margin:0 auto 35px;width:105px;height:105px;filter:drop-shadow(0 0 36px #f85c7877);animation:entrySymbol 900ms cubic-bezier(.18,.86,.22,1) both}
+.entry-symbol svg{width:100%;height:100%;overflow:visible}.entry-symbol:after{content:"";position:absolute;inset:-20px;border:1px solid #ff6b7f48;border-radius:50%;animation:entryRing 3s ease-out infinite}
+.entry-pretitle{font:700 clamp(10px,1.4vw,13px) 'Space Grotesk',sans-serif;letter-spacing:clamp(2px,.7vw,7px);color:#ff8e9c;margin-bottom:18px;animation:entryReveal 750ms 180ms both}
+.entry-heading{font-family:'Noto Sans JP',sans-serif;font-size:clamp(45px,8.5vw,105px);font-weight:900;letter-spacing:-.075em;line-height:1.28;margin:0;animation:entryReveal 950ms 270ms both;text-wrap:balance}
+.entry-heading small{display:block;color:#e6eaf4;font-size:clamp(30px,5.4vw,68px);font-weight:900;letter-spacing:-.065em}
+.entry-heading .entry-danger{display:inline-block;position:relative;color:#ff7386;text-shadow:0 0 25px #f65e7855,0 0 110px #f5325b33;animation:entryFlicker 4s 1.4s infinite}
+.entry-heading .entry-danger::after{content:"";height:3px;position:absolute;bottom:-7px;left:4%;right:4%;background:linear-gradient(90deg,transparent,#ff5c72,transparent);box-shadow:0 0 22px #fe6978}
+.entry-sub{font-size:clamp(21px,3.1vw,38px);font-weight:800;line-height:1.55;letter-spacing:-.04em;margin:35px 0 0;animation:entryReveal 950ms 470ms both}
+.entry-sub b{color:#fff}.entry-sub span{color:#ff9daa}
+.entry-description{font-size:clamp(12px,1.3vw,14px);max-width:650px;margin:21px auto 30px;color:#adb6c9;line-height:2;animation:entryReveal 900ms 570ms both}
+.entry-verification{display:flex;justify-content:center;gap:19px;align-items:center;color:#b8c3d5;font:600 10px 'Space Grotesk',sans-serif;letter-spacing:1.5px;margin-bottom:35px;animation:entryReveal 900ms 650ms both}
+.entry-verification .entry-dot{width:6px;height:6px;border-radius:100%;background:#ff7386;box-shadow:0 0 12px #ff7386}
+.entry-cta{appearance:none;border:1px solid #ffd6de;background:linear-gradient(110deg,#ffe4e9,#ffb8c5);color:#18101b;display:inline-flex;align-items:center;justify-content:center;min-height:64px;padding:0 29px;gap:30px;font-weight:900;letter-spacing:.03em;font-size:14px;box-shadow:0 0 0 6px #ff738611,0 15px 55px #ff5b7840;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;animation:entryReveal 900ms 760ms both}
+.entry-cta:hover{transform:translateY(-4px);box-shadow:0 0 0 9px #ff738619,0 20px 80px #ff5b7877}
+.entry-cta:focus-visible{outline:3px solid #7feffd;outline-offset:5px}
+.entry-cta .entry-arrow{font-size:24px}
+.entry-bottom{position:absolute;left:max(38px,5vw);right:max(38px,5vw);bottom:30px;z-index:3;display:flex;justify-content:space-between;gap:10px;color:#677487;font:700 10px 'Space Grotesk',sans-serif;letter-spacing:1.8px}
+.entry-flare{position:absolute;z-index:1;pointer-events:none;width:160%;height:1px;left:-30%;top:50%;background:linear-gradient(90deg,transparent,#ff7088 50%,transparent);box-shadow:0 0 15px #ff7088,0 0 85px #f24a6a;transform:rotate(-10deg) scaleX(0);animation:entrySlash 1.1s 200ms cubic-bezier(.2,.8,.15,1) both}
+.entry-warning.is-exiting{animation:entryLeave .9s cubic-bezier(.6,0,.22,1) both;pointer-events:none}
+@keyframes entryBreathe{to{transform:scale(1.13);opacity:.7}}
+@keyframes entrySymbol{from{opacity:0;transform:translateY(-35px) scale(.65) rotate(-12deg)}to{opacity:1;transform:none}}
+@keyframes entryRing{0%{transform:scale(.8);opacity:.8}80%,100%{transform:scale(1.5);opacity:0}}
+@keyframes entryReveal{from{opacity:0;transform:translateY(25px);filter:blur(8px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@keyframes entrySlash{10%{opacity:1;transform:rotate(-10deg) scaleX(.03)}70%{opacity:.8;transform:rotate(-10deg) scaleX(1)}100%{opacity:0;transform:rotate(-10deg) scaleX(1)}}
+@keyframes entryFlicker{0%,91%,95%,100%{opacity:1}92%,94%{opacity:.68}93%{opacity:.95}}
+@keyframes entryLeave{0%{opacity:1;transform:none;filter:none}45%{opacity:1;transform:scale(1.04);filter:brightness(1.5)}100%{opacity:0;transform:scale(1.18);filter:blur(18px)}}
+.site-caution{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 20px;padding:11px 5%;background:linear-gradient(90deg,#331b2a,#1d1b2b,#331b2a);border-bottom:1px solid #f770864f;color:#ffdce2;text-align:center;font-size:12px;line-height:1.6}
+.site-caution strong{font-size:13px}.site-caution button{background:transparent;color:#ff9caf;border:0;border-bottom:1px solid #ff9caf;padding:1px;font-size:11px;font-weight:800}
+@media(max-width:650px){.entry-frame{inset:12px}.entry-topline{top:25px;left:25px;right:25px;font-size:8px;letter-spacing:1px}.entry-bottom{left:25px;right:25px;bottom:20px;font-size:8px;letter-spacing:.4px}.entry-inner{padding:88px 8px 72px}.entry-symbol{width:74px;height:74px;margin-bottom:26px}.entry-heading{font-size:clamp(42px,12vw,72px)}.entry-heading small{font-size:clamp(32px,9vw,55px)}.entry-sub{margin-top:29px}.entry-verification{gap:9px;flex-wrap:wrap;font-size:9px}.entry-cta{min-height:59px;width:min(100%,330px);gap:14px;padding:0 12px;font-size:13px}.entry-description{max-width:360px}}
+@media(max-height:680px){.entry-inner{padding:66px 5px 55px}.entry-symbol{width:62px;height:62px;margin-bottom:12px}.entry-heading{font-size:clamp(36px,7vw,70px)}.entry-heading small{font-size:clamp(25px,4vw,45px)}.entry-sub{font-size:clamp(19px,2vw,26px);margin-top:22px}.entry-description{margin:12px auto 20px;line-height:1.7}.entry-verification{margin-bottom:20px}}
+@media(prefers-reduced-motion:reduce){.entry-warning,.entry-warning *,.entry-warning::before,.entry-warning::after{animation:none!important;transition:none!important}.entry-warning.is-exiting{opacity:0!important}}
+
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+  
+</head>
+<body class="intro-locked">
+  <!-- Initial caution: shown at each visit, never automatically dismissed. -->
+  <div class="entry-warning" id="entryWarning" role="dialog" aria-modal="true" aria-labelledby="entryWarningHeading" aria-describedby="entryWarningDescription">
+    <div class="entry-grid" aria-hidden="true"></div><div class="entry-frame" aria-hidden="true"></div><div class="entry-flare" aria-hidden="true"></div>
+    <div class="entry-topline"><span>MATH<span style="color:#ff7386">//</span>RANK <span style="color:#657387">/ SYSTEM ALERT</span></span><strong>CAUTION 001</strong></div>
+    <div class="entry-inner">
+      <div class="entry-symbol" aria-hidden="true"><svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M55 12 103 96H7L55 12Z" stroke="#ff879a" stroke-width="3"/><path d="M55 41V66" stroke="#fff2f4" stroke-width="7" stroke-linecap="square"/><circle cx="55" cy="79" r="4" fill="#fff2f4"/><path d="M55 1V10M55 100V109M1 55H10M100 55H109" stroke="#ff879a" opacity=".4"/></svg></div>
+      <div class="entry-pretitle">CRITICAL NOTICE / 必ずお読みください</div>
+      <h1 class="entry-heading" id="entryWarningHeading"><small>このサイトは</small><span class="entry-danger">不完全です。</span></h1>
+      <p class="entry-sub"><span>間違いがある可能性があります。</span></p>
+      <p class="entry-description" id="entryWarningDescription">公式・解説・図・練習問題に誤りが残っている可能性があります。<br>重要な学習内容は、学校の教科書や先生の説明でも確認してください。</p>
+      <div class="entry-verification"><span class="entry-dot"></span> UNVERIFIED CONTENT <span>・</span> CHECK BEFORE LEARNING <span class="entry-dot"></span></div>
+      <button class="entry-cta" type="button" id="entryWarningBtn">内容を理解してサイトへ進む <span class="entry-arrow">↗</span></button>
+    </div>
+    <div class="entry-bottom"><span>⚠ EDUCATIONAL USE ONLY</span><span>© MATH//RANK / 2027 EDITION</span></div>
+  </div>
+  <noscript><style>.entry-warning{display:none}</style><p style="margin:24px;padding:22px;color:white;background:#581e31;font-weight:bold">このサイトは不完全です。間違いがある可能性があります。JavaScriptを有効にしてください。</p></noscript>
+
+  <div class="noise" aria-hidden="true"></div>
+  <div class="progress-line" id="progressLine"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MATH RANK ホーム"><span class="brand-icon">∑</span><span>MATH<span class="brand-slash">//</span>RANK</span></a>
+    <nav class="main-nav" aria-label="メインナビ"><a href="#ranking">RANKING</a><a href="#practice">PRACTICE</a><a href="#challenge">CHALLENGE</a><a href="#strategy">STRATEGY</a></nav>
+    <button class="header-progress" id="headerProgress" type="button" title="暗記進捗を表示"><span class="status-light"></span><span id="headerCount">0</span> MASTERED <span class="arrow">↗</span></button>
+  </header>
+  <div class="site-caution" role="note"><strong>⚠ このサイトは不完全です。</strong><span>間違いがある可能性があります。学習内容は教科書等でも確認してください。</span><button type="button" id="showEntryWarning">注意を再表示 ↗</button></div>
+
+  <main id="top">
+    <section class="hero shell" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> THE ULTIMATE EXAM FORMULA ARCHIVE <span class="version">2027 EDITION</span></div>
+        <div class="hero-kicker">HIGH SCHOOL ENTRANCE EXAM / MATHEMATICS</div>
+        <h1 id="heroTitle">数学公式を、<br /><em>武器</em>に<span class="punct">。</span></h1>
+        <p class="hero-description">基礎から難関校レベルまで。<br />覚えるだけで終わらせない。<strong>理解して、使いこなす。</strong><br />そのための、数学公式アーカイブ。</p>
+        <div class="hero-actions"><a class="btn-primary" href="#ranking">公式ランキングを見る <span>↗</span></a><a class="btn-ghost" href="#practice">練習問題を解く <span>↘</span></a></div>
+        <div class="hero-meta"><span>01 — FORMULAS</span><span>02 — DIAGRAMS & PROBLEMS</span><span>03 — MASTERY</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="hero-equation eq-a">a² + b² = c²</div><div class="hero-equation eq-b">x = (−b ± √D) / (2a)</div><div class="hero-equation eq-c">S = √s(s−a)(s−b)(s−c)</div><div class="hero-symbol">∑</div><div class="hero-art-bottom">THE LANGUAGE OF LOGIC <span>✳</span> THE POWER OF KNOWLEDGE</div></div>
+    </section>
+    <section class="stats shell" aria-label="学習統計"><div class="stat"><span class="stat-number" id="totalCount">00</span><span class="stat-label">FORMULAS / 収録公式</span></div><div class="stat"><span class="stat-number">07</span><span class="stat-label">FIELDS / 学習分野</span></div><div class="stat"><span class="stat-number" id="masteredCount">00</span><span class="stat-label">MASTERED / 暗記済み</span></div><div class="stat stat-completion"><div class="completion-line"><span class="stat-number" id="completionPercent">0%</span><span class="stat-label">COMPLETION</span></div><div class="meter"><span id="meterFill"></span></div></div></section>
+    <section class="ranking-section shell" id="ranking"><div class="section-heading"><div><div class="section-index">01 / FORMULA INDEX</div><h2>公式<span class="accent">ランキング</span><span class="title-period">.</span></h2><p>この順位は学習用のおすすめ順。出題頻度を実測した順位ではありません。重要度・汎用性・発展問題への応用力をもとに整理した学習優先度ランキング。</p></div><div class="section-side">KNOW THE RULES.<br />BREAK THE LIMITS.</div></div>
+      <div class="toolbar"><label class="search"><span class="search-icon">⌕</span><input type="search" id="searchInput" placeholder="公式・キーワードを検索..." autocomplete="off" /><kbd>/</kbd></label><div class="select-wrap"><label for="difficultyFilter">難易度</label><select id="difficultyFilter"><option value="all">すべて</option><option value="basic">基礎</option><option value="standard">標準</option><option value="advanced">発展</option><option value="elite">難関校</option></select></div><div class="select-wrap"><label for="sortSelect">並び順</label><select id="sortSelect"><option value="rank">おすすめ順</option><option value="hard">難しい順</option><option value="easy">やさしい順</option><option value="name">名前順</option></select></div></div>
+      <div class="category-list" id="categoryList" aria-label="分野で絞り込み"></div><div class="result-line"><span id="resultCount">表示中</span><button id="resetFilters" type="button">FILTER RESET ↗</button></div>
+      <div class="formula-grid" id="formulaGrid"></div><div class="empty-state" id="emptyState" hidden><span>∅</span><h3>公式が見つかりません</h3><p>検索ワードやフィルターを変更してみてください。</p><button type="button" id="emptyReset">フィルターをリセット ↗</button></div>
+    </section>
+
+<section class="practice-section shell" id="practice">
+ <div class="section-heading"><div><div class="section-index">02 / PROBLEM LAB</div><h2>実戦<span class="accent">問題演習</span><span class="title-period">.</span></h2><p>図は条件を理解するための参考図（原則として正確な縮尺ではありません）。問題文を優先し、途中式を書いてから解答を開こう。</p></div><div class="section-side">SOLVE IT.<br>UNDERSTAND IT.</div></div>
+ <div class="practice-bar"><label>分野 <select id="practiceCategory"><option value="all">すべての分野</option><option value="geometry">図形・発展幾何</option><option value="algebra">計算・方程式・関数</option><option value="other">立体・確率・データ</option></select></label><label>難易度 <select id="practiceLevel"><option value="all">すべて</option><option value="basic">基礎</option><option value="standard">標準</option><option value="advanced">発展</option><option value="elite">難関校</option></select></label><button type="button" id="practiceShuffle">問題をシャッフル ↻</button></div>
+ <div class="practice-progress"><span id="practiceCount">0 問</span><span id="practiceSolved">0 問 自己チェック済み</span></div>
+ <div id="practiceList" class="practice-list"></div><div id="practiceEmpty" class="practice-empty" hidden>条件に合う問題がありません。難易度・分野を変えてみてください。</div>
+</section>
+    <section class="challenge-section" id="challenge"><div class="shell challenge-inner"><div class="challenge-copy"><div class="section-index">03 / QUICK CHALLENGE</div><h2>覚えたつもり、<br /><span class="accent">で終わるな。</span></h2><p>ランダムに出題される公式の3択問題。<br />知識を「使える力」に変える3択チャレンジ。</p><div class="challenge-score">CURRENT STREAK <strong id="streakCount">00</strong><span> / </span>BEST <strong id="bestCount">00</strong></div></div><div class="quiz-card" id="quizCard"><div class="quiz-top"><span>FORMULA CHECK / <span id="quizCategory">MATHEMATICS</span></span><span id="quizDifficulty">LEVEL —</span></div><div id="quizContent"></div><div class="quiz-bottom"><span id="quizFeedback" aria-live="polite">SELECT YOUR ANSWER</span><button id="nextQuiz" type="button">NEXT QUESTION ↗</button></div></div></div></section>
+    <section class="strategy-section shell" id="strategy"><div class="section-heading"><div><div class="section-index">04 / STUDY STRATEGY</div><h2>公式の、<span class="accent">その先へ。</span></h2></div></div><div class="strategy-grid"><article><span>01 / UNDERSTAND</span><h3>意味から理解する</h3><p>公式を暗記するだけでなく、どんな条件で成立するのか確認する。特にメネラウスやチェバは図に線を引いて覚えよう。</p></article><article><span>02 / APPLY</span><h3>例題で使ってみる</h3><p>「いつ使うか」を判断できるようにする。公式を見ずに例題を解けたら次のレベルへ進もう。</p></article><article><span>03 / MASTER</span><h3>繰り返して定着</h3><p>暗記済みにチェックして進捗を可視化。翌日・3日後・1週間後に解き直すと忘れにくい。</p></article></div><p class="caution">※ このサイトは不完全です。誤記や解説・図の誤りが残る可能性があります。公式は教科書や先生の説明で確認してください。高校数学の先取り・難関校向けの発展公式も含まれます。入試での出題範囲や公式の利用可否は学校・地域・年度によって異なります。</p></section>
+  </main>
+  <footer class="footer shell"><div class="footer-brand">MATH<span>//</span>RANK</div><p>LEARN THE FORMULA. OWN THE SOLUTION.</p><a href="#top">BACK TO TOP ↑</a><small>DESIGNED FOR CURIOUS MINDS.</small></footer>
+  <dialog id="formulaModal" class="formula-modal"><div class="modal-layout"><button type="button" class="modal-close" id="closeModal" aria-label="閉じる">×</button><div id="modalContent"></div></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+// Formula entry: [name, category, level, LaTeX, shortDescription, explanation, example, answer]
+const DATA = [
+['三平方の定理','図形','standard',String.raw`a^2+b^2=c^2`,'直角三角形を攻略','直角をはさむ2辺をa,b、直角の向かいにある最長辺（斜辺）をcとする。a²+b²=c²は直角三角形で成立し、逆も成立する。長さを求める前に直角を確認する。','直角をはさむ2辺が6cmと8cmの三角形。斜辺は？','√(6²+8²)=√100=10cm'],
+['解の公式','方程式','standard',String.raw`x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}`,'二次方程式の万能解法','ax²+bx+c=0（a≠0）の解を求める。b²−4acが負のとき実数解はない。','2x²−5x−3=0 を解こう。','x=(5±√49)/4=(5±7)/4 より x=3, −1/2'],
+['相似比と面積比','図形','standard',String.raw`a:b\ \Rightarrow\ S_1:S_2=a^2:b^2`,'面積は比の2乗','相似な図形では長さの比を2乗すると面積比になる。立体の体積比は3乗。','相似比が2:3の2つの三角形。面積比は？','2²:3²=4:9'],
+['二次関数の変化の割合','関数','standard',String.raw`\frac{\Delta y}{\Delta x}=a(p+q)`,'放物線の頻出計算','y=ax²でxがpからqへ変化するとき、変化の割合はa(p+q)。p≠qで考える。','y=2x²でxが1から4に増える。変化の割合は？','2(1+4)=10'],
+['メネラウスの定理','発展幾何','elite',String.raw`\frac{AF}{FB}\cdot\frac{BD}{DC}\cdot\frac{CE}{EA}=1`,'一直線を見抜く','三角形ABCでDは直線BC上、Eは直線CA上、Fは直線AB上。3点D,E,Fが一直線なら線分の長さの比の積が1になる（頂点と一致しない場合）。通常は少なくとも1点が辺の延長上にある。','FはAB上、DはBC上、EはCAのC側の延長上。AF/FB=2、BD/DC=3 のとき、CE/EAは？','2×3×(CE/EA)=1 より CE/EA=1/6'],
+['ヘロンの公式','発展幾何','elite',String.raw`S=\sqrt{s(s-a)(s-b)(s-c)}`,'3辺だけで面積','三角形の3辺a,b,cがわかれば面積Sを求められる。s=(a+b+c)/2 は半周長。3辺が三角形を作れることが条件。','3辺が13cm、14cm、15cmの三角形。面積は？','s=21、S=√(21×8×7×6)=√7056=84cm²'],
+['チェバの定理','発展幾何','elite',String.raw`\frac{BD}{DC}\cdot\frac{CE}{EA}\cdot\frac{AF}{FB}=1`,'3本の線の交点','三角形ABCの辺BC,CA,AB上にD,E,Fがあるとき、AD,BE,CFが1点で交わることと3つの比の積=1は同値（通常の内部点の設定）。メネラウスと違い「1点で交わる」が鍵。','△ABCでDはBC上、EはCA上、FはAB上。AD・BE・CFが1点で交わる。BD/DC=2、CE/EA=3 のとき AF/FBは？','2×3×(AF/FB)=1 より AF/FB=1/6'],
+['円周角の定理','図形','standard',String.raw`\angle APB=\frac12\angle AOB`,'円の角度はこれ','円周上のPを含まない弧ABに対応する中心角∠AOBは、その弧に対する円周角∠APBの2倍。同じ弧に対する円周角同士は等しい。Pが弧ABの反対側へ移ると対応する中心角に注意。','中心角AOBが116°。対応する円周角APBは？','116÷2=58°'],
+['平方根の計算','計算','basic',String.raw`\sqrt a\sqrt b=\sqrt{ab}`,'根号の計算','a,bが0以上のときに成立。√a+√b=√(a+b) とは一般にできない。','√12×√3 を計算。','√36=6'],
+['因数分解（平方差）','計算','basic',String.raw`a^2-b^2=(a+b)(a-b)`,'使い勝手抜群','2乗同士の引き算を積に分解する公式。文字でも数でも使える。','x²−49 を因数分解。','(x+7)(x−7)'],
+['因数分解（和の平方）','計算','basic',String.raw`a^2+2ab+b^2=(a+b)^2`,'展開とセット','真ん中が2abであることに注目。引き算版は(a−b)²。','x²+10x+25 を因数分解。','(x+5)²'],
+['因数分解（差の平方）','計算','basic',String.raw`a^2-2ab+b^2=(a-b)^2`,'符号ミスを防ぐ','a²−2ab+b²をまとめる。真ん中の符号がマイナス。','x²−14x+49 を因数分解。','(x−7)²'],
+['展開（分配法則）','計算','basic',String.raw`(a+b)(c+d)=ac+ad+bc+bd`,'計算の大原則','それぞれの項同士をかけて、同類項をまとめる。符号の処理を忘れずに。','(x+2)(x+3)を展開。','x²+5x+6'],
+['二次方程式と因数分解','方程式','basic',String.raw`AB=0\Rightarrow A=0\ \mathrm{or}\ B=0`,'0になる積の仕組み','因数分解した後、積が0なら少なくとも片方は0。','(x−4)(x+2)=0を解く。','x=4 または x=−2'],
+['判別式','方程式','advanced',String.raw`D=b^2-4ac`,'解の個数を判定','二次方程式ax²+bx+c=0（a≠0）で、D>0なら異なる2実数解、D=0なら重解、D<0なら実数解なし。','x²−6x+9=0 の実数解の個数は？','D=36−36=0、1個（重解）'],
+['一次関数の変化の割合','関数','basic',String.raw`a=\frac{y_2-y_1}{x_2-x_1}`,'傾きの基本','一次関数y=ax+bの傾きは2点のyの差÷xの差。x₁≠x₂。','(1,3),(4,9)を通る直線の傾きは？','(9−3)/(4−1)=2'],
+['二次関数の基本形','関数','basic',String.raw`y=ax^2`,'放物線のスタート','aの符号で開く向き、絶対値で幅が変わる。中学範囲の基本形は頂点が原点。','y=−3x²でx=2のときyは？','−3×4=−12'],
+['比例・反比例','関数','basic',String.raw`y=ax,\qquad y=\frac{a}{x}`,'関数の入口','比例はy/x一定、反比例はxy一定。反比例ではx≠0。','反比例でx=4,y=3なら、x=6のときyは？','a=12、y=12/6=2'],
+['連立方程式（消去）','方程式','basic',String.raw`\begin{cases}ax+by=c\\ dx+ey=f\end{cases}`,'代入法・加減法','一方の文字を消して1変数の方程式にする。加減法か代入法を選ぶ。','x+y=7、x−y=1 を解く。','加えると2x=8、x=4,y=3'],
+['二次方程式（平方完成）','方程式','advanced',String.raw`x^2+px=(x+\frac p2)^2-\frac{p^2}{4}`,'解の公式の仕組み','x²の係数が1の式で平方完成すると頂点や解を考えやすい。','x²+6x+5 を平方完成。','(x+3)²−4'],
+['相似比と体積比','立体・測定','advanced',String.raw`a:b\ \Rightarrow\ V_1:V_2=a^3:b^3`,'体積は比の3乗','相似な立体の体積比は相似比の3乗になる。表面積は2乗。','相似比が2:5の立体。体積比は？','8:125'],
+['三角形の面積','図形','basic',String.raw`S=\frac12 ah`,'高さは垂直','底辺aに対する高さhは底辺を含む直線までの垂直距離。','底辺12cm、高さ7cmの三角形の面積は？','12×7÷2=42cm²'],
+['台形の面積','図形','basic',String.raw`S=\frac{(a+b)h}{2}`,'上底＋下底','平行な2辺の長さがa,b、高さがh。','上底4cm、下底10cm、高さ6cmの面積は？','(4+10)×6÷2=42cm²'],
+['円の面積と円周','図形','basic',String.raw`S=\pi r^2,\quad L=2\pi r`,'円の必須セット','rは半径。直径d=2r。','半径5cmの円の面積は？','25πcm²'],
+['おうぎ形の面積','図形','standard',String.raw`S=\pi r^2\frac{\theta}{360^\circ}`,'中心角で割合を取る','中心角θ度は円全体のθ/360。弧長は2πr×θ/360。','半径6cm、中心角60°の扇形の面積は？','36π×60/360=6πcm²'],
+['おうぎ形の弧の長さ','図形','standard',String.raw`l=2\pi r\frac{\theta}{360^\circ}`,'弧長も割合','中心角θ度は円周全体のθ/360。','半径9cm、中心角80°の弧長は？','18π×80/360=4πcm'],
+['円柱の体積','立体・測定','basic',String.raw`V=\pi r^2h`,'底面積×高さ','柱体の体積は底面積×高さ。','半径3cm、高さ10cmの円柱の体積は？','90πcm³'],
+['円すいの体積','立体・測定','standard',String.raw`V=\frac13\pi r^2h`,'錐体は3分の1','同じ底面・高さの柱体と比べると体積は1/3。','半径3cm、高さ12cmの円すいの体積は？','(1/3)×9π×12=36πcm³'],
+['球の体積','立体・測定','standard',String.raw`V=\frac43\pi r^3`,'球体を攻略','球の半径rを3乗して4π/3をかける。','半径3cmの球の体積は？','(4/3)π×27=36πcm³'],
+['球の表面積','立体・測定','standard',String.raw`S=4\pi r^2`,'球の表面','半径rの球の表面積。円の面積4個分。','半径5cmの球の表面積は？','4π×25=100πcm²'],
+['標本の平均','確率・データ','basic',String.raw`\bar x=\frac{x_1+\cdots+x_n}{n}`,'データの中心','全データの和をデータの個数nで割る。','4,6,8,10の平均は？','(4+6+8+10)/4=7'],
+['確率の基本','確率・データ','standard',String.raw`P(A)=\frac{\text{Aの起こる場合の数}}{\text{全場合の数}}`,'同様に確からしい場合','全結果が同じ確率で起こるときだけ、場合の数の比で求められる。','公平な6面サイコロで偶数が出る確率は？','3/6=1/2'],
+['樹形図と積の法則','確率・データ','standard',String.raw`m\times n`,'場合の数を整理','1段目にm通り、各場合について2段目にn通りならm×n通り。重複や条件に注意。','服が3種類、ズボンが4種類。組合せは？','3×4=12通り'],
+['組合せ','確率・データ','advanced',String.raw`{}_n C_r=\frac{n!}{r!(n-r)!}`,'選ぶ順番は無視','異なるn個からr個を順序を考えずに選ぶ。高校内容の先取り。0≦r≦n。','5人から2人選ぶ方法は？','5×4/(2×1)=10通り'],
+['順列','確率・データ','advanced',String.raw`{}_n P_r=\frac{n!}{(n-r)!}`,'並べる順番を区別','異なるn個からr個を順序付きで選ぶ。高校内容の先取り。','5人から委員長と副委員長を選ぶ方法は？','5×4=20通り'],
+['内角の和','図形','basic',String.raw`180^\circ(n-2)`,'多角形の基本','n角形は1つの頂点からn−2個の三角形に分けられる。','8角形の内角の和は？','180×6=1080°'],
+['正多角形の1つの外角','図形','basic',String.raw`\frac{360^\circ}{n}`,'外角の和は360度','正n角形の外角はすべて等しい。','正12角形の1つの外角は？','360÷12=30°'],
+['三角形の合同条件','図形','basic',String.raw`SSS,\ SAS,\ ASA`,'3つの合同条件','3組の辺、2組の辺とその間の角、1組の辺とその両端の角。AAAは合同条件ではない。','2つの三角形で3組の対応する辺の長さがそれぞれ等しい。合同といえる？','いえる（3組の辺がそれぞれ等しい）'],
+['三角形の相似条件','図形','standard',String.raw`AAA\ (2\ angles),\ SAS,\ SSS`,'形が一致する条件','2組の角、2組の辺の比とその間の角、3組の辺の比。角2組で十分。','2つの三角形で2組の対応する角がそれぞれ等しい。相似といえる？','いえる（2組の角がそれぞれ等しい）'],
+['平行線と線分比','図形','standard',String.raw`DE\parallel BC\Rightarrow\frac{AD}{AB}=\frac{AE}{AC}`,'相似を生み出す','三角形ABCでDはAB上、EはAC上にありDE∥BCなら△ADE∽△ABC。','△ABCのAB上にD、AC上にEがあり、DE∥BC。AD=4, AB=10, AC=15ならAEは？','4/10=AE/15 よりAE=6'],
+['中点連結定理','図形','standard',String.raw`DE\parallel BC,\quad DE=\frac12 BC`,'中点を結ぶ','△ABCでD,EがAB,ACの中点ならDE∥BC、DE=BC/2。','△ABCでABとACの中点をそれぞれD,Eとする。BC=18cmならDEは？','9cm'],
+['角の二等分線定理','発展幾何','advanced',String.raw`\frac{BD}{DC}=\frac{AB}{AC}`,'比を作る重要定理','△ABCで∠Aの内角二等分線がBCと交わる点をDとすると成立。','△ABCで∠Aの二等分線ADがBCと交わる。AB=6cm, AC=9cm, BC=10cmならBDは？','BD:DC=2:3 なので BD=10×2/5=4'],
+['外角の二等分線定理','発展幾何','elite',String.raw`\frac{BD}{DC}=\frac{AB}{AC}`,'延長線上にも比','△ABCのAの外角二等分線が直線BCとDで交わるとき、長さの比が成り立つ。ただしAB≠ACの場合に有限な交点がある。Dは辺BCの外側。','AB:AC=2:3、BD=8、DはB側の延長線上。DCは？','8/DC=2/3 より DC=12'],
+['重心と中線','発展幾何','advanced',String.raw`AG:GD=2:1`,'重心は中線を2:1','三角形の中線3本が交わる点を重心Gといい、頂点Aから対辺の中点Dに引いた中線を2:1に分ける。','△ABCでDはBCの中点、Gは重心。AD=15cmならAGは？','15×2/3=10cm'],
+['正弦定理','発展幾何','elite',String.raw`\frac a{\sin A}=\frac b{\sin B}=\frac c{\sin C}=2R`,'高校数学の先取り','三角形の各辺a,b,cと向かい合う角A,B,C、外接円半径Rの関係。sinを使う高校範囲。','A=30°、a=5cm のとき外接円半径Rは？','5/sin30°=2R より 10=2R、R=5cm'],
+['余弦定理','発展幾何','elite',String.raw`c^2=a^2+b^2-2ab\cos C`,'三平方を拡張','辺a=BC、b=CA、c=ABとすると、角Cをはさむ2辺a,bと向かいの辺cの関係。C=90°なら三平方の定理になる。高校数学の先取り。','a=3,b=4,C=60°ならcは？','c²=9+16−24×1/2=13、c=√13'],
+['面積と三角比','発展幾何','elite',String.raw`S=\frac12 ab\sin C`,'2辺とその間の角','角Cをはさむ2辺a,bがわかると面積を求められる。高校数学の先取り。','a=6,b=8,C=30°なら面積は？','6×8×1/2×1/2=12'],
+['トレミーの定理','発展幾何','elite',String.raw`AC\cdot BD=AB\cdot CD+AD\cdot BC`,'円に内接する四角形','円に内接する四角形ABCDで対角線の積=向かい合う辺の積の和。難関校・高校先取り。','円に内接する長方形の縦3、横4。対角線は？','対角線は5。5×5=3×3+4×4=25を確認'],
+['方べきの定理（交わる弦）','発展幾何','elite',String.raw`PA\cdot PB=PC\cdot PD`,'円の積の関係','円内の点Pで弦ABとCDが交わるとき、各弦の分割された長さの積は等しい。外部点の割線にも対応する公式がある。','PA=2,PB=6,PC=3ならPDは？','2×6=3×PD より PD=4'],
+['方べきの定理（接線）','発展幾何','elite',String.raw`PT^2=PA\cdot PB`,'接線×接線','円外の点Pからの接線PTと割線PAB（P,A,Bの順）の関係。','PA=4, PB=9なら接線PTの長さは？','PT²=36 よりPT=6'],
+['ピタゴラス数','発展幾何','advanced',String.raw`3^2+4^2=5^2`,'暗記すると速い','3:4:5、5:12:13、8:15:17は頻出の直角三角形の辺の組。整数倍でも成立。','辺が10cmと24cmの直角三角形の斜辺は？','5:12:13の2倍 → 26cm'],
+['接弦定理','発展幾何','elite',String.raw`\angle(\text{接線},\text{弦})=\angle(\text{円周角})`,'接線と円周角を結ぶ','接点Tから引いた弦TAと接線が作る角は、その角に対応する弧TAを見る円周角∠TPAに等しい。接線のどちら向きの半直線を使うかで角が変わるため、対応する弧を必ず確認する。','接線と弦が作る角が40°。対応する円周角は？','40°'],
+['母線と円すい側面積','立体・測定','advanced',String.raw`S_{\text{側面}}=\pi rl`,'円すいの展開図','底面半径r、母線lの円すいの側面積はπrl。底面積πr²を加えると表面積。','r=3cm、l=5cmの円すいの側面積は？','15πcm²'],
+['オイラーの多面体定理','立体・測定','advanced',String.raw`V-E+F=2`,'頂点・辺・面の関係','穴のない凸多面体で成立。V=頂点数、E=辺数、F=面数。','立方体で確認。頂点8、辺12、面6なら？','8−12+6=2'],
+['平均の速さ','立体・測定','basic',String.raw`v=\frac{d}{t}`,'速さ・時間・距離','距離d÷時間tで平均の速さ。単位（km/h、m/sなど）を統一。','120kmを2時間で進む平均の速さは？','60km/h'],
+['仕事算の基本','方程式','advanced',String.raw`\text{仕事量}=\text{仕事率}\times\text{時間}`,'割合を使って整理','全体の仕事を1として1時間あたりの仕事量を考える。','Aは6時間、Bは3時間で終える仕事。一緒なら何時間？','1/6+1/3=1/2（毎時）なので2時間'],
+['資料の相対度数','確率・データ','basic',String.raw`\text{相対度数}=\frac{\text{階級の度数}}{\text{度数合計}}`,'割合でデータ比較','階級の度数を全体の度数で割る。合計は1。','40人中、ある階級に10人。相対度数は？','10/40=0.25'],
+['標本調査の推定','確率・データ','standard',String.raw`\text{推定人数}=N\times\frac{k}{n}`,'全体を推定','無作為抽出したn人中k人が該当するとき、全体N人の推定人数。抽出に偏りがあると精度が落ちる。','200人中30人が該当。全体1000人なら推定何人？','1000×30/200=150人'],
+['等差数列の和','計算','elite',String.raw`S_n=\frac{n(a_1+a_n)}2`,'規則性問題の武器','等差数列の最初のn項の和。高校数学の先取りだが、規則性の問題にも便利。','1から50までの整数の和は？','50×(1+50)/2=1275'],
+['等差数列の一般項','計算','elite',String.raw`a_n=a_1+(n-1)d`,'数の並びの規則','初項a₁、公差dの等差数列。高校数学の先取り。','3,7,11,...の20番目は？','3+19×4=79'],
+['連続整数の和','計算','advanced',String.raw`1+2+\cdots+n=\frac{n(n+1)}2`,'規則性で使える','1からnまでの自然数の和。等差数列の和の特別な場合。','1から100までの和は？','100×101/2=5050'],
+['比の内分点','発展幾何','elite',String.raw`P=\frac{nA+mB}{m+n}`,'座標でも比を扱う','線分ABをAP:PB=m:nに内分する点Pの位置ベクトル（または各座標）。高校数学の先取り。','数直線でA=2,B=12、AP:PB=2:3ならPは？','(3×2+2×12)/5=6'],
+['二次関数の頂点（一般形）','関数','elite',String.raw`x=-\frac b{2a}`,'平方完成で頂点','y=ax²+bx+c（a≠0）の放物線の軸。頂点のy座標は代入して求める。高校範囲の先取り。','y=x²−6x+8 の頂点は？','軸x=3、y=9−18+8=−1 より(3,−1)'],
+['相加相乗平均','計算','elite',String.raw`\frac{a+b}2\geq\sqrt{ab}`,'最小値を見抜く','a,bが非負のとき成立し、等号はa=b。高校数学の先取り。','正数xについて x+9/x の最小値は？','x+9/x≧2√9=6、x=3で等号'],
+['円の接線と半径','図形','standard',String.raw`OT\perp PT`,'接点には直角','円の中心O、接点T、接線上の点Pなら半径OTは接線PTに垂直。','OT=5, OP=13、PTは？','直角三角形よりPT=√(169−25)=12'],
+['対角線の本数','図形','advanced',String.raw`\frac{n(n-3)}2`,'多角形を数える','n角形の各頂点から自分と隣2点を除くn−3本、全体で2回ずつ数えるので2で割る。','10角形の対角線は何本？','10×7/2=35本']
+];
+const LEVELS={basic:{name:'BASIC / 基礎',color:'#a9d9ff',value:1},standard:{name:'STANDARD / 標準',color:'#68e7f9',value:2},advanced:{name:'ADVANCED / 発展',color:'#ffc18a',value:3},elite:{name:'ELITE / 難関校',color:'#c8a9ff',value:4}};
+const CATEGORIES=['すべて','計算','方程式','関数','図形','立体・測定','確率・データ','発展幾何'];
+const KEY='mathrank-mastered-v1', STREAK='mathrank-best-v1';
+const $=sel=>document.querySelector(sel);
+const $$=sel=>[...document.querySelectorAll(sel)];
+const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const storageGet=k=>{try{return window.localStorage.getItem(k)}catch{return null}};
+const storageSet=(k,v)=>{try{window.localStorage.setItem(k,v);return true}catch{return false}};
+const readSaved=()=>{try{const arr=JSON.parse(storageGet(KEY)||'[]');return new Set(Array.isArray(arr)?arr.filter(v=>Number.isInteger(v)&&v>=0&&v<DATA.length):[])}catch{return new Set()}};
+let saved=readSaved(), category='すべて', currentQuiz=-1, answered=false, streak=0, best=Math.max(0,Number.parseInt(storageGet(STREAK)||'0',10)||0), quizOrder=[];
+function tex(src,display=true){return display?`\\[${src}\\]`:`\\(${src}\\)`}
+function typeset(target){if(window.MathJax?.typesetPromise)window.MathJax.typesetPromise([target]).catch(()=>{});else{let tries=0;const timer=setInterval(()=>{if(window.MathJax?.typesetPromise){clearInterval(timer);window.MathJax.typesetPromise([target]).catch(()=>{})}else if(++tries>35)clearInterval(timer)},300)}}
+function updateStats(){const count=saved.size;$('#totalCount').textContent=DATA.length;$('#masteredCount').textContent=String(count).padStart(2,'0');$('#headerCount').textContent=count;const percent=Math.round(100*count/DATA.length);$('#completionPercent').textContent=percent+'%';$('#meterFill').style.width=percent+'%'}
+function toast(msg){const el=$('#toast');el.textContent=msg;el.classList.add('visible');clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove('visible'),2200)}
+function saveToggle(id){if(saved.has(id))saved.delete(id);else saved.add(id);const persisted=storageSet(KEY,JSON.stringify([...saved]));updateStats();renderCards();if($('#formulaModal').open&&Number($('#formulaModal').dataset.id)===id)$('#modalSave').textContent=saved.has(id)?'✓ 暗記済みを解除':'＋ 暗記済みにする';toast(persisted?(saved.has(id)?'暗記済みに登録しました':'暗記済みを解除しました'):'このブラウザでは保存できません（表示中のみ反映）')}
+function renderCategories(){const container=$('#categoryList');container.innerHTML=CATEGORIES.map(c=>`<button type="button" class="cat-btn ${c===category?'active':''}" data-category="${escapeHtml(c)}">${escapeHtml(c)}</button>`).join('')}
+function getFiltered(){let list=DATA.map((d,id)=>({d,id}));const q=$('#searchInput').value.trim().toLocaleLowerCase('ja');const level=$('#difficultyFilter').value;if(category!=='すべて')list=list.filter(x=>x.d[1]===category);if(level!=='all')list=list.filter(x=>x.d[2]===level);if(q)list=list.filter(x=>[x.d[0],x.d[1],x.d[4],x.d[5],x.d[3]].join(' ').toLocaleLowerCase('ja').includes(q));const sort=$('#sortSelect').value;if(sort==='hard')list.sort((a,b)=>LEVELS[b.d[2]].value-LEVELS[a.d[2]].value||a.id-b.id);else if(sort==='easy')list.sort((a,b)=>LEVELS[a.d[2]].value-LEVELS[b.d[2]].value||a.id-b.id);else if(sort==='name')list.sort((a,b)=>a.d[0].localeCompare(b.d[0],'ja'));return list}
+function renderCards(){const list=getFiltered();$('#resultCount').textContent=`SHOWING ${list.length} / ${DATA.length} FORMULAS`;$('#emptyState').hidden=list.length!==0;const el=$('#formulaGrid');el.innerHTML=list.map(({d,id})=>{const level=LEVELS[d[2]];return `<article class="formula-card" style="--level-color:${level.color}"><div class="card-top"><span class="rank ${id<3?'top-rank':''}">${String(id+1).padStart(2,'0')}</span><span class="level-tag">${level.name}</span></div><div class="card-category">${escapeHtml(d[1])} / FORMULA ${String(id+1).padStart(3,'0')}</div><h3>${escapeHtml(d[0])}</h3><div class="formula-display">${tex(d[3])}</div><div class="card-foot"><span class="card-subtitle">${escapeHtml(d[4])}</span><div class="card-controls"><button class="circle-btn ${saved.has(id)?'saved':''}" data-save="${id}" type="button" title="暗記済みを切り替える" aria-label="${escapeHtml(d[0])}を暗記済みにする">${saved.has(id)?'✓':'☆'}</button><button class="circle-btn details-btn" data-open="${id}" type="button" title="詳しく見る" aria-label="${escapeHtml(d[0])}の解説を見る">↗</button></div></div></article>`}).join('');typeset(el)}
+function openModal(id){const d=DATA[id],level=LEVELS[d[2]];const el=$('#modalContent');$('#formulaModal').dataset.id=id;el.innerHTML=`<div class="modal-eyebrow">FORMULA ${String(id+1).padStart(3,'0')} / ${escapeHtml(d[1])} / ${level.name}</div><h2 class="modal-title">${escapeHtml(d[0])}</h2><div class="modal-equation">${tex(d[3])}</div><section class="modal-section"><h4>01 — CONCEPT / 解説</h4>${explanationBlock(d[0],d[5])}</section><section class="modal-section"><h4>02 — PRACTICE / 例題</h4><div class="modal-example">${escapeHtml(d[6])}</div><button class="reveal-answer" type="button" id="revealAnswer">答えと解き方を表示 ＋</button><div class="modal-answer" id="modalAnswer" hidden>${escapeHtml(d[7])}</div></section><div class="modal-actions"><button type="button" class="modal-save" id="modalSave">${saved.has(id)?'✓ 暗記済みを解除':'＋ 暗記済みにする'}</button></div><p class="modal-note">※ 図は模式図を含みます。辺の長さ・角度・成立条件は問題文を優先。自力で解けるようになってからチェックしよう。</p>`;$('#formulaModal').showModal();typeset(el);$('#revealAnswer').addEventListener('click',()=>{const ans=$('#modalAnswer');ans.hidden=!ans.hidden;$('#revealAnswer').textContent=ans.hidden?'答えと解き方を表示 ＋':'答えを隠す −'});$('#modalSave').addEventListener('click',()=>saveToggle(id))}
+function reset(){category='すべて';$('#searchInput').value='';$('#difficultyFilter').value='all';$('#sortSelect').value='rank';renderCategories();renderCards()}
+function quizNext(){const pool=DATA.map((_,i)=>i);if(!quizOrder.length){quizOrder=pool;for(let i=quizOrder.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[quizOrder[i],quizOrder[j]]=[quizOrder[j],quizOrder[i]]}}let id=quizOrder.pop();if(id===currentQuiz&&quizOrder.length){quizOrder.unshift(id);id=quizOrder.pop()}currentQuiz=id;answered=false;const d=DATA[id];let wrongs=DATA.map((x,j)=>({a:x[3],id:j})).filter(x=>x.id!==id&&x.a!==d[3]).sort(()=>Math.random()-.5).slice(0,2);const opts=[{a:d[3],correct:true},...wrongs.map(x=>({a:x.a,correct:false}))].sort(()=>Math.random()-.5);$('#quizCategory').textContent=d[1];$('#quizDifficulty').textContent=LEVELS[d[2]].name;$('#quizContent').innerHTML=`<h3>「${escapeHtml(d[0])}」の公式はどれ？</h3><div class="quiz-options">${opts.map((o,i)=>`<button class="quiz-option" type="button" data-correct="${o.correct}" data-option="${i}"><span>${String.fromCharCode(65+i)}.</span>　${tex(o.a,false)}</button>`).join('')}</div>`;$('#quizFeedback').textContent='SELECT YOUR ANSWER';$('#quizFeedback').style.color='';$('#nextQuiz').textContent='SKIP ↗';typeset($('#quizContent'))}
+function quizChoose(button){if(answered)return;answered=true;const ok=button.dataset.correct==='true';if(ok){streak++;if(streak>best){best=streak;storageSet(STREAK,String(best))}}else streak=0;$$('.quiz-option').forEach(el=>{el.disabled=true;if(el.dataset.correct==='true')el.classList.add('correct');else if(el===button)el.classList.add('wrong')});$('#quizFeedback').textContent=ok?'✓ CORRECT!':'✕ 不正解。緑色が正しい公式です。';$('#quizFeedback').style.color=ok?'#c9ff79':'#ffc18a';$('#nextQuiz').textContent='NEXT QUESTION ↗';$('#streakCount').textContent=String(streak).padStart(2,'0');$('#bestCount').textContent=String(best).padStart(2,'0')}
+$('#categoryList').addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(!b)return;category=b.dataset.category;renderCategories();renderCards()});$('#formulaGrid').addEventListener('click',e=>{const open=e.target.closest('[data-open]'),save=e.target.closest('[data-save]');if(open)openModal(Number(open.dataset.open));else if(save)saveToggle(Number(save.dataset.save))});$('#searchInput').addEventListener('input',renderCards);$('#difficultyFilter').addEventListener('change',renderCards);$('#sortSelect').addEventListener('change',renderCards);$('#resetFilters').addEventListener('click',reset);$('#emptyReset').addEventListener('click',reset);$('#closeModal').addEventListener('click',()=>$('#formulaModal').close());$('#formulaModal').addEventListener('click',e=>{if(e.target===$('#formulaModal'))$('#formulaModal').close()});$('#quizContent').addEventListener('click',e=>{const btn=e.target.closest('.quiz-option');if(btn)quizChoose(btn)});$('#nextQuiz').addEventListener('click',quizNext);$('#headerProgress').addEventListener('click',()=>{reset();$('#ranking').scrollIntoView({behavior:'smooth'});toast(`${saved.size} / ${DATA.length} 公式を暗記済み`)});window.addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-innerHeight;$('#progressLine').style.width=(max>0?scrollY/max*100:0)+'%'},{passive:true});document.addEventListener('keydown',e=>{if(e.key==='/'&&!/input|textarea/i.test(document.activeElement.tagName)){e.preventDefault();$('#searchInput').focus()}if(e.key==='Escape'&&$('#formulaModal').open)$('#formulaModal').close()});
+renderCategories();updateStats();renderCards();$('#bestCount').textContent=String(best).padStart(2,'0');quizNext();
+
+
+const DIAGRAMS = {
+ triangle: `<polygon class="edge" points="170,36 42,242 319,242"/><text class="point" x="162" y="23">A</text><text class="point" x="18" y="255">B</text><text class="point" x="326" y="255">C</text>`,
+ right: `<path class="edge" d="M65 230 L65 60 L315 230 Z"/><path class="helper" d="M65 208 H87 V230"/><text class="point" x="53" y="46">A</text><text class="point" x="47" y="252">B</text><text class="point" x="320" y="246">C</text><text class="measure-label" x="25" y="145">a</text><text class="measure-label" x="188" y="253">b</text><text class="measure-label" x="211" y="133">c</text>`,
+ similarity: `<path class="edge" d="M42 230 L140 55 L235 230 Z M280 230 L330 143 L380 230 Z"/><text class="point" x="134" y="40">A</text><text class="point" x="25" y="247">B</text><text class="point" x="236" y="248">C</text><text class="point" x="325" y="132">D</text><text class="measure-label" x="125" y="265">大</text><text class="measure-label" x="322" y="265">小</text>`,
+ circle: `<circle class="edge" cx="195" cy="142" r="105"/><path class="helper" d="M195 142 L103.3 90.8 M195 142 L286.7 90.8"/><path class="measure" d="M103.3 90.8 L195 247 L286.7 90.8"/><circle class="point-dot" cx="195" cy="142" r="3"/><text class="point" x="203" y="143">O</text><text class="point" x="84" y="86">A</text><text class="point" x="290" y="85">B</text><text class="point" x="194" y="265">P</text>`,
+ menelaus: `<path class="edge" d="M165 32 L50 205 L300 205 Z"/><path class="helper" d="M300 205 L327.00 239.60"/><path class="measure" d="M88.33 147.33 L327.00 239.60"/><circle class="point-dot" cx="165.00" cy="32.00" r="3.6"/><text class="point" x="157.00" y="18.00">A</text><circle class="point-dot" cx="50.00" cy="205.00" r="3.6"/><text class="point" x="35.00" y="222.00">B</text><circle class="point-dot" cx="300.00" cy="205.00" r="3.6"/><text class="point" x="292.00" y="220.00">C</text><circle class="point-dot" cx="237.50" cy="205.00" r="3.6"/><text class="point" x="229.00" y="225.00">D</text><circle class="point-dot" cx="327.00" cy="239.60" r="3.6"/><text class="point" x="339.00" y="246.00">E</text><circle class="point-dot" cx="88.33" cy="147.33" r="3.6"/><text class="point" x="73.00" y="143.00">F</text><text class="measure-label" x="55" y="122">AF:FB=2:1</text><text class="measure-label" x="151" y="224">BD:DC=3:1</text>`,
+ ceva: `<path class="edge" d="M170 40 L45 235 L325 235 Z"/><path class="helper" d="M170 40 L231.667 235.000 M45 235 L208.750 88.750 M325 235 L152.143 67.857"/><circle class="point-dot" cx="170.00" cy="40.00" r="3.6"/><text class="point" x="159.00" y="26.00">A</text><circle class="point-dot" cx="45.00" cy="235.00" r="3.6"/><text class="point" x="28.00" y="250.00">B</text><circle class="point-dot" cx="325.00" cy="235.00" r="3.6"/><text class="point" x="330.00" y="250.00">C</text><circle class="point-dot" cx="231.67" cy="235.00" r="3.6"/><text class="point" x="225.00" y="257.00">D</text><circle class="point-dot" cx="208.75" cy="88.75" r="3.6"/><text class="point" x="218.00" y="82.00">E</text><circle class="point-dot" cx="152.14" cy="67.86" r="3.6"/><text class="point" x="134.00" y="71.00">F</text><circle class="point-dot" cx="190.56" cy="105.00" r="3.6"/><text class="point" x="194.00" y="110.00">P</text>`,
+ heron: `<path class="edge" d="M170 40 L40 242 L327 242 Z"/><path class="helper" d="M170 40 L170 242"/><path class="helper" d="M170 222 h20 v20"/><text class="point" x="164" y="27">A</text><text class="point" x="23" y="258">B</text><text class="point" x="330" y="258">C</text><text class="measure-label" x="88" y="128">c</text><text class="measure-label" x="258" y="129">b</text><text class="measure-label" x="175" y="262">a</text>`,
+ anglebisector: `<path class="edge" d="M177 36 L40 244 L326 244 Z"/><path class="helper" d="M177 36 L181.075 244"/><circle class="point-dot" cx="177.00" cy="36.00" r="3.6"/><text class="point" x="168.00" y="23.00">A</text><circle class="point-dot" cx="40.00" cy="244.00" r="3.6"/><text class="point" x="20.00" y="260.00">B</text><circle class="point-dot" cx="326.00" cy="244.00" r="3.6"/><text class="point" x="333.00" y="260.00">C</text><circle class="point-dot" cx="181.08" cy="244.00" r="3.6"/><text class="point" x="184.08" y="264.00">D</text>`,
+ midpoint: `<path class="edge" d="M175 35 L40 244 L326 244 Z"/><path class="helper" d="M107.5 139.5 L250.5 139.5"/><text class="point" x="165" y="23">A</text><text class="point" x="22" y="261">B</text><text class="point" x="329" y="261">C</text><text class="point" x="93" y="134">D</text><text class="point" x="255" y="134">E</text>`,
+ ptolemy: `<circle class="helper" cx="190" cy="142" r="110"/><path class="edge" d="M124 54 L256 54 L256 230 L124 230 Z"/><path class="measure" d="M124 54 L256 230 M256 54 L124 230"/><circle class="point-dot" cx="124.00" cy="54.00" r="3.6"/><text class="point" x="104.00" y="45.00">A</text><circle class="point-dot" cx="256.00" cy="54.00" r="3.6"/><text class="point" x="263.00" y="46.00">B</text><circle class="point-dot" cx="256.00" cy="230.00" r="3.6"/><text class="point" x="263.00" y="250.00">C</text><circle class="point-dot" cx="124.00" cy="230.00" r="3.6"/><text class="point" x="103.00" y="250.00">D</text><text class="measure-label" x="184" y="44">3</text><text class="measure-label" x="269" y="148">4</text>`,
+ power: `<circle class="edge" cx="190" cy="142" r="110"/><path class="helper" d="M80.291 150 L299.709 150 M180 32.455 L180 251.545"/><circle class="point-dot" cx="180" cy="150" r="4"/><text class="point" x="62" y="152">A</text><text class="point" x="308" y="152">B</text><text class="point" x="184" y="272">C</text><text class="point" x="184" y="24">D</text><text class="point" x="186" y="145">P</text>`,
+ trapezoid: `<path class="edge" d="M100 75 L245 75 L328 236 L37 236 Z"/><path class="helper" d="M100 75 V236"/><text class="measure-label" x="166" y="63">a</text><text class="measure-label" x="176" y="255">b</text><text class="measure-label" x="74" y="158">h</text>`,
+ sector: `<path class="edge" d="M180 235 L180 45 A190 190 0 0 1 344 140 Z"/><circle class="point-dot" cx="180" cy="235" r="4"/><text class="point" x="161" y="253">O</text><text class="measure-label" x="185" y="130">r</text><text class="measure-label" x="260" y="208">θ</text>`,
+ tangent: `<circle class="edge" cx="160" cy="134" r="94"/><path class="helper" d="M160 134 L254 134 M254 32 L254 259"/><path class="measure" d="M160 134 L254 255 M254 134 L254 255"/><path class="helper" d="M239 134 V149 H254"/><text class="point" x="145" y="127">O</text><text class="point" x="260" y="127">T</text><text class="point" x="263" y="263">P</text>`,
+ centroid: `<path class="edge" d="M177 35 L40 243 L328 243 Z"/><path class="helper" d="M177 35 L184 243 M40 243 L252.5 139 M328 243 L108.5 139"/><circle class="point-dot" cx="177.00" cy="35.00" r="3.6"/><text class="point" x="162.00" y="24.00">A</text><circle class="point-dot" cx="40.00" cy="243.00" r="3.6"/><text class="point" x="22.00" y="260.00">B</text><circle class="point-dot" cx="328.00" cy="243.00" r="3.6"/><text class="point" x="334.00" y="260.00">C</text><circle class="point-dot" cx="184.00" cy="243.00" r="3.6"/><text class="point" x="190.00" y="265.00">D</text><circle class="point-dot" cx="181.67" cy="173.67" r="3.6"/><text class="point" x="192.00" y="171.00">G</text>`,
+ bisectorexercise: `<path class="edge" d="M126 102.016 L60 230 L300 230 Z"/><path class="helper" d="M126 102.016 L156 230"/><circle class="point-dot" cx="126.00" cy="102.02" r="3.6"/><text class="point" x="120.00" y="88.02">A</text><circle class="point-dot" cx="60.00" cy="230.00" r="3.6"/><text class="point" x="41.00" y="247.00">B</text><circle class="point-dot" cx="300.00" cy="230.00" r="3.6"/><text class="point" x="309.00" y="245.00">C</text><circle class="point-dot" cx="156.00" cy="230.00" r="3.6"/><text class="point" x="147.00" y="250.00">D</text><text class="measure-label" x="74" y="160">6 cm</text><text class="measure-label" x="218" y="162">9 cm</text><text class="measure-label" x="188" y="251">10 cm</text>`,
+ externalbisector: `<path class="edge" d="M150.00 156.822 L175 230 L240 230 Z"/><path class="helper" d="M45 230 L175 230"/><path class="measure" d="M150.00 156.822 L45 230"/><circle class="point-dot" cx="150.00" cy="156.82" r="3.6"/><text class="point" x="143.00" y="140.82">A</text><circle class="point-dot" cx="175.00" cy="230.00" r="3.6"/><text class="point" x="172.00" y="251.00">B</text><circle class="point-dot" cx="240.00" cy="230.00" r="3.6"/><text class="point" x="246.00" y="246.00">C</text><circle class="point-dot" cx="45.00" cy="230.00" r="3.6"/><text class="point" x="30.00" y="246.00">D</text><text class="measure-label" x="69" y="212">BD</text><text class="measure-label" x="199" y="214">BC</text>`,
+ tangentsecant: `<circle class="edge" cx="150" cy="145" r="95"/><path class="helper" d="M55 145 L340 145"/><path class="measure" d="M340 145 L197.5000 62.7276"/><path class="helper" d="M150 145 L197.5000 62.7276"/><circle class="point-dot" cx="150.00" cy="145.00" r="3.6"/><text class="point" x="137.00" y="136.00">O</text><circle class="point-dot" cx="55.00" cy="145.00" r="3.6"/><text class="point" x="35.00" y="161.00">B</text><circle class="point-dot" cx="245.00" cy="145.00" r="3.6"/><text class="point" x="245.00" y="165.00">A</text><circle class="point-dot" cx="340.00" cy="145.00" r="3.6"/><text class="point" x="350.00" y="150.00">P</text><circle class="point-dot" cx="197.50" cy="62.73" r="3.6"/><text class="point" x="201.50" y="48.73">T</text>`,
+ tangentchord: `<circle class="edge" cx="190" cy="145" r="100"/><path class="helper" d="M290 28 L290 257"/><path class="measure" d="M290 145 L190 45 M90 145 L290 145 M90 145 L190 45"/><circle class="point-dot" cx="190.00" cy="145.00" r="3.6"/><text class="point" x="202.00" y="157.00">O</text><circle class="point-dot" cx="290.00" cy="145.00" r="3.6"/><text class="point" x="298.00" y="145.00">T</text><circle class="point-dot" cx="190.00" cy="45.00" r="3.6"/><text class="point" x="173.00" y="30.00">A</text><circle class="point-dot" cx="90.00" cy="145.00" r="3.6"/><text class="point" x="71.00" y="160.00">P</text><text class="measure-label" x="274" y="85">45°</text><text class="measure-label" x="119" y="131">45°</text>`,
+ righttest: `<path class="edge" d="M95 54.3782 L60 115 L267.8461 235 Z"/><text class="point" x="84" y="41">A</text><text class="point" x="41" y="118">B</text><text class="point" x="274" y="249">C</text><text class="measure-label" x="55" y="73">7</text><text class="measure-label" x="153" y="182">24</text><text class="measure-label" x="199" y="102">25</text>`,
+};
+const FIGURE_INFO={
+ '三平方の定理':['right','直角Bを確認。斜辺cは直角の向かい側。','① 直角を見つける。|② 直角をはさむ2辺をそれぞれ2乗する。|③ 足して平方根をとる。'],
+ 'メネラウスの定理':['menelaus','FはAB上、DはBC上、EはCAのC側の延長上。赤い直線の3点は一直線で、AF:FB=2:1、BD:DC=3:1。','① 三角形ABCを決める。|② 1本の直線上にあるD・E・Fを探す。|③ 辺の比を1周分かけて1と置く。'],
+ 'チェバの定理':['ceva','AD・BE・CFは正しく1点Pで交わる。図ではBD:DC=2:1、CE:EA=3:1、AF:FB=1:6。','① 3頂点から対辺へ引いた3本の線を見つける。|② 1点で交わることを確認する。|③ 各辺の比の積を1とする。'],
+ 'ヘロンの公式':['heron','a・b・cは3辺の長さ。高さが分からなくても面積を出せる。','① 3辺が三角形を作るか確認する。|② 半周長s=(a+b+c)/2を求める。|③ √[s(s−a)(s−b)(s−c)]に代入する。'],
+ '相似比と面積比':['similarity','同じ形の三角形でも、辺の長さに応じて面積は2乗で変化する。','① 対応する辺を見つける。|② 相似比をa:bとする。|③ 面積比はa²:b²にする。'],
+ '相似比と体積比':['similarity','相似な立体は辺の比を3乗する。図は相似な断面の模式図。','① 相似比を調べる。|② 面積は2乗、体積は3乗と区別する。'],
+ '円周角の定理':['circle','青い2本は中心角、紫の2本は同じ弧に対する円周角。','① 対象の弧が同じか確認する。|② 中心角が分かれば2で割る。|③ 円周角が分かれば2倍して中心角を出す。'],
+ '三角形の面積':['heron','底辺BCと、頂点AからBCへ下ろした垂線が高さ。','① 底辺を1つ決める。|② その底辺への垂直な高さを探す。|③ 底辺×高さ÷2。'],
+ '台形の面積':['trapezoid','aが上底、bが下底、hは平行な2辺の垂直距離。','① 平行な2辺を見つける。|② その和に高さをかける。|③ 2で割る。'],
+ 'おうぎ形の面積':['sector','中心角θの割合だけ、半径rの円を切り取る。','① 半径rと中心角θを確認。|② 円全体の面積πr²を求める。|③ θ/360をかける。'],
+ 'おうぎ形の弧の長さ':['sector','弧は円周のθ/360の長さ。','① 円周2πrを出す。|② θ/360をかける。'],
+ '角の二等分線定理':['anglebisector','ADが∠Aを半分に分けるとき、底辺の分割比BD:DC=AB:AC。','① ∠BAD=∠DACを確認。|② 対応する辺の比を立てる。|③ 交差に掛けて求める。'],
+ '外角の二等分線定理':['externalbisector','ADはAの外角の二等分線。DはBCのB側の延長上にあり、BD:DC=AB:AC=2:3。','① 外角の二等分線であることを確認。|② Dが辺の外側にあることを確認。|③ BD:DC=AB:ACを使う。'],
+ '中点連結定理':['midpoint','DとEはそれぞれABとACの中点。DEはBCに平行で長さは半分。','① 2辺の中点を探す。|② それらを結ぶ線と残りの辺が平行。|③ DE=BC/2。'],
+ '平行線と線分比':['midpoint','図中DEがBCに平行なら小さい△ADEと大きい△ABCが相似。','① DE∥BCを確認。|② △ADE∽△ABCを使う。|③ 対応する辺の比をそろえる。'],
+ '重心と中線':['centroid','中線3本の交点Gが重心。頂点側AG:底辺側GD=2:1。','① 辺の中点Dを取る。|② 中線ADを引く。|③ 重心Gは頂点から2/3の位置。'],
+ 'トレミーの定理':['ptolemy','4頂点が円周上にある長方形の例。辺AB=CDは3、辺BC=DAは4、対角線は5。定理は長方形以外の円に内接する四角形でも成立。','① 円に内接することを確認。|② 対角線の積AC×BDを左辺に置く。|③ AB×CD+AD×BCと等しくする。'],
+ '方べきの定理（交わる弦）':['power','円の内部で交わる2本の弦の分割された長さの積を比べる。','① 同じ交点Pを探す。|② PA×PBとPC×PDを作る。|③ 2つの積を等号で結ぶ。'],
+ '接弦定理':['tangentchord','Tでの接線（縦の線）と弦TAが作る45°の角は、∠TPA=45°に等しい。','① 接点と弦を見つける。|② その弦の反対側の弧の円周角を探す。|③ 対応する角を等しく置く。'],
+ '円の接線と半径':['tangent','接点Tでは半径OTと接線PTが90°で交わる。','① 接点Tを探す。|② OT⊥PTを使う。|③ 直角三角形なら三平方も使える。'],
+ '方べきの定理（接線）':['tangentsecant','Pから円へ接線PTと割線PABを引く。Aは近い交点、Bは遠い交点で、図でもPT²=PA×PB。','① 外部点Pと接点Tを確認。|② 近い交点A、遠い交点Bを決める。|③ PT²=PA×PBを作る。'],
+ 'ピタゴラス数':['right','3:4:5や5:12:13を知っていると計算が速い。','① 直角を確認。|② 既知の整数比に当てはまるか見る。|③ 倍率をかける。'],
+ '正弦定理':['triangle','三角形の辺と対角の関係。aは角Aの向かいの辺BC。','① 辺と向かいの角を正確に対応させる。|② a/sin A=b/sin B=c/sin C=2R。'],
+ '余弦定理':['triangle','cは角Cの向かいの辺AB。角C=90°なら三平方の定理になる。','① 2辺とその間の角を確認。|② 向かいの辺の2乗を求める。|③ 余弦を代入。'],
+ '面積と三角比':['triangle','2辺とその間の角が分かれば、sinを使って面積を求められる。','① 2辺を決める。|② はさまれる角を確認。|③ 1/2×a×b×sin C。'],
+};
+function diagramSVG(type,caption=''){return type&&DIAGRAMS[type]?`<figure class="diagram-panel"><svg viewBox="0 -30 400 310" role="img" aria-label="${escapeHtml(caption)}" xmlns="http://www.w3.org/2000/svg">${DIAGRAMS[type]}</svg><figcaption class="diagram-caption">${escapeHtml(caption)}</figcaption></figure>`:''}
+const CUSTOM_STEPS = {
+ '解の公式': '① 式をax²+bx+c=0（a≠0）の形に整理する。|② a・b・cの符号ごと代入し、D=b²−4acを計算する。|③ 平方根と±の両方を計算し、実数解の個数も確認する。',
+ '二次関数の変化の割合': '① 変化する前後のxをp,qとする（p≠q）。|② y=ax²の係数aを読み取る。|③ a(p+q)を計算する。',
+ '平方根の計算': '① 根号の中が0以上か確認する。|② 掛け算なら根号の中をまとめて掛ける。|③ 必要に応じて平方数を根号の外へ出す。足し算には同じ規則を使わない。',
+ '因数分解（平方差）': '① 2つの項がそれぞれ平方になっているか調べる。|② a²−b²=(a+b)(a−b)を使う。|③ 展開して元の式に戻るか確認する。',
+ '因数分解（和の平方）': '① 最初と最後がそれぞれ平方であることを確認する。|② 中央の項が+2abか調べる。|③ (a+b)²にまとめて展開で検算する。',
+ '因数分解（差の平方）': '① 両端は平方、中央は−2abか確かめる。|② (a−b)²にまとめる。|③ −の符号を忘れず展開で検算する。',
+ '展開（分配法則）': '① 左の各項を右の各項すべてと掛ける。|② 符号込みで4つの積を並べる。|③ 同類項をまとめる。',
+ '二次方程式と因数分解': '① 右辺が0になるように移項する。|② 左辺をできるだけ因数分解する。|③ いずれかの因数が0として、それぞれの解を求める。',
+ '判別式': '① 方程式をax²+bx+c=0（a≠0）に整理する。|② D=b²−4acを計算する。|③ D>0なら異なる実数解2個、D=0なら1個、D<0なら実数解なし。',
+ '一次関数の変化の割合': '① 異なるx座標をもつ2点を選ぶ。|② yの増加量をxの増加量で割る。|③ 傾きの正負をグラフの上がり下がりと照合する。',
+ '二次関数の基本形': '① y=ax²でaを確認する。|② aが正なら上向き、負なら下向きの放物線。|③ 点の座標はxを代入して求める。',
+ '比例・反比例': '① y=axなら比例、y=a/xなら反比例と見分ける。|② 比例はy/x、反比例はxyが一定。|③ 与えられた組からaを求めて別の値へ代入する。',
+ '連立方程式（消去）': '① 代入法か加減法の使いやすい方を選ぶ。|② 一方の文字を消して1文字だけの式を解く。|③ 元の式に代入して両方の値を求め、検算する。',
+ '二次方程式（平方完成）': '① xの係数pを半分にし、その2乗を足し引きする。|② x²+px=(x+p/2)²−p²/4と変形する。|③ 必要なら平方根を用いて解く。',
+ '円の面積と円周': '① 半径rと直径2rを取り違えない。|② 面積ならπr²、周の長さなら2πr。|③ cm²とcmなど単位も区別する。',
+ '円柱の体積': '① 底面の円の半径rと柱の高さhを確認する。|② 底面積πr²を求める。|③ それにhを掛け、体積の単位を付ける。',
+ '円すいの体積': '① 底面の円の半径rと垂直な高さhを確認する。|② πr²hを計算する。|③ 円柱と違い最後に3で割る。',
+ '球の体積': '① 半径rを確認する。|② r³に4π/3を掛ける。|③ 単位がcm³など立方になるか確認する。',
+ '球の表面積': '① 半径rを確認する。|② 4πr²に代入する。|③ 体積の公式4πr³/3と取り違えない。',
+ '標本の平均': '① データの個数nを正しく数える。|② 全データを合計する。|③ 合計÷nを計算し、必要なら小数で表す。',
+ '確率の基本': '① どの結果も同じ確率で起こる条件か確認する。|② 求めたい事象に当てはまる場合を数える。|③ 全場合の数で割って0以上1以下か確認する。',
+ '樹形図と積の法則': '① まず最初の選び方を数える。|② 各選び方に続く場合が同じn通りか確認する。|③ m×nで数え、重複や除外条件がないか調べる。',
+ '組合せ': '① 選ぶ順番を区別しないことを確認する。|② n!/[r!(n−r)!]を計算する（0≦r≦n）。|③ 同じ組を順序違いで数えない。',
+ '順列': '① 並べる順番で結果が変わることを確認する。|② 最初から順にn、n−1…通りを掛ける。|③ n!/(n−r)!で確かめる。',
+ '内角の和': '① 何角形かnを数える。|② 1つの頂点から(n−2)個の三角形に分割する。|③ 180°×(n−2)で内角の和を出す。',
+ '正多角形の1つの外角': '① 外角の総和は360°と考える。|② 正n角形なら外角はn個すべて等しい。|③ 360°/nで1個分を求める。',
+ '三角形の合同条件': '① 対応する頂点・辺・角を整理する。|② 3辺／2辺とその間の角／1辺と両端の角のいずれかを確認する。|③ AAAだけでは大きさが決まらないので合同と言えない。',
+ '三角形の相似条件': '① 対応する頂点を決める。|② 2角／3辺の比／2辺の比とその間の角のいずれかを確認する。|③ 相似と分かったら対応順を合わせて比例式を立てる。',
+ '母線と円すい側面積': '① 母線lは頂点から底面円周までの斜めの長さ。|② 底面半径rを確認して側面積πrlを計算する。|③ 表面積なら底面積πr²も足す。',
+ 'オイラーの多面体定理': '① 対象が穴のない凸多面体か確認する。|② 頂点V・辺E・面Fを数える。|③ V−E+F=2になるか確かめる。',
+ '平均の速さ': '① 全移動距離dと総時間tをそろえる。|② d/tを計算する。|③ km/hなど距離と時間の単位を整える。',
+ '仕事算の基本': '① 全体の仕事量を1と置く。|② 各人の単位時間あたりの仕事率を出す。|③ 協力するときの仕事率を足し、1をそれで割って時間を出す。',
+ '資料の相対度数': '① 目的の階級の人数（度数）を数える。|② すべての階級の度数合計で割る。|③ 相対度数の合計が1になるか確認する。',
+ '標本調査の推定': '① 無作為抽出など代表性があるか確認する。|② 標本の該当割合k/nを求める。|③ 母集団の総数Nに掛けて推定値とする（確定数ではない）。',
+ '等差数列の和': '① 項数n、初項a₁、末項aₙを見つける。|② (a₁+aₙ)×n/2を計算する。|③ 項数を間違えないように確認する。',
+ '等差数列の一般項': '① 初項a₁と公差dを見つける。|② n番目までの増加回数はn−1回と考える。|③ aₙ=a₁+(n−1)dを計算する。',
+ '連続整数の和': '① 1からnまでの項数はn個。|② n(n+1)/2を使う。|③ 偶数側を先に2で割ると計算しやすい。',
+ '比の内分点': '① AからBへAP:PB=m:nで分ける。|② 点Pは(nA+mB)/(m+n)。|③ PがAとBの間にあるか位置を確認する。',
+ '二次関数の頂点（一般形）': '① y=ax²+bx+c（a≠0）からa,bを読み取る。|② 軸x=−b/(2a)を求める。|③ そのxを関数に代入して頂点のyを計算する。',
+ '相加相乗平均': '① a,bがともに0以上か確かめる。|② (a+b)/2≧√(ab)を使う。|③ 等号はa=bのときだけ。最小値を示すならその条件が実現可能か確認する。',
+ '円の接線と半径': '① 接点Tで半径OTを引く。|② OT⊥PTから直角三角形を作る。|③ 必要なら三平方の定理で長さを求める。',
+ '対角線の本数': '① n角形の各頂点から対角線はn−3本。|② n(n−3)では1本を2回数えている。|③ 最後に2で割る。'
+};
+function explanationBlock(name, fallback){const meta=FIGURE_INFO[name];const steps=meta?meta[2].split('|'):(CUSTOM_STEPS[name]||'① 成り立つ条件を確認する。|② 数値を代入する。|③ 計算を検算する。').split('|');return `<p class="concept-prose">${escapeHtml(fallback)}</p>${meta?diagramSVG(meta[0],meta[1]):''}<div class="explain-steps">${steps.map((s,i)=>`<div class="explain-step"><strong>STEP ${i+1}</strong>　${escapeHtml(s.replace(/^[①②③④]\s*/,''))}</div>`).join('')}</div>`}
+const PROBLEMS=[
+['三平方の定理','geometry','standard','直角三角形で、直角をはさむ辺が9cmと12cm。斜辺の長さを求めよ。','15cm','直角なので三平方を使う。|c²=9²+12²=81+144=225。|長さは正だからc=√225=15cm。','right'],
+['三平方の定理（逆）','geometry','advanced','3辺が7cm、24cm、25cmの三角形は直角三角形か。','直角三角形である','最長辺は25cm。|7²+24²=49+576=625。|25²=625で等しいので三平方の定理の逆より直角三角形。','righttest'],
+['ヘロンの公式','geometry','elite','三角形の3辺が13cm、14cm、15cm。面積を求めよ。','84cm²','半周長s=(13+14+15)/2=21。|面積S=√{21×(21−13)×(21−14)×(21−15)}。|=√(21×8×7×6)=√7056=84cm²。','heron'],
+['メネラウスの定理','geometry','elite','三角形ABCでFは辺AB上、Dは辺BC上、Eは辺CAのC側の延長上にあり、F・D・Eは一直線。AF/FB=2、BD/DC=3のときCE/EAを求めよ。','1/6','三角形の各辺または延長上の点が一直線にあるのでメネラウス。|(AF/FB)×(BD/DC)×(CE/EA)=1。|2×3×(CE/EA)=1。よって1/6。','menelaus'],
+['チェバの定理','geometry','elite','三角形ABCでDは辺BC上、Eは辺CA上、Fは辺AB上。線分AD、BE、CFが1点で交わる。BD/DC=2、CE/EA=3ならAF/FBは？','1/6','3本の頂点からの線が1点で交わるのでチェバ。|(BD/DC)×(CE/EA)×(AF/FB)=1。|2×3×(AF/FB)=1 よりAF/FB=1/6。','ceva'],
+['円周角','geometry','standard','中心角∠AOB=134°。同じ弧ABに対する円周角∠APBを求めよ。','67°','同じ弧ABを見ていることを確認。|円周角は中心角の半分。|134°÷2=67°。','circle'],
+['相似比と面積比','geometry','standard','相似な2つの図形の辺の比が3:5。面積比を求めよ。','9:25','相似な図形の面積比は辺の比を2乗する。|3²:5²=9:25。','similarity'],
+['角の二等分線','geometry','advanced','△ABCでADが∠Aの二等分線、AB=6cm、AC=9cm、BC=10cm。BDを求めよ。','4cm','角の二等分線定理からBD:DC=6:9=2:3。|BC=10cmなのでBD=10×2/(2+3)。|BD=4cm。','anglebisector'],
+['中点連結定理','geometry','standard','△ABCでAB、ACの中点をD、Eとする。BC=22cmならDEは？','11cm','DとEが中点なのでDE∥BC。|長さはBCの半分。|22÷2=11cm。','midpoint'],
+['重心','geometry','advanced','△ABCの中線ADが18cm。重心をGとするとAGは？','12cm','重心は頂点から中線を2:1に分ける。|AG=18×2/3=12cm。','centroid'],
+['トレミーの定理','geometry','elite','円に内接する長方形ABCDでAB=3、BC=4、CD=3、DA=4、AC=5。BDを求めよ。','5','円に内接するのでトレミー。|AC×BD=AB×CD+AD×BC。|5×BD=3×3+4×4=25。|よってBD=5。','ptolemy'],
+['方べきの定理','geometry','elite','円の内部で2弦AB、CDがPで交わる。PA=3、PB=8、PC=4のときPDは？','6','交わる弦の方べきPA×PB=PC×PD。|3×8=4×PD。|PD=24÷4=6。','power'],
+['台形の面積','geometry','basic','上底5cm、下底13cm、高さ7cmの台形の面積を求めよ。','63cm²','平行な2辺の和は5+13=18。|面積=(5+13)×7÷2。|63cm²。','trapezoid'],
+['おうぎ形','geometry','standard','半径9cm、中心角80°のおうぎ形の弧の長さを求めよ。','4πcm','円周は2π×9=18π。|中心角80°は円全体の80/360=2/9。|18π×2/9=4πcm。','sector'],
+['平方差の因数分解','algebra','basic','x²−81を因数分解せよ。','(x+9)(x−9)','81=9²。|a²−b²=(a+b)(a−b)。|x²−9²=(x+9)(x−9)。',''],
+['解の公式','algebra','standard','2x²−5x−3=0 を解け。','x=3、−1/2','a=2、b=−5、c=−3。|判別式D=(−5)²−4×2×(−3)=49。|x=(5±7)/4なのでx=3、−1/2。',''],
+['二次関数の変化の割合','algebra','standard','y=3x²でxが−2から4に変化するとき、変化の割合は？','6','y=ax²では変化の割合=a(p+q)。|a=3、p=−2、q=4。|3×(−2+4)=6。',''],
+['連立方程式','algebra','basic','x+y=11、x−y=3 を解け。','x=7、y=4','2式を加えると2x=14。|x=7。|x+y=11へ戻しy=4。',''],
+['平方完成','algebra','advanced','x²−8x+11を平方完成せよ。','(x−4)²−5','x²−8xには(−8/2)²=16を足し引きする。|x²−8x+11=(x−4)²−16+11。|=(x−4)²−5。',''],
+['相加相乗平均','algebra','elite','x>0のときx+16/xの最小値を求めよ。','8（x=4のとき）','xと16/xは正。|相加相乗平均よりx+16/x≧2√16=8。|x=16/xつまりx=4で等号成立。',''],
+['円すいの体積','other','standard','底面の半径3cm、高さ8cmの円すいの体積は？','24πcm³','円すいは底面積×高さ÷3。|π×3²×8÷3=24πcm³。',''],
+['確率','other','standard','公平なサイコロを1回振る。出た目が3の倍数である確率は？','1/3','1〜6のうち3の倍数は3と6の2通り。|全体6通りは同様に確からしい。|確率2/6=1/3。',''],
+['組合せ','other','advanced','5人の中から順番を区別せず2人の委員を選ぶ方法は？','10通り','順番を区別しないので組合せ。|5×4÷(2×1)=10通り。',''],
+['球の体積','other','standard','半径3cmの球の体積を求めよ。','36πcm³','球の体積=(4/3)πr³。|r=3なので(4/3)π×27。|36πcm³。','']
+];
+const PRACTICE_KEY='mathrank-practice-v2';
+let practiceSolved=new Set();try{practiceSolved=new Set((JSON.parse(storageGet(PRACTICE_KEY)||'[]')||[]).filter(v=>Number.isInteger(v)&&v>=0&&v<PROBLEMS.length))}catch{}
+let practiceOrder=PROBLEMS.map((_,i)=>i);
+const openedAnswers=new Set();
+function renderPractice(){const cat=$('#practiceCategory').value,lv=$('#practiceLevel').value;const ids=practiceOrder.filter(i=>(cat==='all'||PROBLEMS[i][1]===cat)&&(lv==='all'||PROBLEMS[i][2]===lv));$('#practiceCount').textContent=`${ids.length} 問を表示 / 全 ${PROBLEMS.length} 問`;$('#practiceSolved').textContent=`${practiceSolved.size} / ${PROBLEMS.length} 問 自己チェック済み`;$('#practiceEmpty').hidden=ids.length>0;$('#practiceList').innerHTML=ids.map(i=>{const p=PROBLEMS[i],l=LEVELS[p[2]];return `<article class="practice-card" data-problem="${i}"><div class="practice-card-top"><span class="p-number">#${String(i+1).padStart(2,'0')}</span><span>${p[1]==='geometry'?'GEOMETRY':p[1]==='algebra'?'ALGEBRA':'OTHERS'}</span><span style="color:${l.color}">${l.name}</span></div><h3>${escapeHtml(p[0])}</h3><p class="p-question">${escapeHtml(p[3])}</p>${p[6]?diagramSVG(p[6],`${p[0]}の図解（図の数字・線分は問題文を参照）`):''}<div class="practice-actions"><button class="practice-action" type="button" data-answer="${i}" aria-expanded="${openedAnswers.has(i)}">${openedAnswers.has(i)?'解答を閉じる −':'解答・途中式を見る ＋'}</button><button class="practice-action ${practiceSolved.has(i)?'is-solved':''}" type="button" data-solved="${i}">${practiceSolved.has(i)?'✓ 解けた':'○ 自分で解けたらチェック'}</button></div><div class="p-answer" id="answer-${i}" ${openedAnswers.has(i)?'':'hidden'}><h4>ANSWER / ${escapeHtml(p[4])}</h4>${p[5].split('|').map((step,n)=>`<p><strong>STEP ${n+1}.</strong> ${escapeHtml(step)}</p>`).join('')}</div></article>`}).join('')}
+$('#practiceCategory').addEventListener('change',renderPractice);$('#practiceLevel').addEventListener('change',renderPractice);
+$('#practiceShuffle').addEventListener('click',()=>{for(let i=practiceOrder.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[practiceOrder[i],practiceOrder[j]]=[practiceOrder[j],practiceOrder[i]]}renderPractice();toast('問題を並べ替えました')});
+$('#practiceList').addEventListener('click',e=>{const a=e.target.closest('[data-answer]');if(a){const target=$(`#answer-${a.dataset.answer}`);target.hidden=!target.hidden;if(target.hidden)openedAnswers.delete(Number(a.dataset.answer));else openedAnswers.add(Number(a.dataset.answer));a.setAttribute('aria-expanded',String(!target.hidden));a.textContent=target.hidden?'解答・途中式を見る ＋':'解答を閉じる −';return}const b=e.target.closest('[data-solved]');if(b){const i=Number(b.dataset.solved);if(practiceSolved.has(i))practiceSolved.delete(i);else practiceSolved.add(i);if(!storageSet(PRACTICE_KEY,JSON.stringify([...practiceSolved])))toast('このブラウザでは進捗を保存できません');renderPractice()}});
+renderPractice();
+
+
+// Caution opener / prevents accidental dismissal until the user actively enters.
+(function(){
+  const overlay=document.getElementById('entryWarning');
+  const enter=document.getElementById('entryWarningBtn');
+  const show=document.getElementById('showEntryWarning');
+  let transitioning=false;
+  function openNotice(){
+    if(transitioning)return;
+    overlay.hidden=false;
+    overlay.classList.remove('is-exiting');
+    document.body.classList.add('intro-locked');
+    enter.focus({preventScroll:true});
+  }
+  function closeNotice(){
+    if(transitioning)return;
+    transitioning=true;
+    overlay.classList.add('is-exiting');
+    window.setTimeout(()=>{
+      overlay.hidden=true;
+      overlay.classList.remove('is-exiting');
+      document.body.classList.remove('intro-locked');
+      transitioning=false;
+      document.querySelector('.brand')?.focus({preventScroll:true});
+    },window.matchMedia('(prefers-reduced-motion: reduce)').matches?0:890);
+  }
+  enter.addEventListener('click',closeNotice);
+  show.addEventListener('click',openNotice);
+  document.addEventListener('keydown',e=>{
+    if(!overlay.hidden&&e.key==='Tab'){
+      e.preventDefault();enter.focus();
+    }
+    if(!overlay.hidden&&e.key==='Escape')e.preventDefault();
+  },true);
+  enter.focus({preventScroll:true});
+})();
+
+</script>
+</body>
+</html>
