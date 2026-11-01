@@ -191,6 +191,81 @@ html{overflow-x:hidden}body{overflow-x:hidden}.app-shell,.work-area,.content,.pa
 .discovery-overlay.void-cinema .discovery-name,.discovery-overlay.void-cinema .discovery-eyebrow{position:relative;z-index:2}
 @media(max-width:760px){.discovery-overlay.void-cinema .void-motif{width:min(74vw,315px)}.discovery-overlay.void-cinema .discovery-icon{margin:24px 0}.discovery-overlay.void-cinema .discovery-content{padding:12px;max-height:90dvh}.discovery-overlay.void-cinema .discovery-odds{margin:10px 0 16px}.discovery-overlay.void-cinema .discovery-content::before{width:min(70vw,var(--void-size))}}
 
+
+/* v6: iPhone-specific collection usability, no desktop layout change */
+@media (max-width: 760px) {
+  #page-collection .section-heading {margin-bottom:9px;gap:8px}
+  #page-collection .section-heading h1 {font-size:19px;margin:2px 0 1px;line-height:1.2}
+  #page-collection .section-heading p {font-size:9px;line-height:1.25}
+  #page-collection .eyebrow {font-size:7px;letter-spacing:1px}
+  #page-collection .collection-summary {margin-bottom:10px;padding:7px 10px;gap:8px;border-radius:10px}
+  #page-collection .collection-summary strong {font-size:17px}
+  #page-collection .collection-summary span{font-size:7px}
+  #page-collection .toolbar {display:flex;gap:7px;margin-bottom:10px}
+  #page-collection .tab-group {gap:2px;padding:3px;border-radius:8px}
+  #page-collection .tab-group button{font-size:9px;padding:7px 4px}
+  #page-collection .toolbar-right {display:flex;width:100%;flex-wrap:nowrap;gap:6px}
+  #page-collection .search-box{min-width:0;flex:1;height:35px;padding:0 9px}
+  #page-collection .search-box input{font-size:10px;width:100%;min-width:0}
+  #page-collection #tier-filter{min-width:0;width:42%;flex:none;height:35px;padding:0 6px;font-size:9px}
+  #page-collection .aura-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+  #page-collection .aura-card{display:flex!important;flex-direction:column!important;grid-template-columns:unset!important;grid-template-rows:unset!important;gap:0;min-height:0!important;height:170px!important;padding:9px!important;border-radius:12px!important}
+  #page-collection .aura-card-top{display:flex!important;gap:4px;font-size:8px;letter-spacing:.7px;min-height:18px}
+  #page-collection .aura-count{font-size:8px;padding:2px 6px}
+  #page-collection .aura-art{height:62px!important;min-height:62px!important;margin:0!important;grid-column:auto!important;grid-row:auto!important}
+  #page-collection .aura-card .aura-art .aura-orb-wrap{width:63px!important;height:63px!important}
+  #page-collection .aura-card h3{font-size:11px!important;line-height:1.1!important;min-height:0!important;margin:2px 0 1px!important;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;word-break:break-word}
+  #page-collection .aura-signature-meta{font-size:7px;line-height:1.1;letter-spacing:.1px;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #page-collection .aura-rarity-meta{font-size:7px!important;line-height:1.1;letter-spacing:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0!important}
+  #page-collection .aura-card-bottom{display:flex!important;align-items:center;gap:4px;flex-wrap:nowrap;justify-content:space-between;margin-top:auto!important;min-height:31px}
+  #page-collection .aura-card-bottom small{font-size:8px;white-space:nowrap;margin:0;flex:1 1 auto;overflow:hidden;text-overflow:ellipsis}
+  #page-collection .aura-card-bottom button{width:auto!important;max-width:53%;min-width:0;min-height:29px!important;flex:0 1 auto!important;padding:4px 6px!important;font-size:9px!important;white-space:nowrap}
+  #page-collection .aura-card.void-rare::before{animation-duration:18s;opacity:.25}
+  #page-collection .aura-card.locked .aura-art .void-unknown-mark {width:44px!important;height:44px!important}
+  #page-collection .aura-card.locked .void-unknown-mark svg{width:27px!important;height:27px!important}
+  #aura-pager{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:11px 0 5px;color:#b5bed5}
+  #aura-pager button{border-radius:10px;background:#1b2235;border:1px solid #586181;color:#ebeaff;font-size:11px;font-weight:800;min-height:36px;padding:5px 13px}
+  #aura-pager button:disabled{opacity:.35}
+  #aura-page-counter{font-size:11px;text-align:center;letter-spacing:.3px;font-weight:800}
+  #page-collection .content{padding-bottom:30px}
+  .aura-center .core-icon{width:96px;height:96px;display:grid;place-items:center;font-size:0!important;line-height:0}
+  .aura-center .core-icon .aura-orb-wrap{width:96px!important;height:96px!important}
+  .orbit-float svg{width:15px!important;height:15px!important;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .discovery-overlay .discovery-icon{font-size:0;line-height:1;margin:18px 0!important}
+  .discovery-overlay .discovery-icon .aura-orb-wrap{width:min(42vw,176px)!important;height:min(42vw,176px)!important}
+}
+#aura-pager[hidden]{display:none!important}
+.recent-icon svg{display:block;width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.8}
+.aura-orb-svg text{font-family:Arial,system-ui,sans-serif}
+/* Cross-device vector motif fallback: no emoji glyphs in game orbs */
+.orbit-float svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.aura-center .core-icon{display:grid;place-items:center;font-size:0;line-height:0}
+.aura-center .core-icon .aura-orb-wrap{width:102px!important;height:102px!important}
+.discovery-overlay .discovery-icon{font-size:0;display:grid;place-items:center}
+.discovery-overlay .discovery-icon .aura-orb-wrap{width:min(44vw,190px)!important;height:min(44vw,190px)!important}
+@media (prefers-reduced-motion:reduce) {.aura-orb-svg *,.orb-drift,.orbit-float svg {animation:none!important}}
+
+
+/* v6 scope safeguards: preserve PC orb symbols and layout */
+.orb-sigil-vector{display:none}
+.orb-sigil-original{display:block}
+.orbit-float svg{display:none}
+.orbit-float .orb-float-original{display:inline}
+@media(max-width:760px){
+ .orb-sigil-vector{display:block}
+ .orb-sigil-original{display:none}
+ .orbit-float svg{display:block}
+ .orbit-float .orb-float-original{display:none}
+ #page-collection .aura-card h3{font-size:12px!important}
+ #page-collection .aura-card-bottom button{font-size:10px!important}
+}
+
+
+@media (min-width:761px){
+  /* Keep the desktop summon and discovery typography unchanged. */
+  .aura-center .core-icon{font-size:65px!important;line-height:1!important;display:block!important;}
+  .discovery-overlay .discovery-icon{font-size:clamp(90px,15vw,160px)!important;display:block!important;line-height:1!important;}
+}
 </style>
 </head>
 <body>
@@ -262,7 +337,7 @@ html{overflow-x:hidden}body{overflow-x:hidden}.app-shell,.work-area,.content,.pa
                   <div class="altar-glow"></div><div class="altar-ray ray-1"></div><div class="altar-ray ray-2"></div><div class="altar-ray ray-3"></div>
                   <div class="ring-outer"></div><div class="ring-mid"></div><div class="ring-inner"></div><div class="orbit-tick orbit-tick-a"></div><div class="orbit-tick orbit-tick-b"></div>
                   <div class="aura-center" id="aura-center"><div class="core-flare"></div><div class="core-icon">✦</div></div>
-                  <span class="orbit-float float-a">✧</span><span class="orbit-float float-b">✳</span><span class="orbit-float float-c">✦</span>
+                  <span class="orbit-float float-a" aria-hidden="true"><span class="orb-float-original">✧</span><svg viewBox="0 0 24 24"><path d="M12 2l2.1 7.9L22 12l-7.9 2.1L12 22l-2.1-7.9L2 12l7.9-2.1z"/></svg></span><span class="orbit-float float-b" aria-hidden="true"><span class="orb-float-original">✳</span><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg></span><span class="orbit-float float-c" aria-hidden="true"><span class="orb-float-original">✦</span><svg viewBox="0 0 24 24"><path d="M12 2l3.2 6.8L22 12l-6.8 3.2L12 22l-3.2-6.8L2 12l6.8-3.2z"/></svg></span>
                   <div id="burst-layer" aria-hidden="true"></div>
                 </div>
                 <div class="result-block" aria-live="polite" aria-atomic="true">
@@ -300,13 +375,13 @@ html{overflow-x:hidden}body{overflow-x:hidden}.app-shell,.work-area,.content,.pa
           <div class="page-endline">VOID NETWORK <span>—</span> THE IMPOSSIBLE IS ONLY A NUMBER.</div>
         </section>
 
-        <section class="page" id="page-collection" aria-labelledby="collection-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> AURA DATABASE <span class="eyebrow-dot">◆</span> 80 SIGNATURES</div><h1 id="collection-title">未知の光を、<em>収集せよ。</em></h1><p>すべてのオーラには、それぞれ固有の奇跡がある。</p></div></div><div class="collection-summary panel"><div><span>ARCHIVE PROGRESS</span><strong id="collection-count">0 <small>/ 80</small></strong></div><div class="large-progress"><div id="collection-progress"></div></div><div class="collection-percent" id="collection-percent">0%</div></div><div class="toolbar"><div class="tab-group" id="collection-tabs"><button data-filter="all" class="active">すべて <span>80</span></button><button data-filter="owned">発見済み</button><button data-filter="missing">未発見</button></div><div class="toolbar-right"><label class="search-box"><svg><use href="#i-search"/></svg><input id="collection-search" placeholder="オーラ名で検索" autocomplete="off"></label><select id="tier-filter" aria-label="レアリティで絞り込む"><option value="all">すべてのレアリティ</option></select></div></div><div class="aura-grid" id="aura-grid"></div><div class="grid-empty" id="grid-empty" hidden>条件に合うオーラがありません。</div></section>
+        <section class="page" id="page-collection" aria-labelledby="collection-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> AURA DATABASE <span class="eyebrow-dot">◆</span> 80 SIGNATURES</div><h1 id="collection-title">未知の光を、<em>収集せよ。</em></h1><p>すべてのオーラには、それぞれ固有の奇跡がある。</p></div></div><div class="collection-summary panel"><div><span>ARCHIVE PROGRESS</span><strong id="collection-count">0 <small>/ 80</small></strong></div><div class="large-progress"><div id="collection-progress"></div></div><div class="collection-percent" id="collection-percent">0%</div></div><div class="toolbar"><div class="tab-group" id="collection-tabs"><button data-filter="all" class="active">すべて <span>80</span></button><button data-filter="owned">発見済み</button><button data-filter="missing">未発見</button></div><div class="toolbar-right"><label class="search-box"><svg><use href="#i-search"/></svg><input id="collection-search" placeholder="オーラ名で検索" autocomplete="off"></label><select id="tier-filter" aria-label="レアリティで絞り込む"><option value="all">すべてのレアリティ</option></select></div></div><div class="aura-grid" id="aura-grid"></div><div class="grid-empty" id="grid-empty" hidden>条件に合うオーラがありません。</div><nav id="aura-pager" aria-label="図鑑ページ送り" hidden><button id="aura-prev" type="button">← 前へ</button><span id="aura-page-counter" aria-live="polite">1 / 1</span><button id="aura-next" type="button">次へ →</button></nav></section>
 
         <section class="page" id="page-forge" aria-labelledby="forge-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE FORGE <span class="eyebrow-dot">◆</span> ASCEND BEYOND</div><h1 id="forge-title">運を、<em>鍛え上げろ。</em></h1><p>入手したオーラを素材に、強力なラック装備をクラフト。</p></div></div><div id="forge-ready-banner" class="forge-ready-banner" hidden><span class="forge-ready-icon">✦</span><div><strong>CRAFT AVAILABLE</strong><span id="forge-ready-text">新しくクラフトできる装備があります</span></div></div><div class="forge-overview panel"><div class="forge-glyph">✣</div><div class="forge-overview-text"><span>YOUR EQUIPPED POWER</span><strong id="forge-bonus">+0.00× <small>GEAR LUCK</small></strong><p>3スロットに装備可能。各スロットには1つだけ装備できる。</p></div><button class="outline-btn" data-goto="collection">素材を見る <svg><use href="#i-chevron"/></svg></button></div><div class="subhead"><h2>装備スロット <span>／ EQUIPPED</span></h2></div><div class="equip-slots" id="equip-slots"></div><div class="subhead with-gap"><h2>クラフト設計図 <span>／ BLUEPRINTS</span></h2><div class="small-note">素材はクラフト時に消費されます</div></div><div class="recipe-grid" id="gear-grid"></div></section>
 
         <section class="page" id="page-potions" aria-labelledby="potions-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> ALCHEMY LAB <span class="eyebrow-dot">◆</span> TEMPORARY POWER</div><h1 id="potions-title">一瞬に、<em>奇跡を宿せ。</em></h1><p>オーラとスターダストを調合。ここぞという時に運命を加速させよう。</p></div></div><div class="potion-active panel"><div class="potion-illustration">◈</div><div><span>ACTIVE ELIXIR</span><strong id="active-potion-name">ポーション効果なし</strong><p id="active-potion-text">ポーションを作成して使用すると、期間中ラックが上がります。</p></div><div class="potion-clock" id="active-potion-timer">0 / 6</div></div><div class="active-potion-stack" id="active-potion-stack" aria-label="重ねがけ中のポーション"></div><div class="subhead"><h2>所持しているポーション <span>／ INVENTORY</span></h2></div><div class="potion-inventory" id="potion-inventory"></div><div class="subhead with-gap"><h2>調合レシピ <span>／ LABORATORY</span></h2><span class="small-note">同種も重ねがけOK · 最大6本 · 倍率は掛け算 · 時間は個別</span></div><div class="recipe-grid" id="potion-grid"></div></section>
 
-        <section class="page" id="page-records" aria-labelledby="records-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR LEGACY <span class="eyebrow-dot">◆</span> ARCHIVE STATUS</div><h1 id="records-title">すべての軌跡を、<em>刻め。</em></h1><p>歩んだ記録を確認し、セーブデータを管理しよう。</p></div></div><div class="records-grid" id="records-grid"></div><div class="records-bottom"><div class="panel data-panel"><div class="subhead"><h2>セーブデータ <span>／ DATA MANAGEMENT</span></h2></div><p>プレイ内容はこのブラウザに自動保存されます。ブラウザのデータ削除に備えて、バックアップファイルの保存をおすすめします。</p><div class="save-status"><span class="online-dot"></span><span id="save-status-text">自動セーブ有効</span></div><div class="data-actions"><button id="export-btn" class="solid-small"><svg><use href="#i-down"/></svg> セーブを書き出す</button><label class="outline-btn import-btn"><svg><use href="#i-up"/></svg> セーブを読み込む<input id="import-input" type="file" accept=".json,application/json" hidden></label></div><div class="data-warning"><span>注意</span> 別のブラウザ・端末には自動で同期されません。プライベートブラウズでは保存できない場合があります。</div><div class="admin-code-panel"><div class="admin-code-header"><span>✦</span><div><b>ADMIN CODE</b><small>管理コードから特別なポーションを受け取る</small></div></div><form id="admin-code-form" class="admin-code-form"><input id="admin-code-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="12" placeholder="管理コードを入力" autocomplete="off" aria-label="管理コード"><button type="submit">コードを使用</button></form><div id="admin-code-message" class="admin-code-message" role="status">入力したコードの報酬は、ポーション画面から使えます。</div></div><button class="danger-link" id="reset-btn">全データを初期化</button></div><div class="panel achievements-panel"><div class="subhead"><h2>進行状況 <span>／ MILESTONES</span></h2></div><div id="milestone-list"></div></div></div></section>
+        <section class="page" id="page-records" aria-labelledby="records-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR LEGACY <span class="eyebrow-dot">◆</span> ARCHIVE STATUS</div><h1 id="records-title">すべての軌跡を、<em>刻め。</em></h1><p>歩んだ記録を確認し、セーブデータを管理しよう。</p></div></div><div class="records-grid" id="records-grid"></div><div class="records-bottom"><div class="panel data-panel"><div class="subhead"><h2>セーブデータ <span>／ DATA MANAGEMENT</span></h2></div><p>プレイ内容はこのブラウザに自動保存されます。ブラウザのデータ削除に備えて、バックアップファイルの保存をおすすめします。</p><div class="save-status"><span class="online-dot"></span><span id="save-status-text">自動セーブ有効</span></div><div class="data-actions"><button id="export-btn" class="solid-small"><svg><use href="#i-down"/></svg> セーブを書き出す</button><label class="outline-btn import-btn"><svg><use href="#i-up"/></svg> セーブを読み込む<input id="import-input" type="file" accept=".json,application/json" hidden></label></div><div class="data-warning"><span>注意</span> 別のブラウザ・端末には自動で同期されません。プライベートブラウズでは保存できない場合があります。</div><div class="admin-code-panel"><div class="admin-code-header"><span>✦</span><div><b>ADMIN CODE</b><small>管理コードから特別なポーションを受け取る</small></div></div><form id="admin-code-form" class="admin-code-form"><input id="admin-code-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="12" placeholder="管理コードを入力" autocomplete="off" aria-label="管理コード"><button type="submit">コードを使用</button></form><div id="admin-code-message" class="admin-code-message" role="status">2020：管理者ポーション / 2021：図鑑コンプリート。</div></div><button class="danger-link" id="reset-btn">全データを初期化</button></div><div class="panel achievements-panel"><div class="subhead"><h2>進行状況 <span>／ MILESTONES</span></h2></div><div id="milestone-list"></div></div></div></section>
       </main>
     </div>
   </div>
@@ -404,7 +479,7 @@ const validPotionId = (id) => POTIONS.some(p => p.id===id);
 const freshState = () => ({version:2,rolls:0,shards:0,bestId:0,equippedAura:null,inventory:{},discovered:{},recent:[],gearOwned:[],equipped:{ring:null,core:null,charm:null},potions:{},activePotions:[],fast:false,sound:true});
 function normalizeState(obj) {
   if (!obj || typeof obj!=='object' || Array.isArray(obj)) throw new Error('セーブデータ形式が正しくありません。');
-  if (obj.version!==1 && obj.version!==2) throw new Error('このセーブデータのバージョンは対応していません。');
+  if(![1,2,3,4,5].includes(Number(obj.version)) && !(obj.inventory&&typeof obj.inventory==='object') && !(obj.discovered&&typeof obj.discovered==='object')) throw new Error('このセーブデータのバージョンは対応していません。');
   const s=freshState();
   s.rolls=safeInt(obj.rolls); s.shards=safeInt(obj.shards);
   s.bestId=AURAS[Number(obj.bestId)] ? Number(obj.bestId) : 0;
@@ -438,8 +513,17 @@ function normalizeState(obj) {
 }
 let state;
 let canSave=true;
-try { const raw=localStorage.getItem(STORAGE_KEY);state=raw ? normalizeState(JSON.parse(raw)) : freshState(); }
-catch(e){state=freshState();canSave=false;}
+try {
+  const raw=localStorage.getItem(STORAGE_KEY);
+  // Preserve an untouched pre-upgrade backup to avoid destroying older saves.
+  if(raw && !localStorage.getItem(STORAGE_KEY+'_pre_v6_backup')) localStorage.setItem(STORAGE_KEY+'_pre_v6_backup',raw);
+  state=raw ? normalizeState(JSON.parse(raw)) : freshState();
+} catch(e){
+  // A malformed prior save should not prevent navigation to Collection.
+  // Avoid rewriting the source until the user explicitly plays or imports a save.
+  state=freshState(); canSave=false;
+  try{console.warn('VOID RNG: legacy save recovery required',e);}catch(_){}
+}
 let page='roll', collectionMode='all', collectionSearch='', collectionTier='all';
 let rolling=false, auto=false, autoTimer=null, hasModal=false, resultAura=null, lastSaveAt=0;
 let audioContext;
@@ -503,7 +587,7 @@ function tone(freq=660,duration=.09,kind='sine',volume=.026,offset=0){if(!state.
 function playRollSound(a){tone(260+a.tier*46,.11,'sine',.022);if(a.tier>=3)tone(540+a.tier*55,.26,'triangle',.023,.07);if(a.tier>=5)tone(840,.3,'sine',.025,.2);}
 function burst(a){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const layer=$('burst-layer');layer.replaceChildren();const n=Math.min(48,12+a.tier*4);for(let i=0;i<n;i++){const p=document.createElement('span');p.className='burst-particle';const angle=(Math.PI*2*i/n)+Math.random()*.2,dist=68+Math.random()*145;p.style.setProperty('--dx',Math.cos(angle)*dist+'px');p.style.setProperty('--dy',Math.sin(angle)*dist+'px');p.style.setProperty('--sz',(2+Math.random()*4)+'px');p.style.setProperty('--dur',(0.7+Math.random()*.8)+'s');layer.append(p);}setTimeout(()=>layer.replaceChildren(),1700);}
 function presentAura(a,first=false){
-  const stage=$('altar');stage.style.setProperty('--aura-color',a.color);$('aura-center').querySelector('.core-icon').textContent=a.glyph;
+  const stage=$('altar');stage.style.setProperty('--aura-color',a.color);if(__mobileCollection())$('aura-center').querySelector('.core-icon').innerHTML=renderAuraOrb(a,{size:102,className:'roll-center-orb'});else $('aura-center').querySelector('.core-icon').textContent=a.glyph;
   $('result-rank').textContent=TIERS[a.tier].name;$('result-rank').style.color=a.color;
   $('result-name').textContent=a.name;$('result-name').style.textShadow=`0 0 22px ${a.color}77`;
   $('result-odds').textContent=oddsText(a)+'  ·  '+TIERS[a.tier].jp;
@@ -571,7 +655,7 @@ function showDiscovery(a,first=true){
   el.className='discovery-overlay';
   el.style.setProperty('--discovery-color',a.color);
   const iconEl=el.querySelector('.discovery-icon');
-  iconEl.textContent=a.glyph+'\uFE0E';
+  if(__mobileCollection())iconEl.innerHTML=renderAuraOrb(a,{size:170,className:'reveal-orb'});else iconEl.textContent=a.glyph+'\uFE0E';
   $('discovery-name').textContent=a.name;
   $('discovery-odds').textContent=oddsText(a)+' · '+TIERS[a.tier].name;
   const title=el.querySelector('.discovery-eyebrow');
@@ -638,7 +722,7 @@ function renderRollUI(){
   $('stat-best').textContent=best?.name||'—';$('stat-best-odds').textContent=best?oddsText(best):'まだ記録がありません';
   if(best?.tier>=5)$('player-rank').textContent='星界の観測者';else if(state.rolls>=1000)$('player-rank').textContent='星の収集者';else if(state.rolls>=100)$('player-rank').textContent='運命の探索者';else $('player-rank').textContent='星屑の旅人';
   const recent=$('recent-list');if(!state.recent.length)recent.innerHTML='<div class="empty-recent">最初のオーラを引こう。<br>あなたの物語はここから始まる。</div>';
-  else recent.innerHTML=state.recent.slice(0,5).map(item=>{const a=AURAS[item.id];const age=Math.max(0,Date.now()-item.at);const when=age<60000?'NOW':age<3600000?Math.floor(age/60000)+'m':Math.floor(age/3600000)+'h';return `<div class="recent-entry"><div class="recent-icon" style="--rc:${a.color}">${a.glyph}</div><div class="recent-body"><div class="recent-name" style="color:${a.color}">${a.name}</div><div class="recent-odds">${oddsText(a)}</div></div><span class="recent-time">${when}</span></div>`;}).join('');
+  else recent.innerHTML=state.recent.slice(0,5).map(item=>{const a=AURAS[item.id];const age=Math.max(0,Date.now()-item.at);const when=age<60000?'NOW':age<3600000?Math.floor(age/60000)+'m':Math.floor(age/3600000)+'h';return `<div class="recent-entry"><div class="recent-icon" style="--rc:${a.color}">${__mobileCollection()?__smallVectorMark(a):a.glyph}</div><div class="recent-body"><div class="recent-name" style="color:${a.color}">${a.name}</div><div class="recent-odds">${oddsText(a)}</div></div><span class="recent-time">${when}</span></div>`;}).join('');
   updatePotionTimer();
 }
 function showPage(next){if(!PAGE_NAMES[next])return;page=next;document.querySelectorAll('.page').forEach(el=>el.classList.toggle('active',el.id==='page-'+page));document.querySelectorAll('[data-page]').forEach(btn=>{const on=btn.dataset.page===page;btn.classList.toggle('active',on);btn.setAttribute('aria-current',on?'page':'false');});$('breadcrumb-current').textContent=PAGE_NAMES[page];if(page==='collection')renderCollection();if(page==='forge')renderForge();if(page==='potions')renderPotions();if(page==='records')renderRecords();window.scrollTo({top:0,behavior:'instant'});}
@@ -729,7 +813,7 @@ function resetAll(){if(!window.confirm('すべてのオーラ・装備・記録�
 function renderEntireGame(){
   $('fast-btn').classList.toggle('is-on',state.fast);$('fast-state').textContent=state.fast?'ON':'OFF';$('fast-btn').setAttribute('aria-pressed',String(state.fast));
   $('sound-btn').innerHTML=icon(state.sound?'volume':'mute');
-  if(resultAura)presentAura(resultAura,false);else if(state.equippedAura!==null&&isOwned(AURAS[state.equippedAura]))presentAura(AURAS[state.equippedAura],false);else if(state.recent.length)presentAura(AURAS[state.recent[0].id],false);else{$('altar').style.setProperty('--aura-color','#9c90ff');$('aura-center').querySelector('.core-icon').textContent='✦';$('result-rank').textContent='YOUR DESTINY AWAITS';$('result-rank').style.color='#b2a5ff';$('result-name').textContent='AWAKEN';$('result-name').style.textShadow='0 0 20px #9991f377';$('result-odds').textContent='宇宙のどこかに、まだ見ぬ光がある。';$('result-new').hidden=true;}
+  if(resultAura)presentAura(resultAura,false);else if(state.equippedAura!==null&&isOwned(AURAS[state.equippedAura]))presentAura(AURAS[state.equippedAura],false);else if(state.recent.length)presentAura(AURAS[state.recent[0].id],false);else{$('altar').style.setProperty('--aura-color','#9c90ff');if(__mobileCollection())$('aura-center').querySelector('.core-icon').innerHTML=renderAuraOrb(AURAS[0],{size:102,className:'roll-center-orb'});else $('aura-center').querySelector('.core-icon').textContent='✦';$('result-rank').textContent='YOUR DESTINY AWAITS';$('result-rank').style.color='#b2a5ff';$('result-name').textContent='AWAKEN';$('result-name').style.textShadow='0 0 20px #9991f377';$('result-odds').textContent='宇宙のどこかに、まだ見ぬ光がある。';$('result-new').hidden=true;}
   renderRollUI();renderEquippedAura();renderCollection();renderForge();renderPotions();renderRecords();updateCraftReadyUI();
 }
 function showHelp(){setAuto(false);hasModal=true;const d=$('help-modal');if(typeof d.showModal==='function')d.showModal();else d.setAttribute('open','');}
@@ -744,9 +828,10 @@ function bind(){
   $('help-modal').addEventListener('click',e=>{if(e.target===$('help-modal'))hideHelp();});
   $('discovery-dismiss').addEventListener('click',dismissDiscovery);
   $('discovery-overlay').addEventListener('click',e=>{if(e.target.classList.contains('discovery-wash'))dismissDiscovery();});
-  $('collection-tabs').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;collectionMode=b.dataset.filter;$('collection-tabs').querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));renderCollection();});
-  $('collection-search').addEventListener('input',e=>{collectionSearch=e.target.value.trim();renderCollection();});
-  $('tier-filter').addEventListener('change',e=>{collectionTier=e.target.value;renderCollection();});
+  $('collection-tabs').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;collectionMode=b.dataset.filter;__resetCollectionPage();$('collection-tabs').querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));renderCollection();});
+  $('collection-search').addEventListener('input',e=>{collectionSearch=e.target.value.trim();__resetCollectionPage();renderCollection();});
+  $('tier-filter').addEventListener('change',e=>{collectionTier=e.target.value;__resetCollectionPage();renderCollection();});
+  $('aura-prev').addEventListener('click',()=>__moveCollection(-1));$('aura-next').addEventListener('click',()=>__moveCollection(1));
   $('aura-grid').addEventListener('click',e=>{const b=e.target.closest('[data-equip-aura]');if(b)equippedAura(b.dataset.equipAura);});
   $('gear-grid').addEventListener('click',e=>{const b=e.target.closest('[data-craft-gear]');if(b)craftGear(b.dataset.craftGear);});
   $('potion-grid').addEventListener('click',e=>{const b=e.target.closest('[data-craft-potion]');if(b)craftPotion(b.dataset.craftPotion);});
@@ -763,8 +848,294 @@ function starfield(){const canvas=$('starfield'),ctx=canvas.getContext('2d');if(
   resize();window.addEventListener('resize',resize,{passive:true});let last=0;
   function draw(t){if(t-last>=50||reduced){last=t;ctx.clearRect(0,0,w,h);for(const s of stars){ctx.beginPath();ctx.fillStyle=`rgba(186,190,255,${s.o*(reduced?1:(.74+.26*Math.sin(t*.0008+s.p)))})`;ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill();}}if(!reduced)requestAnimationFrame(draw);}requestAnimationFrame(draw);
 }
+
+/* ===== VOID RNG v5 orb overhaul / admin expansion ===== */
+const ORB_STYLE = `
+.aura-art{height:98px;overflow:visible}
+.aura-art::before,.aura-art::after{display:none!important}
+.aura-orb-wrap{position:relative;display:grid;place-items:center;isolation:isolate;filter:drop-shadow(0 0 14px color-mix(in srgb,var(--orb-glow,#c7b8ff),transparent 48%))}
+.aura-orb-svg{width:100%;height:100%;overflow:visible}
+.aura-orb-svg .rot-a{animation:orbSpinA var(--orb-spin,11s) linear infinite;transform-origin:60px 60px}
+.aura-orb-svg .rot-b{animation:orbSpinB calc(var(--orb-spin,11s) * 1.38) linear infinite;transform-origin:60px 60px}
+.aura-orb-svg .pulse-a{animation:orbPulse 2.9s ease-in-out infinite;transform-origin:60px 60px}
+.aura-orb-svg .pulse-b{animation:orbPulse 3.7s ease-in-out infinite reverse;transform-origin:60px 60px}
+.aura-orb-svg .float-a{animation:orbFloat 3.2s ease-in-out infinite;transform-origin:60px 60px}
+.aura-orb-svg .float-b{animation:orbFloat 4.4s ease-in-out infinite reverse;transform-origin:60px 60px}
+.aura-orb-svg .twinkle{animation:orbTwinkle 1.7s ease-in-out infinite}
+.aura-orb-wrap.is-muted{opacity:.78;filter:saturate(.72) brightness(.92)}
+.aura-card .aura-art .aura-orb-wrap{width:92px;height:92px}
+.aura-card.void-rare .aura-orb-wrap{transform:scale(1.05);filter:drop-shadow(0 0 18px var(--special)) drop-shadow(0 0 28px color-mix(in srgb,var(--special),transparent 60%))}
+.equipped-orb-host{position:relative;width:178px;height:178px;display:grid;place-items:center;z-index:2}
+.equipped-orb-host .aura-orb-wrap{width:100%;height:100%}
+.orb-showcase{overflow:visible}
+.orb-showcase .orb-drift{position:absolute;border-radius:999px;pointer-events:none;background:radial-gradient(circle at 30% 30%,color-mix(in srgb,var(--equip-color),white 44%),transparent 72%);filter:blur(1px);opacity:.65}
+.orb-showcase .orb-drift-a{width:18px;height:18px;left:24px;top:36px;animation:orbDriftA 6s ease-in-out infinite}
+.orb-showcase .orb-drift-b{width:12px;height:12px;right:30px;top:60px;animation:orbDriftB 5.2s ease-in-out infinite}
+.orb-showcase .orb-drift-c{width:10px;height:10px;left:50%;bottom:24px;animation:orbDriftC 6.8s ease-in-out infinite}
+.aura-signature-meta{font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:#91a0bc;margin:-2px 0 8px}
+@keyframes orbSpinA{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes orbSpinB{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
+@keyframes orbPulse{0%,100%{transform:scale(1);opacity:.92}50%{transform:scale(1.055);opacity:1}}
+@keyframes orbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@keyframes orbTwinkle{0%,100%{opacity:.3}45%{opacity:1}70%{opacity:.55}}
+@keyframes orbDriftA{0%,100%{transform:translate(0,0) scale(.9);opacity:.35}50%{transform:translate(10px,-10px) scale(1.35);opacity:.9}}
+@keyframes orbDriftB{0%,100%{transform:translate(0,0) scale(.8);opacity:.4}50%{transform:translate(-9px,8px) scale(1.2);opacity:.95}}
+@keyframes orbDriftC{0%,100%{transform:translate(-6px,0) scale(.7);opacity:.3}50%{transform:translate(8px,-12px) scale(1.25);opacity:.85}}
+@media(max-width:760px){.aura-card .aura-art .aura-orb-wrap{width:78px;height:78px}.equipped-orb-host{width:156px;height:156px}}
+@media(max-width:410px){.aura-card .aura-art .aura-orb-wrap{width:88px;height:88px}}
+`;
+(function injectOrbStyle(){const st=document.createElement('style');st.textContent=ORB_STYLE;document.head.appendChild(st);})();
+
+Object.assign(POTIONS.find(p=>p.id==='spark-elixir')||{},{mult:2.5,seconds:120,desc:'初歩の錬金術で幸運をしっかり底上げする。'});
+Object.assign(POTIONS.find(p=>p.id==='glimmer-draught')||{},{mult:4.5,seconds:95,desc:'凝縮された光で運命の引力を大きく強化。'});
+Object.assign(POTIONS.find(p=>p.id==='prism-philter')||{},{mult:10,seconds:80,desc:'複数の未来線を束ね、強くレアを引き寄せる。'});
+Object.assign(POTIONS.find(p=>p.id==='nebula-serum')||{},{mult:30,seconds:65,desc:'星雲の圧縮核を使った超高出力の短期決戦薬。'});
+Object.assign(POTIONS.find(p=>p.id==='omega-essence')||{},{mult:120,seconds:50,desc:'常識を壊す級の超越ポーション。'});
+const __adminPotion=POTIONS.find(p=>p.id==='void-admin-2020');
+if(__adminPotion){__adminPotion.mult=5000000;__adminPotion.seconds=600;__adminPotion.desc='管理コード2020専用。10分間ラックを500万倍にする特別ポーション。';}
+
+const ORB_OVERRIDES = {
+  'STARDUST':{motif:'stardust',accent:'#ead9ff',accent2:'#9fe5ff',sigil:'✦',title:'Stellar Dust'},
+  'VORTEX':{motif:'vortex',accent:'#a98cff',accent2:'#6fd4ff',sigil:'✺',title:'Void Spiral'},
+  'SYMPHONY':{motif:'symphony',accent:'#dfb1ff',accent2:'#8df2ff',sigil:'♫',title:'Celestial Score'},
+  'NIGHTFALL':{motif:'crescent',accent:'#8ea0ff',accent2:'#f9fbff',sigil:'☾',title:'Lunar Veil'},
+  'SOLSTICE':{motif:'solar',accent:'#ffd784',accent2:'#fff2a6',sigil:'☼',title:'Solar Crown'},
+  'HYPERNOVA':{motif:'nova',accent:'#ffb0f7',accent2:'#ffd08c',sigil:'✹',title:'Burst Core'},
+  'NEBULA':{motif:'nebula',accent:'#d4b1ff',accent2:'#9adfff',sigil:'✧',title:'Cloud Bloom'},
+  'VALKYRIE':{motif:'wing',accent:'#d4c2ff',accent2:'#ffffff',sigil:'⚜',title:'Winged Oath'},
+  'CHRONOS':{motif:'clock',accent:'#ffd396',accent2:'#fff4c6',sigil:'⌛',title:'Time Engine'},
+  'ECLIPSE':{motif:'eclipse',accent:'#ffd48b',accent2:'#7c8dff',sigil:'◐',title:'Shadow Ring'},
+  'WRAITH':{motif:'ghost',accent:'#d0d9ff',accent2:'#b38cff',sigil:'✧',title:'Phantom Mist'},
+  'SERAPH':{motif:'seraph',accent:'#ffe3b7',accent2:'#ffffff',sigil:'✥',title:'Holy Halo'},
+  'SUPERNOVA':{motif:'nova',accent:'#ffd193',accent2:'#fff8cf',sigil:'✦',title:'Nova Heart'},
+  'GLACIAL':{motif:'ice',accent:'#c8f4ff',accent2:'#ffffff',sigil:'❄',title:'Frozen Crest'},
+  'CELESTIAL':{motif:'star',accent:'#c8ecff',accent2:'#ffffff',sigil:'✦',title:'Sky Sigil'},
+  'INFERNO':{motif:'flame',accent:'#ff9c7e',accent2:'#ffd46d',sigil:'✶',title:'Hellfire Core'},
+  'ARCANUM':{motif:'rune',accent:'#ffb8e9',accent2:'#ffe0ff',sigil:'✥',title:'Secret Rune'},
+  'PARADOX':{motif:'fracture',accent:'#ffa9da',accent2:'#7fe1ff',sigil:'∞',title:'Broken Logic'},
+  'ETERNITY':{motif:'infinity',accent:'#ffc2f2',accent2:'#ffffff',sigil:'∞',title:'Endless Loop'},
+  'HEAVENFALL':{motif:'meteor',accent:'#ffd0f0',accent2:'#fff4d1',sigil:'☄',title:'Fallen Halo'},
+  'OBLIVION':{motif:'abyss',accent:'#ff92cf',accent2:'#7f8cff',sigil:'◉',title:'Abyss Core'},
+  'ORIGIN':{motif:'genesis',accent:'#ffb0cd',accent2:'#fff4c0',sigil:'◈',title:'Origin Seed'},
+  'IMMORTAL':{motif:'crown',accent:'#ffaad4',accent2:'#ffffff',sigil:'♛',title:'Undying Throne'},
+  'ZENITH':{motif:'crown',accent:'#ffc1f6',accent2:'#fff2b4',sigil:'✦',title:'Peak Crown'},
+  'QUASAR':{motif:'quasar',accent:'#83f3ff',accent2:'#ffffff',sigil:'✦',title:'Beam Core'},
+  'ASTRAL KING':{motif:'crown',accent:'#95ecff',accent2:'#fff2d3',sigil:'♛',title:'Royal Star'},
+  'EVENT HORIZON':{motif:'vortex',accent:'#7ae3ff',accent2:'#fcb6ff',sigil:'◉',title:'Edge of Collapse'},
+  'DARK MATTER':{motif:'void',accent:'#7fe5ff',accent2:'#c89cff',sigil:'⬢',title:'Hidden Mass'},
+  'SOLARIS':{motif:'solar',accent:'#9ff7ff',accent2:'#fff6b6',sigil:'☼',title:'Solar Engine'},
+  'DIVINITY':{motif:'seraph',accent:'#9bf4ff',accent2:'#ffffff',sigil:'✥',title:'Sacred Judgment'},
+  'COSMOS':{motif:'cosmos',accent:'#8ff6ff',accent2:'#d7e0ff',sigil:'✧',title:'Galaxy Bloom'},
+  'OMEGA':{motif:'omega',accent:'#8bf4ff',accent2:'#fff6d3',sigil:'Ω',title:'Final Constant'},
+  'ZERO POINT':{motif:'zero',accent:'#d0b6ff',accent2:'#a6ffff',sigil:'◎',title:'Null Core'},
+  'GENESIS':{motif:'genesis',accent:'#ddd0ff',accent2:'#fff8d9',sigil:'◈',title:'Birth Matrix'},
+  'INFINITY':{motif:'infinity',accent:'#e7d2ff',accent2:'#ffffff',sigil:'∞',title:'Endless Source'},
+  'THE ARCHITECT':{motif:'architect',accent:'#d2c6ff',accent2:'#a8e8ff',sigil:'⬡',title:'Design Lattice'},
+  'NIRVANA':{motif:'lotus',accent:'#f1d9ff',accent2:'#ffffff',sigil:'✿',title:'Lotus Calm'},
+  'PHOENIX':{motif:'phoenix',accent:'#ffd096',accent2:'#ff8baa',sigil:'✶',title:'Rebirth Flame'},
+  'APOTHEOSIS':{motif:'ascend',accent:'#e6d8ff',accent2:'#fff3c0',sigil:'✦',title:'Ascension Arc'},
+  'AEON':{motif:'clock',accent:'#d0c6ff',accent2:'#a8ffff',sigil:'⌘',title:'Aeon Drive'},
+  'THE END':{motif:'fracture',accent:'#ff799e',accent2:'#ffd4df',sigil:'✕',title:'Final Rupture'},
+  'ABYSS WALKER':{motif:'abyss',accent:'#ff84a8',accent2:'#8e85ff',sigil:'◉',title:'Deep Walker'},
+  'REALITY BREAKER':{motif:'fracture',accent:'#ff88c1',accent2:'#81ffff',sigil:'✸',title:'World Splitter'},
+  'BLACK SUN':{motif:'eclipse',accent:'#ff7fa1',accent2:'#ffca78',sigil:'☼',title:'Dark Corona'},
+  'CREATION':{motif:'architect',accent:'#ff8ab0',accent2:'#fff0ca',sigil:'◈',title:'Prime Forge'},
+  'FATELESS':{motif:'thread',accent:'#ff8ec4',accent2:'#f3d7ff',sigil:'✣',title:'Severed Thread'},
+  'NULL GOD':{motif:'void',accent:'#ff86a2',accent2:'#9b9eff',sigil:'⬢',title:'Null Throne'},
+  'ENTROPY':{motif:'entropy',accent:'#ff899b',accent2:'#ffd3d8',sigil:'✦',title:'Decay Signal'},
+  'SINGULARITY':{motif:'singularity',accent:'#fff0bc',accent2:'#d6b2ff',sigil:'◉',title:'Absolute Collapse'},
+  'OMNISCIENT':{motif:'eye',accent:'#fff2d0',accent2:'#a5f4ff',sigil:'◍',title:'All-Seeing Eye'},
+  'ABSOLUTE ZERO':{motif:'ice',accent:'#efffff',accent2:'#b6e6ff',sigil:'❄',title:'Frozen Absolute'},
+  'HEART OF VOID':{motif:'heartvoid',accent:'#fcefc8',accent2:'#c7b3ff',sigil:'♥',title:'Void Heart'},
+  'LAST LIGHT':{motif:'star',accent:'#fff1d2',accent2:'#ffc88d',sigil:'✦',title:'Last Beacon'},
+  'THE FIRST STAR':{motif:'star',accent:'#fff5e5',accent2:'#fff0a8',sigil:'✦',title:'Prime Star'},
+  'ENDLESS':{motif:'infinity',accent:'#f8f4dd',accent2:'#ffffff',sigil:'∞',title:'Unending Flow'},
+  'ECLIPSE: Ω':{motif:'omega',accent:'#fff3c5',accent2:'#ff89a8',sigil:'Ω',title:'Omega Eclipse'}
+};
+
+function __hexToRgb(hex){let h=String(hex||'#999').replace('#','');if(h.length===3)h=h.split('').map(x=>x+x).join('');const n=parseInt(h,16);return{r:(n>>16)&255,g:(n>>8)&255,b:n&255};}
+function __rgbToHex(r,g,b){return '#'+[r,g,b].map(v=>Math.max(0,Math.min(255,Math.round(v))).toString(16).padStart(2,'0')).join('');}
+function __mixHex(a,b,t=.5){const A=__hexToRgb(a),B=__hexToRgb(b);return __rgbToHex(A.r+(B.r-A.r)*t,A.g+(B.g-A.g)*t,A.b+(B.b-A.b)*t);}
+function __rgba(hex,a){const c=__hexToRgb(hex);return `rgba(${c.r},${c.g},${c.b},${a})`;}
+function __orbPower(odds){if(!odds)return 1;if(odds>=1e12)return 10;if(odds>=2e11)return 9;if(odds>=2.5e10)return 8;if(odds>=9e8)return 7;if(odds>=5e7)return 6;if(odds>=1e7)return 5;if(odds>=1e6)return 4;if(odds>=1e5)return 3;if(odds>=1e4)return 2;return 1;}
+function __defaultMotifForTier(t){return['seed','spark','prism','sigil','halo','myth','cosmos','ascend','void','absolute'][Math.min(9,Math.max(0,t||0))];}
+function __orbProfile(a){
+  const exact=ORB_OVERRIDES[a.name]||{};
+  const power=__orbPower(a.odds);
+  const accent=exact.accent||__mixHex(a.color,'#ffffff',Math.min(.58,.24+power*.03));
+  const accent2=exact.accent2||__mixHex(a.color,power>=6?'#fff0b6':'#79e6ff',Math.min(.5,.18+power*.025));
+  const shell=__mixHex(a.color,'#ffffff',.12+Math.min(.28,power*.02));
+  const deep=__mixHex(a.color,'#050817',.72);
+  return {motif:exact.motif||__defaultMotifForTier(a.tier),sigil:exact.sigil||a.glyph,accent,accent2,shell,deep,power,title:exact.title||((a.name||'AURA')+' CORE')};
+}
+function __sparkDots(p,uid){let out='';const count=Math.min(10,2+Math.floor(p.power/1.6));for(let i=0;i<count;i++){const ang=(Math.PI*2*i/count)+(p.power*.17);const rad=33+(i%4)*7+p.power*1.2;const x=(60+Math.cos(ang)*rad).toFixed(2),y=(60+Math.sin(ang)*rad).toFixed(2),r=(i%3===0?2.8:1.8)+(p.power>7?0.3:0);out+=`<circle class="twinkle" cx="${x}" cy="${y}" r="${r}" fill="${i%2?__rgba(p.accent2,.86):__rgba('#ffffff',.95)}" style="animation-delay:${(i*.18).toFixed(2)}s"/>`; } return out; }
+function __motifMarkup(p,uid){
+  const accent=`url(#${uid}-accent)`;const accent2=`url(#${uid}-accent2)`;
+  switch(p.motif){
+    case 'stardust': return `<g class="rot-a"><path d="M60 24l8 24 24 12-24 12-8 24-8-24-24-12 24-12z" fill="${accent}" opacity=".48"/><circle cx="60" cy="60" r="18" fill="${accent2}" opacity=".16"/>${__sparkDots(p,uid)}</g>`;
+    case 'vortex': return `<g class="rot-a"><ellipse cx="60" cy="60" rx="31" ry="13" fill="none" stroke="${__rgba(p.accent,.9)}" stroke-width="4.5"/><ellipse cx="60" cy="60" rx="20" ry="38" fill="none" stroke="${__rgba(p.accent2,.82)}" stroke-width="3" transform="rotate(42 60 60)"/><circle cx="60" cy="60" r="11" fill="${__rgba('#050816',.88)}" stroke="${__rgba(p.accent,.8)}" stroke-width="2.2"/></g>${__sparkDots(p,uid)}`;
+    case 'symphony': return `<g class="float-a"><path d="M28 71c9-14 17 14 27 0s18 14 37 0" fill="none" stroke="${__rgba(p.accent,.95)}" stroke-width="4" stroke-linecap="round"/><path d="M31 55c7-10 12 10 22 0s13 10 27 0 12 8 20 0" fill="none" stroke="${__rgba(p.accent2,.78)}" stroke-width="3" stroke-linecap="round"/><rect x="44" y="33" width="5" height="18" rx="2.5" fill="${__rgba(p.accent2,.9)}"/><rect x="57" y="27" width="5" height="22" rx="2.5" fill="${__rgba(p.accent,.92)}"/><rect x="70" y="37" width="5" height="16" rx="2.5" fill="${__rgba('#fff',.9)}"/></g>`;
+    case 'crescent': return `<g class="float-a"><circle cx="56" cy="58" r="24" fill="${__rgba(p.accent2,.22)}"/><circle cx="65" cy="54" r="22" fill="${__rgba('#081020',.82)}"/><path d="M76 36l3 6 6 3-6 3-3 6-3-6-6-3 6-3z" fill="${__rgba('#fff',.96)}"/>${__sparkDots(p,uid)}</g>`;
+    case 'solar': return `<g class="rot-a"><circle cx="60" cy="60" r="19" fill="${accent}" opacity=".75"/>${Array.from({length:8}).map((_,i)=>{const ang=i*Math.PI/4,x1=60+Math.cos(ang)*25,y1=60+Math.sin(ang)*25,x2=60+Math.cos(ang)*38,y2=60+Math.sin(ang)*38;return `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${__rgba(p.accent2,.92)}" stroke-width="3.2" stroke-linecap="round"/>`;}).join('')}</g>`;
+    case 'nova': return `<g class="rot-a">${Array.from({length:8}).map((_,i)=>{const ang=i*Math.PI/4,x=60+Math.cos(ang)*31,y=60+Math.sin(ang)*31;return `<polygon points="60,60 ${ (60+Math.cos(ang-.13)*12).toFixed(1)},${(60+Math.sin(ang-.13)*12).toFixed(1)} ${x.toFixed(1)},${y.toFixed(1)} ${(60+Math.cos(ang+.13)*12).toFixed(1)},${(60+Math.sin(ang+.13)*12).toFixed(1)}" fill="${i%2?__rgba(p.accent,.72):__rgba(p.accent2,.72)}"/>`;}).join('')}<circle cx="60" cy="60" r="17" fill="${accent}" opacity=".78"/></g>`;
+    case 'nebula': return `<g class="float-a"><circle cx="48" cy="50" r="14" fill="${__rgba(p.accent,.42)}"/><circle cx="69" cy="48" r="11" fill="${__rgba(p.accent2,.34)}"/><circle cx="74" cy="66" r="14" fill="${__rgba(p.accent,.35)}"/><circle cx="53" cy="69" r="12" fill="${__rgba('#ffffff',.18)}"/><circle cx="60" cy="60" r="10" fill="${__rgba('#fff',.65)}"/>${__sparkDots(p,uid)}</g>`;
+    case 'wing': return `<g class="pulse-a"><path d="M60 60C42 54 34 42 31 30c10 2 18 6 29 23" fill="${__rgba(p.accent,.45)}" stroke="${__rgba(p.accent2,.8)}" stroke-width="2"/><path d="M60 60c18-6 26-18 29-30-10 2-18 6-29 23" fill="${__rgba(p.accent,.45)}" stroke="${__rgba(p.accent2,.8)}" stroke-width="2"/><polygon points="60,40 67,56 60,80 53,56" fill="${accent2}" opacity=".9"/></g>`;
+    case 'clock': return `<g class="rot-a"><circle cx="60" cy="60" r="24" fill="none" stroke="${__rgba(p.accent,.82)}" stroke-width="3.5"/><line x1="60" y1="60" x2="60" y2="42" stroke="${__rgba('#fff',.95)}" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="60" x2="73" y2="67" stroke="${__rgba(p.accent2,.92)}" stroke-width="3" stroke-linecap="round"/>${[0,90,180,270].map(a=>`<line x1="60" y1="34" x2="60" y2="39" stroke="${__rgba(p.accent2,.85)}" stroke-width="3" transform="rotate(${a} 60 60)"/>`).join('')}</g>`;
+    case 'eclipse': return `<g class="rot-b"><circle cx="60" cy="60" r="28" fill="${__rgba(p.accent2,.24)}"/><circle cx="56" cy="58" r="19" fill="${__rgba('#07101f',.92)}"/><circle cx="68" cy="54" r="14" fill="${__rgba(p.accent,.65)}"/></g>`;
+    case 'ghost': return `<g class="float-a"><path d="M42 76c2-18 7-34 18-34s15 11 16 24-5 15-10 12c-5 4-8 5-12 1-6 5-12 1-12-3z" fill="${__rgba(p.accent,.38)}" stroke="${__rgba(p.accent2,.84)}" stroke-width="2"/><circle cx="55" cy="57" r="2.2" fill="#fff"/><circle cx="66" cy="56" r="2.2" fill="#fff"/></g>`;
+    case 'seraph': return `<g class="pulse-a"><circle cx="60" cy="43" r="12" fill="${__rgba('#fff',.35)}"/><circle cx="60" cy="43" r="18" fill="none" stroke="${__rgba(p.accent2,.85)}" stroke-width="2.6"/><path d="M60 60c-16-3-24-11-29-20 11 1 20 5 29 18" fill="${__rgba(p.accent,.38)}" stroke="${__rgba(p.accent2,.88)}" stroke-width="2"/><path d="M60 60c16-3 24-11 29-20-11 1-20 5-29 18" fill="${__rgba(p.accent,.38)}" stroke="${__rgba(p.accent2,.88)}" stroke-width="2"/></g>`;
+    case 'ice': return `<g class="rot-a">${[0,60,120].map(a=>`<line x1="60" y1="35" x2="60" y2="85" stroke="${__rgba(p.accent2,.92)}" stroke-width="3" stroke-linecap="round" transform="rotate(${a} 60 60)"/><line x1="60" y1="43" x2="52" y2="49" stroke="${__rgba(p.accent,.78)}" stroke-width="2" transform="rotate(${a} 60 60)"/><line x1="60" y1="43" x2="68" y2="49" stroke="${__rgba(p.accent,.78)}" stroke-width="2" transform="rotate(${a} 60 60)"/><line x1="60" y1="77" x2="52" y2="71" stroke="${__rgba(p.accent,.78)}" stroke-width="2" transform="rotate(${a} 60 60)"/><line x1="60" y1="77" x2="68" y2="71" stroke="${__rgba(p.accent,.78)}" stroke-width="2" transform="rotate(${a} 60 60)"/>`).join('')}</g>`;
+    case 'flame': return `<g class="pulse-a"><path d="M60 28c11 10 14 20 10 27 10 0 16 10 10 22-6 11-18 15-30 11-15-5-20-21-11-31 3-4 8-7 9-13 1-7 3-11 12-16z" fill="${accent}" opacity=".82"/><path d="M60 42c7 7 8 13 6 18 6 1 8 7 4 13-4 6-10 8-16 6-9-3-11-13-6-19 2-2 5-4 5-8 1-3 2-6 7-10z" fill="${accent2}" opacity=".9"/></g>`;
+    case 'rune': return `<g class="rot-a"><polygon points="60,30 82,44 82,76 60,90 38,76 38,44" fill="none" stroke="${__rgba(p.accent2,.84)}" stroke-width="3"/><path d="M50 67l10-20 10 20M54 58h12" fill="none" stroke="${__rgba(p.accent,.95)}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>`;
+    case 'fracture': return `<g class="rot-b"><polygon points="59,24 72,47 63,57 82,72 54,95 49,72 34,71 46,52 40,36" fill="${__rgba(p.accent,.44)}" stroke="${__rgba(p.accent2,.86)}" stroke-width="2.4"/></g>`;
+    case 'infinity': return `<g class="pulse-a"><text x="60" y="72" text-anchor="middle" font-size="44" font-weight="900" fill="${__rgba(p.accent2,.94)}">∞</text></g>`;
+    case 'abyss': return `<g class="rot-a"><circle cx="60" cy="60" r="26" fill="${__rgba('#03050f',.93)}" stroke="${__rgba(p.accent,.88)}" stroke-width="3"/>${Array.from({length:8}).map((_,i)=>{const ang=i*Math.PI/4;return `<line x1="${(60+Math.cos(ang)*20).toFixed(1)}" y1="${(60+Math.sin(ang)*20).toFixed(1)}" x2="${(60+Math.cos(ang)*33).toFixed(1)}" y2="${(60+Math.sin(ang)*33).toFixed(1)}" stroke="${__rgba(p.accent2,.76)}" stroke-width="2.2"/>`;}).join('')}</g>`;
+    case 'genesis': return `<g class="pulse-a"><circle cx="60" cy="60" r="23" fill="none" stroke="${__rgba(p.accent2,.82)}" stroke-width="3"/><circle cx="60" cy="60" r="8" fill="${accent}" opacity=".95"/><path d="M60 37v46M37 60h46" stroke="${__rgba(p.accent,.74)}" stroke-width="2.2"/></g>`;
+    case 'quasar': return `<g class="rot-a"><circle cx="60" cy="60" r="12" fill="${accent}" opacity=".92"/><rect x="24" y="56" width="72" height="8" rx="4" fill="${__rgba(p.accent2,.65)}" transform="rotate(-22 60 60)"/><rect x="24" y="56" width="72" height="8" rx="4" fill="${__rgba('#fff',.35)}" transform="rotate(24 60 60)"/></g>`;
+    case 'void': return `<g class="rot-b"><circle cx="60" cy="60" r="28" fill="${__rgba('#050816',.95)}"/><circle cx="60" cy="60" r="18" fill="none" stroke="${__rgba(p.accent,.9)}" stroke-width="3.4" stroke-dasharray="5 5"/><circle cx="60" cy="60" r="34" fill="none" stroke="${__rgba(p.accent2,.48)}" stroke-width="2"/></g>`;
+    case 'cosmos': return `<g class="rot-a"><circle cx="60" cy="60" r="8" fill="${__rgba('#fff',.95)}"/><ellipse cx="60" cy="60" rx="32" ry="12" fill="none" stroke="${__rgba(p.accent,.86)}" stroke-width="3"/><ellipse cx="60" cy="60" rx="18" ry="35" fill="none" stroke="${__rgba(p.accent2,.72)}" stroke-width="2.4" transform="rotate(55 60 60)"/>${__sparkDots(p,uid)}</g>`;
+    case 'zero': return `<g class="pulse-b"><circle cx="60" cy="60" r="25" fill="none" stroke="${__rgba(p.accent2,.82)}" stroke-width="4"/><circle cx="60" cy="60" r="7" fill="${accent}"/></g>`;
+    case 'architect': return `<g class="rot-a"><rect x="40" y="40" width="40" height="40" fill="none" stroke="${__rgba(p.accent2,.84)}" stroke-width="3" transform="rotate(45 60 60)"/><rect x="48" y="48" width="24" height="24" fill="${__rgba(p.accent,.26)}" stroke="${__rgba(p.accent,.84)}" stroke-width="2"/><path d="M60 28v64M28 60h64" stroke="${__rgba(p.accent,.54)}" stroke-width="2"/></g>`;
+    case 'lotus': return `<g class="pulse-a">${[0,72,144,216,288].map(a=>`<ellipse cx="60" cy="44" rx="8" ry="18" fill="${__rgba(p.accent,.42)}" stroke="${__rgba(p.accent2,.75)}" stroke-width="1.6" transform="rotate(${a} 60 60)"/>`).join('')}<circle cx="60" cy="60" r="8" fill="${accent2}" opacity=".88"/></g>`;
+    case 'phoenix': return `<g class="pulse-a"><path d="M60 58C42 57 34 46 31 33c11 4 20 11 29 24" fill="${__rgba(p.accent,.5)}" stroke="${__rgba(p.accent2,.78)}" stroke-width="2"/><path d="M60 58c18-1 26-12 29-25-11 4-20 11-29 24" fill="${__rgba(p.accent,.5)}" stroke="${__rgba(p.accent2,.78)}" stroke-width="2"/><path d="M60 36c7 7 10 12 8 19 6 1 10 7 6 14-4 6-12 9-19 7-10-3-13-14-6-22 2-2 6-6 11-18z" fill="${accent2}" opacity=".9"/></g>`;
+    case 'ascend': return `<g class="pulse-a"><path d="M60 32l14 18H65v30h-10V50h-9z" fill="${accent2}" opacity=".92"/><circle cx="60" cy="44" r="20" fill="none" stroke="${__rgba(p.accent,.72)}" stroke-width="2.2"/></g>`;
+    case 'thread': return `<g class="float-a"><path d="M35 72c7-18 17-29 28-38 8 7 11 14 17 18-13 3-22 13-32 30" fill="none" stroke="${__rgba(p.accent2,.88)}" stroke-width="3" stroke-linecap="round"/><circle cx="63" cy="35" r="4" fill="${__rgba('#fff',.95)}"/></g>`;
+    case 'entropy': return `<g class="rot-b"><path d="M35 39h22l-12 11h28l-14 12h19L58 82h-23l13-10H32l14-12H35z" fill="${__rgba(p.accent,.52)}" stroke="${__rgba(p.accent2,.82)}" stroke-width="2"/></g>`;
+    case 'singularity': return `<g class="rot-a"><circle cx="60" cy="60" r="10" fill="${__rgba('#fff',.98)}"/><circle cx="60" cy="60" r="22" fill="none" stroke="${__rgba(p.accent,.9)}" stroke-width="4"/><circle cx="60" cy="60" r="34" fill="none" stroke="${__rgba(p.accent2,.45)}" stroke-width="2.2" stroke-dasharray="6 4"/></g>`;
+    case 'eye': return `<g class="pulse-a"><path d="M30 60c8-12 18-20 30-20s22 8 30 20c-8 12-18 20-30 20S38 72 30 60z" fill="${__rgba(p.accent,.2)}" stroke="${__rgba(p.accent2,.88)}" stroke-width="3"/><circle cx="60" cy="60" r="9" fill="${accent}"/><circle cx="60" cy="60" r="3" fill="#fff"/></g>`;
+    case 'heartvoid': return `<g class="pulse-a"><path d="M60 83 40 63c-7-7-7-18 1-24 6-4 14-2 19 4 5-6 13-8 19-4 8 6 8 17 1 24z" fill="${__rgba(p.accent,.58)}" stroke="${__rgba(p.accent2,.86)}" stroke-width="2.2"/><circle cx="60" cy="58" r="8" fill="${__rgba('#050816',.88)}"/></g>`;
+    case 'absolute': return `<g class="rot-a"><circle cx="60" cy="60" r="26" fill="none" stroke="${__rgba(p.accent2,.85)}" stroke-width="2.6"/><polygon points="60,31 71,60 60,89 49,60" fill="${__rgba(p.accent,.35)}" stroke="${__rgba(p.accent,.88)}" stroke-width="2.2"/><circle cx="60" cy="60" r="9" fill="${accent2}" opacity=".94"/></g>`;
+    case 'omega': return `<g class="rot-a"><text x="60" y="77" text-anchor="middle" font-size="42" font-weight="900" fill="${__rgba(p.accent2,.94)}">Ω</text><circle cx="60" cy="54" r="26" fill="none" stroke="${__rgba(p.accent,.58)}" stroke-width="2.6"/></g>`;
+    default: return `<g class="pulse-a"><circle cx="60" cy="60" r="20" fill="${accent}" opacity=".8"/><polygon points="60,38 74,60 60,82 46,60" fill="${accent2}" opacity=".84"/>${__sparkDots(p,uid)}</g>`;
+  }
+}
+
+function __vectorSigil(a,p){
+ const color=__rgba('#ffffff',p.power>7?.96:.91),edge=__rgba(p.accent,.85),variant=a.id%7;
+ const shapes=[
+  `<path d="M60 44L68 60L60 76L52 60Z" fill="${color}" stroke="${edge}" stroke-width="1.6"/>`,
+  `<path d="M60 42L64 56L78 60L64 64L60 78L56 64L42 60L56 56Z" fill="${color}" stroke="${edge}" stroke-width="1.4"/>`,
+  `<path d="M60 43L77 60L60 77L43 60Z" fill="none" stroke="${color}" stroke-width="3"/><path d="M60 49L71 60L60 71L49 60Z" fill="${edge}"/>`,
+  `<path d="M46 45L74 74M74 45L46 74" stroke="${color}" stroke-width="4" stroke-linecap="round"/><circle cx="60" cy="60" r="4" fill="${edge}"/>`,
+  `<path d="M60 42L65 54L78 60L65 66L60 78L55 66L42 60L55 54Z" fill="none" stroke="${color}" stroke-width="2.4"/>`,
+  `<circle cx="60" cy="60" r="12" fill="none" stroke="${color}" stroke-width="3"/><path d="M60 41V50M60 70V79M41 60H50M70 60H79" stroke="${edge}" stroke-width="2.3"/>`,
+  `<path d="M60 42L74 50V70L60 78L46 70V50Z" fill="none" stroke="${color}" stroke-width="2.5"/><path d="M60 49L70 60L60 71L50 60Z" fill="${edge}"/>`
+ ];
+ return shapes[variant];
+}
+function __smallVectorMark(a){const p=__orbProfile(a);return `<svg viewBox="0 0 120 120" aria-hidden="true"><g transform="translate(0 0)">${__vectorSigil(a,p)}</g></svg>`;}
+
+function renderAuraOrb(a,{size=96,className='',muted=false}={}){
+  const p=__orbProfile(a);const uid=`orb${String(a.id).replace(/[^\w-]/g,'_')}_${size}_${p.motif}`;const shell=33+Math.min(14,p.power*1.5);const rim=40+Math.min(14,p.power*1.5);const spin=Math.max(3.2,13.4-p.power*.88);const glow=muted?'#99a3ba':p.accent;const sparkCount=Math.min(12,4+Math.floor(p.power/1.5));
+  return `<div class="aura-orb-wrap ${className}${muted?' is-muted':''}" style="width:${size}px;height:${size}px;--orb-glow:${glow};--orb-accent2:${p.accent2};--orb-spin:${spin}s;--orb-main:${a.color}"><svg class="aura-orb-svg" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs><radialGradient id="${uid}-core" cx="34%" cy="26%" r="78%"><stop offset="0%" stop-color="#ffffff" stop-opacity=".98"/><stop offset="26%" stop-color="${p.accent2}" stop-opacity=".92"/><stop offset="56%" stop-color="${p.shell}" stop-opacity=".96"/><stop offset="84%" stop-color="${p.deep}" stop-opacity="1"/></radialGradient><radialGradient id="${uid}-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="${__rgba(p.accent,.42)}"/><stop offset="100%" stop-color="${__rgba(p.accent,.02)}"/></radialGradient><linearGradient id="${uid}-accent" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="${p.accent}"/><stop offset="100%" stop-color="${p.accent2}"/></linearGradient><linearGradient id="${uid}-accent2" x1="20%" y1="15%" x2="80%" y2="95%"><stop offset="0%" stop-color="#ffffff" stop-opacity=".95"/><stop offset="100%" stop-color="${p.accent2}" stop-opacity=".92"/></linearGradient></defs><g class="pulse-b"><circle cx="60" cy="60" r="52" fill="url(#${uid}-glow)" opacity="${(0.34+Math.min(.38,p.power*.04)).toFixed(2)}"/></g><g class="rot-a"><circle cx="60" cy="60" r="${rim}" fill="none" stroke="${__rgba(p.accent,.42)}" stroke-width="2.2" stroke-dasharray="${(p.power>6?6:4)} ${(p.power>6?5:6)}" opacity=".9"/></g><g class="rot-b"><ellipse cx="60" cy="60" rx="${rim+5}" ry="${shell-11}" fill="none" stroke="${__rgba(p.accent2,.25)}" stroke-width="1.7"/></g><g class="pulse-a"><circle cx="60" cy="60" r="${shell}" fill="url(#${uid}-core)"/><circle cx="49" cy="45" r="${Math.max(8,14-p.power*.35)}" fill="${__rgba('#ffffff',.32)}"/></g>${__motifMarkup(p,uid)}<g class="float-b orb-sigil-original"><text x="60" y="68" text-anchor="middle" font-size="${18+Math.min(10,p.power)}" font-weight="900" fill="${__rgba('#ffffff',.96)}" style="paint-order:stroke;stroke:${__rgba(p.deep,.85)};stroke-width:2.8px;font-family:Manrope,system-ui,sans-serif">${p.sigil}</text></g><g class="float-b orb-sigil-vector">${__vectorSigil(a,p)}</g><g>${Array.from({length:sparkCount}).map((_,i)=>{const ang=(Math.PI*2*i/sparkCount)+(p.power*.11),rad=44+(i%3)*5+(p.power>7?3:0),x=(60+Math.cos(ang)*rad).toFixed(2),y=(60+Math.sin(ang)*rad).toFixed(2),r=(i%4===0?2.4:1.6);return `<circle class="twinkle" cx="${x}" cy="${y}" r="${r}" fill="${i%2?__rgba(p.accent2,.92):__rgba('#ffffff',.96)}" style="animation-delay:${(i*.13).toFixed(2)}s"/>`;}).join('')}</g></svg></div>`;
+}
+function __unknownOrbMarkup(){return `<span class="void-unknown-mark" title="未発見" aria-label="未発見"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 23a12 12 0 0 1 24 0c0 9-12 9-12 19"/><path d="M32 51v1"/></svg></span>`;}
+
+function renderEquippedAura(){
+  const a=state.equippedAura!==null?AURAS[state.equippedAura]:null;
+  const owned=!!(a&&isOwned(a));
+  const shown=owned?a:{id:-1,name:'DORMANT',tier:0,odds:0,color:'#8591ae',glyph:'✦'};
+  const card=$('equipped-aura-card');
+  card.style.setProperty('--equip-color',shown.color);
+  card.classList.toggle('orb-equipped',owned);
+  card.classList.toggle('orb-legendary',owned&&a.tier>=4);
+  card.classList.toggle('orb-cosmic',owned&&a.tier>=6);
+  card.querySelector('.orb-showcase').innerHTML=`<div class="equipped-orb-host">${renderAuraOrb(shown,{size:172,className:'equipped-orb',muted:!owned})}</div><i class="orb-drift orb-drift-a"></i><i class="orb-drift orb-drift-b"></i><i class="orb-drift orb-drift-c"></i>`;
+  $('equipped-aura-tier').textContent=owned?TIERS[a.tier].name:'AURA NOT EQUIPPED';
+  $('equipped-aura-name').textContent=owned?a.name:'未装備';
+  $('equipped-aura-odds').textContent=owned?oddsText(a)+' · '+TIERS[a.tier].jp:'図鑑からオーラを装備しよう';
+  card.querySelector('.orb-showcase').setAttribute('aria-label',owned?a.name+'の光るオーブ':'未装備のオーブ');
+}
+
+function renderCollection(){
+  const total=discoveredCount();$('collection-count').innerHTML=total+' <small>/ 80</small>';
+  $('collection-progress').style.width=total/80*100+'%';$('collection-percent').textContent=(total/80*100).toFixed(1)+'%';
+  const result=AURAS.filter(a=>(collectionMode==='all'||(collectionMode==='owned'?!!state.discovered[a.id]:!state.discovered[a.id]))&&(collectionTier==='all'||a.tier===Number(collectionTier))&&(!collectionSearch||a.name.toLowerCase().includes(collectionSearch.toLowerCase())));
+  $('aura-grid').innerHTML=result.map(a=>{
+    const count=state.inventory[a.id]||0,owned=count>0,known=!!state.discovered[a.id],equipped=owned&&state.equippedAura===a.id;
+    const design=voidRareDesign(a),rareClass=design?'void-rare power-'+design.level:'';const profile=__orbProfile(a);
+    const rarity=design?`<div class="aura-rarity-meta">${design.label} · ${design.theme}</div>`:'';
+    const signature=known&&a.tier>=3?`<div class="aura-signature-meta">${profile.title}</div>`:'';
+    const orb=known?renderAuraOrb(a,{size:96,className:'collection-orb'}):__unknownOrbMarkup();
+    return `<article class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art">${orb}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${signature}${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'装備中':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
+  }).join('');$('grid-empty').hidden=result.length!==0;
+}
+
+function redeemAdminCode(event){
+  event.preventDefault();
+  const input=$('admin-code-input');
+  const code=input.value.trim();
+  const message=$('admin-code-message');
+  input.value='';
+  if(code==='2020'){
+    const admin=POTIONS.find(p=>p.id==='void-admin-2020');
+    state.potions[admin.id]=(state.potions[admin.id]||0)+1;
+    save();renderPotions();renderRollUI();
+    message.textContent='2020認証完了：ラック×5,000,000の管理者ポーションを1本受け取りました。';
+    message.className='admin-code-message success';
+    toast('ADMIN ACCESS GRANTED','2020: ラック ×5,000,000・10分間のポーションを獲得！','good');
+    tone(880,.26,'sine',.04);tone(1320,.35,'triangle',.04,.12);return;
+  }
+  if(code==='2021'){
+    for(const aura of AURAS){state.discovered[aura.id]=true;state.inventory[aura.id]=Math.max(1,state.inventory[aura.id]||0);} 
+    state.bestId=AURAS[AURAS.length-1].id;
+    save();renderEntireGame();showPage('collection');
+    message.textContent='2021認証完了：図鑑コンプリート。全80種のオーラを1個ずつ付与しました。';
+    message.className='admin-code-message success';
+    toast('COMPENDIUM OVERRIDE','2021: 図鑑80/80解放 + 全オーラ付与。','good');
+    tone(740,.18,'triangle',.03);tone(960,.24,'sine',.03,.08);tone(1280,.3,'triangle',.035,.18);return;
+  }
+  message.textContent='コードが違います。2020 または 2021 を確認してください。';
+  message.className='admin-code-message error';
+  toast('INVALID CODE','その管理コードは使えません。','error');
+}
+/* ===== end of v5 override block ===== */
+
+
+// v6: Render only eight cards at a time on phones; desktops remain exactly as before.
+let collectionMobilePage=0;
+function __mobileCollection(){return window.matchMedia('(max-width:760px)').matches;}
+function renderCollection(){
+  try{
+    const total=discoveredCount();
+    $('collection-count').innerHTML=total+' <small>/ 80</small>';
+    $('collection-progress').style.width=Math.min(100,total/80*100)+'%';
+    $('collection-percent').textContent=Math.min(100,total/80*100).toFixed(1)+'%';
+    const filtered=AURAS.filter(a=>(collectionMode==='all'||(collectionMode==='owned'?!!state.discovered[a.id]:!state.discovered[a.id]))&&(collectionTier==='all'||a.tier===Number(collectionTier))&&(!collectionSearch||a.name.toLowerCase().includes(collectionSearch.toLowerCase())));
+    const mobile=__mobileCollection(),perPage=8,pages=Math.max(1,Math.ceil(filtered.length/perPage));
+    collectionMobilePage=Math.max(0,Math.min(collectionMobilePage,pages-1));
+    const display=mobile?filtered.slice(collectionMobilePage*perPage,(collectionMobilePage+1)*perPage):filtered;
+    const cards=display.map(a=>{
+      const count=state.inventory[a.id]||0,owned=count>0,known=!!state.discovered[a.id],equipped=owned&&state.equippedAura===a.id;
+      const design=voidRareDesign(a),rareClass=design?'void-rare power-'+design.level:'';
+      const profile=__orbProfile(a);
+      const rarity=design?`<div class="aura-rarity-meta">${design.label} · ${design.theme}</div>`:'';
+      const signature=known&&a.tier>=3?`<div class="aura-signature-meta">${profile.title}</div>`:'';
+      const orb=known?renderAuraOrb(a,{size:96,className:'collection-orb'}):__unknownOrbMarkup();
+      return `<article class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art">${orb}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${signature}${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'装備中':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
+    });
+    $('aura-grid').innerHTML=cards.join('');
+    $('grid-empty').hidden=filtered.length!==0;
+    const pager=$('aura-pager');
+    pager.hidden=!mobile||filtered.length===0;
+    $('aura-page-counter').textContent=`${collectionMobilePage+1} / ${pages} ページ`;
+    $('aura-prev').disabled=collectionMobilePage===0;
+    $('aura-next').disabled=collectionMobilePage>=pages-1;
+  }catch(e){
+    console.error('Collection error',e);
+    $('grid-empty').hidden=false;
+    $('grid-empty').textContent='図鑑の読み込みで問題が発生しました。画面を更新してください。';
+  }
+}
+function __moveCollection(delta){collectionMobilePage+=delta;renderCollection();
+ const grid=$('aura-grid');
+ if(grid)grid.scrollIntoView({block:'start',behavior:'instant'});
+}
+function __resetCollectionPage(){collectionMobilePage=0;}
+
 function init(){TIERS.forEach((t,i)=>{const opt=document.createElement('option');opt.value=i;opt.textContent=t.jp+' · '+t.name;$('tier-filter').append(opt);});bind();renderEntireGame();showPage('roll');starfield();setInterval(()=>{const before=state.activePotions.length;const active=activePotions();updatePotionTimer();if(before!==active.length){renderRollUI();if(page==='potions')renderPotions();toast('ポーション効果終了',`残り${active.length}本 · 合計ラック×${multiplierText(potionMultiplier())}`);}if(page==='roll'&&state.rolls)for(const el of document.querySelectorAll('.recent-time')){ /* relative times refresh on next roll */ }},500);}
 init();
+window.addEventListener('resize',()=>{if(page==='collection')renderCollection();},{passive:true});
 })();
 
 </script>
