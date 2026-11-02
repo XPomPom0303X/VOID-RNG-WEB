@@ -450,6 +450,41 @@ body.sp-inspect-open{overflow:hidden;}
 @media(max-width:760px){.void-math-bar{min-height:59px;padding:9px 13px;gap:8px}.void-math-bar-emblem{width:29px;height:29px;font-size:16px}.void-math-bar-caption{gap:8px}.void-math-bar-copy strong{font-size:10px;letter-spacing:.4px}.void-math-bar-copy span{font-size:9px}.void-math-bar-link{min-height:38px;padding:0 12px;font-size:11px;gap:5px}.void-math-bar-link svg{width:13px;height:13px}}
 @media(max-width:345px){.void-math-bar-copy span{display:none}.void-math-bar-link{padding:0 9px}}
 @media(prefers-reduced-motion:reduce){.void-math-bar-link{transition:none}}
+
+/* Web update: keep the left navigation visible while the long collection scrolls.
+   Important: overflow-x:hidden on the body breaks sticky positioning in Chromium. */
+html,body{overflow-x:clip!important}
+@media(min-width:761px){
+  .app-shell{align-items:stretch}
+  .sidebar{
+    position:sticky!important;
+    top:0!important;
+    align-self:flex-start;
+    height:100vh;
+    height:100dvh;
+    max-height:100vh;
+    max-height:100dvh;
+    overflow-x:hidden;
+    overflow-y:auto;
+    overscroll-behavior-y:contain;
+    scrollbar-width:thin;
+    scrollbar-color:#5c5688 #101522;
+  }
+}
+/* Preserve the original compact mobile navigation; no floating sidebar on phones. */
+@media(max-width:760px){
+  .sidebar{position:relative!important;top:auto!important;align-self:auto;
+    height:auto;max-height:none;overflow:visible}
+}
+</style>
+<style id="equip-unequip-style">
+.equip-slot:has(.slot-unequip){border-color:#776ca655;background:linear-gradient(135deg,#191a32,#111725)}
+.slot-unequip{align-self:flex-start;margin-top:5px;padding:7px 13px;border-radius:8px;border:1px solid #bc879a77;background:#462a3955;color:#ffd5e2;font-size:11px;font-weight:800;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.slot-unequip:hover{background:#6a354966;border-color:#efacbb;transform:translateY(-1px)}
+.slot-unequip:focus-visible,.craft-btn-unequip:focus-visible{outline:2px solid #f7c1d3;outline-offset:3px}
+.craft-btn.craft-btn-unequip{background:linear-gradient(110deg,#422b42,#54344c);border-color:#b8869b;color:#ffe0e9}
+.craft-btn.craft-btn-unequip:hover{background:linear-gradient(110deg,#644057,#784b67)}
+.aura-card-bottom button.is-equipped{background:#4d2e4588;border-color:#aa738c;color:#ffcee0}
 </style>
 </head>
 <body>
@@ -953,10 +988,10 @@ function renderCollection(){
     const count=state.inventory[a.id]||0,owned=count>0,known=!!state.discovered[a.id],equipped=owned&&state.equippedAura===a.id;
     const design=voidRareDesign(a),rareClass=design?'void-rare power-'+design.level:'';
     const rarity=design?`<div class="aura-rarity-meta">${design.label} · ${design.theme}</div>`:'';
-    return `<article data-aura-id="${a.id}" class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art">${known?`<span>${a.glyph+'\uFE0E'}</span>`:`<span class="void-unknown-mark" title="未発見" aria-label="未発見"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 23a12 12 0 0 1 24 0c0 9-12 9-12 19"/><path d="M32 51v1"/></svg></span>`}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'装備中':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
+    return `<article data-aura-id="${a.id}" class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art">${known?`<span>${a.glyph+'\uFE0E'}</span>`:`<span class="void-unknown-mark" title="未発見" aria-label="未発見"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 23a12 12 0 0 1 24 0c0 9-12 9-12 19"/><path d="M32 51v1"/></svg></span>`}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'× 外す':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
   }).join('');$('grid-empty').hidden=result.length!==0;
 }
-function equippedAura(id){const a=AURAS[Number(id)];if(!a||!isOwned(a)){toast('装備できません','このオーラを持っていません。','error');return;}state.equippedAura=a.id;presentAura(a,false);save();renderCollection();renderEquippedAura();toast('オーラ装備完了',a.name+'をセットしました。','good');}
+function equippedAura(id){const a=AURAS[Number(id)];if(!a||!isOwned(a)){toast('装備できません','このオーラを持っていません。','error');return;}const remove=state.equippedAura===a.id;state.equippedAura=remove?null:a.id;if(!remove)presentAura(a,false);save();renderCollection();renderEquippedAura();toast(remove?'オーラ装備解除':'オーラ装備完了',a.name+(remove?'を外しました。':'をセットしました。'),'good');}
 function __craftAllocation(rec){
   if(!rec||state.shards < (rec.dust||0))return null;
   const reservation=new Map();
@@ -1017,10 +1052,17 @@ function consume(rec){
 }
 function renderForge(){
   $('forge-bonus').innerHTML='+'+gearBonus().toFixed(2)+'× <small>GEAR LUCK</small>';
-  $('equip-slots').innerHTML=Object.entries(SLOT_LABELS).map(([slot,label])=>{const gear=GEAR.find(g=>g.id===state.equipped[slot]);return `<div class="equip-slot"><div class="slot-tag">${label}</div>${gear?`<div class="slot-name" style="color:${gear.color}">${gear.glyph} ${gear.name}</div><div class="slot-bonus">+${gear.bonus.toFixed(2)}× LUCK</div>`:'<div class="slot-empty">スロットが空いています</div>'}</div>`;}).join('');
-  $('gear-grid').innerHTML=GEAR.map(g=>{const owned=state.gearOwned.includes(g.id),eq=state.equipped[g.slot]===g.id,can=canCraft(g);return `<article class="recipe-card ${can&&!owned?'craft-recipe-ready':''}" style="--recipe-color:${g.color}"><div class="recipe-top"><div class="recipe-icon">${g.glyph}</div>${can&&!owned?'<span class="craft-ready-label">✦ CRAFT READY</span>':`<span class="recipe-category">${g.slotName} · EQUIPMENT</span>`}</div><h3>${g.name}</h3><p class="recipe-desc">${g.desc}</p><div class="recipe-bonus">+${g.bonus.toFixed(2)}× <small>LUCK BONUS</small></div><div class="recipe-ingredients">${ingredients(g)}</div><button class="craft-btn" data-craft-gear="${g.id}" ${(!owned&&!can)?'disabled':''}>${owned?(eq?icon('check')+' 装備中':'装備する'):can?'✦ クラフトする':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
+  $('equip-slots').innerHTML=Object.entries(SLOT_LABELS).map(([slot,label])=>{const gear=GEAR.find(g=>g.id===state.equipped[slot]);return `<div class="equip-slot"><div class="slot-tag">${label}</div>${gear?`<div class="slot-name" style="color:${gear.color}">${gear.glyph} ${gear.name}</div><div class="slot-bonus">+${gear.bonus.toFixed(2)}× LUCK</div><button type="button" class="slot-unequip" data-unequip-slot="${slot}" aria-label="${label}の装備を外す">× 装備を外す</button>`:'<div class="slot-empty">スロットが空いています</div>'}</div>`;}).join('');
+  $('gear-grid').innerHTML=GEAR.map(g=>{const owned=state.gearOwned.includes(g.id),eq=state.equipped[g.slot]===g.id,can=canCraft(g);return `<article class="recipe-card ${can&&!owned?'craft-recipe-ready':''}" style="--recipe-color:${g.color}"><div class="recipe-top"><div class="recipe-icon">${g.glyph}</div>${can&&!owned?'<span class="craft-ready-label">✦ CRAFT READY</span>':`<span class="recipe-category">${g.slotName} · EQUIPMENT</span>`}</div><h3>${g.name}</h3><p class="recipe-desc">${g.desc}</p><div class="recipe-bonus">+${g.bonus.toFixed(2)}× <small>LUCK BONUS</small></div><div class="recipe-ingredients">${ingredients(g)}</div><button class="craft-btn ${eq?'craft-btn-unequip':''}" data-craft-gear="${g.id}" ${(!owned&&!can)?'disabled':''}>${owned?(eq?'× 装備を外す':'装備する'):can?'✦ クラフトする':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
 }
-function craftGear(id){const g=GEAR.find(g=>g.id===id);if(!g)return;if(state.gearOwned.includes(id)){state.equipped[g.slot]=g.id;save();renderForge();renderRollUI();updateCraftReadyUI();toast('装備を変更しました',g.name+'を装備した。','good');return;}if(!canCraft(g)){toast('素材が足りません','必要なオーラとスターダストを集めよう。','error');return;}if(!consume(g))return;state.gearOwned.push(g.id);state.equipped[g.slot]=g.id;save();renderForge();renderRollUI();updateCraftReadyUI();toast('CRAFT SUCCESS',g.name+'が完成。自動で装備しました！','good');tone(600,.2,'triangle',.035);tone(850,.2,'sine',.03,.12);}
+function craftGear(id){const g=GEAR.find(g=>g.id===id);if(!g)return;if(state.gearOwned.includes(id)){const remove=state.equipped[g.slot]===g.id;state.equipped[g.slot]=remove?null:g.id;save();renderForge();renderRollUI();updateCraftReadyUI();toast(remove?'装備解除完了':'装備を変更しました',g.name+(remove?'を外しました。':'を装備した。'),'good');return;}if(!canCraft(g)){toast('素材が足りません','必要なオーラとスターダストを集めよう。','error');return;}if(!consume(g))return;state.gearOwned.push(g.id);state.equipped[g.slot]=g.id;save();renderForge();renderRollUI();updateCraftReadyUI();toast('CRAFT SUCCESS',g.name+'が完成。自動で装備しました！','good');tone(600,.2,'triangle',.035);tone(850,.2,'sine',.03,.12);}
+function unequipSlot(slot){
+  if(!Object.prototype.hasOwnProperty.call(SLOT_LABELS,slot)||!state.equipped[slot])return;
+  const gear=GEAR.find(g=>g.id===state.equipped[slot]);
+  state.equipped[slot]=null;
+  save();renderForge();renderRollUI();updateCraftReadyUI();
+  toast('装備解除完了',(gear?.name||SLOT_LABELS[slot])+'を外しました。','good');
+}
 function renderPotions(){
   const active=activePotions(),mult=potionMultiplier(),full=active.length>=MAX_POTION_STACKS;
   $('active-potion-name').textContent=active.length?`${active.length}本のポーション発動中`:'ポーション効果なし';
@@ -1107,6 +1149,7 @@ function bind(){
   $('tier-filter').addEventListener('change',e=>{collectionTier=e.target.value;__resetCollectionPage();renderCollection();});
   $('aura-prev').addEventListener('click',()=>__moveCollection(-1));$('aura-next').addEventListener('click',()=>__moveCollection(1));
   $('aura-grid').addEventListener('click',e=>{const b=e.target.closest('[data-equip-aura]');if(b)equippedAura(b.dataset.equipAura);});
+  $('equip-slots').addEventListener('click',e=>{const b=e.target.closest('[data-unequip-slot]');if(b)unequipSlot(b.dataset.unequipSlot);});
   $('gear-grid').addEventListener('click',e=>{const b=e.target.closest('[data-craft-gear]');if(b)craftGear(b.dataset.craftGear);});
   $('potion-grid').addEventListener('click',e=>{const b=e.target.closest('[data-craft-potion]');if(b)craftPotion(b.dataset.craftPotion);});
   $('potion-inventory').addEventListener('click',e=>{const b=e.target.closest('[data-use-potion]');if(b)usePotion(b.dataset.usePotion);});
@@ -1477,7 +1520,7 @@ function renderCollection(){
     const rarity=design?`<div class="aura-rarity-meta">${design.label} · ${design.theme}</div>`:'';
     const signature=known&&a.tier>=3?`<div class="aura-signature-meta">${profile.title}</div>`:'';
     const orb=known?renderAuraOrb(a,{size:96,className:'collection-orb'}):__unknownOrbMarkup();
-    return `<article data-aura-id="${a.id}" class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art" role="button" tabindex="${known?0:-1}" aria-label="${known?a.name+'を拡大表示':'未発見'}">${orb}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${signature}${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'装備中':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
+    return `<article data-aura-id="${a.id}" class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art" role="button" tabindex="${known?0:-1}" aria-label="${known?a.name+'を拡大表示':'未発見'}">${orb}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${signature}${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'× 外す':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
   }).join('');$('grid-empty').hidden=result.length!==0;
 }
 
@@ -1554,7 +1597,7 @@ function renderCollection(){
       const rarity=design?`<div class="aura-rarity-meta">${design.label} · ${design.theme}</div>`:'';
       const signature=known&&a.tier>=3?`<div class="aura-signature-meta">${profile.title}</div>`:'';
       const orb=known?(mobile?__lazyOrbPlaceholder(a):renderAuraOrb(a,{size:96,className:'collection-orb'})):__unknownOrbMarkup();
-      return `<article data-aura-id="${a.id}" class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art" role="button" tabindex="${known?0:-1}" aria-label="${known?a.name+'を拡大表示':'未発見'}">${orb}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${signature}${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'装備中':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
+      return `<article data-aura-id="${a.id}" class="aura-card ${known?'':'locked'} ${rareClass}" style="--c:${a.color};--special:${design?.accent||a.color};--spin-duration:${design?Math.max(3,15-design.level*1.5):12}s"><div class="aura-card-top"><span>${TIERS[a.tier].name}</span><span class="aura-count">${known?'×'+fmt(count):icon('lock')}</span></div><div class="aura-art" role="button" tabindex="${known?0:-1}" aria-label="${known?a.name+'を拡大表示':'未発見'}">${orb}</div><h3 title="${known?a.name:'未発見'}">${known?a.name:'UNKNOWN'}</h3>${signature}${rarity}<div class="aura-card-bottom"><small>${oddsText(a)}</small>${owned?`<button data-equip-aura="${a.id}" class="${equipped?'is-equipped':''}">${equipped?'× 外す':'装備する'}</button>`:`<small>${known?'素材なし':'未発見'}</small>`}</div></article>`;
     });
     $('aura-grid').innerHTML=cards.join('');
     $('grid-empty').hidden=filtered.length!==0;
