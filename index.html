@@ -672,6 +672,38 @@ html,body{overflow-x:hidden!important}
 @media(max-width:760px){.refinery{display:flex;flex-direction:column;padding:15px 12px;margin-bottom:27px}.refinery-intro{order:0}.refinery-body{order:1}.refinery-price-list{order:2}.refinery-bulk{order:3}.refinery-intro{align-items:flex-start;flex-wrap:wrap}.refinery-wallet{min-width:0;margin-left:auto;padding:8px 12px}.refinery-wallet strong{font-size:19px}.refinery h2{font-size:25px}.refinery-kicker{font-size:8px;letter-spacing:1px}.refinery-price-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:14px 0}.refinery-price{padding:8px 9px}.refinery-price b{font-size:15px}.refinery-body{grid-template-columns:1fr;gap:13px}.refinery-core{min-height:195px}.refinery-energy-a{width:155px;height:155px}.refinery-energy-b{width:190px;height:190px}.refinery-orb-art{width:108px;height:108px}.refinery-orb-art .aura-orb-wrap{max-width:108px;max-height:108px}.refinery-core-tag{bottom:10px;font-size:7px}.refinery-qty-row .refinery-field{width:100px}.refinery-bulk{gap:14px}.refinery-collection-shortcut{flex-wrap:wrap;padding:10px 12px;font-size:10px}.refinery-collection-shortcut button{font-size:10px;margin-left:auto}}
 @media(max-width:390px){.refinery-qty-row .refinery-field{width:100px}.refinery-preserve{margin-left:0;font-size:10px}.refinery-bulk-summary{font-size:10px}.refinery-bulk-controls{gap:6px}}
 @media(prefers-reduced-motion:reduce){.refinery-energy-a,.refinery-energy-b{animation:none}}
+
+/* v14 — Rarity-specific cinematic controls, nonblocking with autosave. */
+.cinema-settings{margin:15px 0 0;border-color:#60579b65;background:linear-gradient(120deg,#17172e,#11192b);overflow:hidden;box-shadow:0 9px 32px #080b18aa}
+.cinema-settings-summary{display:flex;align-items:center;gap:12px;cursor:pointer;list-style:none;padding:16px 18px;user-select:none;min-height:74px}
+.cinema-settings-summary::-webkit-details-marker{display:none}
+.cinema-settings-summary::marker{content:''}
+.cinema-settings-summary:focus-visible{outline:2px solid #b3a5ff;outline-offset:-4px;border-radius:12px}
+.cinema-settings-crest{width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border-radius:11px;border:1px solid #a597ff70;background:radial-gradient(circle,#8c74e45b,#30284f30);box-shadow:0 0 20px #8e7bff20;color:#d3c8ff;font-size:23px}
+.cinema-settings-heading{display:grid;gap:3px;min-width:0;flex:1}
+.cinema-settings-heading strong{font-size:12px;letter-spacing:.4px;color:#f2efff}
+.cinema-settings-heading small{font-size:10px;line-height:1.5;color:#a2a2bf}
+.cinema-settings-count{font-variant-numeric:tabular-nums;white-space:nowrap;font-size:10px;font-weight:900;color:#d0c4ff;padding:6px 9px;background:#7462ac30;border:1px solid #9b8dd645;border-radius:7px}
+.cinema-settings-arrow{width:16px;height:16px;stroke:#a59bc8;fill:none;stroke-width:2;transition:transform .18s}
+.cinema-settings[open] .cinema-settings-arrow{transform:rotate(180deg)}
+.cinema-settings-body{padding:2px 17px 18px;border-top:1px solid #45415b65}
+.cinema-settings-quick{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:13px 0}
+.cinema-settings-quick p{margin:0;min-width:0;color:#a6abc4;font-size:10px;line-height:1.65}
+.cinema-settings-actions{display:flex;gap:6px;flex:none}
+.cinema-settings-actions button{border-radius:7px;border:1px solid #655d9990;background:#262444;color:#e3dcff;padding:8px 9px;font-size:10px;font-weight:800;white-space:nowrap}
+.cinema-settings-actions button:hover{border-color:#b0a1fa;background:#40366a}
+.cinema-tiers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.cinema-tier-toggle{--tier-accent:#b58aff;display:flex;align-items:center;justify-content:space-between;gap:7px;padding:11px 10px;border:1px solid color-mix(in srgb,var(--tier-accent),transparent 47%);border-radius:9px;background:linear-gradient(112deg,color-mix(in srgb,var(--tier-accent),transparent 89%),#11182a);min-width:0;text-align:left;transition:background .15s,border-color .15s}
+.cinema-tier-toggle span{font-size:10px;font-weight:900;color:var(--tier-accent);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cinema-tier-toggle b{font-size:9px;letter-spacing:.7px;color:#101425;background:var(--tier-accent);padding:5px 7px;border-radius:5px;flex:none}
+.cinema-tier-toggle[aria-pressed=false]{background:#111626;border-color:#33394f}
+.cinema-tier-toggle[aria-pressed=false] span{color:#858ca4}
+.cinema-tier-toggle[aria-pressed=false] b{background:#252a3c;color:#8d94ac}
+.cinema-tier-toggle:focus-visible,.cinema-settings-actions button:focus-visible{outline:2px solid #e3d9ff;outline-offset:2px}
+.cinema-settings-footnote{margin:12px 0 0;color:#858da7;font-size:9px;line-height:1.75}
+@media(min-width:1200px){.cinema-tiers{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:500px){.cinema-settings-summary{padding:12px;gap:9px;min-height:63px}.cinema-settings-crest{width:32px;height:32px;flex-basis:32px;font-size:19px}.cinema-settings-heading strong{font-size:11px}.cinema-settings-heading small{font-size:9px}.cinema-settings-count{font-size:9px;padding:5px}.cinema-settings-body{padding:3px 11px 13px}.cinema-settings-quick{align-items:stretch;flex-direction:column}.cinema-settings-actions button{flex:1}.cinema-tier-toggle{padding:10px 7px}.cinema-tier-toggle span{font-size:9px}.cinema-tier-toggle b{font-size:8px;padding:4px 5px}}
+@media(max-width:360px){.cinema-tiers{grid-template-columns:1fr}.cinema-settings-heading small{display:none}}
 </style>
 <style id="equip-unequip-style">
 .equip-slot:has(.slot-unequip){border-color:#776ca655;background:linear-gradient(135deg,#191a32,#111725)}
@@ -865,6 +897,50 @@ html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
 }
 @media (prefers-reduced-motion:reduce){.gear-art.relic-v12 *{animation:none!important}}
 </style>
+
+<style id="v15-dual-potion-styles">
+.dual-luck-panel,.dual-potion-status{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.dual-luck-panel{position:relative;z-index:3;width:min(100%,470px);margin:0 auto 13px}
+.dual-luck-card,.potion-status-card{min-width:0;border:1px solid #49567b;border-radius:12px;padding:13px;background:linear-gradient(145deg,#172237,#101525);box-shadow:inset 0 1px 0 #ffffff12}
+.shot-card{border-color:#8b8aff75;background:radial-gradient(circle at 5% 0%,#8175ff25,transparent 80%),linear-gradient(135deg,#19162b,#13182a)}
+.minute-card{border-color:#6cccca66;background:radial-gradient(circle at 5% 0%,#2dbbcf24,transparent 80%),linear-gradient(135deg,#12202c,#121728)}
+.dual-luck-card>span{display:block;color:#b8b5e0;font-size:9px;letter-spacing:.35px;font-weight:850}
+.dual-luck-card>strong{display:block;color:#dcd3ff;margin:5px 0;font-size:clamp(16px,2vw,23px);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.dual-luck-card.minute-card>strong{color:#9af1eb}
+.dual-luck-card>small{display:block;color:#96a3bb;font-size:9px;line-height:1.5}
+.dual-potion-status{margin-bottom:17px}
+.potion-status-card{padding:21px;display:flex;flex-direction:column;gap:10px}
+.potion-status-card .mode-badge{color:#c8c0ff;font-size:11px;font-weight:900;letter-spacing:1px}
+.potion-status-card.minute-card .mode-badge{color:#96eee9}
+.potion-status-card strong{font-size:clamp(25px,3.5vw,43px);color:#ede8ff;font-weight:950;letter-spacing:-1px;overflow-wrap:anywhere}
+.potion-status-card.minute-card strong{color:#a1f8ef}
+.potion-status-card>span{color:#e0dcff;font-weight:800;font-size:12px}
+.potion-status-card p{color:#a4acc3;font-size:11px;line-height:1.7;margin:0}
+.potion-system-explain{font-size:11px;line-height:1.9;color:#aab6d1;border:1px solid #363e5b;background:#141a2b;border-radius:12px;padding:12px 18px;margin-bottom:27px}
+.potion-system-explain b{color:#e1daff}
+.alchemy-mode{min-width:0;margin:0 0 28px}
+.alchemy-mode+.alchemy-mode{margin-top:34px}
+.mode-title{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;margin:0 0 14px;border-bottom:1px solid #39415d;padding:4px 0 12px}
+.mode-title h3{margin:0;color:#cbc5ff;font-size:16px;letter-spacing:.5px}
+.mode-one-minute .mode-title h3{color:#a1f5eb}
+.mode-title small{color:#929bb2;font-size:10px;line-height:1.5}
+.mode-inventory-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px}
+.mode-recipe-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.mode-recipe-grid .recipe-card{min-width:0}
+#potion-grid .recipe-card{position:relative;overflow:hidden;box-shadow:inset 0 1px 0 #ffffff0a,0 14px 30px #0003}
+#potion-grid .recipe-icon{width:79px;height:79px;padding:4px;background:#111527;border:1px solid color-mix(in srgb,var(--recipe-color),transparent 52%);border-radius:20px}
+#potion-grid .recipe-top{align-items:flex-start}
+#potion-grid .recipe-card h3{margin-top:18px}
+.mode-inventory-grid .inventory-potion{min-width:0;overflow:hidden;box-shadow:inset 0 1px #ffffff09;background:linear-gradient(#172030,#101622)}
+.mode-inventory-grid .potion-emblem{width:85px;height:85px;max-width:100%;margin:4px auto 11px;padding:4px}
+.mode-inventory-grid .potion-emblem .artifact-icon-shell{display:block;width:100%;height:100%}
+.mode-inventory-grid .potion-emblem svg.artifact-icon-svg{width:100%!important;height:100%!important}
+.mode-inventory-grid .inventory-potion>b{overflow-wrap:anywhere;min-height:33px}
+.mode-inventory-grid .inventory-potion>span{font-variant-numeric:tabular-nums;line-height:1.5}
+@media(max-width:1450px){.mode-recipe-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mode-inventory-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.dual-luck-panel{gap:7px}.dual-luck-card{padding:10px}.dual-luck-card>span{font-size:8px}.dual-luck-card>strong{font-size:clamp(14px,4.3vw,18px)}.dual-luck-card>small{font-size:8px}.dual-potion-status{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.potion-status-card{padding:14px 10px;gap:8px}.potion-status-card .mode-badge{font-size:9px}.potion-status-card strong{font-size:clamp(17px,6vw,28px)}.potion-status-card>span{font-size:10px}.potion-status-card p{font-size:9px;line-height:1.5}.mode-inventory-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.mode-recipe-grid{grid-template-columns:1fr}.mode-title h3{font-size:13px}.mode-title small{font-size:9px}.mode-inventory-grid .potion-emblem{width:76px;height:76px}.alchemy-mode{margin-bottom:22px}}
+@media(max-width:355px){.dual-potion-status{grid-template-columns:1fr}.dual-luck-card>span{font-size:7px}}
+</style>
 </head>
 <body>
   <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -953,9 +1029,13 @@ html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
                 </div>
                 <div class="roll-potion-strip is-idle" id="roll-potion-strip" style="--boost-time-progress:0%" aria-label="現在のポーション残り時間">
                   <span class="strip-mark" aria-hidden="true"><svg><use href="#i-flask"/></svg></span>
-                  <div class="strip-details"><small>NEXT POTION EXPIRY</small><strong id="next-expiry-name">ポーション未使用</strong></div>
+                  <div class="strip-details"><small id="next-expiry-heading">NEXT POTION</small><strong id="next-expiry-name">ポーション未使用</strong></div>
                   <time class="strip-clock" id="next-expiry-clock">--:--</time>
                   <button type="button" class="strip-open" data-goto="potions">詳細 ↗</button>
+                </div>
+                <div class="dual-luck-panel" aria-label="1ロールと1分のラック">
+                  <div class="dual-luck-card shot-card"><span>✦ ONE ROLL / 重ねがけ可</span><strong id="summon-shot-luck">×1.00</strong><small id="summon-shot-note">セット中 0/6本 · 装備の10%のみ</small></div>
+                  <div class="dual-luck-card minute-card"><span>◷ ONE MINUTE / 重ねがけ不可</span><strong id="summon-minute-luck">×1.00</strong><small id="summon-minute-note">効果なし · 装備100%適用</small></div>
                 </div>
                 <div class="roll-controls">
                   <button class="roll-button" id="roll-btn"><svg><use href="#i-spark"/></svg><span>ROLL THE FATE</span><small>SPACE</small></button>
@@ -963,6 +1043,31 @@ html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
                 </div>
                 <div class="panel-bottom"><span>✦ &nbsp; 確率は各オーラの基礎出現率</span><span>PRESS SPACE TO ROLL</span></div>
               </div>
+
+              <details class="cinema-settings panel" id="cinema-settings">
+                <summary class="cinema-settings-summary">
+                  <span class="cinema-settings-crest" aria-hidden="true">✧</span>
+                  <span class="cinema-settings-heading"><strong>レア演出をカスタマイズ</strong><small>EPIC以上のフル演出を、レア度ごとにON / OFF</small></span>
+                  <span class="cinema-settings-count" id="cinema-settings-count" aria-live="polite">7 / 7 ON</span>
+                  <svg class="cinema-settings-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg>
+                </summary>
+                <div class="cinema-settings-body">
+                  <div class="cinema-settings-quick">
+                    <p>OFFにしても排出確率・図鑑・セーブは変わりません。オートロールも止まりません。</p>
+                    <div class="cinema-settings-actions"><button type="button" id="cinema-all-on">すべてON</button><button type="button" id="cinema-all-off">すべてOFF</button></div>
+                  </div>
+                  <div class="cinema-tiers" id="cinema-tiers" role="group" aria-label="レア度別の演出設定">
+                    <button type="button" class="cinema-tier-toggle" data-cinema-tier="3" aria-pressed="true" style="--tier-accent:#b58aff"><span>◆ EPIC</span><b>ON</b></button>
+                    <button type="button" class="cinema-tier-toggle" data-cinema-tier="4" aria-pressed="true" style="--tier-accent:#ffd17d"><span>◆ LEGENDARY</span><b>ON</b></button>
+                    <button type="button" class="cinema-tier-toggle" data-cinema-tier="5" aria-pressed="true" style="--tier-accent:#ff85b4"><span>◆ MYTHIC</span><b>ON</b></button>
+                    <button type="button" class="cinema-tier-toggle" data-cinema-tier="6" aria-pressed="true" style="--tier-accent:#79ebf5"><span>◆ COSMIC</span><b>ON</b></button>
+                    <button type="button" class="cinema-tier-toggle" data-cinema-tier="7" aria-pressed="true" style="--tier-accent:#d2a4ff"><span>◆ TRANSCENDENT</span><b>ON</b></button>
+                    <button type="button" class="cinema-tier-toggle" data-cinema-tier="8" aria-pressed="true" style="--tier-accent:#ff607d"><span>◆ FORBIDDEN</span><b>ON</b></button>
+                    <button type="button" class="cinema-tier-toggle" data-cinema-tier="9" aria-pressed="true" style="--tier-accent:#fff1c5"><span>◆ ABSOLUTE</span><b>ON</b></button>
+                  </div>
+                  <p class="cinema-settings-footnote">通常のフル演出条件：EPIC・LEGENDARYは初発見時、MYTHIC以上は毎回。設定はこのブラウザのセーブに保存されます。</p>
+                </div>
+              </details>
 
               <div class="quick-stats"><div class="stat-tile"><span class="stat-symbol teal">✧</span><div><small>CURRENT LUCK</small><strong id="stat-luck">1.00×</strong><p id="luck-source">装備とポーションで上昇</p></div></div><div class="stat-tile"><span class="stat-symbol purple">◈</span><div><small>TOTAL ROLLS</small><strong id="stat-rolls">0</strong><p>運命への挑戦回数</p></div></div><div class="stat-tile"><span class="stat-symbol amber">✶</span><div><small>BEST PULL</small><strong id="stat-best">—</strong><p id="stat-best-odds">まだ記録がありません</p></div></div></div>
             </div>
@@ -978,7 +1083,7 @@ html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
                 <div class="orb-details"><span id="equipped-aura-tier">AURA NOT EQUIPPED</span><h3 id="equipped-aura-name">未装備</h3><p id="equipped-aura-odds">図鑑からオーラを装備しよう</p></div>
                 <button class="rail-action" data-goto="collection">オーラを選ぶ <svg><use href="#i-chevron"/></svg></button>
               </div>
-              <div class="rail-card panel"><div class="rail-title"><div><span class="title-spark">✦</span> ACTIVE BOOST</div><span class="micro-label">LIVE</span></div><div class="boost-big"><span id="boost-num">1.00</span><b>×</b></div><div class="boost-caption">CURRENT LUCK MULTIPLIER</div><div class="boost-divider"></div><div class="boost-rows"><div><span>装備ボーナス</span><strong id="rail-gear">+0.00×</strong></div><div><span>ポーション倍率</span><strong id="rail-potion">×1.00</strong></div><div><span>次の効果終了</span><strong id="rail-timer">—</strong></div><div><span>重ねがけ</span><strong id="rail-stack">0 / 6</strong></div></div><button class="rail-action" data-goto="forge">ラック装備を見る <svg><use href="#i-chevron"/></svg></button></div>
+              <div class="rail-card panel"><div class="rail-title"><div><span class="title-spark">✦</span> ACTIVE BOOST</div><span class="micro-label">LIVE</span></div><div class="boost-big"><span id="boost-num">1.00</span><b>×</b></div><div class="boost-caption">NEXT ROLL / EFFECTIVE LUCK (MAX ×1億)</div><div class="boost-divider"></div><div class="boost-rows"><div><span>装備ボーナス</span><strong id="rail-gear">+0.00×</strong></div><div><span>優先ポーション倍率</span><strong id="rail-potion">×1.00</strong></div><div><span>1分型の残り時間</span><strong id="rail-timer">—</strong></div><div><span>1ロール型セット</span><strong id="rail-stack">0 / 6</strong></div></div><button class="rail-action" data-goto="forge">ラック装備を見る <svg><use href="#i-chevron"/></svg></button></div>
               <div class="rail-card panel activity-panel"><div class="rail-title"><div><span class="title-spark mint">◉</span> RECENT PULLS</div><span class="micro-label">LAST 05</span></div><div id="recent-list" class="recent-list"><div class="empty-recent">最初のオーラを引こう。<br>あなたの物語はここから始まる。</div></div></div>
               <div class="tip-banner"><span class="tip-star">✧</span><div><b>CRAFT YOUR FUTURE</b><p>重複したオーラから装備やポーションを作って、さらに強い運を手に入れよう。</p></div><button data-goto="forge" aria-label="クラフトへ"><svg><use href="#i-chevron"/></svg></button></div>
             </div>
@@ -1010,7 +1115,18 @@ html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
 </section>
 <div class="subhead"><h2>装備スロット <span>／ EQUIPPED</span></h2></div><div class="equip-slots" id="equip-slots"></div><div class="subhead with-gap"><h2>クラフト設計図 <span>／ BLUEPRINTS</span></h2><div class="small-note">素材はクラフト時に消費されます</div></div><div class="recipe-grid" id="gear-grid"></div></section>
 
-        <section class="page" id="page-potions" aria-labelledby="potions-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> ALCHEMY LAB <span class="eyebrow-dot">◆</span> TEMPORARY POWER</div><h1 id="potions-title">一瞬に、<em>奇跡を宿せ。</em></h1><p>オーラとスターダストを調合。ここぞという時に運命を加速させよう。</p></div></div><div class="potion-active panel"><div class="potion-illustration">◈</div><div><span>ACTIVE ELIXIR</span><strong id="active-potion-name">ポーション効果なし</strong><p id="active-potion-text">ポーションを作成して使用すると、期間中ラックが上がります。</p></div><div class="potion-clock" id="active-potion-timer">0 / 6</div></div><div class="active-potion-stack" id="active-potion-stack" aria-label="重ねがけ中のポーション"></div><div class="subhead"><h2>所持しているポーション <span>／ INVENTORY</span></h2></div><div class="potion-inventory" id="potion-inventory"></div><div class="subhead with-gap"><h2>調合レシピ <span>／ LABORATORY</span></h2><span class="small-note">同種も重ねがけOK · 最大6本 · 倍率は掛け算 · 超レア優先抽選</span></div><div class="recipe-grid" id="potion-grid"></div></section>
+        <section class="page" id="page-potions" aria-labelledby="potions-title">
+          <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> VOID ALCHEMY <span class="eyebrow-dot">◆</span> NEW LUCK SYSTEM</div><h1 id="potions-title">運命を、<em>分岐させろ。</em></h1><p>次の1ロールへ集中するか、1分間の安定した幸運を選ぶか。</p></div></div>
+          <div class="dual-potion-status">
+            <div class="potion-status-card panel shot-card"><div class="mode-badge">✦ 1ロール型 / ONE SHOT</div><strong id="shot-active-luck">×1.00</strong><span id="shot-active-detail">0/6本 セット中</span><p>最大6本を掛け算して次の1ロールでまとめて消費。装備ラックの10%を適用。</p></div>
+            <div class="potion-status-card panel minute-card"><div class="mode-badge">◷ 1分間型 / ONE MINUTE</div><strong id="minute-active-luck">×1.00</strong><span id="minute-active-detail">効果なし</span><p>1本のみ発動可能。1ロール型がセットされている間は時間を停止して待機。</p></div>
+          </div>
+          <div class="potion-system-explain">次の抽選では <b>1ロール型 → 1分間型 → 装備のみ</b> の順に優先。実効ラックの上限は <b>1億倍</b>。高倍率が重なっても抽選を破綻させない設計です。</div>
+          <div class="subhead"><h2>所持ポーション <span>／ INVENTORY</span></h2></div>
+          <div id="potion-inventory"></div>
+          <div class="subhead with-gap"><h2>調合レシピ <span>／ LABORATORY</span></h2></div>
+          <div id="potion-grid"></div>
+        </section>
 
         <section class="page" id="page-records" aria-labelledby="records-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR LEGACY <span class="eyebrow-dot">◆</span> ARCHIVE STATUS</div><h1 id="records-title">すべての軌跡を、<em>刻め。</em></h1><p>歩んだ記録を確認し、セーブデータを管理しよう。</p></div></div><div class="records-grid" id="records-grid"></div><div class="records-bottom"><div class="panel data-panel"><div class="subhead"><h2>セーブデータ <span>／ DATA MANAGEMENT</span></h2></div><p>プレイ内容はこのブラウザに自動保存されます。ブラウザのデータ削除に備えて、バックアップファイルの保存をおすすめします。</p><div class="save-status"><span class="online-dot"></span><span id="save-status-text">自動セーブ有効</span></div><div class="data-actions"><button id="export-btn" class="solid-small"><svg><use href="#i-down"/></svg> セーブを書き出す</button><label class="outline-btn import-btn"><svg><use href="#i-up"/></svg> セーブを読み込む<input id="import-input" type="file" accept=".json,application/json" hidden></label></div><div class="data-warning"><span>注意</span> 別のブラウザ・端末には自動で同期されません。プライベートブラウズでは保存できない場合があります。</div><div class="admin-code-panel"><div class="admin-code-header"><span>✦</span><div><b>ADMIN CODE</b><small>このコードは管理者だけが知っています</small></div></div><form id="admin-code-form" class="admin-code-form"><input id="admin-code-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="12" placeholder="管理コードを入力" autocomplete="off" aria-label="管理コード"><button type="submit">コードを使用</button></form><div id="admin-code-message" class="admin-code-message" role="status">コードを入力して認証してください。</div></div><button class="danger-link" id="reset-btn">全データを初期化</button></div><div class="panel achievements-panel"><div class="subhead"><h2>進行状況 <span>／ MILESTONES</span></h2></div><div id="milestone-list"></div></div></div></section>
       </main>
@@ -1025,7 +1141,7 @@ html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
   </nav>
   <div id="toast-stack" class="toast-stack" role="status" aria-live="polite"></div>
   <div id="discovery-overlay" class="discovery-overlay" hidden><div class="discovery-wash"></div><div class="discovery-content"><div class="discovery-eyebrow">✦ &nbsp; NEW DISCOVERY &nbsp; ✦</div><div class="discovery-icon">✧</div><div class="discovery-name" id="discovery-name"></div><div class="discovery-odds" id="discovery-odds"></div><button id="discovery-dismiss">CONTINUE <svg><use href="#i-chevron"/></svg></button></div></div>
-  <dialog id="help-modal" class="help-modal"><div class="help-inner"><button class="help-close icon-btn" id="help-close" aria-label="閉じる"><svg><use href="#i-close"/></svg></button><div class="eyebrow"><span class="eyebrow-line"></span> WELCOME TO VOID</div><h2>運命を書き換える、<em>準備はいい？</em></h2><div class="help-steps"><div><span>01</span><b>ROLL</b><p>中央のボタンでオーラを抽選。80種類の頂点は1兆分の1。スペースキーでも抽選できる。</p></div><div><span>02</span><b>COLLECT</b><p>図鑑に発見を記録。同じオーラを複数獲得するとクラフト素材にも使える。</p></div><div><span>03</span><b>ASCEND</b><p>装備とポーションでラックを強化。ポーションは最大6本まで重複できる。</p></div></div><div class="help-extra">※ 表示の「1/N」は基準レート。各オーラを独立に判定し、当選した中で最も高いレア度から選びます。ラックが高いほど高レアを狙えます。<br>※ セーブはこの端末のブラウザに保存。大切なデータは「記録・セーブ」で書き出せます。</div><button id="help-start" class="roll-button">LET'S BEGIN <svg><use href="#i-chevron"/></svg></button></div></dialog>
+  <dialog id="help-modal" class="help-modal"><div class="help-inner"><button class="help-close icon-btn" id="help-close" aria-label="閉じる"><svg><use href="#i-close"/></svg></button><div class="eyebrow"><span class="eyebrow-line"></span> WELCOME TO VOID</div><h2>運命を書き換える、<em>準備はいい？</em></h2><div class="help-steps"><div><span>01</span><b>ROLL</b><p>中央のボタンでオーラを抽選。80種類の頂点は100億分の1。スペースキーでも抽選できる。</p></div><div><span>02</span><b>COLLECT</b><p>図鑑に発見を記録。同じオーラを複数獲得するとクラフト素材にも使える。</p></div><div><span>03</span><b>ASCEND</b><p>装備とポーションでラックを強化。1ロール型は6本まで重ねがけ、1分型は1本だけ。</p></div></div><div class="help-extra">※ 表示の「1/N」は基準レート。各オーラを独立に判定し、当選した中で最も高いレア度から選びます。ラックが高いほど高レアを狙えます。<br>※ セーブはこの端末のブラウザに保存。大切なデータは「記録・セーブ」で書き出せます。</div><button id="help-start" class="roll-button">LET'S BEGIN <svg><use href="#i-chevron"/></svg></button></div></dialog>
   <script>
 /* VOID RNG — Standalone browser game (no frameworks required). */
 (() => {
@@ -1034,8 +1150,12 @@ const $ = (id) => document.getElementById(id);
 const icon = (name) => `<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const STORAGE_KEY = 'aether_rng_save_reset_season-622fc8de61ee4d7569fa'; // New season: old local saves are not loaded.
 const SAVE_EPOCH = 'season-622fc8de61ee4d7569fa';
-const MAX_POTION_STACKS = 6;
-const PROMO_KEY = STORAGE_KEY + '__stellar_5000_once';
+const MAX_POTION_STACKS = 6; // 1ロール型: 最大6本を同じ1回で消費
+const MAX_EFFECTIVE_LUCK = 100000000; // 乱数飽和防止: 実効ラック最大1億倍
+
+// Welcome-gift distribution ended; existing gifted potions remain in saves.
+const CINEMATIC_TIERS=[3,4,5,6,7,8,9];
+const defaultCinematicTiers=()=>Object.fromEntries(CINEMATIC_TIERS.map(t=>[String(t),true]));
 const TIERS = [
   {name:'BASIC',jp:'ベーシック',color:'#91a0b7'},
   {name:'UNCOMMON',jp:'アンコモン',color:'#52d6be'},
@@ -1068,9 +1188,9 @@ const ODDS = [
   [120000,180000,250000,375000,500000,750000,1000000,1500000],
   [2250000,3500000,5000000,7500000,12000000,20000000,30000000,50000000],
   [75000000,100000000,150000000,200000000,300000000,450000000,650000000,900000000],
-  [1200000000,1800000000,2500000000,4000000000,6500000000,10000000000,15000000000,25000000000],
-  [40000000000,55000000000,80000000000,100000000000,150000000000,200000000000,300000000000,450000000000],
-  [500000000000,600000000000,700000000000,800000000000,850000000000,900000000000,950000000000,1000000000000],
+  [1200000000,1350000000,1500000000,1700000000,1900000000,2100000000,2300000000,2500000000],
+  [2600000000,2900000000,3200000000,3550000000,3900000000,4250000000,4600000000,5000000000],
+  [5400000000,6000000000,6600000000,7200000000,7800000000,8500000000,9200000000,10000000000],
 ];
 const GLYPHS = ['✦','✧','◈','✳','✶','❖','✴','✺'];
 const AURAS = NAMES.flatMap((names, tier) => names.map((name, index) => ({
@@ -1088,17 +1208,40 @@ const GEAR = [
   {id:'origin-engine',name:'オリジンエンジン',slot:'core',slotName:'CORE',bonus:30,glyph:'⟡',color:'#ff90bc',desc:'すべての始まりを再起動させる装置。',cost:[['ORIGIN',1],['PARADOX',1]],dust:6000},
   {id:'void-sigil',name:'虚無のシジル',slot:'charm',slotName:'CHARM',bonus:55,glyph:'✹',color:'#86e3fc',desc:'宇宙の法則そのものを書き換える。',cost:[['DARK MATTER',1],['OMEGA',1]],dust:20000},
 ];
+// Potion v15: one-shot (all queued doses are spent on ONE roll) or minute (one active, non-stackable).
+// All old potion IDs are retained where possible, so previous inventory is migrated without losing items.
 const POTIONS = [
-  {id:'spark-elixir',name:'スパーク・エリクサー',mult:2.5,seconds:120,color:'#77e9cd',glyph:'♧',desc:'初歩の錬金術で幸運をしっかり底上げする。',cost:[['EMBER',1],['MIST',1]],dust:25},
-  {id:'glimmer-draught',name:'グリマー・ドロップ',mult:4.5,seconds:95,color:'#8dc7ff',glyph:'◇',desc:'凝縮された光で運命の引力を大きく強化。',cost:[['GLIMMER',2],['SPARK',1]],dust:80},
-  {id:'prism-philter',name:'プリズム・フィルター',mult:10,seconds:80,color:'#c1a2ff',glyph:'✥',desc:'複数の未来線を束ね、強くレアを引き寄せる。',cost:[['PRISM',1],['LUNAR',1]],dust:200},
-  {id:'nebula-serum',name:'ネビュラ・セラム',mult:30,seconds:65,color:'#f49cde',glyph:'✶',desc:'星雲の圧縮核を使った超高出力の短期決戦薬。',cost:[['STARDUST',1],['NEBULA',1]],dust:700},
-  {id:'omega-essence',name:'オメガ・エッセンス',mult:120,seconds:50,color:'#ffd59b',glyph:'✺',desc:'常識を壊す級の超越ポーション。',cost:[['ZENITH',1],['OMEGA',1]],dust:5000},
+  {id:'spark-elixir',name:'スパーク・エリクサー',kind:'shot',mult:1.5,color:'#77e9cd',desc:'次の1ロール専用。重ねがけ可能。',cost:[['EMBER',1],['MIST',1]],dust:25},
+  {id:'glimmer-draught',name:'グリマー・ドロップ',kind:'shot',mult:2,color:'#8dc7ff',desc:'光の粒子を一度の抽選に集中。',cost:[['GLIMMER',2],['SPARK',1]],dust:80},
+  {id:'prism-philter',name:'プリズム・フィルター',kind:'shot',mult:2.5,color:'#c1a2ff',desc:'虹色の運命を1ロールに凝縮。',cost:[['PRISM',1],['LUNAR',1]],dust:200},
+  {id:'thunder-tonic',name:'サンダー・トニック',kind:'shot',mult:3,color:'#78c9ff',desc:'RAREの雷を次の1回に解き放つ。',cost:[['THUNDER',1]],tierCost:[{tier:2,count:2}],dust:320},
+  {id:'epic-storm',name:'エピック・ストーム',kind:'shot',mult:4,color:'#c799ff',desc:'EPICを次の1ロールだけ暴走させる。',cost:[['SYMPHONY',1]],tierCost:[{tier:3,count:3}],dust:1100},
+  {id:'nebula-serum',name:'ネビュラ・セラム',kind:'shot',mult:5,color:'#f49cde',desc:'星雲のエネルギーを一瞬だけ爆発させる。',cost:[['STARDUST',1],['NEBULA',1]],dust:700},
+  {id:'solstice-brew',name:'ソルスティス・ブリュー',kind:'shot',mult:6,color:'#ffd27c',desc:'黄金の残光を次の抽選に賭ける。',cost:[['SOLSTICE',1]],tierCost:[{tier:4,count:2}],dust:4000},
+  {id:'seraph-nectar',name:'セラフ・ネクター',kind:'shot',mult:8,color:'#ffeabf',desc:'神聖な一撃を生み出す霊薬。',cost:[['SERAPH',1]],tierCost:[{tier:5,count:2}],dust:12000},
+  {id:'omega-essence',name:'オメガ・エッセンス',kind:'shot',mult:10,color:'#ffd59b',desc:'極限の幸運を次の1回に。',cost:[['ZENITH',1],['OMEGA',1]],dust:5000},
+  {id:'quasar-catalyst',name:'クエーサー・カタリスト',kind:'shot',mult:12,color:'#8cecff',desc:'宇宙の閃光を一度だけ増幅。',cost:[['QUASAR',1]],tierCost:[{tier:6,count:2}],dust:25000},
+  {id:'aeon-ampoule',name:'イーオン・アンプル',kind:'shot',mult:15,color:'#cbb7ff',desc:'時間を切り取った超越の一滴。',cost:[['AEON',1]],tierCost:[{tier:7,count:2}],dust:55000},
+  {id:'abyss-surge',name:'アビス・サージ',kind:'shot',mult:18,color:'#ff829e',desc:'禁忌の力を次の1ロールにすべて注ぐ。',cost:[['BLACK SUN',1]],tierCost:[{tier:8,count:2}],dust:105000},
+  {id:'absolute-serum',name:'アブソリュート・セラム',kind:'shot',mult:22,color:'#fce8c0',desc:'絶対級の幸運を一度の抽選に宿す。',cost:[['THE FIRST STAR',1]],tierCost:[{tier:9,count:2}],dust:260000},
+  {id:'minute-ember',name:'残光のメディスン',kind:'minute',mult:2,seconds:60,color:'#70edd0',desc:'1分間ラック×2。重ねがけ不可。',cost:[['EMBER',3],['MIST',3]],dust:75},
+  {id:'minute-starlight',name:'星光のドロップ',kind:'minute',mult:5,seconds:60,color:'#9cc6ff',desc:'1分間ラック×5。重ねがけ不可。',cost:[['GLIMMER',3],['SPARK',2]],dust:250},
+  {id:'minute-astral',name:'星界のラピス',kind:'minute',mult:15,seconds:60,color:'#b69bff',desc:'1分間ラック×15。重ねがけ不可。',cost:[['VORTEX',2]],tierCost:[{tier:3,count:2}],dust:1300},
+  {id:'minute-eclipse',name:'日蝕の水銀',kind:'minute',mult:50,seconds:60,color:'#ffca90',desc:'1分間ラック×50。重ねがけ不可。',cost:[['ECLIPSE',1]],tierCost:[{tier:4,count:2}],dust:5000},
+  {id:'minute-cosmic',name:'銀河のアンブロシア',kind:'minute',mult:150,seconds:60,color:'#7ceafa',desc:'1分間ラック×150。重ねがけ不可。',cost:[['QUASAR',1]],tierCost:[{tier:6,count:2}],dust:35000},
+  {id:'minute-abyss',name:'奈落のイコル',kind:'minute',mult:450,seconds:60,color:'#ff7da6',desc:'1分間ラック×450。重ねがけ不可。',cost:[['ABYSS WALKER',1]],tierCost:[{tier:8,count:2}],dust:120000},
+  {id:'minute-absolute',name:'永劫の神水',kind:'minute',mult:1200,seconds:60,color:'#f7dcff',desc:'1分間ラック×1,200。重ねがけ不可。',cost:[['LAST LIGHT',1]],tierCost:[{tier:9,count:2}],dust:290000},
+  // v15.1: seven new minute-only brews bridge the previous large multiplier gaps.
+  {id:'minute-shimmer',name:'薄明のしずく',kind:'minute',mult:3,seconds:60,color:'#75e7b3',desc:'星明かりの残光で1分間ラック×3。重ねがけ不可。',cost:[['NEON',2],['RADIANT',1]],dust:150},
+  {id:'minute-polaris',name:'北辰のエッセンス',kind:'minute',mult:9,seconds:60,color:'#73b9ff',desc:'北極星の導きで1分間ラック×9。重ねがけ不可。',cost:[['POLARIS',2],['MIRAGE',1]],tierCost:[{tier:2,count:2}],dust:650},
+  {id:'minute-nebula',name:'星雲の霊液',kind:'minute',mult:30,seconds:60,color:'#d39cff',desc:'星雲の粒子を閉じこめた1分間ラック×30。重ねがけ不可。',cost:[['NEBULA',1],['STARDUST',1]],tierCost:[{tier:3,count:2}],dust:2600},
+  {id:'minute-chronos',name:'刻時の水晶液',kind:'minute',mult:80,seconds:60,color:'#f1bb80',desc:'時の流れに力を宿し1分間ラック×80。重ねがけ不可。',cost:[['CHRONOS',1],['SERAPH',1]],tierCost:[{tier:4,count:2}],dust:10500},
+  {id:'minute-origin',name:'原初のアムリタ',kind:'minute',mult:250,seconds:60,color:'#fa96cd',desc:'原初の輝きを調合した1分間ラック×250。重ねがけ不可。',cost:[['ORIGIN',1],['PARADOX',1]],tierCost:[{tier:5,count:2}],dust:50000},
+  {id:'minute-genesis',name:'創世のネクター',kind:'minute',mult:700,seconds:60,color:'#a1f5ff',desc:'創世の力を宿す1分間ラック×700。重ねがけ不可。',cost:[['GENESIS',1]],tierCost:[{tier:7,count:2}],dust:160000},
+  {id:'minute-zenith',name:'天頂のエリクシル',kind:'minute',mult:1800,seconds:60,color:'#fff0c9',desc:'宇宙の頂点で精製した1分間ラック×1,800。重ねがけ不可。',cost:[['THE FIRST STAR',1]],tierCost:[{tier:9,count:2}],dust:420000},
+  {id:'stellar-welcome-5000',name:'星界の歓迎ギフト',kind:'minute',mult:5000,seconds:60,color:'#87f7e9',gift:true,desc:'既存の限定配布を引き継ぐ。1分間ラック×5,000。',cost:[],dust:0},
+  {id:'void-omega-elixir',name:'VOID Ω 管理者エリクサー',kind:'minute',mult:5000000,seconds:30,color:'#d7a2ff',admin:true,desc:'管理者専用。30秒間ラック×500万。時間型と重ねがけ不可。',cost:[],dust:0},
 ];
-// ONE-TIME SEASON GIFT: 5,000× for 60 seconds, one per browser save.
-POTIONS.push({id:'stellar-welcome-5000',name:'星界の歓迎ギフト',mult:5000,seconds:60,color:'#87f7e9',glyph:'✧',desc:'全プレイヤーへの1回限りの配布。使うと60秒間ラック×5,000。',gift:true,cost:[],dust:0});
-// Special elixir (client-side game reward).
-POTIONS.push({id:'void-omega-elixir',name:'VOID Ω 管理者エリクサー',mult:5000000,seconds:600,color:'#d7a2ff',glyph:'✦',desc:'管理コードで獲得できる、10分間ラックを500万倍にする特別なポーション。',admin:true,cost:[],dust:0});
 
 /* v10: new advanced equipment and alchemy recipes.
    tierCost consumes ANY owned aura in that EXACT rarity, AFTER named ingredients.
@@ -1117,27 +1260,17 @@ GEAR.push(
   {id:'last-light-sanctum',name:'ラストライト・サンクタム',slot:'core',slotName:'CORE',bonus:2000,glyph:'✦',color:'#fff2cc',desc:'宇宙最後の光を保持し続ける伝説の保管炉。',cost:[['LAST LIGHT',1]],tierCost:[{tier:9,count:3}],dust:650000},
   {id:'void-apotheosis',name:'ヴォイド・アポセオシス',slot:'charm',slotName:'CHARM',bonus:3500,glyph:'✵',color:'#efbaff',desc:'禁忌と絶対を融合させた究極の守護紋。',cost:[['NULL GOD',1],['APOTHEOSIS',1]],tierCost:[{tier:8,count:2},{tier:9,count:2}],dust:950000}
 );
-POTIONS.push(
-  {id:'thunder-tonic',name:'サンダー・トニック',mult:6,seconds:150,color:'#78c9ff',glyph:'ϟ',desc:'RAREの電荷を調合した、持続型のラック薬。',cost:[['THUNDER',1]],tierCost:[{tier:2,count:2}],dust:320},
-  {id:'epic-storm',name:'エピック・ストーム',mult:18,seconds:90,color:'#c799ff',glyph:'✳',desc:'EPICの力を束ねて一時的に運命を暴走させる。',cost:[['SYMPHONY',1]],tierCost:[{tier:3,count:3}],dust:1100},
-  {id:'solstice-brew',name:'ソルスティス・ブリュー',mult:60,seconds:65,color:'#ffd27c',glyph:'☼',desc:'レジェンダリーの残光を凝縮した黄金の秘薬。',cost:[['SOLSTICE',1]],tierCost:[{tier:4,count:2}],dust:4000},
-  {id:'seraph-nectar',name:'セラフ・ネクター',mult:180,seconds:60,color:'#ffeabf',glyph:'✥',desc:'MYTHICの神秘を授かる祝福の霊薬。',cost:[['SERAPH',1]],tierCost:[{tier:5,count:2}],dust:12000},
-  {id:'quasar-catalyst',name:'クエーサー・カタリスト',mult:550,seconds:50,color:'#8cecff',glyph:'✺',desc:'COSMICの光を放出する超高密度触媒。',cost:[['QUASAR',1]],tierCost:[{tier:6,count:2}],dust:25000},
-  {id:'aeon-ampoule',name:'イーオン・アンプル',mult:1800,seconds:45,color:'#cbb7ff',glyph:'⧖',desc:'TRANSCENDENTの時空を薬に封じた増幅液。',cost:[['AEON',1]],tierCost:[{tier:7,count:2}],dust:55000},
-  {id:'abyss-surge',name:'アビス・サージ',mult:6000,seconds:35,color:'#ff829e',glyph:'✴',desc:'FORBIDDENの深淵を一瞬だけ解放する。',cost:[['BLACK SUN',1]],tierCost:[{tier:8,count:2}],dust:105000},
-  {id:'absolute-serum',name:'アブソリュート・セラム',mult:20000,seconds:28,color:'#fce8c0',glyph:'◇',desc:'ABSOLUTEの光を瞬間圧縮。最上位のラック強化液。',cost:[['THE FIRST STAR',1]],tierCost:[{tier:9,count:2}],dust:260000}
-);
 // Consistent display order: low to high luck, no matter when each recipe was added.
 GEAR.sort((a,b)=>a.bonus-b.bonus || a.name.localeCompare(b.name,'ja'));
-POTIONS.sort((a,b)=>a.mult-b.mult || a.name.localeCompare(b.name,'ja'));
+POTIONS.sort((a,b)=>(a.kind===b.kind?0:(a.kind==='shot'?-1:1)) || a.mult-b.mult || a.name.localeCompare(b.name,'ja'));
 const SLOT_LABELS = {ring:'SLOT 01 / 装備枠1',core:'SLOT 02 / 装備枠2',charm:'SLOT 03 / 装備枠3'};
 const PAGE_NAMES = {roll:'SUMMON',collection:'COLLECTION',forge:'CRAFTING',potions:'ALCHEMY',records:'RECORDS'};
 const fmt = (v) => Math.floor(Number(v)||0).toLocaleString('ja-JP');
 
 const VOID_RARE_TITLES = ['STARFALL','ABYSSAL','CELESTIAL','FRACTURE','ECLIPSE','REQUIEM','INFINITY','PARADOX','ASCENSION','NEBULA','SUPERNOVA','SINGULARITY'];
 function voidRareDesign(a){
-  if(a.odds<10000)return null;
-  const level=a.odds>=100000000000?6:a.odds>=10000000000?5:a.odds>=1000000000?4:a.odds>=100000000?3:a.odds>=1000000?2:1;
+  if(a.tier<3)return null;
+  const level=Math.max(1,Math.min(6,a.tier-2));
   const seed=a.id*137+Math.round(Math.log10(a.odds))*71;
   const hue=(seed*43)%360;
   const alt=`hsl(${(hue+64+level*12)%360} 100% 78%)`;
@@ -1149,7 +1282,7 @@ const oddsText = (a) => a.odds ? `1 / ${fmt(a.odds)}` : 'BASE AURA';
 const safeInt = (n, max=1e12) => Number.isSafeInteger(n) && n>=0 ? Math.min(max,n) : 0;
 const validGearId = (id) => GEAR.some(g => g.id===id);
 const validPotionId = (id) => POTIONS.some(p => p.id===id);
-const freshState = () => ({version:6,resetEpoch:SAVE_EPOCH,rolls:0,shards:0,bestId:0,equippedAura:null,inventory:{},discovered:{},recent:[],gearOwned:[],equipped:{ring:null,core:null,charm:null},potions:{},activePotions:[],promoGiftClaimed:false,fast:false,sound:true});
+const freshState = () => ({version:7,resetEpoch:SAVE_EPOCH,rolls:0,shards:0,bestId:0,equippedAura:null,inventory:{},discovered:{},recent:[],gearOwned:[],equipped:{ring:null,core:null,charm:null},potions:{},activePotions:[],oneRollQueued:[],minutePotion:null,promoGiftClaimed:false,fast:false,sound:true,cinematicTiers:defaultCinematicTiers()});
 function normalizeState(obj) {
   if (!obj || typeof obj!=='object' || Array.isArray(obj)) throw new Error('セーブデータ形式が正しくありません。');
   if(![1,2,3,4,5].includes(Number(obj.version)) && !(obj.inventory&&typeof obj.inventory==='object') && !(obj.discovered&&typeof obj.discovered==='object')) throw new Error('このセーブデータのバージョンは対応していません。');
@@ -1182,15 +1315,38 @@ function normalizeState(obj) {
   if(obj.potions && typeof obj.potions==='object') for(const p of POTIONS) {
     const n=safeInt(obj.potions[p.id],1e6); if(n) s.potions[p.id]=n;
   }
-  // v1 stored only one potion; migrate it automatically so existing saves still work.
-  const savedEffects=Array.isArray(obj.activePotions) ? obj.activePotions : (obj.activePotion ? [obj.activePotion] : []);
-  for(const e of savedEffects.slice(0,MAX_POTION_STACKS)){
-    if(e && validPotionId(e.id) && Number.isFinite(e.expires) && e.expires>Date.now() && e.expires<Date.now()+24*3600e3){
-      s.activePotions.push({id:e.id,expires:e.expires});
+  // Seamlessly migrate inventory; old-duration buffs convert back into unspent items.
+  // v15 saves use distinct queues and have no overlapping minute buffs.
+  if(Array.isArray(obj.oneRollQueued)){
+    // The admin potion changed from single-roll to 30-second. Refund any old
+    // queued copy so upgrading does not silently destroy a player's item.
+    for(const id of obj.oneRollQueued.slice(0,MAX_POTION_STACKS)){
+      if(id==='void-omega-elixir')s.potions[id]=Math.min(1000000,(s.potions[id]||0)+1);
+    }
+    s.oneRollQueued=obj.oneRollQueued.filter(id=>typeof id==='string' && POTIONS.some(p=>p.id===id && p.kind==='shot')).slice(0,MAX_POTION_STACKS);
+  }
+  if(obj.minutePotion && typeof obj.minutePotion==='object'){
+    const m=obj.minutePotion, p=POTIONS.find(x=>x.id===m.id && x.kind==='minute');
+    if(p && Number.isFinite(m.remainingMs) && m.remainingMs>0){
+      const last=Number.isFinite(m.updatedAt)?Math.min(Date.now(),Math.max(0,m.updatedAt)):Date.now();
+      const elapsed=s.oneRollQueued.length ? 0 : Math.max(0,Date.now()-last);
+      const left=Math.min((p.seconds||60)*1000,m.remainingMs)-elapsed;
+      if(left>0)s.minutePotion={id:p.id,remainingMs:left,updatedAt:Date.now()};
+    }
+  }
+  if(!Array.isArray(obj.oneRollQueued) && !obj.minutePotion){
+    const effects=Array.isArray(obj.activePotions)?obj.activePotions:(obj.activePotion?[obj.activePotion]:[]);
+    for(const e of effects.slice(0,MAX_POTION_STACKS)){
+      if(e && typeof e.id==='string' && validPotionId(e.id) && Number.isFinite(e.expires) && e.expires>Date.now()){
+        s.potions[e.id]=Math.min(1000000,(s.potions[e.id]||0)+1);
+      }
     }
   }
   s.promoGiftClaimed=obj.promoGiftClaimed===true;
   s.fast=obj.fast===true; s.sound=obj.sound!==false;
+  if(obj.cinematicTiers && typeof obj.cinematicTiers==='object' && !Array.isArray(obj.cinematicTiers)){
+    for(const t of CINEMATIC_TIERS){s.cinematicTiers[t]=obj.cinematicTiers[t]!==false;}
+  }
   return s;
 }
 let state;
@@ -1211,48 +1367,46 @@ function save() {
   try { localStorage.setItem(STORAGE_KEY,JSON.stringify(state));canSave=true;lastSaveAt=Date.now(); }
   catch(e){if(canSave) toast('セーブに失敗しました','ブラウザの保存設定を確認し、データを書き出してください。','error'); canSave=false;}
 }
-function grantOneTimeGift(){
-  // Backendless GitHub Pages has browser-local saves, NOT global accounts.
-  // The extra localStorage marker prevents repeated grants by importing an old
-  // save or by using the in-game reset button.
-  const gift=POTIONS.find(p=>p.gift);
-  if(!gift)return false;
-  let alreadyClaimed=state.promoGiftClaimed===true;
-  try{alreadyClaimed=alreadyClaimed||localStorage.getItem(PROMO_KEY)==='claimed';}catch(_){/* storage unavailable */}
-  state.promoGiftClaimed=true;
-  if(alreadyClaimed){
-    try{localStorage.setItem(PROMO_KEY,'claimed');}catch(_){}
-    save();return false;
-  }
-  state.potions[gift.id]=(state.potions[gift.id]||0)+1;
-  try{localStorage.setItem(PROMO_KEY,'claimed');}catch(_){}
-  save();return true;
-}
-const receivedWelcomeGift=grantOneTimeGift();
+// Promotional gift grants have ended. Previously granted inventory is still supported.
 function rng() {
-  // 53 random bits: sufficient to represent events with probability 1 / 1,000,000,000,000.
+  // 53 random bits: sufficient to represent 1-in-10,000,000,000 events.
   if (globalThis.crypto?.getRandomValues) {
     const u=new Uint32Array(2);crypto.getRandomValues(u);
     return ((u[0]>>>5)*67108864+(u[1]>>>6))/9007199254740992;
   }
   return Math.random(); // Fallback for older browsers; secure context recommended.
 }
-function activePotions(){
-  const before=state.activePotions.length;
-  state.activePotions=state.activePotions.filter(e=>e.expires>Date.now()&&validPotionId(e.id));
-  if(before!==state.activePotions.length) save();
-  return state.activePotions;
+// Purely local potion clock. While one-roll shots are queued, the minute effect
+// is paused, so the one-roll has priority without wasting the minute boost.
+function syncPotionClock(now=Date.now()){
+  const m=state.minutePotion;
+  if(!m)return false;
+  const valid=POTIONS.some(p=>p.id===m.id && p.kind==='minute');
+  if(!valid){state.minutePotion=null;return true;}
+  const elapsed=Math.max(0,now-(Number(m.updatedAt)||now));
+  if(!state.oneRollQueued.length){m.remainingMs=Math.max(0,m.remainingMs-elapsed);}
+  m.updatedAt=now;
+  if(m.remainingMs<=0){state.minutePotion=null;return true;}
+  return false;
 }
-function potionMultiplier(){
-  // The multiplier always equals the product of all active potion multipliers.
-  // Six 5,000,000× admin potions are valid; never silently re-normalize the result.
-  return activePotions().reduce((mult,e)=>{
-    const effect=POTIONS.find(p=>p.id===e.id);
-    return mult*(effect?.mult||1);
+function oneRollMultiplier(){
+  return state.oneRollQueued.reduce((acc,id)=>{
+    const p=POTIONS.find(p=>p.id===id&&p.kind==='shot');
+    return Math.min(MAX_EFFECTIVE_LUCK,acc*(p?.mult||1));
   },1);
 }
+function minuteMultiplier(){
+  return state.minutePotion?(POTIONS.find(p=>p.id===state.minutePotion.id)?.mult||1):1;
+}
 function gearBonus(){return Object.values(state.equipped).reduce((sum,id)=>sum+(GEAR.find(g=>g.id===id)?.bonus||0),0);}
-function luck(){return (1+gearBonus())*potionMultiplier();}
+function luck(){
+  syncPotionClock();
+  const gb=gearBonus();
+  if(state.oneRollQueued.length)return Math.min(MAX_EFFECTIVE_LUCK,(1+gb*.1)*oneRollMultiplier());
+  return Math.min(MAX_EFFECTIVE_LUCK,(1+gb)*minuteMultiplier());
+}
+function potionMultiplier(){return state.oneRollQueued.length?oneRollMultiplier():minuteMultiplier();}
+function activePotions(){return state.oneRollQueued.map(id=>({id,kind:'shot'})).concat(state.minutePotion?[{id:state.minutePotion.id,kind:'minute'}]:[]);}
 function multiplierText(n){
   if(!Number.isFinite(n))return '∞';
   if(n>=1e12)return n.toExponential(2);
@@ -1288,8 +1442,7 @@ function auraProbability(a,L){
   const multiplier=Number.isFinite(L)&&L>0 ? L : 1;
   return -Math.expm1(-multiplier/a.odds); // stable for tiny odds
 }
-function pickAura(){
-  const L=luck();
+function pickAura(L=luck()){
   // Check every tier independently. Highest tier wins, but every matching
   // aura in that tier has a fair opportunity to appear.
   for(let tier=TIERS.length-1;tier>=0;tier--){
@@ -1340,26 +1493,54 @@ function flushCraftAnnouncement(){
   toast('✦ 装備の素材がそろった！',list.map(g=>g.name).join(' / ')+' をクラフト可能','good');
   tone(760,.2,'triangle',.025);tone(1100,.28,'sine',.025,.13);
 }
+function cinematicEnabled(tier){
+  return tier<3 || state.cinematicTiers?.[tier]!==false;
+}
+function renderCinematicSettings(){
+  const enabled=CINEMATIC_TIERS.filter(cinematicEnabled).length;
+  $('cinema-settings-count').textContent=enabled+' / '+CINEMATIC_TIERS.length+' ON';
+  document.querySelectorAll('[data-cinema-tier]').forEach(btn=>{
+    const on=cinematicEnabled(Number(btn.dataset.cinemaTier));
+    btn.setAttribute('aria-pressed',String(on));
+    btn.querySelector('b').textContent=on?'ON':'OFF';
+    btn.title=TIERS[Number(btn.dataset.cinemaTier)].name+'のフル演出 '+(on?'ON':'OFF');
+  });
+}
+function setCinematicTier(tier,on){
+  if(!CINEMATIC_TIERS.includes(tier))return;
+  state.cinematicTiers[tier]=!!on;
+  renderCinematicSettings();save();
+}
+function setAllCinematicTiers(on){
+  CINEMATIC_TIERS.forEach(t=>{state.cinematicTiers[t]=!!on;});
+  renderCinematicSettings();save();
+}
 function startRoll(){
   if(rolling || hasModal)return;
+  syncPotionClock();
+  const rollLuck=luck(),usingOneRoll=state.oneRollQueued.length>0;
   rolling=true;$('roll-btn').disabled=true;$('summon-panel').classList.add('rolling');
   $('result-rank').textContent='SCANNING POSSIBILITIES';$('result-name').textContent='RESONATING...';$('result-odds').textContent='可能性の波形を解析中';$('result-new').hidden=true;
   const delay=state.fast?105:720;
   if(!state.fast)tone(250,.10,'sine',.014);
   setTimeout(()=>{
     const craftableBefore=new Set(currentlyCraftable().map(g=>g.id));
-    const a=pickAura();const first=!state.discovered[a.id];
+    const a=pickAura(rollLuck);const first=!state.discovered[a.id];
+    if(usingOneRoll){syncPotionClock();state.oneRollQueued=[];} // all stacked shots spent on exactly this roll
+    else{syncPotionClock();}
     state.rolls++;state.inventory[a.id]=(state.inventory[a.id]||0)+1;state.discovered[a.id]=true;
     state.shards+=1+Math.floor(rng()*3)+a.tier*2;
     if(a.odds>(AURAS[state.bestId]?.odds||0))state.bestId=a.id;
     state.recent.unshift({id:a.id,at:Date.now()});state.recent=state.recent.slice(0,35);
-    presentAura(a,first);burst(a);playRollSound(a);
-    if(a.tier>=4){const panel=$('summon-panel');panel.style.setProperty('--flash-color',a.color);panel.classList.remove('legend-flash');void panel.offsetWidth;panel.classList.add('legend-flash');}
+    const useEffects=cinematicEnabled(a.tier);
+    presentAura(a,first);
+    if(useEffects){burst(a);playRollSound(a);}
+    if(useEffects && a.tier>=4){const panel=$('summon-panel');panel.style.setProperty('--flash-color',a.color);panel.classList.remove('legend-flash');void panel.offsetWidth;panel.classList.add('legend-flash');}
     rolling=false;$('roll-btn').disabled=false;$('summon-panel').classList.remove('rolling');
     renderRollUI();save();
     // Epic 1/10k+ on first discovery, Legendary+ on first discovery,
     // Mythic+ every roll (including duplicates). Lower tiers do not interrupt auto-roll.
-    const cinematic=(a.tier>=5)||(first&&(a.tier>=4||a.odds>=10000));
+    const cinematic=useEffects && (a.tier>=5 || (first && a.tier>=3));
     if(cinematic)showDiscovery(a,first);
     else if(first && a.tier>=2)toast('NEW DISCOVERY · '+a.name,TIERS[a.tier].jp+' / '+oddsText(a),'good');
     announceNewCraftReady(craftableBefore);
@@ -1436,10 +1617,11 @@ function dismissDiscovery(){
 function renderRollUI(){
   const count=discoveredCount();$('nav-count').textContent=count+'/80';$('discover-counter').textContent=String(count).padStart(2,'0');$('discover-progress').style.width=(count/80*100)+'%';
   $('top-shards').textContent=fmt(state.shards);
-  const active=activePotions(),L=luck(),potionBoost=potionMultiplier();
-  $('stat-luck').textContent=multiplierText(L)+'×';$('boost-num').textContent=multiplierText(L);$('rail-gear').textContent='+'+gearBonus().toFixed(2)+'×';$('rail-potion').textContent='×'+multiplierText(potionBoost);
-  $('rail-stack').textContent=active.length+' / '+MAX_POTION_STACKS;
-  $('luck-source').textContent=active.length?`ポーション ${active.length}本重ねがけ中`:'装備とポーションで上昇';$('stat-rolls').textContent=fmt(state.rolls);
+  syncPotionClock();
+  const shots=state.oneRollQueued.length,L=luck(),potionBoost=potionMultiplier();
+  $('stat-luck').textContent=multiplierText(L)+'×';$('boost-num').textContent=multiplierText(L);$('rail-gear').textContent='+'+(state.oneRollQueued.length?gearBonus()*.1:gearBonus()).toFixed(2)+'×'+(state.oneRollQueued.length?' (10%)':'');$('rail-potion').textContent='×'+multiplierText(potionBoost);
+  $('rail-stack').textContent=shots+' / '+MAX_POTION_STACKS;
+  $('luck-source').textContent=shots?'1ロール型が最優先':state.minutePotion?'1分間型が発動中':'装備だけで抽選';$('stat-rolls').textContent=fmt(state.rolls);
   const best=state.rolls ? AURAS[state.bestId] : null;
   $('stat-best').textContent=best?.name||'—';$('stat-best-odds').textContent=best?oddsText(best):'まだ記録がありません';
   if(best?.tier>=5)$('player-rank').textContent='星界の観測者';else if(state.rolls>=1000)$('player-rank').textContent='星の収集者';else if(state.rolls>=100)$('player-rank').textContent='運命の探索者';else $('player-rank').textContent='星屑の旅人';
@@ -1678,7 +1860,22 @@ function __potionEmblem(id){
  'abyss-surge':'<circle cx="60" cy="55" r="25"/><circle cx="70" cy="47" r="23" fill="rgba(255,255,255,.14)" stroke="currentColor" stroke-opacity=".35" stroke-width="1.4"/><path d="M25 77 36 87 48 82M72 87 84 79 94 85"/>',
  'absolute-serum':'<path d="M60 13 92 55 60 100 28 55Z"/><path d="M60 13V100M28 55H92M60 13 40 55 60 100 80 55Z"/>',
  'stellar-welcome-5000':'<path d="M60 14 69 46 99 58 69 69 60 101 51 69 21 58 51 46Z"/><circle cx="60" cy="58" r="14"/>',
- 'void-omega-elixir':'<path d="M60 14 71 36 94 38 82 58 96 80 68 78 60 103 52 78 24 80 38 58 26 38 49 36Z"/><circle cx="60" cy="58" r="14"/><circle cx="60" cy="58" r="5" fill="#ffffff" fill-opacity=".88" stroke="none"/>'
+ 'void-omega-elixir':'<path d="M60 14 71 36 94 38 82 58 96 80 68 78 60 103 52 78 24 80 38 58 26 38 49 36Z"/><circle cx="60" cy="58" r="14"/><circle cx="60" cy="58" r="5" fill="#ffffff" fill-opacity=".88" stroke="none"/>',
+ 'minute-shimmer':'<path d="M60 20 67 41 86 47 72 61 76 83 60 73 44 83 48 61 34 47 53 41Z"/><path d="M25 80 33 73M87 29 96 21"/>',
+ 'minute-polaris':'<path d="M60 13 68 47 104 56 68 64 60 100 52 64 16 56 52 47Z"/><path d="M36 38 84 78M83 35 37 80"/><circle cx="60" cy="56" r="8"/>',
+ 'minute-nebula':'<path d="M26 65C22 36 58 17 84 35C105 53 86 95 57 91C24 88 31 51 60 48C78 45 86 61 75 75"/><path d="M43 32 55 43 43 53M80 77 70 68 84 60"/>',
+ 'minute-chronos':'<path d="M39 22H81M39 96H81M44 25Q40 42 59 58Q79 76 76 93M76 25Q79 43 60 58Q41 76 44 93"/><path d="M47 29 60 44 73 29M47 89 60 75 73 89"/>',
+ 'minute-origin':'<path d="M60 16 71 44 101 57 71 69 60 100 49 69 19 57 49 44Z"/><circle cx="60" cy="57" r="20"/><path d="M60 38V76M41 57H79"/>',
+ 'minute-genesis':'<path d="M60 17 94 38V78L60 99 26 78V38Z"/><path d="M60 29 82 44V72L60 87 38 72V44Z"/><path d="M60 29V87M38 44 82 72M82 44 38 72"/>',
+ 'minute-zenith':'<path d="M60 12 68 47 102 55 69 66 60 103 51 66 18 55 52 47Z"/><path d="M32 33 88 84M88 33 32 84"/><circle cx="60" cy="57" r="13"/>',
+ 'minute-ember':'<path d="M60 22Q88 52 69 83Q81 58 61 46Q52 68 46 79Q33 54 60 22Z"/><path d="M49 83Q60 65 68 83"/>',
+ 'minute-starlight':'<path d="M60 20 67 51 98 58 67 65 60 97 53 65 22 58 53 51Z"/><circle cx="60" cy="58" r="8"/>',
+ 'minute-astral':'<ellipse cx="60" cy="57" rx="37" ry="13" transform="rotate(-32 60 57)"/><ellipse cx="60" cy="57" rx="30" ry="11" transform="rotate(35 60 57)"/><circle cx="60" cy="57" r="11"/>',
+ 'minute-eclipse':'<circle cx="60" cy="56" r="25"/><path d="M76 33A25 25 0 0 0 76 78"/><path d="M45 35Q36 61 54 80"/>',
+ 'minute-cosmic':'<path d="M60 22 71 45 95 49 78 67 83 91 60 79 37 91 42 67 25 49 49 45Z"/><circle cx="60" cy="60" r="12"/>',
+ 'minute-abyss':'<path d="M32 32 49 42 60 21 72 42 89 32 81 83 60 96 39 83Z"/><path d="M44 62Q60 44 76 62Q60 82 44 62Z"/>',
+ 'minute-absolute':'<path d="M60 15 68 45 98 54 70 67 60 99 50 67 22 54 52 45Z"/><path d="M40 38 80 80M80 38 40 80"/><circle cx="60" cy="57" r="9"/>'
+
  };
  return motifs[id]||'<path d="M60 18 82 55 60 92 38 55Z"/>';
 }
@@ -1853,51 +2050,74 @@ function unequipSlot(slot){
   toast('装備解除完了',(gear?.name||SLOT_LABELS[slot])+'を外しました。','good');
 }
 function renderPotions(){
-  const active=activePotions(),mult=potionMultiplier(),full=active.length>=MAX_POTION_STACKS;
-  $('active-potion-name').textContent=active.length?`${active.length}本のポーション発動中`:'ポーション効果なし';
-  $('active-potion-text').textContent=active.length?`合計ラック ×${multiplierText(mult)}。同じ種類も重複OK！上位レア度から独立抽選。各ポーションは個別の時間で終了します。`:'同じ種類も違う種類も最大6本。各オーラに倍率を反映し、上位レア度から個別に抽選します。';
-  $('active-potion-timer').textContent=active.length+' / '+MAX_POTION_STACKS;
-  const soonestActive=active.length?active.reduce((a,b)=>a.expires<=b.expires?a:b):null;
-  const promoArt=soonestActive?POTIONS.find(p=>p.id===soonestActive.id):POTIONS.find(p=>p.gift)||POTIONS[0];
-  const potionIllustration=document.querySelector('#page-potions .potion-illustration');
-  if(potionIllustration) potionIllustration.innerHTML=renderPotionIcon(promoArt);
-  $('active-potion-stack').innerHTML=active.length?active.map((e,index)=>{
-    const p=POTIONS.find(x=>x.id===e.id);
-    return `<div class="stacked-elixir" style="--elixir-color:${p.color}"><span class="elixir-glyph">${renderPotionIcon(p)}</span><div class="elixir-details"><strong>${p.name}</strong><small>LUCK ×${p.mult.toLocaleString('ja-JP',{maximumFractionDigits:2})} · STACK ${index+1}</small></div><span class="elixir-time" data-potion-expiry="${e.expires}">${clockText(e.expires-Date.now())}</span></div>`;
-  }).join(''):'<div class="empty-stack"><span>✧</span> ポーションを使うとここに重ねがけの履歴と残り時間が並びます。</div>';
-  $('potion-inventory').innerHTML=POTIONS.filter(p=>(!p.admin&&!p.gift)||(state.potions[p.id]||0)>0||state.activePotions.some(e=>e.id===p.id)).map(p=>{const count=state.potions[p.id]||0;
-    return `<div class="inventory-potion" style="--potion-color:${p.color}"><div class="potion-emblem">${renderPotionIcon(p)}</div><b>${p.name}</b><span>×${fmt(count)} · LUCK ×${p.mult.toLocaleString('ja-JP',{maximumFractionDigits:2})}</span><button data-use-potion="${p.id}" ${count&&!full?'':'disabled'}>${full?'6本発動中':count?'使用する':'所持数 0'}</button></div>`;
-  }).join('');
-  $('potion-grid').innerHTML=POTIONS.filter(p=>!p.admin&&!p.gift).map(p=>{const can=canCraft(p);return `<article class="recipe-card" style="--recipe-color:${p.color}"><div class="recipe-top"><div class="recipe-icon">${renderPotionIcon(p)}</div><span class="recipe-category">ELIXIR · ALCHEMY</span></div><h3>${p.name}</h3><p class="recipe-desc">${p.desc}</p><div class="recipe-bonus">×${p.mult.toLocaleString('ja-JP',{maximumFractionDigits:2})} <small>LUCK / ${p.seconds} SEC</small></div><div class="recipe-ingredients">${ingredients(p)}</div><button class="craft-btn" data-craft-potion="${p.id}" ${can?'':'disabled'}>${can?'✦ 調合する':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
+  syncPotionClock();
+  const shot=state.oneRollQueued.length,minute=state.minutePotion;
+  const shotLuck=shot?Math.min(MAX_EFFECTIVE_LUCK,(1+gearBonus()*.1)*oneRollMultiplier()):1+gearBonus()*.1;
+  const minuteLuck=minute?Math.min(MAX_EFFECTIVE_LUCK,(1+gearBonus())*minuteMultiplier()):1+gearBonus();
+  $('shot-active-luck').textContent='×'+multiplierText(shotLuck);
+  $('shot-active-detail').textContent=shot?shot+'/6本 セット済み · 次の1回で全消費':'0/6本 · 次のロールにセット可能';
+  $('minute-active-luck').textContent='×'+multiplierText(minuteLuck);
+  $('minute-active-detail').textContent=minute?`${POTIONS.find(p=>p.id===minute.id)?.name||''} · ${clockText(minute.remainingMs)}${shot?' / 一時停止':''}`:'未使用 · 1分間ポーションを1本セット';
+  function potionCard(p){
+    const count=state.potions[p.id]||0;
+    const blocked=p.kind==='shot'?shot>=MAX_POTION_STACKS:!!minute;
+    return `<article class="inventory-potion" style="--potion-color:${p.color}"><div class="potion-emblem">${renderPotionIcon(p)}</div><b>${p.name}</b><span>所持 ×${fmt(count)} · LUCK ×${p.mult.toLocaleString('ja-JP')} / ${p.kind==='shot'?'1ロール':`${p.seconds||60}秒`}</span><button type="button" data-use-potion="${p.id}" ${count&&!blocked?'':'disabled'}>${!count?'所持数 0':blocked?(p.kind==='shot'?'6本セット済':'時間型を使用中'):'使用する'}</button></article>`;
+  }
+  function modeSection(kind,items,recipe=false){
+    const shotMode=kind==='shot';
+    const headline=shotMode?'ONE ROLL / 1ロール限定':'TIMED / 時間型';
+    const desc=shotMode?'重ねがけ可能・最大6本を次の1回で消費・装備10%':'重ねがけ不可・通常60秒（管理者専用30秒）・装備100%';
+    return `<section class="alchemy-mode ${shotMode?'mode-one-shot':'mode-one-minute'}"><div class="mode-title"><h3>${headline}</h3><small>${desc}</small></div><div class="${recipe?'mode-recipe-grid':'mode-inventory-grid'}">${items}</div></section>`;
+  }
+  $('potion-inventory').innerHTML=['shot','minute'].map(kind=>modeSection(kind,POTIONS.filter(p=>p.kind===kind&&(!p.admin&&!p.gift||(state.potions[p.id]||0)>0||state.oneRollQueued.includes(p.id)||state.minutePotion?.id===p.id)).map(potionCard).join(''))).join('');
+  const recipeCard=p=>{const can=canCraft(p);return `<article class="recipe-card" style="--recipe-color:${p.color}"><div class="recipe-top"><div class="recipe-icon">${renderPotionIcon(p)}</div><span class="recipe-category">${p.kind==='shot'?'ONE ROLL':'ONE MINUTE'} · ALCHEMY</span></div><h3>${p.name}</h3><p class="recipe-desc">${p.desc}</p><div class="recipe-bonus">×${p.mult.toLocaleString('ja-JP')} <small>${p.kind==='shot'?'1 ROLL':'60 SECONDS'}</small></div><div class="recipe-ingredients">${ingredients(p)}</div><button class="craft-btn" data-craft-potion="${p.id}" ${can?'':'disabled'}>${can?'✦ 調合する':icon('lock')+' 素材が不足しています'}</button></article>`;};
+  $('potion-grid').innerHTML=['shot','minute'].map(kind=>modeSection(kind,POTIONS.filter(p=>p.kind===kind&&!p.admin&&!p.gift).map(recipeCard).join(''),true)).join('');
   updatePotionTimer();
 }
 function craftPotion(id){const p=POTIONS.find(p=>p.id===id);if(!p||p.admin||p.gift)return;if(!canCraft(p)){toast('素材が足りません','図鑑から素材を探してみよう。','error');return;}if(!consume(p))return;state.potions[id]=(state.potions[id]||0)+1;save();renderPotions();renderRollUI();toast('ALCHEMY SUCCESS',p.name+'を調合しました。','good');tone(700,.25,'sine',.03);}
 function usePotion(id){
   const p=POTIONS.find(p=>p.id===id);if(!p||(state.potions[id]||0)<1)return;
-  const active=activePotions();
-  if(active.length>=MAX_POTION_STACKS){toast('重ねがけの上限です','同時に使えるポーションは最大6本。効果終了後に追加できます。','error');return;}
+  if(rolling){toast('抽選処理中です','抽選完了後にポーションを使ってください。','error');return;}
+  syncPotionClock();
+  if(p.kind==='shot'){
+    if(state.oneRollQueued.length>=MAX_POTION_STACKS){toast('1ロール型は最大6本','次の抽選後に追加できます。','error');return;}
+    state.oneRollQueued.push(id);
+  }else{
+    if(state.minutePotion){toast('時間型ポーションは重ねがけ不可','効果終了後に次の1本を使用できます。','error');return;}
+    state.minutePotion={id,remainingMs:(p.seconds||60)*1000,updatedAt:Date.now()};
+  }
   state.potions[id]--;
-  state.activePotions.push({id,expires:Date.now()+p.seconds*1000});
   save();renderPotions();renderRollUI();
-  toast('BOOST STACKED',p.name+' · 合計ラック×'+multiplierText(potionMultiplier()),'good');tone(850,.18,'triangle',.03);
+  toast(p.kind==='shot'?'ONE ROLL READY':'TIMED BOOST ACTIVE',p.name+(p.kind==='shot'?' · 次の抽選にセット':` · ${p.seconds||60}秒間有効`),'good');tone(850,.18,'triangle',.03);
 }
 function updatePotionTimer(){
-  const active=activePotions();
-  const soonest=active.length?Math.min(...active.map(e=>e.expires)) : null;
-  $('rail-timer').textContent=soonest ? clockText(soonest-Date.now()) : '—';
-  $('rail-stack').textContent=active.length+' / '+MAX_POTION_STACKS;
+  syncPotionClock();
+  const shots=state.oneRollQueued.length,minute=state.minutePotion;
+  const shotLuck=Math.min(MAX_EFFECTIVE_LUCK,(1+gearBonus()*.1)*(shots?oneRollMultiplier():1));
+  const minuteLuck=Math.min(MAX_EFFECTIVE_LUCK,(1+gearBonus())*(minute?minuteMultiplier():1));
+  $('rail-timer').textContent=minute?clockText(minute.remainingMs)+(shots?' ⏸':''):'—';
+  $('rail-stack').textContent=shots+' / '+MAX_POTION_STACKS;
+  $('summon-shot-luck').textContent='×'+multiplierText(shotLuck);
+  $('summon-minute-luck').textContent='×'+multiplierText(minuteLuck);
+  $('summon-shot-note').textContent=shots?shots+'/6本 · 次の1回で全部消費 · 装備10%':'セット中 0/6本 · 装備10%';
+  $('summon-minute-note').textContent=minute?(shots?'一時停止中 / ':'残り時間 / ')+clockText(minute.remainingMs):'未使用 · 装備100%';
   const strip=$('roll-potion-strip'),label=$('next-expiry-name'),clock=$('next-expiry-clock');
-  if(strip && label && clock){
-    const next=active.length?active.reduce((a,b)=>a.expires<=b.expires?a:b):null;
-    const effect=next?POTIONS.find(p=>p.id===next.id):null;
-    const remain=next?Math.max(0,next.expires-Date.now()):0;
-    strip.classList.toggle('is-idle',!effect);
-    label.textContent=effect?effect.name+' · ×'+multiplierText(effect.mult):'ポーション未使用';
-    clock.textContent=effect?clockText(remain):'--:--';
-    strip.style.setProperty('--boost-time-progress',effect?(Math.min(100,remain/(effect.seconds*1000)*100)).toFixed(2)+'%':'0%');
-    strip.title=effect?'次に切れるポーション：'+effect.name+' / '+clockText(remain):'有効なポーションはありません';
+  if(shots){
+    strip.classList.remove('is-idle');
+    $('next-expiry-heading').textContent='ONE ROLL PRIORITY';label.textContent=shots+'本の1ロール型を使用';clock.textContent='NEXT';
+    strip.style.setProperty('--boost-time-progress','100%');strip.title='次の1回でスタックした全1ロール型を消費します';
+  }else if(minute){
+    strip.classList.remove('is-idle');
+    $('next-expiry-heading').textContent='TIMED BOOST REMAINING';label.textContent=POTIONS.find(p=>p.id===minute.id)?.name||'時間型';clock.textContent=clockText(minute.remainingMs);
+    strip.style.setProperty('--boost-time-progress',(minute.remainingMs/((POTIONS.find(p=>p.id===minute.id)?.seconds||60)*1000)*100).toFixed(2)+'%');strip.title='時間型ポーションの残り時間';
+  }else{
+    strip.classList.add('is-idle');
+    $('next-expiry-heading').textContent='NO ACTIVE ELIXIR';label.textContent='ポーション未使用';clock.textContent='--:--';
+    strip.style.setProperty('--boost-time-progress','0%');strip.title='ポーションを選択してください';
   }
-  $('active-potion-stack').querySelectorAll('[data-potion-expiry]').forEach(el=>{el.textContent=clockText(Number(el.dataset.potionExpiry)-Date.now());});
+  if(page==='potions'){
+    const d=$('minute-active-detail');if(d)d.textContent=minute?`${POTIONS.find(p=>p.id===minute.id)?.name||''} · ${clockText(minute.remainingMs)}${shots?' / 一時停止':''}`:'未使用 · 1分間ポーションを1本セット';
+  }
 }
 
 function renderRecords(){
@@ -1915,7 +2135,7 @@ function renderEntireGame(){
   $('fast-btn').classList.toggle('is-on',state.fast);$('fast-state').textContent=state.fast?'ON':'OFF';$('fast-btn').setAttribute('aria-pressed',String(state.fast));
   $('sound-btn').innerHTML=icon(state.sound?'volume':'mute');
   if(resultAura)presentAura(resultAura,false);else if(state.equippedAura!==null&&isOwned(AURAS[state.equippedAura]))presentAura(AURAS[state.equippedAura],false);else if(state.recent.length)presentAura(AURAS[state.recent[0].id],false);else{$('altar').style.setProperty('--aura-color','#9c90ff');$('aura-center').querySelector('.core-icon').innerHTML=renderAuraOrb(AURAS[0],{size:150,className:'roll-center-orb'});$('result-rank').textContent='YOUR DESTINY AWAITS';$('result-rank').style.color='#b2a5ff';$('result-name').textContent='AWAKEN';$('result-name').style.textShadow='0 0 20px #9991f377';$('result-odds').textContent='宇宙のどこかに、まだ見ぬ光がある。';$('result-new').hidden=true;}
-  renderRollUI();renderEquippedAura();renderCollection();renderForge();renderPotions();renderRecords();updateCraftReadyUI();
+  renderCinematicSettings();renderRollUI();renderEquippedAura();renderCollection();renderForge();renderPotions();renderRecords();updateCraftReadyUI();
 }
 function showHelp(){setAuto(false);hasModal=true;const d=$('help-modal');if(typeof d.showModal==='function')d.showModal();else d.setAttribute('open','');}
 function hideHelp(){const d=$('help-modal');if(typeof d.close==='function')d.close();else d.removeAttribute('open');hasModal=false;}
@@ -1923,6 +2143,9 @@ function bind(){
   document.querySelectorAll('[data-page]').forEach(btn=>btn.addEventListener('click',()=>showPage(btn.dataset.page)));
   document.querySelectorAll('[data-goto]').forEach(btn=>btn.addEventListener('click',()=>showPage(btn.dataset.goto)));
   $('roll-btn').addEventListener('click',startRoll);$('auto-btn').addEventListener('click',()=>setAuto(!auto));$('fast-btn').addEventListener('click',toggleFast);
+  $('cinema-tiers').addEventListener('click',e=>{const btn=e.target.closest('[data-cinema-tier]');if(btn)setCinematicTier(Number(btn.dataset.cinemaTier),!cinematicEnabled(Number(btn.dataset.cinemaTier)));});
+  $('cinema-all-on').addEventListener('click',()=>setAllCinematicTiers(true));
+  $('cinema-all-off').addEventListener('click',()=>setAllCinematicTiers(false));
   $('sound-btn').addEventListener('click',()=>{state.sound=!state.sound;save();$('sound-btn').innerHTML=icon(state.sound?'volume':'mute');if(state.sound)tone(600);});
   $('help-btn').addEventListener('click',showHelp);$('help-close').addEventListener('click',hideHelp);$('help-start').addEventListener('click',hideHelp);
   $('help-modal').addEventListener('close',()=>{hasModal=false;});
@@ -2627,13 +2850,12 @@ function initSpectacleViewer(){
  $('aura-grid').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('aura-art')){e.preventDefault();e.target.click();}});
 }
 
-function init(){TIERS.forEach((t,i)=>{const opt=document.createElement('option');opt.value=i;opt.textContent=t.jp+' · '+t.name;$('tier-filter').append(opt);});bind();renderEntireGame();showPage('roll');starfield();setInterval(()=>{const before=state.activePotions.length;const active=activePotions();updatePotionTimer();if(before!==active.length){renderRollUI();if(page==='potions')renderPotions();toast('ポーション効果終了',`残り${active.length}本 · 合計ラック×${multiplierText(potionMultiplier())}`);}if(page==='roll'&&state.rolls)for(const el of document.querySelectorAll('.recent-time')){ /* relative times refresh on next roll */ }},500);}
+function init(){TIERS.forEach((t,i)=>{const opt=document.createElement('option');opt.value=i;opt.textContent=t.jp+' · '+t.name;$('tier-filter').append(opt);});bind();renderEntireGame();showPage('roll');starfield();setInterval(()=>{const hadMinute=!!state.minutePotion;const ended=syncPotionClock();updatePotionTimer();if(ended&&hadMinute){save();renderRollUI();if(page==='potions')renderPotions();toast('時間型ポーションの効果終了','装備ラックだけで抽選します。');}},500);}
 init();initSpectacleViewer();
-if(receivedWelcomeGift){toast('✦ 全員配布ギフト！','ラック×5,000・60秒のポーションを1個受け取りました。ポーション画面から使用できます。','good');}
 (function(){
   const gearGrid=$('gear-grid'),potionGrid=$('potion-grid');
   if(gearGrid){const n=document.createElement('p');n.className='craft-tier-help';n.style.cssText='font-size:11px;color:#a8b2cd;line-height:1.65;margin:3px 0 18px';n.textContent='◆ EPIC ×3 などの表記は、そのレア度のオーラなら種類を問わず必要数を消費します（指定名の素材とは別に必要）。';gearGrid.before(n);}
-  if(potionGrid){const n=document.createElement('p');n.className='craft-tier-help';n.style.cssText='font-size:11px;color:#a8b2cd;line-height:1.65;margin:3px 0 18px';n.textContent='同じレア度の素材はどれでも使用可能。消費は低確率の低いオーラから優先し、装備中は後回しにします。';potionGrid.before(n);}
+  if(potionGrid){const n=document.createElement('p');n.className='craft-tier-help';n.style.cssText='font-size:11px;color:#a8b2cd;line-height:1.65;margin:3px 0 18px';n.textContent='1ロール型は最大6本を同時に消費。1分型は1本のみ。クラフト素材は各レア度のオーラから選ばれます。';potionGrid.before(n);}
 })();
 window.addEventListener('resize',()=>{if(page==='collection')renderCollection();},{passive:true});
 })();
