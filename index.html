@@ -1226,8 +1226,10 @@ html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
 'use strict';
 const $ = (id) => document.getElementById(id);
 const icon = (name) => `<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
-const STORAGE_KEY = 'aether_rng_save_reset_season-622fc8de61ee4d7569fa'; // New season: old local saves are not loaded.
-const SAVE_EPOCH = 'season-622fc8de61ee4d7569fa';
+// v17 global season reset: all existing browser saves begin anew on their
+// first visit to this updated HTML. Later saves still work normally.
+const SAVE_EPOCH = 'season-20261104-global-5c1239f149acbe5333df';
+const STORAGE_KEY = 'aether_rng_save_reset_' + SAVE_EPOCH;
 const MAX_POTION_STACKS = 6; // 1ロール型: 最大6本を同じ1回で消費
 const MAX_EFFECTIVE_LUCK = 100000000; // 乱数飽和防止: 実効ラック最大1億倍
 
@@ -1469,14 +1471,23 @@ function normalizeState(obj) {
 }
 let state;
 let canSave=true;
+let showedSeasonResetNotice=false;
 try {
+  // Remove ONLY this game's obsolete localStorage saves from this origin.
+  // Never touch the current season key or unrelated websites' storage.
+  const obsolete=[];
+  for(let i=0;i<localStorage.length;i++){
+    const key=localStorage.key(i);
+    if(key && key!==STORAGE_KEY && /^aether_rng_save(?:_|$)/.test(key))obsolete.push(key);
+  }
+  showedSeasonResetNotice=obsolete.length>0;
+  for(const key of obsolete)localStorage.removeItem(key);
   const raw=localStorage.getItem(STORAGE_KEY);
   state=raw ? normalizeState(JSON.parse(raw)) : freshState();
 } catch(e){
-  // A malformed prior save should not prevent navigation to Collection.
-  // Avoid rewriting the source until the user explicitly plays or imports a save.
+  // Storage-disabled browsers still run an unsaved new game.
   state=freshState(); canSave=false;
-  try{console.warn('VOID RNG: legacy save recovery required',e);}catch(_){}
+  try{console.warn('VOID RNG: save storage unavailable',e);}catch(_){}
 }
 let page='roll', collectionMode='all', collectionSearch='', collectionTier='all', potionView='minute';
 let rolling=false, auto=false, autoTimer=null, hasModal=false, resultAura=null, lastSaveAt=0;
@@ -3062,7 +3073,7 @@ function initSpectacleViewer(){
  $('aura-grid').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('aura-art')){e.preventDefault();e.target.click();}});
 }
 
-function init(){TIERS.forEach((t,i)=>{const opt=document.createElement('option');opt.value=i;opt.textContent=t.jp+' · '+t.name;$('tier-filter').append(opt);});bind();renderEntireGame();showPage('roll');starfield();setInterval(()=>{const hadMinute=!!state.minutePotion;const ended=syncPotionClock();updatePotionTimer();if(ended&&hadMinute){save();renderRollUI();if(page==='potions')renderPotions();toast('時間型ポーションの効果終了','装備ラックだけで抽選します。');}},500);}
+function init(){TIERS.forEach((t,i)=>{const opt=document.createElement('option');opt.value=i;opt.textContent=t.jp+' · '+t.name;$('tier-filter').append(opt);});bind();renderEntireGame();showPage('roll');starfield();if(showedSeasonResetNotice)toast('NEW SEASON','全プレイヤーのセーブデータを初期化しました。新しい記録は今後も保存されます。','good');setInterval(()=>{const hadMinute=!!state.minutePotion;const ended=syncPotionClock();updatePotionTimer();if(ended&&hadMinute){save();renderRollUI();if(page==='potions')renderPotions();toast('時間型ポーションの効果終了','装備ラックだけで抽選します。');}},500);}
 init();initSpectacleViewer();
 (function(){
   const gearGrid=$('gear-grid'),potionGrid=$('potion-grid');
