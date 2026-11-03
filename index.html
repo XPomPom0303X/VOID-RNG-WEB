@@ -1161,7 +1161,7 @@ html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
 
         <section class="page" id="page-collection" aria-labelledby="collection-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> AURA DATABASE <span class="eyebrow-dot">◆</span> 80 SIGNATURES</div><h1 id="collection-title">未知の光を、<em>収集せよ。</em></h1><p>すべてのオーラには、それぞれ固有の奇跡がある。</p></div></div><div class="collection-summary panel"><div><span>ARCHIVE PROGRESS</span><strong id="collection-count">0 <small>/ 80</small></strong></div><div class="large-progress"><div id="collection-progress"></div></div><div class="collection-percent" id="collection-percent">0%</div></div><div class="toolbar"><div class="tab-group" id="collection-tabs"><button data-filter="all" class="active">すべて <span>80</span></button><button data-filter="owned">発見済み</button><button data-filter="missing">未発見</button></div><div class="toolbar-right"><label class="search-box"><svg><use href="#i-search"/></svg><input id="collection-search" placeholder="オーラ名で検索" autocomplete="off"></label><select id="tier-filter" aria-label="レアリティで絞り込む"><option value="all">すべてのレアリティ</option></select></div></div><div class="refinery-collection-shortcut"><span>✧ 余ったオーブをダストに変換</span><button type="button" id="collection-to-refinery">星屑精錬所を開く <span aria-hidden="true">↗</span></button></div><div class="aura-grid" id="aura-grid"></div><div class="grid-empty" id="grid-empty" hidden>条件に合うオーラがありません。</div><nav id="aura-pager" aria-label="図鑑ページ送り" hidden><button id="aura-prev" type="button">← 前へ</button><span id="aura-page-counter" aria-live="polite">1 / 1</span><button id="aura-next" type="button">次へ →</button></nav></section>
 
-        <section class="page" id="page-forge" aria-labelledby="forge-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE FORGE <span class="eyebrow-dot">◆</span> ASCEND BEYOND</div><h1 id="forge-title">運を、<em>鍛え上げろ。</em></h1><p>入手したオーラを素材に、強力なラック装備をクラフト。</p></div></div><div id="forge-ready-banner" class="forge-ready-banner" hidden><span class="forge-ready-icon">✦</span><div><strong>CRAFT AVAILABLE</strong><span id="forge-ready-text">新しくクラフトできる装備があります</span></div></div><div class="forge-overview panel"><div class="forge-glyph">✣</div><div class="forge-overview-text"><span>YOUR EQUIPPED POWER</span><strong id="forge-bonus">+0.00× <small>GEAR LUCK</small></strong><p>3スロットとも自由に装備可能。同じ装備を2マスに入れることはできません。</p></div><button class="outline-btn" data-goto="collection">素材を見る <svg><use href="#i-chevron"/></svg></button></div>
+        <section class="page" id="page-forge" aria-labelledby="forge-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE FORGE <span class="eyebrow-dot">◆</span> ASCEND BEYOND</div><h1 id="forge-title">運を、<em>鍛え上げろ。</em></h1><p>入手したオーラを素材に、強力なラック装備をクラフト。</p></div></div><div id="forge-ready-banner" class="forge-ready-banner" hidden><span class="forge-ready-icon">✦</span><div><strong>CRAFT AVAILABLE</strong><span id="forge-ready-text">新しくクラフトできる装備があります</span></div></div><div class="forge-overview panel"><div class="forge-glyph">✣</div><div class="forge-overview-text"><span>YOUR EQUIPPED POWER</span><strong id="forge-bonus">+0.00× <small>GEAR LUCK</small></strong><p>装備ボタン・クラフトで自動装備。3枠が満杯なら一番弱い装備と自動交換します。</p></div><button class="outline-btn" data-goto="collection">素材を見る <svg><use href="#i-chevron"/></svg></button></div>
 <section class="refinery panel" id="dust-refinery" aria-labelledby="refinery-title">
   <div class="refinery-intro">
     <div><div class="refinery-kicker">✧ &nbsp; STARDUST REFINERY // ORB TRANSMUTATION</div><h2 id="refinery-title">星屑<span>精錬所</span></h2><p>余ったオーブを星屑に分解。高レアリティほど、より多くのスターダストに変換できます。</p></div>
@@ -1351,6 +1351,23 @@ const ONE_ROLL_POWER_V153 = {
   'absolute-serum':35
 };
 for(const potion of POTIONS){if(Object.hasOwn(ONE_ROLL_POWER_V153,potion.id))potion.mult=ONE_ROLL_POWER_V153[potion.id];}
+// v16.1 balance pass: gear loses just 10% of its v15.3 bonus.
+// The one-roll potion multipliers, rarity rates and admin/gift potions stay untouched.
+for(const equipment of GEAR)equipment.bonus=Math.round(equipment.bonus*90)/100;
+// Normal 60-second brews are toned down by roughly 20-25%, with clean readable values.
+const MINUTE_POWER_V161={
+  'minute-ember':2.5, 'minute-shimmer':4, 'minute-starlight':6,
+  'minute-polaris':11, 'minute-astral':19, 'minute-nebula':38,
+  'minute-eclipse':68, 'minute-chronos':110, 'minute-cosmic':190,
+  'minute-origin':340, 'minute-abyss':600, 'minute-genesis':975,
+  'minute-absolute':1700, 'minute-zenith':2700
+};
+for(const potion of POTIONS){
+  if(!Object.hasOwn(MINUTE_POWER_V161,potion.id))continue;
+  potion.mult=MINUTE_POWER_V161[potion.id];
+  // Keep the crafting description in sync with the actual luck multiplier.
+  potion.desc=potion.desc.replace(/×[0-9,]+(?:\.[0-9]+)?/,'×'+potion.mult.toLocaleString('ja-JP',{maximumFractionDigits:2}));
+}
 // Consistent display order: low to high luck, no matter when each recipe was added.
 GEAR.sort((a,b)=>a.bonus-b.bonus || a.name.localeCompare(b.name,'ja'));
 POTIONS.sort((a,b)=>(a.kind===b.kind?0:(a.kind==='shot'?-1:1)) || a.mult-b.mult || a.name.localeCompare(b.name,'ja'));
@@ -2160,22 +2177,45 @@ function equipGearInSlot(id,slot){
   save();renderForge();renderRollUI();updateCraftReadyUI();
   toast('装備セット完了',`${SLOT_LABELS[slot]}：${gear.name}を装備しました。`,'good');
 }
+// Equip from a recipe card without forcing players to open the 3 slot pickers.
+// Free slots have priority. When all are occupied, replace the *weakest* bonus.
+// Gear ownership is never altered by replacement, and one ID occupies at most one slot.
+function equipGearAutomatically(id){
+  const next=GEAR.find(g=>g.id===id);
+  if(!next||!state.gearOwned.includes(id))return null;
+  const slots=Object.keys(state.equipped);
+  const already=slots.find(slot=>state.equipped[slot]===id);
+  if(already)return {slot:already,replaced:null,already:true};
+  let slot=slots.find(slot=>!state.equipped[slot]);
+  if(!slot){
+    slot=slots.reduce((weakest,other)=>{
+      const a=GEAR.find(g=>g.id===state.equipped[weakest])?.bonus??Infinity;
+      const b=GEAR.find(g=>g.id===state.equipped[other])?.bonus??Infinity;
+      return b<a?other:weakest;
+    },slots[0]);
+  }
+  const replaced=state.equipped[slot];
+  state.equipped[slot]=id;
+  return {slot,replaced,already:false};
+}
 function craftGear(id){
   const gear=GEAR.find(g=>g.id===id);if(!gear)return;
   if(state.gearOwned.includes(id)){
     const currentSlot=Object.keys(state.equipped).find(slot=>state.equipped[slot]===id);
     if(currentSlot){unequipSlot(currentSlot);return;}
-    const freeSlot=Object.keys(state.equipped).find(slot=>!state.equipped[slot]);
-    if(!freeSlot){toast('装備枠が埋まっています','装備スロットの選択欄で交換する装備を選んでね。','good');document.getElementById('equip-slots')?.scrollIntoView({block:'center',behavior:'smooth'});return;}
-    equipGearInSlot(id,freeSlot);return;
+    const result=equipGearAutomatically(id);if(!result)return;
+    save();renderForge();renderRollUI();updateCraftReadyUI();
+    const old=GEAR.find(g=>g.id===result.replaced);
+    toast('装備セット完了',old?`${old.name}（最弱枠）と交換し、${gear.name}を装備しました。`:`${gear.name}を空き枠に装備しました。`,'good');
+    return;
   }
   if(!canCraft(gear)){toast('素材が足りません','必要なオーラとスターダストを集めよう。','error');return;}
   if(!consume(gear))return;
   state.gearOwned.push(id);
-  const freeSlot=Object.keys(state.equipped).find(slot=>!state.equipped[slot]);
-  if(freeSlot)state.equipped[freeSlot]=id;
+  const result=equipGearAutomatically(id);
   save();renderForge();renderRollUI();updateCraftReadyUI();
-  toast('CRAFT SUCCESS',gear.name+(freeSlot?'が完成。空き枠に自動装備しました！':'が完成。装備枠の選択欄から装備してね。'),'good');
+  const old=GEAR.find(g=>g.id===result?.replaced);
+  toast('CRAFT SUCCESS',old?`${gear.name}が完成！最弱装備 ${old.name} と自動で交換しました。`:`${gear.name}が完成！自動で装備しました。`,'good');
   tone(600,.2,'triangle',.035);tone(850,.2,'sine',.03,.12);
 }
 function unequipSlot(slot){
