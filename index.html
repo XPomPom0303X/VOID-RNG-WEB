@@ -605,7 +605,7 @@ html,body{overflow-x:clip!important}
 
         <section class="page" id="page-forge" aria-labelledby="forge-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE FORGE <span class="eyebrow-dot">◆</span> ASCEND BEYOND</div><h1 id="forge-title">運を、<em>鍛え上げろ。</em></h1><p>入手したオーラを素材に、強力なラック装備をクラフト。</p></div></div><div id="forge-ready-banner" class="forge-ready-banner" hidden><span class="forge-ready-icon">✦</span><div><strong>CRAFT AVAILABLE</strong><span id="forge-ready-text">新しくクラフトできる装備があります</span></div></div><div class="forge-overview panel"><div class="forge-glyph">✣</div><div class="forge-overview-text"><span>YOUR EQUIPPED POWER</span><strong id="forge-bonus">+0.00× <small>GEAR LUCK</small></strong><p>3スロットに装備可能。各スロットには1つだけ装備できる。</p></div><button class="outline-btn" data-goto="collection">素材を見る <svg><use href="#i-chevron"/></svg></button></div><div class="subhead"><h2>装備スロット <span>／ EQUIPPED</span></h2></div><div class="equip-slots" id="equip-slots"></div><div class="subhead with-gap"><h2>クラフト設計図 <span>／ BLUEPRINTS</span></h2><div class="small-note">素材はクラフト時に消費されます</div></div><div class="recipe-grid" id="gear-grid"></div></section>
 
-        <section class="page" id="page-potions" aria-labelledby="potions-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> ALCHEMY LAB <span class="eyebrow-dot">◆</span> TEMPORARY POWER</div><h1 id="potions-title">一瞬に、<em>奇跡を宿せ。</em></h1><p>オーラとスターダストを調合。ここぞという時に運命を加速させよう。</p></div></div><div class="potion-active panel"><div class="potion-illustration">◈</div><div><span>ACTIVE ELIXIR</span><strong id="active-potion-name">ポーション効果なし</strong><p id="active-potion-text">ポーションを作成して使用すると、期間中ラックが上がります。</p></div><div class="potion-clock" id="active-potion-timer">0 / 6</div></div><div class="active-potion-stack" id="active-potion-stack" aria-label="重ねがけ中のポーション"></div><div class="subhead"><h2>所持しているポーション <span>／ INVENTORY</span></h2></div><div class="potion-inventory" id="potion-inventory"></div><div class="subhead with-gap"><h2>調合レシピ <span>／ LABORATORY</span></h2><span class="small-note">同種も重ねがけOK · 最大6本 · 倍率は掛け算 · 時間は個別</span></div><div class="recipe-grid" id="potion-grid"></div></section>
+        <section class="page" id="page-potions" aria-labelledby="potions-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> ALCHEMY LAB <span class="eyebrow-dot">◆</span> TEMPORARY POWER</div><h1 id="potions-title">一瞬に、<em>奇跡を宿せ。</em></h1><p>オーラとスターダストを調合。ここぞという時に運命を加速させよう。</p></div></div><div class="potion-active panel"><div class="potion-illustration">◈</div><div><span>ACTIVE ELIXIR</span><strong id="active-potion-name">ポーション効果なし</strong><p id="active-potion-text">ポーションを作成して使用すると、期間中ラックが上がります。</p></div><div class="potion-clock" id="active-potion-timer">0 / 6</div></div><div class="active-potion-stack" id="active-potion-stack" aria-label="重ねがけ中のポーション"></div><div class="subhead"><h2>所持しているポーション <span>／ INVENTORY</span></h2></div><div class="potion-inventory" id="potion-inventory"></div><div class="subhead with-gap"><h2>調合レシピ <span>／ LABORATORY</span></h2><span class="small-note">同種も重ねがけOK · 最大6本 · 倍率は掛け算 · 超レア優先抽選</span></div><div class="recipe-grid" id="potion-grid"></div></section>
 
         <section class="page" id="page-records" aria-labelledby="records-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR LEGACY <span class="eyebrow-dot">◆</span> ARCHIVE STATUS</div><h1 id="records-title">すべての軌跡を、<em>刻め。</em></h1><p>歩んだ記録を確認し、セーブデータを管理しよう。</p></div></div><div class="records-grid" id="records-grid"></div><div class="records-bottom"><div class="panel data-panel"><div class="subhead"><h2>セーブデータ <span>／ DATA MANAGEMENT</span></h2></div><p>プレイ内容はこのブラウザに自動保存されます。ブラウザのデータ削除に備えて、バックアップファイルの保存をおすすめします。</p><div class="save-status"><span class="online-dot"></span><span id="save-status-text">自動セーブ有効</span></div><div class="data-actions"><button id="export-btn" class="solid-small"><svg><use href="#i-down"/></svg> セーブを書き出す</button><label class="outline-btn import-btn"><svg><use href="#i-up"/></svg> セーブを読み込む<input id="import-input" type="file" accept=".json,application/json" hidden></label></div><div class="data-warning"><span>注意</span> 別のブラウザ・端末には自動で同期されません。プライベートブラウズでは保存できない場合があります。</div><div class="admin-code-panel"><div class="admin-code-header"><span>✦</span><div><b>ADMIN CODE</b><small>このコードは管理者だけが知っています</small></div></div><form id="admin-code-form" class="admin-code-form"><input id="admin-code-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="12" placeholder="管理コードを入力" autocomplete="off" aria-label="管理コード"><button type="submit">コードを使用</button></form><div id="admin-code-message" class="admin-code-message" role="status">コードを入力して認証してください。</div></div><button class="danger-link" id="reset-btn">全データを初期化</button></div><div class="panel achievements-panel"><div class="subhead"><h2>進行状況 <span>／ MILESTONES</span></h2></div><div id="milestone-list"></div></div></div></section>
       </main>
@@ -613,7 +613,7 @@ html,body{overflow-x:clip!important}
   </div>
   <div id="toast-stack" class="toast-stack" role="status" aria-live="polite"></div>
   <div id="discovery-overlay" class="discovery-overlay" hidden><div class="discovery-wash"></div><div class="discovery-content"><div class="discovery-eyebrow">✦ &nbsp; NEW DISCOVERY &nbsp; ✦</div><div class="discovery-icon">✧</div><div class="discovery-name" id="discovery-name"></div><div class="discovery-odds" id="discovery-odds"></div><button id="discovery-dismiss">CONTINUE <svg><use href="#i-chevron"/></svg></button></div></div>
-  <dialog id="help-modal" class="help-modal"><div class="help-inner"><button class="help-close icon-btn" id="help-close" aria-label="閉じる"><svg><use href="#i-close"/></svg></button><div class="eyebrow"><span class="eyebrow-line"></span> WELCOME TO VOID</div><h2>運命を書き換える、<em>準備はいい？</em></h2><div class="help-steps"><div><span>01</span><b>ROLL</b><p>中央のボタンでオーラを抽選。80種類の頂点は1兆分の1。スペースキーでも抽選できる。</p></div><div><span>02</span><b>COLLECT</b><p>図鑑に発見を記録。同じオーラを複数獲得するとクラフト素材にも使える。</p></div><div><span>03</span><b>ASCEND</b><p>装備とポーションでラックを強化。ポーションは最大6本まで重複できる。</p></div></div><div class="help-extra">※ 表示される「1/N」はラック1.00×時の基礎確率。ラックはレア度に応じて抽選確率を強化します。<br>※ セーブはこの端末のブラウザに保存。大切なデータは「記録・セーブ」で書き出せます。</div><button id="help-start" class="roll-button">LET'S BEGIN <svg><use href="#i-chevron"/></svg></button></div></dialog>
+  <dialog id="help-modal" class="help-modal"><div class="help-inner"><button class="help-close icon-btn" id="help-close" aria-label="閉じる"><svg><use href="#i-close"/></svg></button><div class="eyebrow"><span class="eyebrow-line"></span> WELCOME TO VOID</div><h2>運命を書き換える、<em>準備はいい？</em></h2><div class="help-steps"><div><span>01</span><b>ROLL</b><p>中央のボタンでオーラを抽選。80種類の頂点は1兆分の1。スペースキーでも抽選できる。</p></div><div><span>02</span><b>COLLECT</b><p>図鑑に発見を記録。同じオーラを複数獲得するとクラフト素材にも使える。</p></div><div><span>03</span><b>ASCEND</b><p>装備とポーションでラックを強化。ポーションは最大6本まで重複できる。</p></div></div><div class="help-extra">※ 表示の「1/N」は基準レート。各オーラを独立に判定し、当選した中で最も高いレア度から選びます。ラックが高いほど高レアを狙えます。<br>※ セーブはこの端末のブラウザに保存。大切なデータは「記録・セーブ」で書き出せます。</div><button id="help-start" class="roll-button">LET'S BEGIN <svg><use href="#i-chevron"/></svg></button></div></dialog>
   <script>
 /* VOID RNG — Standalone browser game (no frameworks required). */
 (() => {
@@ -623,6 +623,7 @@ const icon = (name) => `<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const STORAGE_KEY = 'aether_rng_save_reset_season-622fc8de61ee4d7569fa'; // New season: old local saves are not loaded.
 const SAVE_EPOCH = 'season-622fc8de61ee4d7569fa';
 const MAX_POTION_STACKS = 6;
+const PROMO_KEY = STORAGE_KEY + '__stellar_5000_once';
 const TIERS = [
   {name:'BASIC',jp:'ベーシック',color:'#91a0b7'},
   {name:'UNCOMMON',jp:'アンコモン',color:'#52d6be'},
@@ -682,6 +683,8 @@ const POTIONS = [
   {id:'nebula-serum',name:'ネビュラ・セラム',mult:5,seconds:45,color:'#f49cde',glyph:'✶',desc:'星雲の残光から作られる短期決戦の薬。',cost:[['STARDUST',1],['NEBULA',1]],dust:700},
   {id:'omega-essence',name:'オメガ・エッセンス',mult:10,seconds:30,color:'#ffd59b',glyph:'✺',desc:'常識を越える究極の錬金術。',cost:[['ZENITH',1],['OMEGA',1]],dust:5000},
 ];
+// ONE-TIME SEASON GIFT: 5,000× for 60 seconds, one per browser save.
+POTIONS.push({id:'stellar-welcome-5000',name:'星界の歓迎ギフト',mult:5000,seconds:60,color:'#87f7e9',glyph:'✧',desc:'全プレイヤーへの1回限りの配布。使うと60秒間ラック×5,000。',gift:true,cost:[],dust:0});
 // Special elixir (client-side game reward).
 POTIONS.push({id:'void-omega-elixir',name:'VOID Ω 管理者エリクサー',mult:5000000,seconds:600,color:'#d7a2ff',glyph:'✦',desc:'管理コードで獲得できる、10分間ラックを500万倍にする特別なポーション。',admin:true,cost:[],dust:0});
 
@@ -712,6 +715,9 @@ POTIONS.push(
   {id:'abyss-surge',name:'アビス・サージ',mult:6000,seconds:35,color:'#ff829e',glyph:'✴',desc:'FORBIDDENの深淵を一瞬だけ解放する。',cost:[['BLACK SUN',1]],tierCost:[{tier:8,count:2}],dust:105000},
   {id:'absolute-serum',name:'アブソリュート・セラム',mult:20000,seconds:28,color:'#fce8c0',glyph:'◇',desc:'ABSOLUTEの光を瞬間圧縮。最上位のラック強化液。',cost:[['THE FIRST STAR',1]],tierCost:[{tier:9,count:2}],dust:260000}
 );
+// Consistent display order: low to high luck, no matter when each recipe was added.
+GEAR.sort((a,b)=>a.bonus-b.bonus || a.name.localeCompare(b.name,'ja'));
+POTIONS.sort((a,b)=>a.mult-b.mult || a.name.localeCompare(b.name,'ja'));
 const SLOT_LABELS = {ring:'RING / 指輪',core:'CORE / コア',charm:'CHARM / 護符'};
 const PAGE_NAMES = {roll:'SUMMON',collection:'COLLECTION',forge:'CRAFTING',potions:'ALCHEMY',records:'RECORDS'};
 const fmt = (v) => Math.floor(Number(v)||0).toLocaleString('ja-JP');
@@ -731,7 +737,7 @@ const oddsText = (a) => a.odds ? `1 / ${fmt(a.odds)}` : 'BASE AURA';
 const safeInt = (n, max=1e12) => Number.isSafeInteger(n) && n>=0 ? Math.min(max,n) : 0;
 const validGearId = (id) => GEAR.some(g => g.id===id);
 const validPotionId = (id) => POTIONS.some(p => p.id===id);
-const freshState = () => ({version:6,resetEpoch:SAVE_EPOCH,rolls:0,shards:0,bestId:0,equippedAura:null,inventory:{},discovered:{},recent:[],gearOwned:[],equipped:{ring:null,core:null,charm:null},potions:{},activePotions:[],fast:false,sound:true});
+const freshState = () => ({version:6,resetEpoch:SAVE_EPOCH,rolls:0,shards:0,bestId:0,equippedAura:null,inventory:{},discovered:{},recent:[],gearOwned:[],equipped:{ring:null,core:null,charm:null},potions:{},activePotions:[],promoGiftClaimed:false,fast:false,sound:true});
 function normalizeState(obj) {
   if (!obj || typeof obj!=='object' || Array.isArray(obj)) throw new Error('セーブデータ形式が正しくありません。');
   if(![1,2,3,4,5].includes(Number(obj.version)) && !(obj.inventory&&typeof obj.inventory==='object') && !(obj.discovered&&typeof obj.discovered==='object')) throw new Error('このセーブデータのバージョンは対応していません。');
@@ -764,6 +770,7 @@ function normalizeState(obj) {
       s.activePotions.push({id:e.id,expires:e.expires});
     }
   }
+  s.promoGiftClaimed=obj.promoGiftClaimed===true;
   s.fast=obj.fast===true; s.sound=obj.sound!==false;
   return s;
 }
@@ -785,6 +792,24 @@ function save() {
   try { localStorage.setItem(STORAGE_KEY,JSON.stringify(state));canSave=true;lastSaveAt=Date.now(); }
   catch(e){if(canSave) toast('セーブに失敗しました','ブラウザの保存設定を確認し、データを書き出してください。','error'); canSave=false;}
 }
+function grantOneTimeGift(){
+  // Backendless GitHub Pages has browser-local saves, NOT global accounts.
+  // The extra localStorage marker prevents repeated grants by importing an old
+  // save or by using the in-game reset button.
+  const gift=POTIONS.find(p=>p.gift);
+  if(!gift)return false;
+  let alreadyClaimed=state.promoGiftClaimed===true;
+  try{alreadyClaimed=alreadyClaimed||localStorage.getItem(PROMO_KEY)==='claimed';}catch(_){/* storage unavailable */}
+  state.promoGiftClaimed=true;
+  if(alreadyClaimed){
+    try{localStorage.setItem(PROMO_KEY,'claimed');}catch(_){}
+    save();return false;
+  }
+  state.potions[gift.id]=(state.potions[gift.id]||0)+1;
+  try{localStorage.setItem(PROMO_KEY,'claimed');}catch(_){}
+  save();return true;
+}
+const receivedWelcomeGift=grantOneTimeGift();
 function rng() {
   // 53 random bits: sufficient to represent events with probability 1 / 1,000,000,000,000.
   if (globalThis.crypto?.getRandomValues) {
@@ -799,10 +824,21 @@ function activePotions(){
   if(before!==state.activePotions.length) save();
   return state.activePotions;
 }
-function potionMultiplier(){return activePotions().reduce((mult,e)=>mult*POTIONS.find(p=>p.id===e.id).mult,1);}
+function potionMultiplier(){
+  // The multiplier always equals the product of all active potion multipliers.
+  // Six 5,000,000× admin potions are valid; never silently re-normalize the result.
+  return activePotions().reduce((mult,e)=>{
+    const effect=POTIONS.find(p=>p.id===e.id);
+    return mult*(effect?.mult||1);
+  },1);
+}
 function gearBonus(){return Object.values(state.equipped).reduce((sum,id)=>sum+(GEAR.find(g=>g.id===id)?.bonus||0),0);}
 function luck(){return (1+gearBonus())*potionMultiplier();}
-function multiplierText(n){return n>=10000 ? new Intl.NumberFormat('ja-JP',{notation:'compact',maximumFractionDigits:2}).format(n) : n.toFixed(2);}
+function multiplierText(n){
+  if(!Number.isFinite(n))return '∞';
+  if(n>=1e12)return n.toExponential(2);
+  return n>=10000 ? new Intl.NumberFormat('ja-JP',{notation:'compact',maximumFractionDigits:2}).format(n) : n.toFixed(2);
+}
 function clockText(ms){if(ms<=0)return '00:00';const secs=Math.ceil(ms/1000);return String(Math.floor(secs/60)).padStart(2,'0')+':'+String(secs%60).padStart(2,'0');}
 function renderEquippedAura(){
   const a=state.equippedAura!==null?AURAS[state.equippedAura]:null;
@@ -818,20 +854,33 @@ function renderEquippedAura(){
   $('equipped-aura-odds').textContent=owned?oddsText(a)+' · '+TIERS[a.tier].jp:'図鑑からオーラを装備しよう';
   card.querySelector('.orb-showcase').setAttribute('aria-label',owned?a.name+'の光るオーブ':'未装備のオーブ');
 }
-function auraProbability(a,L) {
-  if(a.id===0)return 0;
-  let boost=1;
-  if(a.tier===1) boost=1+(L-1)*0.008;
-  if(a.tier===2) boost=1+(L-1)*0.09;
-  if(a.tier>=3) boost=L;
-  return boost/a.odds;
+// LUCK ENGINE v3 — independent rarity checks, no global probability squashing.
+// For each non-base aura its per-roll proc chance at luck L is:
+//      P = 1 - exp(-L / odds)
+// Very rare events are approximately L / odds. A 1-in-1-trillion aura at
+// L=5,000,000 therefore has ~1-in-200,000 chance to activate on each roll.
+// Unlike the old cumulative ticket subtraction, a huge multiplier does not
+// guarantee a *specific* highest-tier aura forever; matching auras within the
+// highest activated tier are randomly selected.
+// IMPORTANT: the probabilities for displayed 1/N are the reference rates
+// at luck 1, not mutually exclusive final categorical chances.
+function auraProbability(a,L){
+  if(!a || a.id===0 || !a.odds)return 0;
+  const multiplier=Number.isFinite(L)&&L>0 ? L : 1;
+  return -Math.expm1(-multiplier/a.odds); // stable for tiny odds
 }
 function pickAura(){
-  const L=luck();const items=AURAS.slice(1).map(a=>({a,weight:auraProbability(a,L)}));
-  const sum=items.reduce((s,x)=>s+x.weight,0);
-  const scale=sum>0.98 ? 0.98/sum : 1; // Prevent invalid total probability at extreme luck.
-  let r=rng();
-  for(let i=items.length-1;i>=0;i--){const x=items[i];r-=x.weight*scale;if(r<0)return x.a;}
+  const L=luck();
+  // Check every tier independently. Highest tier wins, but every matching
+  // aura in that tier has a fair opportunity to appear.
+  for(let tier=TIERS.length-1;tier>=0;tier--){
+    const successes=[];
+    for(const a of AURAS){
+      if(a.tier!==tier || !a.odds)continue;
+      if(rng()<auraProbability(a,L))successes.push(a);
+    }
+    if(successes.length)return successes[Math.floor(rng()*successes.length)];
+  }
   return AURAS[0];
 }
 function isOwned(a){return (state.inventory[a.id]||0)>0;}
@@ -1066,19 +1115,19 @@ function unequipSlot(slot){
 function renderPotions(){
   const active=activePotions(),mult=potionMultiplier(),full=active.length>=MAX_POTION_STACKS;
   $('active-potion-name').textContent=active.length?`${active.length}本のポーション発動中`:'ポーション効果なし';
-  $('active-potion-text').textContent=active.length?`合計ラック ×${multiplierText(mult)}。同じ種類も重複OK！それぞれ個別の時間で効果が切れます。`:'同じ種類も違う種類も、最大6本まで同時に重ねがけできます。';
+  $('active-potion-text').textContent=active.length?`合計ラック ×${multiplierText(mult)}。同じ種類も重複OK！上位レア度から独立抽選。各ポーションは個別の時間で終了します。`:'同じ種類も違う種類も最大6本。各オーラに倍率を反映し、上位レア度から個別に抽選します。';
   $('active-potion-timer').textContent=active.length+' / '+MAX_POTION_STACKS;
   $('active-potion-stack').innerHTML=active.length?active.map((e,index)=>{
     const p=POTIONS.find(x=>x.id===e.id);
     return `<div class="stacked-elixir" style="--elixir-color:${p.color}"><span class="elixir-glyph">${p.glyph}</span><div class="elixir-details"><strong>${p.name}</strong><small>LUCK ×${p.mult} · STACK ${index+1}</small></div><span class="elixir-time" data-potion-expiry="${e.expires}">${clockText(e.expires-Date.now())}</span></div>`;
   }).join(''):'<div class="empty-stack"><span>✧</span> ポーションを使うとここに重ねがけの履歴と残り時間が並びます。</div>';
-  $('potion-inventory').innerHTML=POTIONS.filter(p=>!p.admin||(state.potions[p.id]||0)>0||state.activePotions.some(e=>e.id===p.id)).map(p=>{const count=state.potions[p.id]||0;
+  $('potion-inventory').innerHTML=POTIONS.filter(p=>(!p.admin&&!p.gift)||(state.potions[p.id]||0)>0||state.activePotions.some(e=>e.id===p.id)).map(p=>{const count=state.potions[p.id]||0;
     return `<div class="inventory-potion" style="--potion-color:${p.color}"><div class="potion-emblem">${p.glyph}</div><b>${p.name}</b><span>×${fmt(count)} · ×${fmt(p.mult)}</span><button data-use-potion="${p.id}" ${count&&!full?'':'disabled'}>${full?'6本発動中':count?'使用する':'所持数 0'}</button></div>`;
   }).join('');
-  $('potion-grid').innerHTML=POTIONS.filter(p=>!p.admin).map(p=>{const can=canCraft(p);return `<article class="recipe-card" style="--recipe-color:${p.color}"><div class="recipe-top"><div class="recipe-icon">${p.glyph}</div><span class="recipe-category">ELIXIR · ALCHEMY</span></div><h3>${p.name}</h3><p class="recipe-desc">${p.desc}</p><div class="recipe-bonus">×${p.mult.toFixed(1)} <small>LUCK / ${p.seconds} SEC</small></div><div class="recipe-ingredients">${ingredients(p)}</div><button class="craft-btn" data-craft-potion="${p.id}" ${can?'':'disabled'}>${can?'✦ 調合する':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
+  $('potion-grid').innerHTML=POTIONS.filter(p=>!p.admin&&!p.gift).map(p=>{const can=canCraft(p);return `<article class="recipe-card" style="--recipe-color:${p.color}"><div class="recipe-top"><div class="recipe-icon">${p.glyph}</div><span class="recipe-category">ELIXIR · ALCHEMY</span></div><h3>${p.name}</h3><p class="recipe-desc">${p.desc}</p><div class="recipe-bonus">×${p.mult.toFixed(1)} <small>LUCK / ${p.seconds} SEC</small></div><div class="recipe-ingredients">${ingredients(p)}</div><button class="craft-btn" data-craft-potion="${p.id}" ${can?'':'disabled'}>${can?'✦ 調合する':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
   updatePotionTimer();
 }
-function craftPotion(id){const p=POTIONS.find(p=>p.id===id);if(!p)return;if(!canCraft(p)){toast('素材が足りません','図鑑から素材を探してみよう。','error');return;}if(!consume(p))return;state.potions[id]=(state.potions[id]||0)+1;save();renderPotions();renderRollUI();toast('ALCHEMY SUCCESS',p.name+'を調合しました。','good');tone(700,.25,'sine',.03);}
+function craftPotion(id){const p=POTIONS.find(p=>p.id===id);if(!p||p.admin||p.gift)return;if(!canCraft(p)){toast('素材が足りません','図鑑から素材を探してみよう。','error');return;}if(!consume(p))return;state.potions[id]=(state.potions[id]||0)+1;save();renderPotions();renderRollUI();toast('ALCHEMY SUCCESS',p.name+'を調合しました。','good');tone(700,.25,'sine',.03);}
 function usePotion(id){
   const p=POTIONS.find(p=>p.id===id);if(!p||(state.potions[id]||0)<1)return;
   const active=activePotions();
@@ -1105,8 +1154,8 @@ function renderRecords(){
   $('save-status-text').textContent=canSave ? '自動セーブ有効 · このブラウザに保存' : '自動保存できない可能性があります · 書き出し推奨';
 }
 function exportSave(){const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download='AETHER_RNG_SAVE_'+new Date().toISOString().slice(0,10)+'.json';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);toast('セーブを書き出しました','バックアップファイルを大切に保存してください。','good');}
-async function importSave(file){if(!file)return;try{if(file.size>2*1024*1024)throw new Error('ファイルが大きすぎます。');const raw=await file.text();const imported=normalizeState(JSON.parse(raw));if(!window.confirm('現在のセーブデータを読み込んだデータで上書きします。よろしいですか？'))return;setAuto(false);state=imported;resultAura=null;save();renderEntireGame();showPage('records');toast('読み込み完了','セーブデータを復元しました。','good');}catch(e){toast('読み込めませんでした',e?.message||'ファイルが正しくありません。','error');}}
-function resetAll(){if(!window.confirm('すべてのオーラ・装備・記録を削除します。元には戻せません。本当に初期化しますか？'))return;setAuto(false);state=freshState();resultAura=null;save();renderEntireGame();showPage('roll');toast('初期化しました','新しい冒険を始めましょう。');}
+async function importSave(file){if(!file)return;try{if(file.size>2*1024*1024)throw new Error('ファイルが大きすぎます。');const raw=await file.text();const imported=normalizeState(JSON.parse(raw));if(!window.confirm('現在のセーブデータを読み込んだデータで上書きします。よろしいですか？'))return;setAuto(false);state=imported;state.promoGiftClaimed=true;resultAura=null;save();renderEntireGame();showPage('records');toast('読み込み完了','セーブデータを復元しました。','good');}catch(e){toast('読み込めませんでした',e?.message||'ファイルが正しくありません。','error');}}
+function resetAll(){if(!window.confirm('すべてのオーラ・装備・記録を削除します。元には戻せません。本当に初期化しますか？'))return;setAuto(false);state=freshState();state.promoGiftClaimed=true;resultAura=null;save();renderEntireGame();showPage('roll');toast('初期化しました','新しい冒険を始めましょう。');}
 function renderEntireGame(){
   $('fast-btn').classList.toggle('is-on',state.fast);$('fast-state').textContent=state.fast?'ON':'OFF';$('fast-btn').setAttribute('aria-pressed',String(state.fast));
   $('sound-btn').innerHTML=icon(state.sound?'volume':'mute');
@@ -1821,6 +1870,7 @@ function initSpectacleViewer(){
 
 function init(){TIERS.forEach((t,i)=>{const opt=document.createElement('option');opt.value=i;opt.textContent=t.jp+' · '+t.name;$('tier-filter').append(opt);});bind();renderEntireGame();showPage('roll');starfield();setInterval(()=>{const before=state.activePotions.length;const active=activePotions();updatePotionTimer();if(before!==active.length){renderRollUI();if(page==='potions')renderPotions();toast('ポーション効果終了',`残り${active.length}本 · 合計ラック×${multiplierText(potionMultiplier())}`);}if(page==='roll'&&state.rolls)for(const el of document.querySelectorAll('.recent-time')){ /* relative times refresh on next roll */ }},500);}
 init();initSpectacleViewer();
+if(receivedWelcomeGift){toast('✦ 全員配布ギフト！','ラック×5,000・60秒のポーションを1個受け取りました。ポーション画面から使用できます。','good');}
 (function(){
   const gearGrid=$('gear-grid'),potionGrid=$('potion-grid');
   if(gearGrid){const n=document.createElement('p');n.className='craft-tier-help';n.style.cssText='font-size:11px;color:#a8b2cd;line-height:1.65;margin:3px 0 18px';n.textContent='◆ EPIC ×3 などの表記は、そのレア度のオーラなら種類を問わず必要数を消費します（指定名の素材とは別に必要）。';gearGrid.before(n);}
