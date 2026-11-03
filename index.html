@@ -613,6 +613,65 @@ html,body{overflow-x:hidden!important}
 }
 @media(prefers-reduced-motion:reduce){.artifact-icon-shell *{animation:none!important}}
 
+
+/* VOID RNG v13 — STARDUST REFINERY */
+.refinery-collection-shortcut{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 17px;padding:13px 16px;border-radius:13px;background:linear-gradient(105deg,#192b3d,#1c1935);border:1px solid #76dbef54;color:#bcefff;font-size:12px;font-weight:800}
+.refinery-collection-shortcut button{flex:none;padding:9px 14px;border-radius:9px;background:#77eff51a;border:1px solid #7dfff49a;color:#e0ffff;font-weight:900;transition:.2s}
+.refinery-collection-shortcut button:hover{background:#77eff538;transform:translateY(-1px)}
+.refinery{position:relative;isolation:isolate;overflow:hidden;margin:0 0 32px;padding:25px;background:radial-gradient(ellipse at 3% 12%,#58dcf018,transparent 44%),radial-gradient(ellipse at 95% 100%,#9569ff16,transparent 55%),linear-gradient(145deg,#12192a,#0d1425);border:1px solid #5d82a075;box-shadow:inset 0 1px 0 #adf1ff1b,0 18px 40px #0005}
+.refinery:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.5;background:linear-gradient(135deg,transparent 35%,#76dcec05 35.1%,transparent 35.4%,transparent 60%,#af94ff08 60.1%,transparent 60.3%)}
+.refinery-intro{display:flex;justify-content:space-between;align-items:center;gap:17px}
+.refinery-kicker{color:#81cfe3;font-size:9px;font-weight:900;letter-spacing:1.9px}
+.refinery h2{font-size:clamp(23px,3vw,33px);color:#f5fbff;margin:8px 0 6px;font-weight:900;letter-spacing:-.9px}
+.refinery h2 span{color:#80effa;text-shadow:0 0 19px #71e5ff48}
+.refinery-intro p{margin:0;color:#94a7bc;line-height:1.7;font-size:11px}
+.refinery-wallet{min-width:145px;display:flex;flex-direction:column;align-items:flex-end;gap:3px;padding:12px 16px;border:1px solid #98eaff42;background:#72eafa0b;border-radius:13px}
+.refinery-wallet>span{color:#96b6c9;font-size:8px;font-weight:900;letter-spacing:1px}
+.refinery-wallet strong{font-size:24px;font-weight:900;color:#defbff;font-variant-numeric:tabular-nums}
+.refinery-wallet small{font-size:8px;color:#7bd9ea;font-weight:900;letter-spacing:1px}
+.refinery-price-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin:21px 0}
+.refinery-price{min-width:0;display:flex;flex-direction:column;gap:3px;background:#0a1220bd;border-radius:9px;padding:9px 10px;border:1px solid color-mix(in srgb,var(--r-tier),transparent 75%);border-left:3px solid var(--r-tier)}
+.refinery-price span{color:var(--r-tier);font-size:9px;white-space:nowrap;font-weight:900;letter-spacing:.2px}
+.refinery-price b{font-size:17px;font-weight:900;color:#e9f8ff;font-variant-numeric:tabular-nums}
+.refinery-price small{font-size:8px;color:#8498ab}
+.refinery-body{display:grid;grid-template-columns:minmax(180px,.9fr) minmax(0,1.3fr);gap:21px;align-items:stretch}
+.refinery-core{min-height:294px;position:relative;display:grid;place-items:center;border-radius:15px;border:1px solid #75cfe446;overflow:hidden;background:radial-gradient(circle,#69dce525,transparent 61%),radial-gradient(circle at 50% 75%,#301b5d35,transparent 65%),#080f20}
+.refinery-energy-a,.refinery-energy-b{position:absolute;width:185px;height:185px;border-radius:50%;border:1.5px solid #7ee7f84a;box-shadow:inset 0 0 20px #4bfff011,0 0 25px #86eaff20;pointer-events:none;animation:refinery-spin 20s linear infinite}
+.refinery-energy-a:before,.refinery-energy-a:after{content:"";position:absolute;inset:-8px;border-radius:50%;border:3px solid transparent;border-top-color:#8eeffc9e;border-bottom-color:#b1a2ff67}
+.refinery-energy-b{width:220px;height:220px;border-style:dashed;border-color:#76eaff32;animation-duration:32s;animation-direction:reverse}
+.refinery-orb-art{position:relative;z-index:2;display:grid;place-items:center;width:135px;height:135px;filter:drop-shadow(0 0 18px #9defff60)}
+.refinery-orb-art .aura-orb-wrap{max-width:135px;max-height:135px}
+.refinery-placeholder{font-size:65px;color:#abf6ff;text-shadow:0 0 25px #92eafa}
+.refinery-core-tag{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#83bdd0;font-size:9px;font-weight:900;letter-spacing:2.1px}
+@keyframes refinery-spin{to{transform:rotate(360deg)}}
+.refinery-controls{min-width:0;display:flex;flex-direction:column;gap:10px}
+.refinery-field{display:flex;flex-direction:column;gap:6px;color:#aabed1;font-size:10px;font-weight:900;letter-spacing:.3px;min-width:0}
+.refinery-field select,.refinery-field input{min-width:0;max-width:100%;width:100%;height:42px;padding:9px 12px;border-radius:9px;border:1px solid #58728a;background:#0c1424;color:#eff8ff;font-size:16px;font-weight:700;outline-offset:3px;color-scheme:dark}
+.refinery-field select:focus-visible,.refinery-field input:focus-visible{outline:2px solid #86eaf9}
+.refinery-balance{color:#8edacc;line-height:1.6;font-size:11px;min-height:17px}
+.refinery-qty-row{display:flex;align-items:flex-end;gap:8px;flex-wrap:wrap}
+.refinery-qty-row .refinery-field{width:110px}
+.refinery-max{height:42px;border:1px solid #6bcbe4a1;border-radius:9px;background:#74ebf214;color:#b1f5ff;padding:0 15px;font-size:11px;font-weight:900}
+.refinery-preserve{display:flex;align-items:center;gap:7px;margin:0 0 11px auto;color:#ccdded;font-weight:700;font-size:11px;cursor:pointer}
+.refinery-preserve input{height:17px;width:17px;accent-color:#8be9ef}
+.refinery-reward{display:flex;align-items:baseline;gap:10px;padding:11px 13px;border-radius:10px;border:1px solid #79f4dc46;background:linear-gradient(90deg,#1b514237,#0c1927)}
+.refinery-reward span{color:#99b7bd;font-size:10px;font-weight:800}
+.refinery-reward strong{color:#96ffe9;font-size:clamp(23px,3vw,31px);font-weight:900;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.refinery-reward small{font-size:8px;color:#79ccb8;font-weight:900}
+.refinery-action,.refinery-bulk-button{min-height:44px;border-radius:10px;color:#071e26;background:linear-gradient(105deg,#7aebf4,#8cfbd6);border:1px solid #bffff5ad;font-weight:900;font-size:12px;box-shadow:0 9px 20px #67ebd721;transition:.2s}
+.refinery-action:hover:not(:disabled),.refinery-bulk-button:hover:not(:disabled){filter:brightness(1.1);transform:translateY(-2px)}
+.refinery-action:disabled,.refinery-bulk-button:disabled{background:#293543;color:#778da3;border-color:#3a4a5b;opacity:1;box-shadow:none}
+.refinery-warning{margin:0;color:#8798ac;font-size:10px;line-height:1.65}
+.refinery-bulk{margin-top:22px;padding-top:19px;border-top:1px solid #47748a55;display:grid;grid-template-columns:minmax(0,1fr) minmax(270px,.95fr);gap:20px;align-items:center}
+.refinery-bulk strong{color:#dffaff;font-size:13px}
+.refinery-bulk p{margin:6px 0 0;color:#8ba0b6;font-size:10px;line-height:1.7}
+.refinery-bulk-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:7px;align-items:end}
+.refinery-bulk-summary{align-self:center;color:#a8f5da;font-size:11px;line-height:1.6;font-weight:800;text-align:right}
+.refinery-bulk-button{grid-column:1/-1;min-height:40px;background:linear-gradient(105deg,#879df4,#b6a5ff);color:#10152a;border-color:#d9ccffa6}
+@media(max-width:1130px){.refinery-price-list{grid-template-columns:repeat(5,minmax(0,1fr))}.refinery-body{grid-template-columns:minmax(150px,1fr) minmax(0,1.3fr)}.refinery-bulk{grid-template-columns:1fr}.refinery-bulk-controls{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media(max-width:760px){.refinery{display:flex;flex-direction:column;padding:15px 12px;margin-bottom:27px}.refinery-intro{order:0}.refinery-body{order:1}.refinery-price-list{order:2}.refinery-bulk{order:3}.refinery-intro{align-items:flex-start;flex-wrap:wrap}.refinery-wallet{min-width:0;margin-left:auto;padding:8px 12px}.refinery-wallet strong{font-size:19px}.refinery h2{font-size:25px}.refinery-kicker{font-size:8px;letter-spacing:1px}.refinery-price-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:14px 0}.refinery-price{padding:8px 9px}.refinery-price b{font-size:15px}.refinery-body{grid-template-columns:1fr;gap:13px}.refinery-core{min-height:195px}.refinery-energy-a{width:155px;height:155px}.refinery-energy-b{width:190px;height:190px}.refinery-orb-art{width:108px;height:108px}.refinery-orb-art .aura-orb-wrap{max-width:108px;max-height:108px}.refinery-core-tag{bottom:10px;font-size:7px}.refinery-qty-row .refinery-field{width:100px}.refinery-bulk{gap:14px}.refinery-collection-shortcut{flex-wrap:wrap;padding:10px 12px;font-size:10px}.refinery-collection-shortcut button{font-size:10px;margin-left:auto}}
+@media(max-width:390px){.refinery-qty-row .refinery-field{width:100px}.refinery-preserve{margin-left:0;font-size:10px}.refinery-bulk-summary{font-size:10px}.refinery-bulk-controls{gap:6px}}
+@media(prefers-reduced-motion:reduce){.refinery-energy-a,.refinery-energy-b{animation:none}}
 </style>
 <style id="equip-unequip-style">
 .equip-slot:has(.slot-unequip){border-color:#776ca655;background:linear-gradient(135deg,#191a32,#111725)}
@@ -927,9 +986,29 @@ html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
           <div class="page-endline">VOID NETWORK <span>—</span> THE IMPOSSIBLE IS ONLY A NUMBER.</div>
         </section>
 
-        <section class="page" id="page-collection" aria-labelledby="collection-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> AURA DATABASE <span class="eyebrow-dot">◆</span> 80 SIGNATURES</div><h1 id="collection-title">未知の光を、<em>収集せよ。</em></h1><p>すべてのオーラには、それぞれ固有の奇跡がある。</p></div></div><div class="collection-summary panel"><div><span>ARCHIVE PROGRESS</span><strong id="collection-count">0 <small>/ 80</small></strong></div><div class="large-progress"><div id="collection-progress"></div></div><div class="collection-percent" id="collection-percent">0%</div></div><div class="toolbar"><div class="tab-group" id="collection-tabs"><button data-filter="all" class="active">すべて <span>80</span></button><button data-filter="owned">発見済み</button><button data-filter="missing">未発見</button></div><div class="toolbar-right"><label class="search-box"><svg><use href="#i-search"/></svg><input id="collection-search" placeholder="オーラ名で検索" autocomplete="off"></label><select id="tier-filter" aria-label="レアリティで絞り込む"><option value="all">すべてのレアリティ</option></select></div></div><div class="aura-grid" id="aura-grid"></div><div class="grid-empty" id="grid-empty" hidden>条件に合うオーラがありません。</div><nav id="aura-pager" aria-label="図鑑ページ送り" hidden><button id="aura-prev" type="button">← 前へ</button><span id="aura-page-counter" aria-live="polite">1 / 1</span><button id="aura-next" type="button">次へ →</button></nav></section>
+        <section class="page" id="page-collection" aria-labelledby="collection-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> AURA DATABASE <span class="eyebrow-dot">◆</span> 80 SIGNATURES</div><h1 id="collection-title">未知の光を、<em>収集せよ。</em></h1><p>すべてのオーラには、それぞれ固有の奇跡がある。</p></div></div><div class="collection-summary panel"><div><span>ARCHIVE PROGRESS</span><strong id="collection-count">0 <small>/ 80</small></strong></div><div class="large-progress"><div id="collection-progress"></div></div><div class="collection-percent" id="collection-percent">0%</div></div><div class="toolbar"><div class="tab-group" id="collection-tabs"><button data-filter="all" class="active">すべて <span>80</span></button><button data-filter="owned">発見済み</button><button data-filter="missing">未発見</button></div><div class="toolbar-right"><label class="search-box"><svg><use href="#i-search"/></svg><input id="collection-search" placeholder="オーラ名で検索" autocomplete="off"></label><select id="tier-filter" aria-label="レアリティで絞り込む"><option value="all">すべてのレアリティ</option></select></div></div><div class="refinery-collection-shortcut"><span>✧ 余ったオーブをダストに変換</span><button type="button" id="collection-to-refinery">星屑精錬所を開く <span aria-hidden="true">↗</span></button></div><div class="aura-grid" id="aura-grid"></div><div class="grid-empty" id="grid-empty" hidden>条件に合うオーラがありません。</div><nav id="aura-pager" aria-label="図鑑ページ送り" hidden><button id="aura-prev" type="button">← 前へ</button><span id="aura-page-counter" aria-live="polite">1 / 1</span><button id="aura-next" type="button">次へ →</button></nav></section>
 
-        <section class="page" id="page-forge" aria-labelledby="forge-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE FORGE <span class="eyebrow-dot">◆</span> ASCEND BEYOND</div><h1 id="forge-title">運を、<em>鍛え上げろ。</em></h1><p>入手したオーラを素材に、強力なラック装備をクラフト。</p></div></div><div id="forge-ready-banner" class="forge-ready-banner" hidden><span class="forge-ready-icon">✦</span><div><strong>CRAFT AVAILABLE</strong><span id="forge-ready-text">新しくクラフトできる装備があります</span></div></div><div class="forge-overview panel"><div class="forge-glyph">✣</div><div class="forge-overview-text"><span>YOUR EQUIPPED POWER</span><strong id="forge-bonus">+0.00× <small>GEAR LUCK</small></strong><p>3スロットとも自由に装備可能。同じ装備を2マスに入れることはできません。</p></div><button class="outline-btn" data-goto="collection">素材を見る <svg><use href="#i-chevron"/></svg></button></div><div class="subhead"><h2>装備スロット <span>／ EQUIPPED</span></h2></div><div class="equip-slots" id="equip-slots"></div><div class="subhead with-gap"><h2>クラフト設計図 <span>／ BLUEPRINTS</span></h2><div class="small-note">素材はクラフト時に消費されます</div></div><div class="recipe-grid" id="gear-grid"></div></section>
+        <section class="page" id="page-forge" aria-labelledby="forge-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE FORGE <span class="eyebrow-dot">◆</span> ASCEND BEYOND</div><h1 id="forge-title">運を、<em>鍛え上げろ。</em></h1><p>入手したオーラを素材に、強力なラック装備をクラフト。</p></div></div><div id="forge-ready-banner" class="forge-ready-banner" hidden><span class="forge-ready-icon">✦</span><div><strong>CRAFT AVAILABLE</strong><span id="forge-ready-text">新しくクラフトできる装備があります</span></div></div><div class="forge-overview panel"><div class="forge-glyph">✣</div><div class="forge-overview-text"><span>YOUR EQUIPPED POWER</span><strong id="forge-bonus">+0.00× <small>GEAR LUCK</small></strong><p>3スロットとも自由に装備可能。同じ装備を2マスに入れることはできません。</p></div><button class="outline-btn" data-goto="collection">素材を見る <svg><use href="#i-chevron"/></svg></button></div>
+<section class="refinery panel" id="dust-refinery" aria-labelledby="refinery-title">
+  <div class="refinery-intro">
+    <div><div class="refinery-kicker">✧ &nbsp; STARDUST REFINERY // ORB TRANSMUTATION</div><h2 id="refinery-title">星屑<span>精錬所</span></h2><p>余ったオーブを星屑に分解。高レアリティほど、より多くのスターダストに変換できます。</p></div>
+    <div class="refinery-wallet"><span>AVAILABLE STARDUST</span><strong id="refinery-wallet">0</strong><small>✦ STARDUST</small></div>
+  </div>
+  <div class="refinery-price-list" id="refinery-price-list" aria-label="レアリティ別ダスト交換レート"></div>
+  <div class="refinery-body">
+    <div class="refinery-core"><div class="refinery-energy-a"></div><div class="refinery-energy-b"></div><div id="refinery-orb-art" class="refinery-orb-art"><span class="refinery-placeholder">✦</span></div><div class="refinery-core-tag">MATTER → STARDUST</div></div>
+    <div class="refinery-controls">
+      <label class="refinery-field">変換するオーブ<select id="refinery-aura" aria-label="変換するオーブを選択"></select></label>
+      <div class="refinery-balance" id="refinery-balance" aria-live="polite">オーブを選択してください</div>
+      <div class="refinery-qty-row"><label class="refinery-field" for="refinery-qty">変換数<input type="number" inputmode="numeric" id="refinery-qty" min="1" max="1" value="1" step="1"></label><button type="button" class="refinery-max" id="refinery-max">MAX</button><label class="refinery-preserve"><input type="checkbox" id="refinery-keep" checked><span>各オーブを1個残す</span></label></div>
+      <div class="refinery-reward"><span>獲得予定</span><strong id="refinery-gain">+0</strong><small>STARDUST</small></div>
+      <button type="button" id="refinery-refine" class="refinery-action" disabled>✧ 選択したオーブを精錬する</button>
+      <p class="refinery-warning">※ 消費したオーブは戻りません。図鑑の発見記録は残ります。装備中の最後の1個は保護されます。</p>
+    </div>
+  </div>
+  <div class="refinery-bulk"><div><strong>✦ 重複オーブをまとめて精錬</strong><p>選んだレア度までのオーブを、各種類1個ずつ残して一括変換。装備中のオーブも保護します。</p></div><div class="refinery-bulk-controls"><label class="refinery-field">対象レア度<select id="refinery-bulk-tier"><option value="0">BASICまで</option><option value="1">UNCOMMONまで</option><option value="2" selected>RAREまで</option><option value="3">EPICまで</option><option value="4">LEGENDARYまで</option><option value="5">MYTHICまで</option><option value="6">COSMICまで</option><option value="7">TRANSCENDENTまで</option><option value="8">FORBIDDENまで</option><option value="9">ABSOLUTEまで</option></select></label><div class="refinery-bulk-summary" id="refinery-bulk-summary">—</div><button type="button" id="refinery-bulk-btn" class="refinery-bulk-button" disabled>重複分を一括精錬</button></div></div>
+</section>
+<div class="subhead"><h2>装備スロット <span>／ EQUIPPED</span></h2></div><div class="equip-slots" id="equip-slots"></div><div class="subhead with-gap"><h2>クラフト設計図 <span>／ BLUEPRINTS</span></h2><div class="small-note">素材はクラフト時に消費されます</div></div><div class="recipe-grid" id="gear-grid"></div></section>
 
         <section class="page" id="page-potions" aria-labelledby="potions-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> ALCHEMY LAB <span class="eyebrow-dot">◆</span> TEMPORARY POWER</div><h1 id="potions-title">一瞬に、<em>奇跡を宿せ。</em></h1><p>オーラとスターダストを調合。ここぞという時に運命を加速させよう。</p></div></div><div class="potion-active panel"><div class="potion-illustration">◈</div><div><span>ACTIVE ELIXIR</span><strong id="active-potion-name">ポーション効果なし</strong><p id="active-potion-text">ポーションを作成して使用すると、期間中ラックが上がります。</p></div><div class="potion-clock" id="active-potion-timer">0 / 6</div></div><div class="active-potion-stack" id="active-potion-stack" aria-label="重ねがけ中のポーション"></div><div class="subhead"><h2>所持しているポーション <span>／ INVENTORY</span></h2></div><div class="potion-inventory" id="potion-inventory"></div><div class="subhead with-gap"><h2>調合レシピ <span>／ LABORATORY</span></h2><span class="small-note">同種も重ねがけOK · 最大6本 · 倍率は掛け算 · 超レア優先抽選</span></div><div class="recipe-grid" id="potion-grid"></div></section>
 
@@ -1630,6 +1709,91 @@ function renderPotionIcon(p){
  </svg></span>`;
 }
 
+
+// STARDUST REFINERY: tier-based value, no changes to discover history or save schema.
+const REFINERY_RATES=[3,10,30,100,400,1500,6000,25000,120000,500000];
+const REFINERY_DUST_LIMIT=1000000000000;
+const refineryCreditable=raw=>Math.max(0,Math.min(raw,REFINERY_DUST_LIMIT-state.shards));
+let refineryAuraId=null,refineryQty=1,refineryKeepOne=true,refineryBulkTier=2;
+const dustOf=a=>REFINERY_RATES[a.tier];
+function refineryMaxQty(a){
+  if(!a)return 0;
+  const count=state.inventory[a.id]||0;
+  const reserved=(refineryKeepOne||state.equippedAura===a.id)?1:0;
+  return Math.max(0,count-reserved);
+}
+function refineryBulkPlan(){
+  const plan=[];let count=0,dust=0;
+  for(const a of AURAS){
+    if(a.tier>refineryBulkTier)continue;
+    const qty=Math.max(0,(state.inventory[a.id]||0)-1);
+    if(qty){plan.push([a,qty]);count+=qty;dust+=qty*dustOf(a);}
+  }
+  return {plan,count,dust};
+}
+function renderRefinery(){
+  if(!$('refinery-aura'))return;
+  const owned=AURAS.filter(a=>(state.inventory[a.id]||0)>0);
+  if(refineryAuraId===null||!owned.some(a=>a.id===refineryAuraId)){
+    refineryAuraId=owned.find(a=>refineryMaxQty(a)>0)?.id??owned[0]?.id??null;
+    refineryQty=1;
+  }
+  $('refinery-wallet').textContent=fmt(state.shards);
+  $('refinery-price-list').innerHTML=TIERS.map((tier,i)=>`<div class="refinery-price" style="--r-tier:${tier.color}"><span>${tier.name}</span><b>+${fmt(REFINERY_RATES[i])}</b><small>1オーブあたり</small></div>`).join('');
+  $('refinery-aura').innerHTML=owned.length?owned.map(a=>`<option value="${a.id}" ${a.id===refineryAuraId?'selected':''}>[${TIERS[a.tier].name}] ${a.name} ×${fmt(state.inventory[a.id])}</option>`).join(''):'<option value="">オーブをまだ所持していません</option>';
+  $('refinery-keep').checked=refineryKeepOne;
+  $('refinery-bulk-tier').value=String(refineryBulkTier);
+  updateRefineryPreview();
+}
+function updateRefineryPreview(){
+  const a=refineryAuraId===null?null:AURAS[refineryAuraId];
+  const owned=a?(state.inventory[a.id]||0):0;
+  const max=refineryMaxQty(a);
+  if(max>0)refineryQty=Math.max(1,Math.min(max,Number.isSafeInteger(refineryQty)?refineryQty:1));
+  else refineryQty=1;
+  $('refinery-orb-art').innerHTML=a?renderAuraOrb(a,{size:130,className:'refinery-preview-orb'}):'<span class="refinery-placeholder">✦</span>';
+  $('refinery-balance').textContent=a?`${TIERS[a.tier].name} · 所持 ${fmt(owned)}個 ／ 変換可能 ${fmt(max)}個${state.equippedAura===a.id?'（装備中の最後の1個は保護）':''}`:'オーブを集めると精錬できます';
+  $('refinery-qty').value=String(refineryQty);
+  $('refinery-qty').max=String(Math.max(1,max));
+  $('refinery-qty').disabled=max===0;
+  $('refinery-max').disabled=max===0;
+  const gain=max?refineryCreditable(refineryQty*dustOf(a)):0;
+  $('refinery-gain').textContent='+'+fmt(gain);
+  $('refinery-refine').disabled=!gain;
+  const bulk=refineryBulkPlan();
+  $('refinery-bulk-summary').textContent=`${fmt(bulk.count)}個 → +${fmt(refineryCreditable(bulk.dust))} ダスト`;
+  $('refinery-bulk-btn').disabled=!bulk.count||!refineryCreditable(bulk.dust);
+}
+function finishRefining(dust,summary){
+  state.shards=Math.min(REFINERY_DUST_LIMIT,state.shards+dust);
+  save();
+  renderRollUI();renderCollection();renderForge();renderEquippedAura();renderRecords();updateCraftReadyUI();
+  toast('✧ 精錬完了',`${summary} ／ +${fmt(dust)} スターダスト`,'good');
+  tone(750,.17,'triangle',.03);tone(1150,.26,'sine',.025,.09);
+}
+function refineSelectedAura(){
+  const a=refineryAuraId===null?null:AURAS[refineryAuraId];if(!a)return;
+  const qty=Number(refineryQty),max=refineryMaxQty(a);
+  if(!Number.isSafeInteger(qty)||qty<1||qty>max){updateRefineryPreview();toast('変換できません','所持数と保護設定を確認してください。','error');return;}
+  const gain=refineryCreditable(qty*dustOf(a));
+  if(!gain){toast('ダスト所持上限です','スターダストは最大1兆まで保持できます。','error');return;}
+  if(!window.confirm(`${a.name} を ${fmt(qty)}個精錬して、${fmt(gain)}スターダストを獲得します。\nオーブは元に戻せません。実行しますか？`))return;
+  if(qty>refineryMaxQty(a))return;
+  state.inventory[a.id]-=qty;
+  if(!state.inventory[a.id])delete state.inventory[a.id];
+  // Do NOT delete state.discovered: discovery history is permanent.
+  finishRefining(gain,`${a.name} ×${fmt(qty)}`);
+}
+function refineBulkAuras(){
+  const bulk=refineryBulkPlan();if(!bulk.count)return;
+  const gain=refineryCreditable(bulk.dust);
+  if(!gain){toast('ダスト所持上限です','スターダストは最大1兆まで保持できます。','error');return;}
+  const tier=TIERS[refineryBulkTier];
+  if(!window.confirm(`${tier.name}までの重複オーブ ${fmt(bulk.count)}個を精錬し、${fmt(gain)}スターダストを獲得します。\nすべての種類を最低1個ずつ残します。オーブは元に戻せません。実行しますか？`))return;
+  const latest=refineryBulkPlan();
+  for(const [a,qty] of latest.plan){state.inventory[a.id]-=qty;}
+  finishRefining(refineryCreditable(latest.dust),`重複オーブ ×${fmt(latest.count)}`);
+}
 function renderForge(){
   $('forge-bonus').innerHTML='+'+gearBonus().toFixed(2)+'× <small>GEAR LUCK</small>';
   const ownedGear=GEAR.filter(g=>state.gearOwned.includes(g.id));
@@ -1648,6 +1812,7 @@ function renderForge(){
     </div>`;
   }).join('');
   $('gear-grid').innerHTML=GEAR.map(g=>{const owned=state.gearOwned.includes(g.id),eq=Object.values(state.equipped).includes(g.id),can=canCraft(g);return `<article class="recipe-card ${can&&!owned?'craft-recipe-ready':''}" style="--recipe-color:${g.color}"><div class="recipe-top"><div class="recipe-icon">${renderGearIcon(g)}</div>${can&&!owned?'<span class="craft-ready-label">✦ CRAFT READY</span>':`<span class="recipe-category">${g.slotName} · EQUIPMENT</span>`}</div><h3>${g.name}</h3><p class="recipe-desc">${g.desc}</p><div class="recipe-bonus">+${g.bonus.toFixed(2)}× <small>LUCK BONUS</small></div><div class="recipe-ingredients">${ingredients(g)}</div><button class="craft-btn ${eq?'craft-btn-unequip':''}" data-craft-gear="${g.id}" ${(!owned&&!can)?'disabled':''}>${owned?(eq?'× 装備を外す':'装備する'):can?'✦ クラフトする':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
+  renderRefinery();
 }
 function equipGearInSlot(id,slot){
   if(!Object.prototype.hasOwnProperty.call(SLOT_LABELS,slot))return;
@@ -1771,6 +1936,15 @@ function bind(){
   $('aura-grid').addEventListener('click',e=>{const b=e.target.closest('[data-equip-aura]');if(b)equippedAura(b.dataset.equipAura);});
   $('equip-slots').addEventListener('click',e=>{const b=e.target.closest('[data-unequip-slot]');if(b)unequipSlot(b.dataset.unequipSlot);});
   $('equip-slots').addEventListener('change',e=>{const selector=e.target.closest('[data-select-slot]');if(selector)equipGearInSlot(selector.value,selector.dataset.selectSlot);});
+  $('collection-to-refinery').addEventListener('click',()=>{showPage('forge');requestAnimationFrame(()=>$('dust-refinery').scrollIntoView({behavior:'smooth',block:'start'}));});
+  $('refinery-aura').addEventListener('change',e=>{const id=Number(e.target.value);refineryAuraId=AURAS[id]?id:null;refineryQty=1;updateRefineryPreview();});
+  $('refinery-keep').addEventListener('change',e=>{refineryKeepOne=e.target.checked;updateRefineryPreview();});
+  $('refinery-qty').addEventListener('input',e=>{const n=Number(e.target.value);refineryQty=Number.isSafeInteger(n)?n:0;const a=refineryAuraId===null?null:AURAS[refineryAuraId];const valid=refineryQty>=1&&refineryQty<=refineryMaxQty(a);$('refinery-gain').textContent='+'+fmt(valid?refineryCreditable(refineryQty*dustOf(a)):0);$('refinery-refine').disabled=!valid||!refineryCreditable(refineryQty*dustOf(a));});
+  $('refinery-qty').addEventListener('change',updateRefineryPreview);
+  $('refinery-max').addEventListener('click',()=>{refineryQty=refineryMaxQty(AURAS[refineryAuraId]);updateRefineryPreview();});
+  $('refinery-refine').addEventListener('click',refineSelectedAura);
+  $('refinery-bulk-tier').addEventListener('change',e=>{refineryBulkTier=Number(e.target.value);updateRefineryPreview();});
+  $('refinery-bulk-btn').addEventListener('click',refineBulkAuras);
   $('gear-grid').addEventListener('click',e=>{const b=e.target.closest('[data-craft-gear]');if(b)craftGear(b.dataset.craftGear);});
   $('potion-grid').addEventListener('click',e=>{const b=e.target.closest('[data-craft-potion]');if(b)craftPotion(b.dataset.craftPotion);});
   $('potion-inventory').addEventListener('click',e=>{const b=e.target.closest('[data-use-potion]');if(b)usePotion(b.dataset.usePotion);});
