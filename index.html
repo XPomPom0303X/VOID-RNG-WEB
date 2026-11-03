@@ -639,6 +639,173 @@ html,body{overflow-x:hidden!important}
 #equip-slots .slot-unequip{margin-top:0;min-height:35px}
 @media(max-width:760px){#equip-slots .equip-slot{padding:15px 14px}#equip-slots .slot-name{font-size:14px}#equip-slots .slot-picker{font-size:13px;min-height:46px}}
 </style>
+
+<style id="void-v11-4-iphone-viewport-fix">
+/* v11.4 — iOS Safari/Discord browser zoom prevention & mobile card containment.
+   Cosmetic CSS only: saved games, RNG, gear rules and admin functions remain unchanged. */
+html { -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+@media (max-width:760px) {
+  html,body { max-width:100%; }
+  body,.app-shell,.work-area,.content,.page,
+  #page-forge,#page-potions,#gear-grid,#potion-grid,
+  #equip-slots,#potion-inventory { min-width:0; max-width:100%; }
+  .app-shell,.work-area,.content,.page { width:100%; }
+  #page-forge .recipe-grid,#page-potions .recipe-grid {
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    width:100%!important;
+    max-width:100%!important;
+    gap:13px;
+  }
+  #gear-grid .recipe-card,#potion-grid .recipe-card {
+    box-sizing:border-box;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    overflow:hidden;
+    padding:17px 15px;
+    contain:layout style;
+  }
+  #gear-grid .recipe-card .recipe-top,
+  #potion-grid .recipe-card .recipe-top {
+    display:flex;
+    min-width:0;
+    max-width:100%;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:8px;
+  }
+  #gear-grid .recipe-icon,#potion-grid .recipe-icon {
+    width:76px; height:76px; flex:0 0 76px;
+    max-width:76px; min-width:0;
+  }
+  #gear-grid .recipe-category,#potion-grid .recipe-category,
+  #gear-grid .craft-ready-label,#potion-grid .craft-ready-label {
+    min-width:0; max-width:calc(100% - 84px);
+    text-align:right;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    line-height:1.45;
+    font-size:9px;
+  }
+  #gear-grid .recipe-card h3,#potion-grid .recipe-card h3 {
+    display:block;
+    width:100%; max-width:100%; min-width:0;
+    font-size:clamp(17px,4.9vw,20px)!important;
+    line-height:1.4!important;
+    letter-spacing:-.025em;
+    overflow-wrap:anywhere;
+    word-break:normal;
+    margin:15px 0 7px!important;
+  }
+  #gear-grid .recipe-desc,#potion-grid .recipe-desc {
+    font-size:clamp(11px,3.1vw,13px)!important;
+    line-height:1.7;
+    overflow-wrap:anywhere;
+    max-width:100%;
+  }
+  #gear-grid .recipe-bonus,#potion-grid .recipe-bonus {
+    display:flex; flex-wrap:wrap;
+    width:100%; min-width:0; max-width:100%;
+    align-items:baseline;
+    font-size:clamp(20px,6vw,28px)!important;
+    line-height:1.25;
+    margin:15px 0;
+    gap:5px 9px;
+    white-space:normal;
+    overflow-wrap:anywhere;
+  }
+  #gear-grid .recipe-bonus small,#potion-grid .recipe-bonus small {
+    display:inline-block;
+    margin-left:0;
+    font-size:10px!important;
+    letter-spacing:.4px;
+    line-height:1.45;
+  }
+  #gear-grid .recipe-ingredients,#potion-grid .recipe-ingredients {
+    width:100%; max-width:100%; min-width:0;
+  }
+  #gear-grid .ingredient,#potion-grid .ingredient {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,max-content);
+    align-items:start;
+    gap:8px;
+    width:100%; min-width:0;
+    font-size:11px;
+    line-height:1.5;
+  }
+  #gear-grid .ingredient > span,#potion-grid .ingredient > span {
+    min-width:0;
+    overflow-wrap:anywhere;
+  }
+  #gear-grid .ingredient strong,#potion-grid .ingredient strong {
+    min-width:0;
+    max-width:min(48vw,155px);
+    text-align:right;
+    overflow-wrap:anywhere;
+    font-size:10px;
+    font-variant-numeric:tabular-nums;
+  }
+  #gear-grid .ingredient span small,#potion-grid .ingredient span small {
+    display:block;
+    margin:2px 0 0;
+    font-size:9px;
+  }
+  #gear-grid .craft-btn,#potion-grid .craft-btn {
+    width:100%;max-width:100%;min-width:0;
+    min-height:44px;
+    height:auto;
+    padding:10px 9px;
+    white-space:normal;
+    text-align:center;
+    overflow-wrap:anywhere;
+    font-size:12px;
+  }
+  #equip-slots .equip-slot { width:100%;min-width:0;max-width:100%; }
+  #equip-slots .equip-slot select { display:block;width:100%;min-width:0;max-width:100%; }
+  .mobile-dock {
+    width:100%;max-width:100%;min-width:0;
+    box-sizing:border-box;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    overflow:hidden;
+  }
+  .mobile-dock .dock-btn {min-width:0;max-width:100%;overflow:hidden;}
+  .mobile-dock .dock-btn span {font-size:clamp(8px,2.4vw,10px)!important;}
+  /* iOS zooms the whole document on focus when form controls use fonts below 16px.
+     This applies to admin input, filters, save import, and gear-slot selection. */
+  input,select,textarea,
+  input[type="text"],input[type="search"],input[type="number"] {
+    font-size:16px!important;
+    -webkit-text-size-adjust:100%;
+  }
+}
+@media (max-width:360px) {
+  #gear-grid .recipe-icon,#potion-grid .recipe-icon {
+    width:68px;height:68px;flex-basis:68px;max-width:68px;
+  }
+  #gear-grid .recipe-category,#potion-grid .recipe-category {max-width:calc(100% - 75px)}
+  #gear-grid .recipe-card h3,#potion-grid .recipe-card h3{font-size:17px!important}
+}
+</style>
+
+<style id="relic-forge-v12-styles">
+/* Legendary relic art — static stone/emblem; ambient particles only */
+.gear-art.relic-v12 .relic-v12-emblem{filter:drop-shadow(0 0 4px #eafcff99)}
+.gear-art.relic-v12 .relic-background{filter:drop-shadow(0 0 3px var(--art-color))}
+.gear-art.relic-v12 .relic-front{filter:drop-shadow(0 0 1px var(--art-color))}
+#gear-grid .recipe-icon{width:98px;height:98px;flex:0 0 98px;background:radial-gradient(circle at 50% 49%,color-mix(in srgb,var(--recipe-color),transparent 76%),#090d1c 70%);box-shadow:inset 0 0 17px color-mix(in srgb,var(--recipe-color),transparent 86%),0 0 22px color-mix(in srgb,var(--recipe-color),transparent 84%)}
+#gear-grid .recipe-card:hover .relic-v12{filter:drop-shadow(0 0 16px var(--art-color));transition:filter .22s ease}
+#equip-slots .slot-icon{width:57px;height:57px}
+@media (max-width:760px){
+  #gear-grid .recipe-icon{width:92px!important;height:92px!important;flex:0 0 92px!important;max-width:92px!important}
+  #gear-grid .recipe-category,#gear-grid .craft-ready-label{max-width:calc(100% - 102px)!important}
+}
+@media (max-width:360px){
+  #gear-grid .recipe-icon{width:82px!important;height:82px!important;flex-basis:82px!important;max-width:82px!important}
+  #gear-grid .recipe-category,#gear-grid .craft-ready-label{max-width:calc(100% - 92px)!important}
+}
+@media (prefers-reduced-motion:reduce){.gear-art.relic-v12 *{animation:none!important}}
+</style>
 </head>
 <body>
   <svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1301,23 +1468,121 @@ function __artifactRune(id){
     'void-apotheosis':'<path d="M23 39Q39 15 51 45L60 28 69 45Q81 15 97 39L85 84 60 100 35 84Z"/><circle cx="60" cy="66" r="19"/><path d="M60 45V90M40 66H80"/>'
   };return rune[id]||'<path d="M60 28 72 50 92 60 72 70 60 92 48 70 28 60 48 50Z"/>';
 }
+// VOID RNG — RELIC FORGE v12 / 21 hand-crafted emblem systems.
+// Everything here is visual. All IDs, save data, stats, recipes, and controls are unchanged.
 function renderGearIcon(g){
- const u='gear_'+g.id.replace(/[^a-z0-9]/g,'_')+'_'+(++__artifactIconSequence),seed=__artifactSeed(g.id),slot=g.slot;
- const points=Array.from({length:12},(_,i)=>{const a=i*Math.PI/6;const r=i%3===0?49:43;return `${(60+Math.cos(a)*r).toFixed(1)},${(60+Math.sin(a)*r).toFixed(1)}`;}).join(' ');
- const details=Array.from({length:8},(_,i)=>{const a=i*Math.PI/4+seed*.001,rx=60+Math.cos(a)*49,ry=60+Math.sin(a)*49;return `<circle cx="${rx.toFixed(1)}" cy="${ry.toFixed(1)}" r="${i%2?1:1.8}" fill="${g.color}"/>`;}).join('');
- const ring=`<g class="artifact-slow-rotate"><ellipse cx="60" cy="65" rx="37" ry="17" fill="none" stroke="url(#${u}_chrome)" stroke-width="11"/><ellipse cx="60" cy="64" rx="37" ry="17" fill="none" stroke="${g.color}" stroke-width="1.8"/><path d="M30 74Q60 94 90 74" stroke="#dffcff" opacity=".72" stroke-width="2"/></g><path d="M60 17 76 37 73 58 60 69 47 58 44 37Z" fill="url(#${u}_gem)" stroke="url(#${u}_chrome)" stroke-width="2.3"/>`;
- const core=`<g class="artifact-slow-rotate"><polygon points="${points}" fill="url(#${u}_chrome)" stroke="${g.color}" stroke-opacity=".8" stroke-width="1.8"/><circle cx="60" cy="60" r="37" fill="#070a20" stroke="#ffffff" stroke-opacity=".37" stroke-width="1.2"/><circle cx="60" cy="60" r="32" fill="none" stroke="${g.color}" stroke-opacity=".6" stroke-width="2" stroke-dasharray="11 8"/></g><path d="M60 29 88 45V76L60 94 32 76V45Z" fill="url(#${u}_gem)" stroke="url(#${u}_chrome)" stroke-width="2.8"/>`;
- const charm=`<path d="M48 10 60 29 72 10" stroke="${g.color}" opacity=".8" stroke-width="3"/><circle cx="60" cy="29" r="5.5" fill="url(#${u}_chrome)"/><path d="M60 27 96 45 89 82 60 102 31 82 24 45Z" fill="url(#${u}_chrome)" stroke="${g.color}" stroke-width="2.5"/><path d="M60 34 85 49 80 77 60 90 40 77 35 49Z" fill="url(#${u}_gem)" stroke="${g.color}" stroke-opacity=".7" stroke-width="1.8"/><path d="M37 38 17 54 27 70M83 38 103 54 93 70" fill="none" stroke="${g.color}" stroke-opacity=".8" stroke-width="2.5"/>`;
- return `<span class="artifact-icon-shell gear-art" style="--art-color:${g.color}" role="img" aria-label="${g.name}の装備アイコン"><svg class="artifact-icon-svg" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><defs>
- <radialGradient id="${u}_gem" cx="31%" cy="23%" r="82%"><stop stop-color="#f6faff"/><stop offset=".22" stop-color="${g.color}"/><stop offset=".65" stop-color="${g.color}" stop-opacity=".49"/><stop offset="1" stop-color="#060819"/></radialGradient>
- <linearGradient id="${u}_chrome" x1=".1" y1="0" x2=".9" y2="1"><stop stop-color="#edf7ff"/><stop offset=".19" stop-color="#7890b0"/><stop offset=".44" stop-color="#1c2948"/><stop offset=".65" stop-color="${g.color}"/><stop offset=".82" stop-color="#293b60"/><stop offset="1" stop-color="#d0e8ff"/></linearGradient>
- <radialGradient id="${u}_aura"><stop stop-color="${g.color}" stop-opacity=".53"/><stop offset="1" stop-color="${g.color}" stop-opacity="0"/></radialGradient></defs>
- <circle cx="60" cy="60" r="59" fill="url(#${u}_aura)"/><circle cx="60" cy="60" r="53" stroke="${g.color}" stroke-opacity=".24" stroke-dasharray="2 7"/>
- ${slot==='ring'?ring:slot==='core'?core:charm}
- <g class="artifact-rune" stroke="${slot==='charm'?'#f5f9ff':'#ffffff'}" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round" fill="none" style="color:${g.color}" transform="translate(60 60) scale(${slot==='ring'?.53:slot==='charm'?.44:.55}) translate(-60 -60)">${__artifactRune(g.id)}</g>
- ${details}<circle cx="43" cy="35" r="2.8" fill="white" opacity=".85"/><path d="M90 27l2 5 5 2-5 2-2 5-2-5-5-2 5-2Z" fill="white" opacity=".8"/>
- </svg></span>`;
+  const id=g.id, C=g.color, u='relic_'+id.replace(/[^a-z0-9]/g,'_')+'_'+(++__artifactIconSequence);
+  const stroke=(d,op=1,w=1.9)=>`<path d="${d}" fill="none" stroke="${C}" opacity="${op}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+  const plating=(d,op=1)=>`<path d="${d}" fill="url(#${u}-steel)" stroke="${C}" stroke-opacity="${op}" stroke-width="1.65" stroke-linejoin="round"/>`;
+  const beam=(d,op=.95,w=2)=>`<path d="${d}" fill="none" stroke="url(#${u}-light)" opacity="${op}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+  const orb=(x,y,r=2,op=.9)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${C}" fill-opacity="${op}"/>`;
+  const gemPaths={
+    shard:'M60 19 78 42 73 70 60 88 47 70 42 42Z',
+    diamond:'M60 22 85 54 60 92 35 54Z',
+    star:'M60 20 69 44 93 53 72 67 60 91 48 67 27 53 51 44Z',
+    prism:'M60 19 83 43 77 76 60 94 43 76 37 43Z',
+    tear:'M60 18C73 37 84 49 81 66C79 81 68 92 60 94C43 88 37 76 39 62C41 47 52 32 60 18Z',
+    hex:'M60 20 85 36 89 67 60 94 31 67 35 36Z',
+    plate:'M60 23 90 39 88 72 60 92 32 72 30 39Z',
+    crown:'M36 37 49 51 60 23 71 51 84 37 79 82 41 82Z',
+    coffin:'M60 19 86 43 81 77 60 94 39 77 34 43Z',
+    eye:'M60 31Q85 31 92 60Q85 89 60 89Q35 89 28 60Q35 31 60 31Z'
+  };
+  // Distinct silhouette, surrounding architecture and gem for every named relic.
+  const art={
+    'glimmer-ring':{stone:'shard',scale:.35,back:
+      `${stroke('M35 41 25 51 29 66M85 41 95 51 91 66',.8,2)}${plating('M33 67 Q60 101 87 67L92 72Q60 111 28 72Z')}${orb(60,13,2.1)}`,
+      front:`${beam('M29 76Q60 104 91 76',.9,2.4)}${stroke('M41 85Q60 95 79 85',.55,1.1)}`},
+    'polaris-ring':{stone:'star',scale:.32,back:
+      `${stroke('M60 7V25M60 95V110M9 60H29M91 60H111M23 23 38 38M82 82 97 97M97 23 82 38M38 82 23 97',.7,2.5)}${plating('M60 9 68 34 93 25 83 48 109 60 82 71 94 95 69 85 60 109 50 85 26 95 38 71 11 60 38 48 26 25 51 34Z',.55)}`,
+      front:`${beam('M23 60Q60 84 97 60',.76,1.5)}${orb(60,7,2,.95)}`},
+    'chronos-band':{stone:'shard',scale:.33,back:
+      `${plating('M36 34Q60 9 84 34L97 60 84 86Q60 110 36 86L23 60Z',.8)}${stroke('M38 27 42 35M60 19V29M82 27 78 35M91 60H99M29 60H21M38 93 42 85M82 93 78 85',.8,2.1)}${beam('M31 73Q60 104 89 73',.65,5)}`,
+      front:`${stroke('M26 64Q60 94 94 64',.75,2)}${orb(94,64,2)}`},
+    'stormbreaker-ring':{stone:'shard',scale:.36,back:
+      `${plating('M47 12 64 30 54 48 76 26 92 41 71 64 93 77 73 93 57 75 37 106 39 72 21 61 42 43 26 30Z')}${beam('M34 79 61 38 55 68 84 29',1,3.3)}${stroke('M17 82 26 73M94 17 102 9',.86,2.6)}`,
+      front:`${beam('M25 88 60 105 94 85',.78,2.2)}${orb(100,27,2.1)}`},
+    'infernal-crown':{stone:'crown',scale:.38,back:
+      `${plating('M15 75 24 30 42 52 60 11 78 52 96 30 105 75 89 94 31 94Z')}${stroke('M15 75 24 30 42 52 60 11 78 52 96 30 105 75',.95,2.9)}${orb(24,27,3,.93)}${orb(60,10,3.3)}${orb(96,27,3)}`,
+      front:`${plating('M27 84 93 84 86 100 34 100Z')}${beam('M35 93H85',.9,2)}`},
+    'quasar-sovereign':{stone:'star',scale:.32,back:
+      `${stroke('M60 4V21M60 98V116M4 60H25M95 60H116',.76,3)}${plating('M60 13 69 43 101 60 69 77 60 108 51 77 19 60 51 43Z')}${beam('M17 63C30 18 93 23 106 62',.68,3.6)}`,
+      front:`${stroke('M13 68C36 111 88 109 107 66',.81,2.4)}${orb(18,64,2.6)}${orb(105,56,2.3)}`},
+    'singularity-emperor':{stone:'eye',scale:.42,back:
+      `${plating('M60 8 73 32 101 19 89 49 113 60 90 72 101 102 71 89 60 113 49 89 19 102 31 73 7 60 31 48 19 19 47 32Z')}${stroke('M60 9V111M9 60H111',.42,1.2)}`,
+      front:`<ellipse cx="60" cy="60" rx="47" ry="14" transform="rotate(-31 60 60)" fill="none" stroke="url(#${u}-light)" stroke-width="4" opacity=".92"/><ellipse cx="60" cy="60" rx="49" ry="16" transform="rotate(37 60 60)" fill="none" stroke="${C}" stroke-width="1.3" opacity=".6"/>`},
+    'orbital-core':{stone:'hex',scale:.45,back:
+      `${plating('M60 9 85 23 107 60 85 97 60 111 35 97 13 60 35 23Z')}${beam('M24 38 37 20 83 20 96 38M24 82 37 100 83 100 96 82',.92,2.2)}<ellipse cx="60" cy="60" rx="46" ry="18" transform="rotate(-24 60 60)" fill="none" stroke="${C}" stroke-opacity=".67" stroke-width="3.6"/>`,
+      front:`${plating('M17 58 31 51 32 69 17 66ZM103 58 89 51 88 69 103 66Z')}${orb(21,62,3)}${orb(99,62,3)}`},
+    'nebula-reactor':{stone:'tear',scale:.46,back:
+      `${plating('M60 11 84 27 101 59 82 95 60 108 36 95 19 59 36 27Z',.65)}${stroke('M39 19C12 33 17 78 40 94M81 19C108 33 103 78 80 94',.85,3)}${beam('M20 70C39 94 90 95 99 40',.72,3.3)}`,
+      front:`${stroke('M21 77Q35 101 59 105',.75,2)}${orb(98,42,2.6)}`},
+    'origin-engine':{stone:'diamond',scale:.45,back:
+      `${plating('M60 9 72 29 93 18 90 40 110 60 90 80 93 102 72 90 60 111 48 90 27 102 30 80 10 60 30 40 27 18 48 29Z')}${beam('M18 61H38M82 61H102M60 13V30M60 89V107',.9,2.5)}`,
+      front:`${plating('M16 42 31 37 37 50 24 61ZM104 42 89 37 83 50 96 61Z')}${orb(60,109,2.5)}`},
+    'astral-gearbox':{stone:'hex',scale:.44,back:
+      `${plating('M60 10 70 28 92 21 89 42 110 54 94 68 101 91 77 89 60 110 43 89 19 91 26 68 10 54 31 42 28 21 50 28Z')}${stroke('M60 15V33M60 88V105M15 60H33M87 60H105M31 31 43 43M77 77 89 89M89 31 77 43M43 77 31 89',.75,2.7)}`,
+      front:`${plating('M27 44 33 29 44 36 39 51ZM93 44 87 29 76 36 81 51Z')}${beam('M29 81Q60 109 91 81',.66,1.8)}`},
+    'seraphim-engine':{stone:'prism',scale:.42,back:
+      `${plating('M43 30 18 14 26 43 11 52 37 67 46 47ZM77 30 102 14 94 43 109 52 83 67 74 47Z')}${beam('M29 25 39 55M91 25 81 55',.75,2.6)}${stroke('M48 18Q60 11 72 18',.85,2.3)}${orb(60,12,3.1)}`,
+      front:`${plating('M28 77 43 71 48 91 33 95ZM92 77 77 71 72 91 87 95Z')}${beam('M44 100Q60 108 76 100',.85,1.9)}`},
+    'genesis-reactor':{stone:'hex',scale:.45,back:
+      `${plating('M60 9 84 23 106 42 106 76 84 96 60 111 36 96 14 76 14 42 36 23Z')}${stroke('M16 43 60 63 104 43M16 77 60 58 104 77M36 24 60 64 84 24M36 96 60 56 84 96',.74,1.8)}`,
+      front:`${plating('M21 40 35 33 40 45 26 54ZM99 40 85 33 80 45 94 54Z')}${orb(60,105,2.1)}`},
+    'last-light-sanctum':{stone:'diamond',scale:.46,back:
+      `${plating('M60 6 68 38 95 20 82 49 113 60 82 71 95 100 68 82 60 114 52 82 25 100 38 71 7 60 38 49 25 20 52 38Z')}${beam('M60 7V35M60 87V113M10 60H35M85 60H110',.82,2.3)}`,
+      front:`${stroke('M23 28Q60 9 97 28M23 92Q60 111 97 92',.7,2)}${orb(60,9,3.2)}`},
+    'prism-charm':{stone:'prism',scale:.48,back:
+      `${plating('M60 9 92 34 102 68 78 101 42 101 18 68 28 34Z')}${stroke('M60 9V26M18 68 36 59M102 68 84 59',.8,2.2)}${beam('M31 34 60 15 89 34',.87,2.1)}`,
+      front:`${plating('M42 92 60 109 78 92 74 86 60 98 46 86Z')}${orb(60,10,3)}`},
+    'eclipse-seal':{stone:'coffin',scale:.44,back:
+      `${plating('M60 13 88 31 105 60 86 95 60 108 34 95 15 60 32 31Z')}${stroke('M25 38Q60 6 95 38M26 84Q60 111 94 84',.7,2.6)}${beam('M20 60A40 40 0 0 1 90 32',.65,3)}`,
+      front:`${stroke('M38 100Q60 111 82 100',.9,1.7)}${orb(94,37,2.8)}`},
+    'void-sigil':{stone:'eye',scale:.47,back:
+      `${plating('M60 13 90 28 108 61 90 94 60 108 30 94 12 61 30 28Z')}${beam('M19 62Q60 11 101 62Q60 110 19 62Z',.75,2)}${stroke('M30 31 40 40M80 82 90 92',.67,2.6)}`,
+      front:`${plating('M46 105 60 112 74 105 70 99 60 104 50 99Z')}${orb(60,11,2.4)}`},
+    'aurora-ward':{stone:'tear',scale:.48,back:
+      `${plating('M25 96Q10 37 38 19L48 33Q31 52 39 81ZM95 96Q110 37 82 19L72 33Q89 52 81 81Z')}${stroke('M18 74Q28 20 55 13M102 74Q92 20 65 13',.85,2.8)}${beam('M21 88Q60 116 99 88',.77,3.2)}`,
+      front:`${plating('M35 86 48 94 60 108 72 94 85 86 75 99 60 115 45 99Z')}${orb(60,9,2.3)}`},
+    'eclipse-requiem':{stone:'coffin',scale:.44,back:
+      `${plating('M13 32 35 44 34 17 53 34 60 7 67 34 86 17 85 44 107 32 96 65 108 86 83 89 60 109 37 89 12 86 24 65Z')}${beam('M16 65Q60 19 104 65',.76,2.4)}`,
+      front:`${plating('M26 79 43 92 60 104 77 92 94 79 82 100 60 114 38 100Z')}${orb(60,10,2.6)}`},
+    'abyssal-throne':{stone:'crown',scale:.41,back:
+      `${plating('M14 91 24 37 42 56 60 8 78 56 96 37 106 91 84 105 36 105Z')}${stroke('M24 40 16 17M96 40 104 17M60 8V2',.82,3)}${orb(60,9,3.7)}${orb(24,35,2.6)}${orb(96,35,2.6)}`,
+      front:`${plating('M30 88 90 88 81 107 39 107Z')}${beam('M38 96H82',.95,2.3)}`},
+    'void-apotheosis':{stone:'crown',scale:.42,back:
+      `${plating('M9 31 38 46 42 14 60 36 78 14 82 46 111 31 92 64 108 86 78 99 60 115 42 99 12 86 28 64Z')}${beam('M20 25 43 13 60 31 77 13 100 25',.95,2.1)}${stroke('M15 82 42 104 60 113 78 104 105 82',.9,2.7)}`,
+      front:`<ellipse cx="60" cy="60" rx="46" ry="17" transform="rotate(-23 60 60)" fill="none" stroke="url(#${u}-light)" stroke-width="2.6" opacity=".72"/>${orb(60,6,2.8)}`}
+  }[id]||{stone:'hex',scale:.4,back:'',front:''};
+  const stone=gemPaths[art.stone]||gemPaths.hex;
+  const cY=art.stone==='crown'?58:art.stone==='shard'?52:art.stone==='star'?55:art.stone==='diamond'?56:art.stone==='eye'?61:59;
+  const points=Array.from({length:12},(_,i)=>{const a=i*Math.PI/6+(__artifactSeed(id)%13)*.006,r=51+(i%4===0?3:0);return `${(60+Math.cos(a)*r).toFixed(1)},${(60+Math.sin(a)*r).toFixed(1)}`;}).join(' ');
+  const particles=Array.from({length:9},(_,i)=>{const a=i*2.399+(__artifactSeed(id)%100)/68,r=i%3===0?52:i%2?48:56,x=60+Math.cos(a)*r,y=60+Math.sin(a)*r;return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${i%4===0?1.65:.86}" fill="${i%3===0?'#edfaff':C}" opacity="${i%2===0?.9:.53}"/>`;}).join('');
+  return `<span class="artifact-icon-shell gear-art relic-v12" style="--art-color:${C}" role="img" aria-label="${g.name}の装備アイコン"><svg class="artifact-icon-svg" viewBox="0 0 120 120" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs>
+    <radialGradient id="${u}-aura"><stop stop-color="${C}" stop-opacity=".42"/><stop offset=".48" stop-color="${C}" stop-opacity=".18"/><stop offset="1" stop-color="${C}" stop-opacity="0"/></radialGradient>
+    <linearGradient id="${u}-steel" x1="0%" y1="10%" x2="100%" y2="89%"><stop stop-color="#ffffff"/><stop offset=".13" stop-color="#9fcce5"/><stop offset=".27" stop-color="#2f4161"/><stop offset=".47" stop-color="#10152f"/><stop offset=".62" stop-color="${C}"/><stop offset=".79" stop-color="#293653"/><stop offset=".95" stop-color="#d4faff"/></linearGradient>
+    <linearGradient id="${u}-light" x1="0%" y1="0%" x2="100%" y2="100%"><stop stop-color="#ffffff"/><stop offset=".25" stop-color="${C}"/><stop offset=".5" stop-color="#7b9dbf"/><stop offset=".76" stop-color="${C}"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+    <radialGradient id="${u}-stone" cx="30%" cy="19%" r="85%"><stop stop-color="#ffffff"/><stop offset=".13" stop-color="${C}"/><stop offset=".32" stop-color="${C}" stop-opacity=".94"/><stop offset=".57" stop-color="#252846"/><stop offset=".77" stop-color="#101328"/><stop offset="1" stop-color="${C}" stop-opacity=".76"/></radialGradient>
+    <linearGradient id="${u}-facet" x1="10%" y1="0%" x2="90%" y2="100%"><stop stop-color="#ffffff" stop-opacity=".85"/><stop offset=".26" stop-color="#ffffff" stop-opacity=".21"/><stop offset=".67" stop-color="#141b39" stop-opacity=".13"/><stop offset="1" stop-color="${C}" stop-opacity=".5"/></linearGradient>
+    <clipPath id="${u}-stoneClip"><path d="${stone}"/></clipPath>
+  </defs>
+  <circle cx="60" cy="60" r="58" fill="url(#${u}-aura)"/><circle cx="60" cy="60" r="53.5" fill="none" stroke="${C}" stroke-opacity=".21" stroke-width="1.1" stroke-dasharray="1.2 8"/>
+  <g class="relic-background">${art.back}</g>
+  <path d="${stone}" fill="#060b1e" stroke="${C}" stroke-opacity=".39" stroke-width="6"/>
+  <path d="${stone}" fill="url(#${u}-stone)" stroke="url(#${u}-steel)" stroke-width="3.3" stroke-linejoin="round"/>
+  <g clip-path="url(#${u}-stoneClip)">
+    <path d="M60 12 59 56 31 99 24 32Z" fill="url(#${u}-facet)" opacity=".49"/><path d="M60 17 61 56 94 103 104 32Z" fill="#060e29" opacity=".26"/>
+    <path d="M60 23V86M39 42 60 59 82 42M40 75 60 59 80 75" fill="none" stroke="${C}" opacity=".33" stroke-width="1.1"/>
+    <ellipse cx="49" cy="32" rx="13" ry="5" transform="rotate(-34 49 32)" fill="#fff" opacity=".24"/>
+    <g class="relic-v12-emblem" transform="translate(60 ${cY}) scale(${art.scale}) translate(-60 -60)" fill="none" stroke="#faffff" stroke-width="3.7" stroke-linejoin="round" stroke-linecap="round" opacity=".95">${__artifactRune(id)}</g>
+  </g>
+  <path d="${stone}" fill="none" stroke="#eafaff" opacity=".3" stroke-width=".85"/>
+  <g class="relic-front">${art.front}</g>
+  ${particles}
+  <path d="M87 18 89 24 95 26 89 28 87 34 85 28 79 26 85 24Z" fill="#f5fdff" opacity=".92"/><circle cx="27" cy="39" r="2.2" fill="#fff" opacity=".82"/>
+  </svg></span>`;
 }
+
 function __potionEmblem(id){
  const motifs={
  'spark-elixir':'<path d="M63 20 47 54H62L55 85 78 45H63Z"/>',
