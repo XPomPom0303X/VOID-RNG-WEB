@@ -453,7 +453,7 @@ body.sp-inspect-open{overflow:hidden;}
 
 /* Web update: keep the left navigation visible while the long collection scrolls.
    Important: overflow-x:hidden on the body breaks sticky positioning in Chromium. */
-html,body{overflow-x:clip!important}
+html,body{overflow-x:hidden!important}
 @media(min-width:761px){
   .app-shell{align-items:stretch}
   .sidebar{
@@ -564,6 +564,53 @@ html,body{overflow-x:clip!important}
   #equip-slots .slot-name{min-width:0;overflow-wrap:anywhere}
   #potion-inventory .inventory-potion b{overflow-wrap:anywhere;}
 }
+
+/* v11.2: iPhone-safe forge/potion mobile layout + icon cleanup */
+#gear-grid .recipe-card h3,
+#potion-grid .recipe-card h3,
+#gear-grid .recipe-desc,
+#potion-grid .recipe-desc,
+#gear-grid .recipe-bonus,
+#potion-grid .recipe-bonus,
+#gear-grid .ingredient span,
+#potion-grid .ingredient span,
+#gear-grid .ingredient strong,
+#potion-grid .ingredient strong,
+#gear-grid .craft-btn,
+#potion-grid .craft-btn{overflow-wrap:anywhere;word-break:break-word}
+#gear-grid .craft-btn,
+#potion-grid .craft-btn{white-space:normal;height:auto;min-height:44px;padding:10px 8px;line-height:1.3;text-align:center}
+#gear-grid .ingredient,
+#potion-grid .ingredient{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;column-gap:10px;row-gap:4px}
+#gear-grid .ingredient strong,
+#potion-grid .ingredient strong{text-align:right;max-width:100%}
+#gear-grid .recipe-bonus,
+#potion-grid .recipe-bonus{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px;line-height:1.05}
+#gear-grid .recipe-bonus small,
+#potion-grid .recipe-bonus small{margin-left:0}
+@media(max-width:760px){
+  #gear-grid .recipe-card,#potion-grid .recipe-card{padding:16px 14px}
+  #gear-grid .recipe-card h3,#potion-grid .recipe-card h3{font-size:clamp(13px,5.9vw,18px);line-height:1.18;margin-top:14px}
+  #gear-grid .recipe-desc,#potion-grid .recipe-desc{font-size:10px;line-height:1.55;min-height:0}
+  #gear-grid .recipe-bonus,#potion-grid .recipe-bonus{font-size:clamp(16px,8.6vw,22px);margin:12px 0}
+  #gear-grid .recipe-bonus small,#potion-grid .recipe-bonus small{font-size:9px;display:inline-block}
+  #gear-grid .recipe-ingredients,#potion-grid .recipe-ingredients{gap:8px;margin-bottom:14px}
+  #gear-grid .ingredient,#potion-grid .ingredient{font-size:10px}
+  #gear-grid .ingredient strong,#potion-grid .ingredient strong{font-size:9px}
+  #gear-grid .ingredient span small,#potion-grid .ingredient span small{display:block;margin:2px 0 0;font-size:8px}
+  #gear-grid .craft-btn,#potion-grid .craft-btn{font-size:10px}
+}
+@media(max-width:420px){
+  #gear-grid .recipe-top,#potion-grid .recipe-top{gap:8px}
+  #gear-grid .recipe-icon,#potion-grid .recipe-icon{width:74px;height:74px;flex:0 0 74px;max-width:74px;padding:3px;border-radius:18px}
+  #gear-grid .recipe-card h3,#potion-grid .recipe-card h3{font-size:clamp(12px,5.8vw,16px)}
+  #gear-grid .recipe-bonus,#potion-grid .recipe-bonus{font-size:clamp(15px,8vw,19px)}
+}
+@media(max-width:360px){
+  #gear-grid .recipe-icon,#potion-grid .recipe-icon{width:68px;height:68px;flex:0 0 68px;max-width:68px}
+  #gear-grid .recipe-card h3,#potion-grid .recipe-card h3{font-size:12px}
+  #gear-grid .recipe-desc,#potion-grid .recipe-desc{font-size:9px}
+}
 @media(prefers-reduced-motion:reduce){.artifact-icon-shell *{animation:none!important}}
 
 </style>
@@ -575,6 +622,22 @@ html,body{overflow-x:clip!important}
 .craft-btn.craft-btn-unequip{background:linear-gradient(110deg,#422b42,#54344c);border-color:#b8869b;color:#ffe0e9}
 .craft-btn.craft-btn-unequip:hover{background:linear-gradient(110deg,#644057,#784b67)}
 .aura-card-bottom button.is-equipped{background:#4d2e4588;border-color:#aa738c;color:#ffcee0}
+</style>
+<style id="gear-slots-flexible-fix">
+/* v11.3: three independently usable gear slots, desktop + mobile */
+#equip-slots .equip-slot{min-width:0;gap:10px;justify-content:flex-start}
+#equip-slots .slot-picker-label{display:block;color:#a8a4dc;font-size:10px;font-weight:800;letter-spacing:.5px;margin-top:auto}
+#equip-slots .slot-picker{display:block;width:100%;max-width:100%;min-width:0;min-height:42px;padding:9px 32px 9px 11px;appearance:auto;-webkit-appearance:menulist;border:1px solid #766db47d;border-radius:9px;background:#161c32;color:#eeeaff;font-size:12px;font-weight:700;line-height:1.35;cursor:pointer}
+#equip-slots .slot-picker:focus-visible{outline:2px solid #c4b7ff;outline-offset:3px}
+#equip-slots .slot-picker option{background:#161c32;color:#eeeaff}
+#equip-slots .slot-empty{font-size:12px;line-height:1.55;color:#aeb5cb;min-height:47px}
+#equip-slots .slot-open{border:1px dashed #777fba9c;background:linear-gradient(135deg,#1a1e35,#101726)}
+#equip-slots .slot-filled{border:1px solid #8377b38c}
+#equip-slots .slot-name{min-width:0;overflow-wrap:anywhere;font-size:clamp(11px,1.25vw,14px)}
+#equip-slots .slot-name>span:last-child{min-width:0;overflow-wrap:anywhere}
+#equip-slots .slot-icon{flex-shrink:0}
+#equip-slots .slot-unequip{margin-top:0;min-height:35px}
+@media(max-width:760px){#equip-slots .equip-slot{padding:15px 14px}#equip-slots .slot-name{font-size:14px}#equip-slots .slot-picker{font-size:13px;min-height:46px}}
 </style>
 </head>
 <body>
@@ -699,7 +762,7 @@ html,body{overflow-x:clip!important}
 
         <section class="page" id="page-collection" aria-labelledby="collection-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> AURA DATABASE <span class="eyebrow-dot">◆</span> 80 SIGNATURES</div><h1 id="collection-title">未知の光を、<em>収集せよ。</em></h1><p>すべてのオーラには、それぞれ固有の奇跡がある。</p></div></div><div class="collection-summary panel"><div><span>ARCHIVE PROGRESS</span><strong id="collection-count">0 <small>/ 80</small></strong></div><div class="large-progress"><div id="collection-progress"></div></div><div class="collection-percent" id="collection-percent">0%</div></div><div class="toolbar"><div class="tab-group" id="collection-tabs"><button data-filter="all" class="active">すべて <span>80</span></button><button data-filter="owned">発見済み</button><button data-filter="missing">未発見</button></div><div class="toolbar-right"><label class="search-box"><svg><use href="#i-search"/></svg><input id="collection-search" placeholder="オーラ名で検索" autocomplete="off"></label><select id="tier-filter" aria-label="レアリティで絞り込む"><option value="all">すべてのレアリティ</option></select></div></div><div class="aura-grid" id="aura-grid"></div><div class="grid-empty" id="grid-empty" hidden>条件に合うオーラがありません。</div><nav id="aura-pager" aria-label="図鑑ページ送り" hidden><button id="aura-prev" type="button">← 前へ</button><span id="aura-page-counter" aria-live="polite">1 / 1</span><button id="aura-next" type="button">次へ →</button></nav></section>
 
-        <section class="page" id="page-forge" aria-labelledby="forge-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE FORGE <span class="eyebrow-dot">◆</span> ASCEND BEYOND</div><h1 id="forge-title">運を、<em>鍛え上げろ。</em></h1><p>入手したオーラを素材に、強力なラック装備をクラフト。</p></div></div><div id="forge-ready-banner" class="forge-ready-banner" hidden><span class="forge-ready-icon">✦</span><div><strong>CRAFT AVAILABLE</strong><span id="forge-ready-text">新しくクラフトできる装備があります</span></div></div><div class="forge-overview panel"><div class="forge-glyph">✣</div><div class="forge-overview-text"><span>YOUR EQUIPPED POWER</span><strong id="forge-bonus">+0.00× <small>GEAR LUCK</small></strong><p>3スロットに装備可能。各スロットには1つだけ装備できる。</p></div><button class="outline-btn" data-goto="collection">素材を見る <svg><use href="#i-chevron"/></svg></button></div><div class="subhead"><h2>装備スロット <span>／ EQUIPPED</span></h2></div><div class="equip-slots" id="equip-slots"></div><div class="subhead with-gap"><h2>クラフト設計図 <span>／ BLUEPRINTS</span></h2><div class="small-note">素材はクラフト時に消費されます</div></div><div class="recipe-grid" id="gear-grid"></div></section>
+        <section class="page" id="page-forge" aria-labelledby="forge-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE FORGE <span class="eyebrow-dot">◆</span> ASCEND BEYOND</div><h1 id="forge-title">運を、<em>鍛え上げろ。</em></h1><p>入手したオーラを素材に、強力なラック装備をクラフト。</p></div></div><div id="forge-ready-banner" class="forge-ready-banner" hidden><span class="forge-ready-icon">✦</span><div><strong>CRAFT AVAILABLE</strong><span id="forge-ready-text">新しくクラフトできる装備があります</span></div></div><div class="forge-overview panel"><div class="forge-glyph">✣</div><div class="forge-overview-text"><span>YOUR EQUIPPED POWER</span><strong id="forge-bonus">+0.00× <small>GEAR LUCK</small></strong><p>3スロットとも自由に装備可能。同じ装備を2マスに入れることはできません。</p></div><button class="outline-btn" data-goto="collection">素材を見る <svg><use href="#i-chevron"/></svg></button></div><div class="subhead"><h2>装備スロット <span>／ EQUIPPED</span></h2></div><div class="equip-slots" id="equip-slots"></div><div class="subhead with-gap"><h2>クラフト設計図 <span>／ BLUEPRINTS</span></h2><div class="small-note">素材はクラフト時に消費されます</div></div><div class="recipe-grid" id="gear-grid"></div></section>
 
         <section class="page" id="page-potions" aria-labelledby="potions-title"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> ALCHEMY LAB <span class="eyebrow-dot">◆</span> TEMPORARY POWER</div><h1 id="potions-title">一瞬に、<em>奇跡を宿せ。</em></h1><p>オーラとスターダストを調合。ここぞという時に運命を加速させよう。</p></div></div><div class="potion-active panel"><div class="potion-illustration">◈</div><div><span>ACTIVE ELIXIR</span><strong id="active-potion-name">ポーション効果なし</strong><p id="active-potion-text">ポーションを作成して使用すると、期間中ラックが上がります。</p></div><div class="potion-clock" id="active-potion-timer">0 / 6</div></div><div class="active-potion-stack" id="active-potion-stack" aria-label="重ねがけ中のポーション"></div><div class="subhead"><h2>所持しているポーション <span>／ INVENTORY</span></h2></div><div class="potion-inventory" id="potion-inventory"></div><div class="subhead with-gap"><h2>調合レシピ <span>／ LABORATORY</span></h2><span class="small-note">同種も重ねがけOK · 最大6本 · 倍率は掛け算 · 超レア優先抽選</span></div><div class="recipe-grid" id="potion-grid"></div></section>
 
@@ -821,7 +884,7 @@ POTIONS.push(
 // Consistent display order: low to high luck, no matter when each recipe was added.
 GEAR.sort((a,b)=>a.bonus-b.bonus || a.name.localeCompare(b.name,'ja'));
 POTIONS.sort((a,b)=>a.mult-b.mult || a.name.localeCompare(b.name,'ja'));
-const SLOT_LABELS = {ring:'RING / 指輪',core:'CORE / コア',charm:'CHARM / 護符'};
+const SLOT_LABELS = {ring:'SLOT 01 / 装備枠1',core:'SLOT 02 / 装備枠2',charm:'SLOT 03 / 装備枠3'};
 const PAGE_NAMES = {roll:'SUMMON',collection:'COLLECTION',forge:'CRAFTING',potions:'ALCHEMY',records:'RECORDS'};
 const fmt = (v) => Math.floor(Number(v)||0).toLocaleString('ja-JP');
 
@@ -859,9 +922,16 @@ function normalizeState(obj) {
   }
   if(Array.isArray(obj.recent)) s.recent=obj.recent.slice(0,35).filter(x=>x && Number.isInteger(Number(x.id)) && Number(x.id)>=0 && Number(x.id)<AURAS.length && Number.isFinite(x.at)).map(x=>({id:Number(x.id),at:Math.max(0,Math.min(Date.now()+60000,x.at))}));
   if(Array.isArray(obj.gearOwned)) s.gearOwned=[...new Set(obj.gearOwned.filter(validGearId))];
-  if(obj.equipped && typeof obj.equipped==='object') for (const slot of Object.keys(s.equipped)) {
-    const id=obj.equipped[slot];
-    if(s.gearOwned.includes(id) && GEAR.find(g=>g.id===id)?.slot===slot) s.equipped[slot]=id;
+  // All three slots are flexible. Retain legacy ring/core/charm save keys
+  // while repairing any invalid or duplicate equipped entries safely.
+  if(obj.equipped && typeof obj.equipped==='object') {
+    const used=new Set();
+    for(const slot of Object.keys(s.equipped)) {
+      const id=obj.equipped[slot];
+      if(typeof id==='string' && s.gearOwned.includes(id) && validGearId(id) && !used.has(id)) {
+        s.equipped[slot]=id;used.add(id);
+      }
+    }
   }
   if(obj.potions && typeof obj.potions==='object') for(const p of POTIONS) {
     const n=safeInt(obj.potions[p.id],1e6); if(n) s.potions[p.id]=n;
@@ -1209,25 +1279,25 @@ function __artifactSeed(value){let n=2166136261;for(const c of value){n^=c.charC
 function __artifactRune(id){
   const rune={
     'glimmer-ring':'<path d="M60 27 68 51 93 60 68 69 60 93 52 69 27 60 52 51Z"/><path d="M60 37V83M37 60H83"/>',
-    'orbital-core':'<circle cx="60" cy="60" r="21"/><ellipse cx="60" cy="60" rx="32" ry="12" transform="rotate(-40 60 60)"/><circle cx="81" cy="40" r="4" fill="currentColor" stroke="none"/>',
+    'orbital-core':'<circle cx="60" cy="60" r="21"/><ellipse cx="60" cy="60" rx="32" ry="12" transform="rotate(-40 60 60)"/><circle cx="81" cy="40" r="4" fill="#ffffff" fill-opacity=".88" stroke="none"/>',
     'prism-charm':'<path d="M60 29 87 77H33Z"/><path d="M60 29V88M33 77 60 63 87 77"/>',
     'polaris-ring':'<path d="M60 24 68 52 96 60 68 68 60 96 52 68 24 60 52 52Z"/><circle cx="60" cy="60" r="10"/>',
     'nebula-reactor':'<path d="M60 37c26-13 38 18 20 34-22 20-52 0-40-22 9-16 29-12 35 1"/><circle cx="60" cy="60" r="7"/>',
-    'eclipse-seal':'<circle cx="60" cy="60" r="29"/><path d="M77 34C59 48 57 79 77 87C48 85 37 69 42 51C46 37 58 31 77 34Z" fill="currentColor" stroke="none"/>',
+    'eclipse-seal':'<circle cx="60" cy="60" r="29"/><path d="M77 34C59 48 57 79 77 87C48 85 37 69 42 51C46 37 58 31 77 34Z" fill="#ffffff" fill-opacity=".88" stroke="none"/>',
     'chronos-band':'<path d="M43 33H77M43 87H77M47 34Q49 51 60 60Q71 69 73 86M73 34Q71 50 60 60Q49 70 47 86"/><path d="M52 41 60 51 68 41M52 78 60 69 68 78"/>',
     'origin-engine':'<path d="M60 24 65 53 96 60 65 67 60 96 55 67 24 60 55 53Z"/><circle cx="60" cy="60" r="15"/><circle cx="60" cy="60" r="5" fill="currentColor"/>',
-    'void-sigil':'<path d="M27 60Q60 17 93 60Q60 103 27 60Z"/><circle cx="60" cy="60" r="20"/><circle cx="60" cy="60" r="9" fill="#06081a"/><path d="M60 40 72 50 65 73 48 67"/>',
-    'stormbreaker-ring':'<path d="M65 24 40 64H57L49 96 83 49H64Z" fill="currentColor" stroke="none"/><path d="M43 83 32 93M79 27 90 17"/>',
+    'void-sigil':'<path d="M27 60Q60 17 93 60Q60 103 27 60Z"/><circle cx="60" cy="60" r="20"/><circle cx="60" cy="60" r="9" fill="rgba(255,255,255,.16)" stroke="currentColor" stroke-opacity=".55" stroke-width="1.6"/><path d="M60 40 72 50 65 73 48 67"/>',
+    'stormbreaker-ring':'<path d="M65 24 40 64H57L49 96 83 49H64Z" fill="#ffffff" fill-opacity=".88" stroke="none"/><path d="M43 83 32 93M79 27 90 17"/>',
     'astral-gearbox':'<path d="M60 20V33M60 87V100M20 60H33M87 60H100M32 32 42 42M78 78 88 88M88 32 78 42M42 78 32 88"/><circle cx="60" cy="60" r="27" stroke-width="6"/><circle cx="60" cy="60" r="13"/><circle cx="60" cy="60" r="5" fill="currentColor"/>',
     'aurora-ward':'<path d="M26 78C39 12 54 100 68 39C78 2 91 31 94 53"/><path d="M27 87C44 35 53 98 74 59C83 40 90 45 96 52"/><path d="M59 21 66 33 59 45 52 33Z" fill="currentColor"/>',
     'infernal-crown':'<path d="M31 76 28 38 47 51 60 27 73 51 92 38 89 76Z" fill="currentColor" fill-opacity=".38"/><path d="M31 76H89M37 84H83"/><path d="M60 38 66 59 60 71 54 59Z"/>',
     'seraphim-engine':'<path d="M60 34 74 60 60 87 46 60Z"/><path d="M44 53C30 36 19 41 19 57L44 70M76 53C90 36 101 41 101 57L76 70M42 73 24 82M78 73 96 82"/><circle cx="60" cy="60" r="9"/>',
-    'eclipse-requiem':'<circle cx="60" cy="60" r="25"/><circle cx="70" cy="52" r="25" fill="#08081b" stroke="none"/><path d="M38 34Q60 20 82 34M38 86Q60 100 82 86"/>',
+    'eclipse-requiem':'<circle cx="60" cy="60" r="25"/><circle cx="70" cy="52" r="25" fill="rgba(8,8,27,.28)" stroke="none"/><path d="M38 34Q60 20 82 34M38 86Q60 100 82 86"/>',
     'quasar-sovereign':'<path d="M60 16 67 49 101 60 67 71 60 104 53 71 19 60 53 49Z"/><path d="M37 37 83 83M83 37 37 83"/><circle cx="60" cy="60" r="15"/>',
     'genesis-reactor':'<path d="M60 20 94 40V80L60 100 26 80V40Z"/><path d="M60 32 82 45V74L60 88 38 74V45Z"/><path d="M60 36V84M38 48 82 72M82 48 38 72"/>',
-    'abyssal-throne':'<path d="M28 82 36 42 48 63 60 25 72 63 84 42 92 82Z"/><path d="M41 79Q60 62 79 79M60 40V69"/><circle cx="60" cy="59" r="8" fill="#02030c"/>',
-    'singularity-emperor':'<circle cx="60" cy="60" r="30"/><ellipse cx="60" cy="60" rx="42" ry="14" transform="rotate(31 60 60)"/><ellipse cx="60" cy="60" rx="42" ry="14" transform="rotate(-31 60 60)"/><circle cx="60" cy="60" r="11" fill="#030310" stroke-width="4"/>',
-    'last-light-sanctum':'<path d="M60 18 66 52 102 60 66 68 60 102 54 68 18 60 54 52Z"/><path d="M33 33 87 87M87 33 33 87"/><circle cx="60" cy="60" r="12" fill="currentColor" stroke="none"/>',
+    'abyssal-throne':'<path d="M28 82 36 42 48 63 60 25 72 63 84 42 92 82Z"/><path d="M41 79Q60 62 79 79M60 40V69"/><circle cx="60" cy="59" r="8" fill="rgba(255,255,255,.18)" stroke="currentColor" stroke-opacity=".55" stroke-width="1.6"/>',
+    'singularity-emperor':'<circle cx="60" cy="60" r="30"/><ellipse cx="60" cy="60" rx="42" ry="14" transform="rotate(31 60 60)"/><ellipse cx="60" cy="60" rx="42" ry="14" transform="rotate(-31 60 60)"/><circle cx="60" cy="60" r="11" fill="rgba(255,255,255,.16)" stroke="currentColor" stroke-opacity=".58" stroke-width="3"/>',
+    'last-light-sanctum':'<path d="M60 18 66 52 102 60 66 68 60 102 54 68 18 60 54 52Z"/><path d="M33 33 87 87M87 33 33 87"/><circle cx="60" cy="60" r="12" fill="#ffffff" fill-opacity=".88" stroke="none"/>',
     'void-apotheosis':'<path d="M23 39Q39 15 51 45L60 28 69 45Q81 15 97 39L85 84 60 100 35 84Z"/><circle cx="60" cy="66" r="19"/><path d="M60 45V90M40 66H80"/>'
   };return rune[id]||'<path d="M60 28 72 50 92 60 72 70 60 92 48 70 28 60 48 50Z"/>';
 }
@@ -1261,10 +1331,10 @@ function __potionEmblem(id){
  'seraph-nectar':'<path d="M60 30 72 52 60 83 48 52Z"/><path d="M49 53Q26 29 22 54L48 73M71 53Q94 29 98 54L72 73"/>',
  'quasar-catalyst':'<path d="M60 17 68 48 99 57 68 65 60 97 52 65 21 57 52 48Z"/><circle cx="60" cy="57" r="12"/>',
  'aeon-ampoule':'<path d="M43 25H77M43 88H77M45 28Q46 43 60 56Q74 69 75 86M75 28Q74 43 60 56Q46 69 45 86"/>',
- 'abyss-surge':'<circle cx="60" cy="55" r="25"/><circle cx="70" cy="47" r="23" fill="#050416" stroke="none"/><path d="M25 77 36 87 48 82M72 87 84 79 94 85"/>',
+ 'abyss-surge':'<circle cx="60" cy="55" r="25"/><circle cx="70" cy="47" r="23" fill="rgba(255,255,255,.14)" stroke="currentColor" stroke-opacity=".35" stroke-width="1.4"/><path d="M25 77 36 87 48 82M72 87 84 79 94 85"/>',
  'absolute-serum':'<path d="M60 13 92 55 60 100 28 55Z"/><path d="M60 13V100M28 55H92M60 13 40 55 60 100 80 55Z"/>',
  'stellar-welcome-5000':'<path d="M60 14 69 46 99 58 69 69 60 101 51 69 21 58 51 46Z"/><circle cx="60" cy="58" r="14"/>',
- 'void-omega-elixir':'<path d="M60 14 71 36 94 38 82 58 96 80 68 78 60 103 52 78 24 80 38 58 26 38 49 36Z"/><circle cx="60" cy="58" r="14"/><circle cx="60" cy="58" r="5" fill="currentColor" stroke="none"/>'
+ 'void-omega-elixir':'<path d="M60 14 71 36 94 38 82 58 96 80 68 78 60 103 52 78 24 80 38 58 26 38 49 36Z"/><circle cx="60" cy="58" r="14"/><circle cx="60" cy="58" r="5" fill="#ffffff" fill-opacity=".88" stroke="none"/>'
  };
  return motifs[id]||'<path d="M60 18 82 55 60 92 38 55Z"/>';
 }
@@ -1297,10 +1367,54 @@ function renderPotionIcon(p){
 
 function renderForge(){
   $('forge-bonus').innerHTML='+'+gearBonus().toFixed(2)+'× <small>GEAR LUCK</small>';
-  $('equip-slots').innerHTML=Object.entries(SLOT_LABELS).map(([slot,label])=>{const gear=GEAR.find(g=>g.id===state.equipped[slot]);return `<div class="equip-slot"><div class="slot-tag">${label}</div>${gear?`<div class="slot-name" style="color:${gear.color}"><span class="slot-icon">${renderGearIcon(gear)}</span><span>${gear.name}</span></div><div class="slot-bonus">+${gear.bonus.toFixed(2)}× LUCK</div><button type="button" class="slot-unequip" data-unequip-slot="${slot}" aria-label="${label}の装備を外す">× 装備を外す</button>`:'<div class="slot-empty">スロットが空いています</div>'}</div>`;}).join('');
-  $('gear-grid').innerHTML=GEAR.map(g=>{const owned=state.gearOwned.includes(g.id),eq=state.equipped[g.slot]===g.id,can=canCraft(g);return `<article class="recipe-card ${can&&!owned?'craft-recipe-ready':''}" style="--recipe-color:${g.color}"><div class="recipe-top"><div class="recipe-icon">${renderGearIcon(g)}</div>${can&&!owned?'<span class="craft-ready-label">✦ CRAFT READY</span>':`<span class="recipe-category">${g.slotName} · EQUIPMENT</span>`}</div><h3>${g.name}</h3><p class="recipe-desc">${g.desc}</p><div class="recipe-bonus">+${g.bonus.toFixed(2)}× <small>LUCK BONUS</small></div><div class="recipe-ingredients">${ingredients(g)}</div><button class="craft-btn ${eq?'craft-btn-unequip':''}" data-craft-gear="${g.id}" ${(!owned&&!can)?'disabled':''}>${owned?(eq?'× 装備を外す':'装備する'):can?'✦ クラフトする':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
+  const ownedGear=GEAR.filter(g=>state.gearOwned.includes(g.id));
+  $('equip-slots').innerHTML=Object.entries(SLOT_LABELS).map(([slot,label])=>{
+    const gear=GEAR.find(g=>g.id===state.equipped[slot]);
+    const choices=ownedGear.map(g=>`<option value="${g.id}" ${gear?.id===g.id?'selected':''}>+${g.bonus.toLocaleString('ja-JP',{maximumFractionDigits:2})}× ｜${g.name}（${g.slotName}）</option>`).join('');
+    return `<div class="equip-slot ${gear?'slot-filled':'slot-open'}" data-equip-slot="${slot}">
+      <div class="slot-tag">${label}</div>
+      ${gear?`<div class="slot-name" style="color:${gear.color}"><span class="slot-icon">${renderGearIcon(gear)}</span><span>${gear.name}</span></div><div class="slot-bonus">+${gear.bonus.toFixed(2)}× LUCK</div>`:
+      `<div class="slot-empty">空きスロット · ${ownedGear.length?'装備を選択できます':'クラフトした装備をここにセット'}</div>`}
+      <label class="slot-picker-label" for="select-${slot}">この枠に装備する</label>
+      <select class="slot-picker" id="select-${slot}" data-select-slot="${slot}" aria-label="${label} の装備を選択">
+        <option value="">— 装備なし —</option>${choices}
+      </select>
+      ${gear?`<button type="button" class="slot-unequip" data-unequip-slot="${slot}" aria-label="${label}の装備を外す">× 装備を外す</button>`:''}
+    </div>`;
+  }).join('');
+  $('gear-grid').innerHTML=GEAR.map(g=>{const owned=state.gearOwned.includes(g.id),eq=Object.values(state.equipped).includes(g.id),can=canCraft(g);return `<article class="recipe-card ${can&&!owned?'craft-recipe-ready':''}" style="--recipe-color:${g.color}"><div class="recipe-top"><div class="recipe-icon">${renderGearIcon(g)}</div>${can&&!owned?'<span class="craft-ready-label">✦ CRAFT READY</span>':`<span class="recipe-category">${g.slotName} · EQUIPMENT</span>`}</div><h3>${g.name}</h3><p class="recipe-desc">${g.desc}</p><div class="recipe-bonus">+${g.bonus.toFixed(2)}× <small>LUCK BONUS</small></div><div class="recipe-ingredients">${ingredients(g)}</div><button class="craft-btn ${eq?'craft-btn-unequip':''}" data-craft-gear="${g.id}" ${(!owned&&!can)?'disabled':''}>${owned?(eq?'× 装備を外す':'装備する'):can?'✦ クラフトする':icon('lock')+' 素材が不足しています'}</button></article>`;}).join('');
 }
-function craftGear(id){const g=GEAR.find(g=>g.id===id);if(!g)return;if(state.gearOwned.includes(id)){const remove=state.equipped[g.slot]===g.id;state.equipped[g.slot]=remove?null:g.id;save();renderForge();renderRollUI();updateCraftReadyUI();toast(remove?'装備解除完了':'装備を変更しました',g.name+(remove?'を外しました。':'を装備した。'),'good');return;}if(!canCraft(g)){toast('素材が足りません','必要なオーラとスターダストを集めよう。','error');return;}if(!consume(g))return;state.gearOwned.push(g.id);state.equipped[g.slot]=g.id;save();renderForge();renderRollUI();updateCraftReadyUI();toast('CRAFT SUCCESS',g.name+'が完成。自動で装備しました！','good');tone(600,.2,'triangle',.035);tone(850,.2,'sine',.03,.12);}
+function equipGearInSlot(id,slot){
+  if(!Object.prototype.hasOwnProperty.call(SLOT_LABELS,slot))return;
+  if(!id){unequipSlot(slot);return;}
+  const gear=GEAR.find(g=>g.id===id);
+  if(!gear || !state.gearOwned.includes(id)){
+    renderForge();toast('装備できません','まず装備をクラフトしてください。','error');return;
+  }
+  // A gear item can be equipped only once; moving it frees its old slot.
+  for(const key of Object.keys(state.equipped))if(key!==slot && state.equipped[key]===id)state.equipped[key]=null;
+  state.equipped[slot]=id;
+  save();renderForge();renderRollUI();updateCraftReadyUI();
+  toast('装備セット完了',`${SLOT_LABELS[slot]}：${gear.name}を装備しました。`,'good');
+}
+function craftGear(id){
+  const gear=GEAR.find(g=>g.id===id);if(!gear)return;
+  if(state.gearOwned.includes(id)){
+    const currentSlot=Object.keys(state.equipped).find(slot=>state.equipped[slot]===id);
+    if(currentSlot){unequipSlot(currentSlot);return;}
+    const freeSlot=Object.keys(state.equipped).find(slot=>!state.equipped[slot]);
+    if(!freeSlot){toast('装備枠が埋まっています','装備スロットの選択欄で交換する装備を選んでね。','good');document.getElementById('equip-slots')?.scrollIntoView({block:'center',behavior:'smooth'});return;}
+    equipGearInSlot(id,freeSlot);return;
+  }
+  if(!canCraft(gear)){toast('素材が足りません','必要なオーラとスターダストを集めよう。','error');return;}
+  if(!consume(gear))return;
+  state.gearOwned.push(id);
+  const freeSlot=Object.keys(state.equipped).find(slot=>!state.equipped[slot]);
+  if(freeSlot)state.equipped[freeSlot]=id;
+  save();renderForge();renderRollUI();updateCraftReadyUI();
+  toast('CRAFT SUCCESS',gear.name+(freeSlot?'が完成。空き枠に自動装備しました！':'が完成。装備枠の選択欄から装備してね。'),'good');
+  tone(600,.2,'triangle',.035);tone(850,.2,'sine',.03,.12);
+}
 function unequipSlot(slot){
   if(!Object.prototype.hasOwnProperty.call(SLOT_LABELS,slot)||!state.equipped[slot])return;
   const gear=GEAR.find(g=>g.id===state.equipped[slot]);
@@ -1391,6 +1505,7 @@ function bind(){
   $('aura-prev').addEventListener('click',()=>__moveCollection(-1));$('aura-next').addEventListener('click',()=>__moveCollection(1));
   $('aura-grid').addEventListener('click',e=>{const b=e.target.closest('[data-equip-aura]');if(b)equippedAura(b.dataset.equipAura);});
   $('equip-slots').addEventListener('click',e=>{const b=e.target.closest('[data-unequip-slot]');if(b)unequipSlot(b.dataset.unequipSlot);});
+  $('equip-slots').addEventListener('change',e=>{const selector=e.target.closest('[data-select-slot]');if(selector)equipGearInSlot(selector.value,selector.dataset.selectSlot);});
   $('gear-grid').addEventListener('click',e=>{const b=e.target.closest('[data-craft-gear]');if(b)craftGear(b.dataset.craftGear);});
   $('potion-grid').addEventListener('click',e=>{const b=e.target.closest('[data-craft-potion]');if(b)craftPotion(b.dataset.craftPotion);});
   $('potion-inventory').addEventListener('click',e=>{const b=e.target.closest('[data-use-potion]');if(b)usePotion(b.dataset.usePotion);});
